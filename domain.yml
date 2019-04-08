@@ -1,0 +1,16 @@
+intents:
+  - greet
+  - goodbye
+  - out_of_scope
+  - good_morning
+  - good_afternoon
+  - good_night
+  - error
+  - help
+  - change_subject
+  - how_are_u
+  - compliments
+  - inform
+
+entities:
+  - locale
