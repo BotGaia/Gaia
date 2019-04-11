@@ -1,7 +1,7 @@
 intents:
-  - greet
-  - goodbye
   - out_of_scope
+  - goodbye
+  - greet
   - good_morning
   - good_afternoon
   - good_night
@@ -12,7 +12,7 @@ intents:
   - compliments
   - inform
   - action_test
-  
+
 entities:
   - locale
 
@@ -39,6 +39,13 @@ templates:
         - Chance de chuva
         - Atividades mais propensas ao ar livre
     
+    utter_inform:
+    - text: |
+        Neste local, minha temperatura é [temperatura] ºC,  
+        com umidade de [umidade]% e pressão de [pressão]hPa*, 
+        meus ventos sopram para [direção] com velocidade de [velocidade]m/s* 
+        e apresento nuvens [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
+        
     utter_out_of_scope:
     - text: |
         Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.
@@ -122,28 +129,18 @@ templates:
           - Chance de chuva
           - Atividades mais propensas ao ar livre
 
-    utter_inform:
-    - text: |
-            Neste local, minha temperatura é [temperatura] ºC,  
-            com umidade de [umidade]% e pressão de [pressão]hPa*, 
-            meus ventos sopram para [direção] com velocidade de [velocidade]m/s* 
-            e apresento nuvens [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
+actions:
+  - utter_error
+  - utter_greet
+  - utter_goodbye
+  - utter_how_are_u
+  - utter_help
+  - utter_compliments
+  - utter_out_of_scope
+  - utter_good_morning
+  - utter_good_afternoon
+  - utter_good_night
+  - utter_change_subject
+  - utter_inform
 
-        
-
-    actions:
-    - utter_error
-    - utter_out_of_scope
-    - utter_help
-    - utter_greet
-    - utter_good_morning
-    - utter_good_afternoon
-    - utter_good_night
-    - utter_goodbye
-    - utter_how_are_u
-    - utter_change_subject
-    - utter_compliments
-    - utter_inform
-  
-
-
+  - action_test
