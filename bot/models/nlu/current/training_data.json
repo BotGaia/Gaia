@@ -1,0 +1,621 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "out_of_scope",
+        "text": "Você fala sobre o meio ambiente?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Qual a origem do mundo?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Você tem signo?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Vc gosta de carnaval?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "batatinha quando nasce"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "me conta uma piada"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "brasilia",
+            "entity": "locale"
+          }
+        ],
+        "text": "estou em brasilia"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "olinda",
+            "entity": "locale"
+          }
+        ],
+        "text": "como está em olinda"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "unaí",
+            "entity": "locale"
+          }
+        ],
+        "text": "me diga o clima em unaí"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "aracajú",
+            "entity": "locale"
+          }
+        ],
+        "text": "qual o clima em aracajú"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "goiânia",
+            "entity": "locale"
+          }
+        ],
+        "text": "me diz o tempo em goiânia"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "manaus",
+            "entity": "locale"
+          }
+        ],
+        "text": "qual o tempo em manaus"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "camboriú",
+            "entity": "locale"
+          }
+        ],
+        "text": "to em balneário camboriú"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "brasilia",
+            "entity": "locale"
+          }
+        ],
+        "text": "como está em brasilia"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "anápolis",
+            "entity": "locale"
+          }
+        ],
+        "text": "como está anápolis"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Tchau obrigada"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Tchau"
+      },
+      {
+        "intent": "goodbye",
+        "text": "até logo"
+      },
+      {
+        "intent": "goodbye",
+        "text": "namaste"
+      },
+      {
+        "intent": "goodbye",
+        "text": "sayonara"
+      },
+      {
+        "intent": "goodbye",
+        "text": "até mais"
+      },
+      {
+        "intent": "goodbye",
+        "text": "até breve"
+      },
+      {
+        "intent": "goodbye",
+        "text": "falou, valeu"
+      },
+      {
+        "intent": "goodbye",
+        "text": "flw vlw"
+      },
+      {
+        "intent": "goodbye",
+        "text": "blza"
+      },
+      {
+        "intent": "goodbye",
+        "text": "blz"
+      },
+      {
+        "intent": "goodbye",
+        "text": "valeu"
+      },
+      {
+        "intent": "goodbye",
+        "text": "de boa"
+      },
+      {
+        "intent": "goodbye",
+        "text": "obrigada"
+      },
+      {
+        "intent": "goodbye",
+        "text": "obrigado"
+      },
+      {
+        "intent": "goodbye",
+        "text": "obg"
+      },
+      {
+        "intent": "goodbye",
+        "text": "flw"
+      },
+      {
+        "intent": "goodbye",
+        "text": "falou"
+      },
+      {
+        "intent": "goodbye",
+        "text": "tchauzinho"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "nao quero saber mais"
+      },
+      {
+        "intent": "goodbye",
+        "text": "não quero saber de mais nada"
+      },
+      {
+        "intent": "greet",
+        "text": "oi, tudo bem"
+      },
+      {
+        "intent": "greet",
+        "text": "como vai"
+      },
+      {
+        "intent": "greet",
+        "text": "oi, como vai voce"
+      },
+      {
+        "intent": "greet",
+        "text": "como vao as coisas"
+      },
+      {
+        "intent": "greet",
+        "text": "com licenca"
+      },
+      {
+        "intent": "greet",
+        "text": "posso falar com voce"
+      },
+      {
+        "intent": "greet",
+        "text": "pode me tirar uma duvida"
+      },
+      {
+        "intent": "greet",
+        "text": "gostaria de tirar uma duvida"
+      },
+      {
+        "intent": "greet",
+        "text": "to bem"
+      },
+      {
+        "intent": "greet",
+        "text": "tranquilo"
+      },
+      {
+        "intent": "greet",
+        "text": "estou bem"
+      },
+      {
+        "intent": "greet",
+        "text": "estou otimo"
+      },
+      {
+        "intent": "greet",
+        "text": "muito bem"
+      },
+      {
+        "intent": "greet",
+        "text": "olá"
+      },
+      {
+        "intent": "greet",
+        "text": "oie"
+      },
+      {
+        "intent": "greet",
+        "text": "oiee"
+      },
+      {
+        "intent": "greet",
+        "text": "opa tudo bem"
+      },
+      {
+        "intent": "greet",
+        "text": "e ai"
+      },
+      {
+        "intent": "greet",
+        "text": "eai"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "good_morning",
+        "text": "bom dia"
+      },
+      {
+        "intent": "good_morning",
+        "text": "ola bom dia"
+      },
+      {
+        "intent": "good_morning",
+        "text": "oi bom dia"
+      },
+      {
+        "intent": "good_morning",
+        "text": "hey bom dia"
+      },
+      {
+        "intent": "good_morning",
+        "text": "good morning"
+      },
+      {
+        "intent": "good_morning",
+        "text": "otimo dia"
+      },
+      {
+        "intent": "good_afternoon",
+        "text": "boa tarde"
+      },
+      {
+        "intent": "good_afternoon",
+        "text": "ola boa tarde"
+      },
+      {
+        "intent": "good_afternoon",
+        "text": "oi boa tarde"
+      },
+      {
+        "intent": "good_afternoon",
+        "text": "hey boa tarde"
+      },
+      {
+        "intent": "good_afternoon",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "good_night",
+        "text": "boa noite"
+      },
+      {
+        "intent": "good_night",
+        "text": "ola boa noite"
+      },
+      {
+        "intent": "good_night",
+        "text": "oi boa noite"
+      },
+      {
+        "intent": "good_night",
+        "text": "hey boa noite"
+      },
+      {
+        "intent": "good_night",
+        "text": "good night"
+      },
+      {
+        "intent": "compliments",
+        "text": "Você é  muito educada!"
+      },
+      {
+        "intent": "compliments",
+        "text": "Adorei"
+      },
+      {
+        "intent": "compliments",
+        "text": "Me ajudou muito"
+      },
+      {
+        "intent": "compliments",
+        "text": "vc eh linda"
+      },
+      {
+        "intent": "compliments",
+        "text": "voce é maravilhosa"
+      },
+      {
+        "intent": "compliments",
+        "text": "amei"
+      },
+      {
+        "intent": "compliments",
+        "text": "voce e plena"
+      },
+      {
+        "intent": "compliments",
+        "text": "voce e deusa"
+      },
+      {
+        "intent": "error",
+        "text": "nao era isso, me enganei"
+      },
+      {
+        "intent": "error",
+        "text": "não quero falar sobre isso"
+      },
+      {
+        "intent": "error",
+        "text": "nunca"
+      },
+      {
+        "intent": "error",
+        "text": "nao"
+      },
+      {
+        "intent": "error",
+        "text": "nao conheco"
+      },
+      {
+        "intent": "error",
+        "text": "não quero"
+      },
+      {
+        "intent": "error",
+        "text": "escolhi errado"
+      },
+      {
+        "intent": "error",
+        "text": "falei errado"
+      },
+      {
+        "intent": "error",
+        "text": "duvida"
+      },
+      {
+        "intent": "error",
+        "text": "ainda não sei"
+      },
+      {
+        "intent": "error",
+        "text": "nenhum"
+      },
+      {
+        "intent": "help",
+        "text": "não sei onde a minha pergunta se encaixa"
+      },
+      {
+        "intent": "help",
+        "text": "ainda nao sei escolher um tópico"
+      },
+      {
+        "intent": "help",
+        "text": "ainda não pensei sobre isso"
+      },
+      {
+        "intent": "help",
+        "text": "nao sei do que quero falar"
+      },
+      {
+        "intent": "help",
+        "text": "não sei do que quero conversar"
+      },
+      {
+        "intent": "help",
+        "text": "ajuda"
+      },
+      {
+        "intent": "help",
+        "text": "me ajuda"
+      },
+      {
+        "intent": "help",
+        "text": "o que voce sabe fazer"
+      },
+      {
+        "intent": "help",
+        "text": "sobre o que voce sabe"
+      },
+      {
+        "intent": "help",
+        "text": "o que voce sabe conversar"
+      },
+      {
+        "intent": "help",
+        "text": "como funciona"
+      },
+      {
+        "intent": "help",
+        "text": "me diga mais"
+      },
+      {
+        "intent": "help",
+        "text": "não entendi"
+      },
+      {
+        "intent": "help",
+        "text": "nao entendi"
+      },
+      {
+        "intent": "help",
+        "text": "não é isso"
+      },
+      {
+        "intent": "help",
+        "text": "nao eh isso"
+      },
+      {
+        "intent": "help",
+        "text": "como assim"
+      },
+      {
+        "intent": "help",
+        "text": "e como funciona"
+      },
+      {
+        "intent": "help",
+        "text": "nao tenho certeza"
+      },
+      {
+        "intent": "change_subject",
+        "text": "quero falar sobre outra coisa"
+      },
+      {
+        "intent": "change_subject",
+        "text": "não quero saber isso"
+      },
+      {
+        "intent": "change_subject",
+        "text": "não quero saber disso"
+      },
+      {
+        "intent": "change_subject",
+        "text": "vamos falar de outra coisa"
+      },
+      {
+        "intent": "change_subject",
+        "text": "nao gosto desse assunto"
+      },
+      {
+        "intent": "change_subject",
+        "text": "vamos trocar de assunto"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "Tudo bem"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "Como vocês esta"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "como ta"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "joia"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "joinha"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "tudo bom"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "bom dia flor do dia"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "Tudo bem e você"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "como vc esta"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "como vai"
+      },
+      {
+        "intent": "how_are_u",
+        "text": "beleza"
+      },
+      {
+        "intent": "action_test",
+        "text": "test custom action"
+      },
+      {
+        "intent": "action_test",
+        "text": "custom action"
+      },
+      {
+        "intent": "action_test",
+        "text": "actions"
+      },
+      {
+        "intent": "action_test",
+        "text": "custom actions"
+      },
+      {
+        "intent": "action_test",
+        "text": "action"
+      },
+      {
+        "intent": "action_test",
+        "text": "test action"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

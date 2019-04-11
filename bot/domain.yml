@@ -11,7 +11,8 @@ intents:
   - how_are_u
   - compliments
   - inform
-
+  - action_test
+  
 entities:
   - locale
 

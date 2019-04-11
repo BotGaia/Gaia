@@ -6,7 +6,7 @@
 - batatinha quando nasce
 - me conta uma piada
 
-##intent:inform
+## intent:inform
 - estou em [brasilia](locale)
 - como está em [olinda](locale)
 - me diga o clima em [unaí](locale)
