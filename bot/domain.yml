@@ -15,6 +15,7 @@ intents:
   - hurricane
   - elaborate
   - locale
+  - start
 
 entities:
   - locale

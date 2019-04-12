@@ -71,6 +71,10 @@
 - e ai
 - eai
 - hello
+- hey
+- Fala Gaia
+- Fala aí
+- Fala aí Gaia
 
 ## intent:good_morning
 - bom dia
@@ -116,6 +120,9 @@
 - duvida
 - ainda não sei
 - nenhum
+- já falou isso
+- vc já falou isso
+- tu falou isso
 
 ## intent:help
 - não sei onde a minha pergunta se encaixa
@@ -180,3 +187,7 @@
 - [Goiania](locale)
 - [Fortaleza](locale)
 - [vancouver](locale)
+- [Goiás](locale)
+
+## intent: start
+- /start
