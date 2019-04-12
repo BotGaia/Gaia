@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/sEkmmNN.png">
+  <img src="https://i.imgur.com/sEkmmNN.png" width="260" height="">
 </p>
 
 <h1 align="center"> Gaia </h1>
