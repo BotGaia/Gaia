@@ -12,9 +12,13 @@ intents:
   - compliments
   - inform
   - action_test
+  - hurricane
+  - elaborate
+  - locale
 
 entities:
   - locale
+  - hurricane
 
 templates:
     utter_error:
@@ -129,6 +133,26 @@ templates:
           - Chance de chuva
           - Atividades mais propensas ao ar livre
 
+    utter_elaborate:
+    - text: |
+          Em qual localidade?
+
+    - text: |
+          Onde deseja saber?
+
+    - text: |
+          Poderia esclarecer em qual localidade, por favor?
+    
+    utter_hurricane:
+    - text: |
+          Por enquanto não posso te informar sobre este fenômeno
+
+    - text: |
+          Furacões são forças grandes demais para teu conhecimento
+
+    - text: |
+          Um dia te contarei sobre eles
+
 actions:
   - utter_error
   - utter_greet
@@ -142,5 +166,6 @@ actions:
   - utter_good_night
   - utter_change_subject
   - utter_inform
-
+  - utter_hurricane
+  - utter_elaborate
   - action_test
