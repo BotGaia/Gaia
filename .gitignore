@@ -15,18 +15,6 @@ bot/.keras/
 bot/.local/
 bot/work
 
-### Intents Notebook ###
-notebooks/intents/evaluate-intents.ipynb
-notebooks/intents/models
-notebooks/intents/errors.json
-notebooks/stories/matrix.pdf
-
- ### Stories Notebook ###
-notebooks/stories/models
-notebooks/stories/errors.json
-notebooks/stories/img
-
-
 ### database
 web/postegres-data
 
@@ -185,6 +173,8 @@ Session.vim
 .netrwhist
 # auto-generated tag files
 tags
+# ngrok
+ngrok
 
 
 # End of https://www.gitignore.io/api/vim,linux,macos,python

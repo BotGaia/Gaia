@@ -43,9 +43,9 @@ services:
         - MIN_TYPING_TIME=1
         - WORDS_PER_SECOND_TYPING=10
         - TRAINING_EPOCHS=15
-        - TELEGRAM_ACCESS_TOKEN={token do bot}
-        - VERIFY={username do bot}
-        - WEBHOOK_URL={link do ngrok}/webhooks/telegram/webhook
+        - TELEGRAM_ACCESS_TOKEN=${TELEGRAM_ACCESS_TOKEN}
+        - VERIFY=${VERIFY}
+        - WEBHOOK_URL=${WEBHOOK_URL}
 
         # Should be set to 'production' or 'beta' or 'dev'
         - ENVIRONMENT_NAME=localhost
@@ -59,13 +59,4 @@ services:
       volumes:
         - ./bot:/bot
 
-  # =============================== Notebooks =================================
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
-    volumes:
-      - ./bot:/work/bot
-      - ./notebooks:/work/notebooks
-    ports:
-      - 8888:8888
+
