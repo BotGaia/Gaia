@@ -94,8 +94,8 @@
 ## Path 7
 * good_night
     - utter_good_night
-* error
-    - utter_error
+* user_error
+    - utter_user_error
 * help
     - utter_help
 
