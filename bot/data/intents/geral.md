@@ -6,6 +6,10 @@
 - batatinha quando nasce
 - me conta uma piada
 - qual seu signo?
+- me conta uma historia
+- quer ouvir uma piada?
+- me fala o cardápio de hoje
+- o que voce gosta de comer?
 
 ## intent: hurricane
 - E o [furacão](hurricane)?
@@ -13,6 +17,7 @@
 - Onde tem [furacão](hurricane)?
 - fala do [furacão](hurricane)
 - tem [furacão](hurricane)?
+- tem risco de [furacão](hurricane)?
 
 ## intent:inform
 - estou em [brasilia](locale)
@@ -111,6 +116,8 @@
 - amei
 - voce e plena
 - voce e deusa
+- você é incrível
+- vc e sensacional
 
 ## intent:user_error
 - nao era isso, me enganei
@@ -130,6 +137,9 @@
 - já falou isso
 - vc já falou isso
 - tu falou isso
+- você ja disse isso
+- isso voce já disse
+- disso voce ja tinha me falado
 
 ## intent:help
 - não sei onde a minha pergunta se encaixa
