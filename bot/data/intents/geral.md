@@ -24,6 +24,9 @@
 - como está em [brasilia](locale)
 - como está [anápolis](locale)
 - me diz o clima em [Salvador](locale)
+- como está o clima no [pará](locale)
+- estou no [parque da cidade](locale)
+- estou na [praia do futuro](locale)
 
 ## intent:goodbye
 - Tchau obrigada
@@ -108,7 +111,7 @@
 - voce e plena
 - voce e deusa
 
-## intent:error
+## intent:user_error
 - nao era isso, me enganei
 - não quero falar sobre isso
 - nunca
@@ -120,6 +123,9 @@
 - duvida
 - ainda não sei
 - nenhum
+
+
+## intent:gaia_error
 - já falou isso
 - vc já falou isso
 - tu falou isso

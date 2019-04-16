@@ -26,12 +26,15 @@
 
 ## Fallback
 * out_of_scope
-    - utter_out_of_scope
+    - utter_default
 
-## Error
-* error
-    - utter_error
+## User Error
+* user_error
+    - utter_user_error
 
+## Gaia Error
+* gaia_error
+    - utter_gaia_error
 
 ## Compliments
 * compliments
@@ -52,6 +55,9 @@
     - utter_greet
 * inform
     - utter_inform
+
+## Path Fallback
+* 
 
 ## Hurricane
 * hurricane

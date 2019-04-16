@@ -5,7 +5,8 @@ intents:
   - good_morning
   - good_afternoon
   - good_night
-  - error
+  - user_error
+  - gaia_error
   - help
   - change_subject
   - how_are_u
@@ -22,7 +23,7 @@ entities:
   - hurricane
 
 templates:
-    utter_error:
+    utter_default:
     - text: |
         A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo a me comunicar com vocês, 
         pode falar de outra forma?
@@ -154,8 +155,23 @@ templates:
     - text: |
           Um dia te contarei sobre eles
 
+    utter_user_error:
+    - text: |
+          Podemos falar sobre outra coisa. Podemos conversar sobre:
+          - Temperatura de um local
+          - Pressão
+          - Nascer e pôr do sol
+          - Velocidade do vento
+          - Umidade
+          - Chance de chuva
+          - Atividades mais propensas ao ar livre                   
+
+    utter_gaia_error:
+    - text: |
+          Desculpa o engano, vocês humanos são muito confusos. Você pode especificar o que quer falar?                  
+
 actions:
-  - utter_error
+  - utter_default
   - utter_greet
   - utter_goodbye
   - utter_how_are_u
@@ -169,4 +185,8 @@ actions:
   - utter_inform
   - utter_hurricane
   - utter_elaborate
+  - utter_user_error
+  - utter_gaia_error
   - action_test
+
+
