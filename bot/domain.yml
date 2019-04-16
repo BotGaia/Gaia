@@ -17,6 +17,8 @@ intents:
   - elaborate
   - locale
   - start
+  - anything_else
+  - who_are_u
 
 entities:
   - locale
@@ -45,6 +47,22 @@ templates:
         - Chance de chuva
         - Atividades mais propensas ao ar livre
     
+    utter_who_are_u:
+    - text: |
+        Sou Gaia
+      
+    utter_anything_else:
+    - text: |
+        O que mais quer saber? Você pode me perguntar sobre:
+
+        - Temperatura de um local
+        - Pressão
+        - Nascer e pôr do sol
+        - Velocidade do vento
+        - Umidade
+        - Chance de chuva
+        - Atividades mais propensas ao ar livre
+
     utter_inform:
     - text: |
         Neste local, minha temperatura é [temperatura] ºC,  
@@ -76,32 +94,28 @@ templates:
           Olá, sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
           absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
           humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu 
-          te direi como estou.
+          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
 
     utter_good_morning:
     - text: |
           Bom dia! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
           absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
           humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu 
-          te direi como estou.
+          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
 
     utter_good_afternoon:
     - text: |
           Boa tarde! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
           absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
           humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu 
-          te direi como estou.
+          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
 
     utter_good_night:
     - text: |
           Boa noite! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
           absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
           humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu 
-          te direi como estou.
+          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
 
     utter_goodbye:
     - text: |
@@ -187,6 +201,8 @@ actions:
   - utter_elaborate
   - utter_user_error
   - utter_gaia_error
+  - utter_who_are_u
+  - utter_anything_else
   - action_test
 
 

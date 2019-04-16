@@ -5,6 +5,7 @@
 - Vc gosta de carnaval?
 - batatinha quando nasce
 - me conta uma piada
+- qual seu signo?
 
 ## intent: hurricane
 - E o [furacão](hurricane)?
@@ -150,6 +151,7 @@
 - como assim
 - e como funciona
 - nao tenho certeza
+- o que mais pode fazer?
 
 ## intent:change_subject
 - quero falar sobre outra coisa
@@ -184,6 +186,23 @@
 - qual o clima agora?
 - qual o tempo agora?
 
+## intent: anything_else
+ - entendi
+ - ok
+ - beleza
+ - bacana
+ - bom demais
+ - legal 
+ - opa, bom de mais
+ - belezura
+ - tranquilo
+ - massa
+ - okay
+ - feshow
+ - fechou
+ - top
+ - tudo bem
+
 ## intent: locale
 - [brasilia](locale)
 - [recife](locale)
@@ -194,6 +213,9 @@
 - [Fortaleza](locale)
 - [vancouver](locale)
 - [Goiás](locale)
+- e no [gama](locale)
+- e em [minas](locale)
+- e na [arniqueiras](locale)
 
 ## intent: start
 - /start
