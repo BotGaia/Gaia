@@ -1,3 +1,6 @@
+## intent: start
+- /start
+
 ## intent:out_of_scope
 - Você fala sobre o meio ambiente?
 - Qual a origem do mundo?
@@ -10,29 +13,6 @@
 - quer ouvir uma piada?
 - me fala o cardápio de hoje
 - o que voce gosta de comer?
-
-## intent: hurricane
-- E o [furacão](hurricane)?
-- [Furacão](hurricane)
-- Onde tem [furacão](hurricane)?
-- fala do [furacão](hurricane)
-- tem [furacão](hurricane)?
-- tem risco de [furacão](hurricane)?
-
-## intent:inform
-- estou em [brasilia](locale)
-- como está em [olinda](locale)
-- me diga o clima em [unaí](locale)
-- qual o clima em [aracajú](locale)
-- me diz o tempo em [goiânia](locale)
-- qual o tempo em [manaus](locale)
-- to em [balneário camboriú](locale)
-- como está em [brasilia](locale)
-- como está [anápolis](locale)
-- me diz o clima em [Salvador](locale)
-- como está o clima no [pará](locale)
-- estou no [parque da cidade](locale)
-- estou na [praia do futuro](locale)
 
 ## intent:goodbye
 - Tchau obrigada
@@ -171,7 +151,6 @@
 - nao gosto desse assunto
 - vamos trocar de assunto
 
-
 ## intent:how_are_u
 - Tudo bem
 - Como vocês esta
@@ -184,17 +163,6 @@
 - como vc esta
 - como vai
 - beleza
-
-## intent:elaborate
-- Me diga o clima
-- Qual o clima?
-- Clima
-- me fala o tempo
-- me fale o clime
-- qual o tempo?
-- Clima agora
-- qual o clima agora?
-- qual o tempo agora?
 
 ## intent: anything_else
  - entendi
@@ -212,20 +180,3 @@
  - fechou
  - top
  - tudo bem
-
-## intent: locale
-- [brasilia](locale)
-- [recife](locale)
-- [salvador](locale)
-- [Paris](locale)
-- [Berlim](locale)
-- [Goiania](locale)
-- [Fortaleza](locale)
-- [vancouver](locale)
-- [Goiás](locale)
-- e no [gama](locale)
-- e em [minas](locale)
-- e na [arniqueiras](locale)
-
-## intent: start
-- /start
