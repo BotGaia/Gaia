@@ -28,6 +28,7 @@ intents:
   - sea_level
   - how_do_u_know
 
+
 entities:
   - locale
   - hurricane
