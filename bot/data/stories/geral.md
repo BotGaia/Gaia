@@ -56,13 +56,6 @@
 * inform
     - utter_inform
 
-## Path Fallback
-* 
-
-## Hurricane
-* hurricane
-    - utter_hurricane
-
 ## Elaborate
 * elaborate
     - utter_elaborate    

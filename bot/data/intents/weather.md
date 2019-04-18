@@ -38,8 +38,10 @@
 - tem chances de chover no [Pará](locale)?
 - qual a chance de chover na [Itália](locale)?
 - o clima esta fechado no [parque da cidade](locale)?
+- Qual a nebulosidade em [brasilia](locale)?
+- Como esta a nebulosidade na [praça dos três poderes](locale)?
 
-##intent: wind
+## intent: wind
 - ta ventando muito na[praia de tamandaré](locale)?
 - como estão os ventos no [deck sul](locale)?
 - Na [praça do relógio](locale) está ventando muito?
@@ -48,6 +50,13 @@
 - Como estão os ventos na [Praia de Ipanema](locale)?
 - Em [São Sebastião](locale) tá ventando?
 - tá ventando muito no [porto de galinhas](locale)
+
+## intent: sea_level
+- Qual o nivel do mar em [Lisboa](locale)?
+- Na [praia do flamengo](locale), qual o nivel do mar?
+- No [Canyon](locale) qual o nível do mar?
+- qual o nível do mar na [praia de copacabana](locale)?
+
 
 ## intent: sunrise_sunset
 -quando o sol se põe em [minas gerais](locale)?
