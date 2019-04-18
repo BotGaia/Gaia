@@ -50,47 +50,6 @@
 * greet
     - utter_greet
 
-## Path 3
-* greet
-    - utter_greet
-* inform
-    - utter_inform
-
-## Path Fallback
-* 
-
-## Hurricane
-* hurricane
-    - utter_hurricane
-
-## Elaborate
-* elaborate
-    - utter_elaborate    
-
-## Path 4
-* elaborate
-    - utter_elaborate
-* hurricane
-    - utter_hurricane
-
-## Path 5
-* inform
-    - utter_inform
-* hurricane
-    - utter_hurricane
-* goodbye
-    - utter_goodbye
-
-## Path 6
-* greet
-    - utter_greet
-* how_are_u
-    - utter_how_are_u
-* inform
-    - utter_inform
-* goodbye
-    - utter_goodbye
-
 ## Path 7
 * good_night
     - utter_good_night
@@ -111,16 +70,6 @@
 * good_afternoon
     - utter_good_afternoon
 
-## Locale
-* locale
-    - utter_inform
-
-## Path 8
-* elaborate
-    - utter_elaborate
-* locale
-    - utter_inform
-
 ## Change Subject
 * change_subject
     - utter_change_subject
@@ -128,10 +77,6 @@
 ## start
 * start
     - utter_greet
-
-## Who Are U
-* who_are_u
-    - utter_who_are_u
 
 ## Anything Else
 * anything_else

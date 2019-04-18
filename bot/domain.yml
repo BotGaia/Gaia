@@ -19,6 +19,14 @@ intents:
   - start
   - anything_else
   - who_are_u
+  - temperature
+  - pressure
+  - humidity
+  - weather
+  - wind
+  - sunrise_sunset
+  - sea_level
+  - how_do_u_know
 
 entities:
   - locale
@@ -42,14 +50,21 @@ templates:
         - Temperatura de um local
         - Pressão
         - Nascer e pôr do sol
-        - Velocidade do vento
+        - Velocidade e direção do vento
         - Umidade
-        - Chance de chuva
+        - Nebulosidade
         - Atividades mais propensas ao ar livre
     
     utter_who_are_u:
     - text: |
-        Sou Gaia
+        Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era caos. 
+        E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da ajuda de vocês! 
+        Pensando nisso, criei esse canal a fim de nos comunicarmos e ajudar vocês no que mais 
+        influencia seus compromissos terráqueos: o clima! 
+
+    utter_how_do_u_know:
+    - text: |
+        Como mãe-terra, sou onipresente e posso acessar informações de qualquer lugar do planeta.
       
     utter_anything_else:
     - text: |
@@ -58,17 +73,17 @@ templates:
         - Temperatura de um local
         - Pressão
         - Nascer e pôr do sol
-        - Velocidade do vento
+        - Nebulosidade
+        - Velocidade e direção do vento
         - Umidade
-        - Chance de chuva
         - Atividades mais propensas ao ar livre
 
     utter_inform:
     - text: |
         Neste local, minha temperatura é [temperatura] ºC,  
-        com umidade de [umidade]% e pressão de [pressão]hPa*, 
-        meus ventos sopram para [direção] com velocidade de [velocidade]m/s* 
-        e apresento nuvens [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
+        com umidade de [umidade]% e pressão de [pressão]N/m², 
+        meus ventos sopram para [direção] com velocidade de [velocidade]m/s 
+        e apresento [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
         
     utter_out_of_scope:
     - text: |
@@ -80,9 +95,9 @@ templates:
         - Temperatura de um local
         - Pressão
         - Nascer e pôr do sol
-        - Velocidade do vento
+        - Velocidade e direção do vento
         - Umidade
-        - Chance de chuva
+        - Nebulosidade
         - Atividades mais propensas ao ar livre
 
     utter_compliments:
@@ -144,9 +159,9 @@ templates:
           - Temperatura de um local
           - Pressão
           - Nascer e pôr do sol
-          - Velocidade do vento
+          - Velocidade e direção do vento
           - Umidade
-          - Chance de chuva
+          - Nebulosidade
           - Atividades mais propensas ao ar livre
 
     utter_elaborate:
@@ -175,15 +190,44 @@ templates:
           - Temperatura de um local
           - Pressão
           - Nascer e pôr do sol
-          - Velocidade do vento
+          - Velocidade e direção do vento
           - Umidade
-          - Chance de chuva
+          - Nebulosidade
           - Atividades mais propensas ao ar livre                   
 
     utter_gaia_error:
     - text: |
           Desculpa o engano, vocês humanos são muito confusos. Você pode especificar o que quer falar?                  
 
+    
+    utter_temperature:
+    - text: |
+        Neste local, minha temperatura atual é de [temperature]ºC.
+        Minha temperatura mínima neste dia é de [temperature_min]ºC e máxima de [temperature_max]ºC.
+      
+    utter_pressure:
+    - text:  |
+        Neste local, minha pressão é de [pressure]N/m².
+
+    utter_humidity:
+    - text: |
+        Neste local, minha umidade é de [umidade]%.
+
+    utter_weather:
+    - text: |
+        Neste local, minhas nuvens se encontram [weather].
+
+    utter_wind:
+    - text: |
+        Neste local, meus ventos sopram para o [wind_degrees] com velocidade de [wind_speed]m/s.
+
+    utter_sea_level:
+    - text: |
+        Neste local, meu nível do mar é de [sea_level]m.
+
+    utter_sunrise_sunset:
+    - text: |
+        Neste local, o sol me ilumina de [sunrise] às [sunset]. 
 actions:
   - utter_default
   - utter_greet
@@ -203,6 +247,14 @@ actions:
   - utter_gaia_error
   - utter_who_are_u
   - utter_anything_else
+  - utter_temperature
+  - utter_pressure
+  - utter_humidity
+  - utter_sea_level
+  - utter_weather
+  - utter_wind
+  - utter_sunrise_sunset
+  - utter_how_do_u_know
   - action_test
 
 

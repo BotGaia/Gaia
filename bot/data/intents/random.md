@@ -10,3 +10,12 @@
 - de onde você veio
 - como você surgiu?
 - como vc surgiu
+
+## intent:how_do_u_know
+- Como você consegue essas informações? 
+- como você tem essas informações
+- como vc acessa essas informações?
+- onde você consegue essas informações
+- como você sabe disso?
+- onde você vê isso?
+ 
