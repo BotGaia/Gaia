@@ -19,7 +19,11 @@ Finalizado o treino, execute este comando para executar o bot em seu console:
 
 ```$ sudo docker-compose run --rm bot make run-console```
 
-Para rodar no Telegram, utilize:
+Para rodar no Telegram, é necessário utilizar o ngrok para expor determinada porta para ser utilizado pelo Telegram. Ao baixar, é só executar utilizando o seguinte comando:
+
+```$ ./ngrok http 5001```
+
+Para executar o serviço do bot para o Telegram, utilize o seguinte comando:
 
 ```$ sudo docker-compose up telegram_bot```
 

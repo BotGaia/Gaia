@@ -1,3 +1,6 @@
+## intent: start
+- /start
+
 ## intent:out_of_scope
 - Você fala sobre o meio ambiente?
 - Qual a origem do mundo?
@@ -5,25 +8,11 @@
 - Vc gosta de carnaval?
 - batatinha quando nasce
 - me conta uma piada
-
-## intent: hurricane
-- E o [furacão](hurricane)?
-- [Furacão](hurricane)
-- Onde tem [furacão](hurricane)?
-- fala do [furacão](hurricane)
-- tem [furacão](hurricane)?
-
-## intent:inform
-- estou em [brasilia](locale)
-- como está em [olinda](locale)
-- me diga o clima em [unaí](locale)
-- qual o clima em [aracajú](locale)
-- me diz o tempo em [goiânia](locale)
-- qual o tempo em [manaus](locale)
-- to em [balneário camboriú](locale)
-- como está em [brasilia](locale)
-- como está [anápolis](locale)
-- me diz o clima em [Salvador](locale)
+- qual seu signo?
+- me conta uma historia
+- quer ouvir uma piada?
+- me fala o cardápio de hoje
+- o que voce gosta de comer?
 
 ## intent:goodbye
 - Tchau obrigada
@@ -107,8 +96,10 @@
 - amei
 - voce e plena
 - voce e deusa
+- você é incrível
+- vc e sensacional
 
-## intent:error
+## intent:user_error
 - nao era isso, me enganei
 - não quero falar sobre isso
 - nunca
@@ -120,9 +111,15 @@
 - duvida
 - ainda não sei
 - nenhum
+
+
+## intent:gaia_error
 - já falou isso
 - vc já falou isso
 - tu falou isso
+- você ja disse isso
+- isso voce já disse
+- disso voce ja tinha me falado
 
 ## intent:help
 - não sei onde a minha pergunta se encaixa
@@ -144,6 +141,7 @@
 - como assim
 - e como funciona
 - nao tenho certeza
+- o que mais pode fazer?
 
 ## intent:change_subject
 - quero falar sobre outra coisa
@@ -152,7 +150,6 @@
 - vamos falar de outra coisa
 - nao gosto desse assunto
 - vamos trocar de assunto
-
 
 ## intent:how_are_u
 - Tudo bem
@@ -167,27 +164,18 @@
 - como vai
 - beleza
 
-## intent:elaborate
-- Me diga o clima
-- Qual o clima?
-- Clima
-- me fala o tempo
-- me fale o clime
-- qual o tempo?
-- Clima agora
-- qual o clima agora?
-- qual o tempo agora?
-
-## intent: locale
-- [brasilia](locale)
-- [recife](locale)
-- [salvador](locale)
-- [Paris](locale)
-- [Berlim](locale)
-- [Goiania](locale)
-- [Fortaleza](locale)
-- [vancouver](locale)
-- [Goiás](locale)
-
-## intent: start
-- /start
+## intent: anything_else
+ - entendi
+ - ok
+ - beleza
+ - bacana
+ - bom demais
+ - legal 
+ - opa, bom de mais
+ - belezura
+ - tranquilo
+ - massa
+ - okay
+ - feshow
+ - fechou
+ - top
