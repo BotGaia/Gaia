@@ -7,13 +7,20 @@ train-core:
 train: train-nlu train-core
 
 run-console:
-	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug \
+    --endpoints endpoints.yml
+
+run-telegram:
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug \
+    --endpoints endpoints.yml --port 5001 --credentials credentials.yml
 
 run-api:
-	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --endpoints endpoints.yml --debug --enable_api 
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current \
+    --endpoints endpoints.yml --debug --enable_api 
 
 train-online:
-	python3 -m rasa_core.train -d domain.yml -s data/stories -o models/dialogue --epochs 15 --online --nlu models/nlu/current/
+	python3 -m rasa_core.train -d domain.yml -s data/stories \
+    -o models/dialogue --epochs 15 --online --nlu models/nlu/current/
 
 evaluate:
 	python3 -m rasa_core.evaluate -d models/dialogue -s data/core/
