@@ -2,61 +2,30 @@ version: '2'
 
 services:
   bot:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
-    environment:
-      - MAX_TYPING_TIME=8
-      - MIN_TYPING_TIME=1
-      - WORDS_PER_SECOND_TYPING=10
-      - ENVIRONMENT_NAME=localhost
-      - BOT_VERSION=last-commit-hash
-    ports:
-      - 5005:5005
-      - 5002:5002
-    depends_on:
-      - actions
-    volumes:
-      - ./bot:/bot
-
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
-    command: "make run-actions"
-
-  # ============================ Telegram Bot =================================
-  telegram_bot:
       build:
           context: .
-          dockerfile: ./docker/bot.Telegram.Dockerfile
+          dockerfile: ./docker/bot.Dockerfile
       stdin_open: true
       tty: true
       environment:
-        - MAX_TYPING_TIME=8
-        - MIN_TYPING_TIME=1
-        - WORDS_PER_SECOND_TYPING=10
-        - TRAINING_EPOCHS=15
-        - TELEGRAM_ACCESS_TOKEN=${TELEGRAM_ACCESS_TOKEN}
-        - VERIFY=${VERIFY}
-        - WEBHOOK_URL=${WEBHOOK_URL}
-
-        # Should be set to 'production' or 'beta' or 'dev'
-        - ENVIRONMENT_NAME=localhost
-        # Last commit hash using this command: git rev-parse HEAD
-        - BOT_VERSION=0.1.0-alpha
-
+        - TELEGRAM_TOKEN=token
+        - TELEGRAM_BOT_USERNAME=botname
+        - TELEGRAM_WEBHOOK=your_server_url/webhooks/telegram/webhook
       ports:
         - 5001:5001
       depends_on:
         - actions
       volumes:
         - ./bot:/bot
+      command: sh -c "make train && make run-telegram"
 
-
+  actions:
+      build:
+        context: .
+        dockerfile: ./docker/actions.Dockerfile
+      ports:
+        - 5055:5055
+      volumes:
+        - ./bot/actions:/bot/actions
+        - ./bot/Makefile:/bot/Makefile
+      command: "make run-actions"
