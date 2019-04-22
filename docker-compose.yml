@@ -4,27 +4,28 @@ services:
   bot:
       build:
           context: .
-          dockerfile: ./docker/bot.Telegram.Dockerfile
+          dockerfile: ./docker/bot.Dockerfile
       stdin_open: true
       tty: true
       environment:
-        - TELEGRAM_ACCESS_TOKEN=${TELEGRAM_ACCESS_TOKEN}
-        - VERIFY= Gaiabot
-        - WEBHOOK_URL=${WEBHOOK_URL}
+        - TELEGRAM_TOKEN=token
+        - TELEGRAM_BOT_USERNAME=botname
+        - TELEGRAM_WEBHOOK=your_server_url/webhooks/telegram/webhook
       ports:
         - 5001:5001
       depends_on:
         - actions
       volumes:
         - ./bot:/bot
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
-    command: "make run-actions"
+      command: sh -c "make train && make run-telegram"
 
+  actions:
+      build:
+        context: .
+        dockerfile: ./docker/actions.Dockerfile
+      ports:
+        - 5055:5055
+      volumes:
+        - ./bot/actions:/bot/actions
+        - ./bot/Makefile:/bot/Makefile
+      command: "make run-actions"
