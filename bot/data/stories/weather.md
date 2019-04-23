@@ -131,21 +131,21 @@
 ## Locale
 * locale
     - utter_inform
-    - action_test
+    - action_weather
 
 ## Path 8
 * elaborate
     - utter_elaborate
 * locale
     - utter_inform
-    - action_test
+    - action_weather
 
 ## Path 3
 * greet
     - utter_greet
 * inform
     - utter_inform
-    - action_test
+    - action_weather
 
 ## Elaborate
 * elaborate
@@ -160,7 +160,7 @@
 ## Path 5
 * inform
     - utter_inform
-    - action_test
+    - action_weather
 * hurricane
     - utter_hurricane
 * goodbye
@@ -173,6 +173,6 @@
     - utter_how_are_u
 * inform
     - utter_inform
-    - action_test
+    - action_weather
 * goodbye
     - utter_goodbye

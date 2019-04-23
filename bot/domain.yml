@@ -12,7 +12,6 @@ intents:
   - how_are_u
   - compliments
   - inform
-  - action_search_locale
   - hurricane
   - elaborate
   - locale
@@ -27,7 +26,7 @@ intents:
   - sunrise_sunset
   - sea_level
   - how_do_u_know
-  - action_test
+  - action_weather
 
 
 entities:
@@ -261,7 +260,6 @@ actions:
   - utter_wind
   - utter_sunrise_sunset
   - utter_how_do_u_know
-  - action_search_locale
-  - action_test
+  - action_weather
 
 

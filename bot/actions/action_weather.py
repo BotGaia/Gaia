@@ -5,9 +5,9 @@ import random
 import json
 
 
-class Action_test(Action):
+class Action_weather(Action):
     def name(self):
-        return "action_test"
+        return "action_weather"
 
     def run(self, dispatcher, tracker, domain):
         locale = tracker.get_slot('locale')

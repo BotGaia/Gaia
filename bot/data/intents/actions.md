@@ -1,4 +1,4 @@
-## intent:action_search_locale
+## intent:action_weather
 - test custom action
 - custom action
 - actions
@@ -6,8 +6,3 @@
 - action
 - test action
 
-##intent:action_test
-- debug
-- debugging
-- pls
-- oh no

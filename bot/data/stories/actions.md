@@ -1,19 +1,10 @@
-## greet action_search_locale
+## greet action_weather
 * greet
     - utter_greet
-* action_search_locale
-    - action_search_locale
+* action_weather
+    - action_weather
 
-## action_search_locale
-* action_search_locale
-    - action_search_locale
+## action_weather
+* action_weather
+    - action_weather
 
-## greet action_test
-* greet
-    - utter_greet
-* action_test
-    - action_test
-
-## action_test
-* action_test
-    - action_test
