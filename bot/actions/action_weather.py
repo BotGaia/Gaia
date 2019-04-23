@@ -15,7 +15,8 @@ class Action_weather(Action):
         response = requests.get(
             'http://68.183.43.29:30000/request', params=payload)
         answer = response.json()
+        data ='Neste local, minha temperatura é '+answer["temperature"]'°C'
         try:
-            dispatcher.utter_message(answer["sky"])
+            dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)

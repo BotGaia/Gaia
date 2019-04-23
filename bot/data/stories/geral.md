@@ -7,7 +7,6 @@
     - utter_how_are_u
 * inform
     -utter_inform
-    - action_weather
 
 ## How Are U Story 1
 * greet
@@ -16,7 +15,6 @@
     - utter_how_are_u
 * inform
     -utter_inform
-    - action_weather
 
 ## Help
 * help
@@ -25,7 +23,6 @@
 ## Inform
 * inform
     - utter_inform
-    - action_weather
 
 ## Fallback
 * out_of_scope

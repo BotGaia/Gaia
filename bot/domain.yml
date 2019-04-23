@@ -203,12 +203,6 @@ templates:
     utter_gaia_error:
     - text: |
           Desculpa o engano, vocês humanos são muito confusos. Você pode especificar o que quer falar?                  
-
-    
-    utter_temperature:
-    - text: |
-        Neste local, minha temperatura atual é de [temperature]ºC.
-        Minha temperatura mínima neste dia é de [temperature_min]ºC e máxima de [temperature_max]ºC.
       
     utter_pressure:
     - text:  |
@@ -252,7 +246,6 @@ actions:
   - utter_gaia_error
   - utter_who_are_u
   - utter_anything_else
-  - utter_temperature
   - utter_pressure
   - utter_humidity
   - utter_sea_level

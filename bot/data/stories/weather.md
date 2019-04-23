@@ -4,17 +4,17 @@
 * how_are_u
     - utter_how_are_u
 * temperature
-    - utter_temperature
+    - action_weather
 
 ## Path Temperature 1
 * temperature
-    - utter_temperature
+    - action_weather
 
 ## Path Temperature 2
 * greet 
     - utter_greet
 * temperature
-    - utter_temperature
+    - action_weather
 
 ## Path Pressure
 * greet 
@@ -131,21 +131,18 @@
 ## Locale
 * locale
     - utter_inform
-    - action_weather
 
 ## Path 8
 * elaborate
     - utter_elaborate
 * locale
     - utter_inform
-    - action_weather
 
 ## Path 3
 * greet
     - utter_greet
 * inform
     - utter_inform
-    - action_weather
 
 ## Elaborate
 * elaborate
@@ -160,7 +157,6 @@
 ## Path 5
 * inform
     - utter_inform
-    - action_weather
 * hurricane
     - utter_hurricane
 * goodbye
@@ -173,6 +169,5 @@
     - utter_how_are_u
 * inform
     - utter_inform
-    - action_weather
 * goodbye
     - utter_goodbye
