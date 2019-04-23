@@ -15,8 +15,12 @@ class Action_weather(Action):
         response = requests.get(
             'http://68.183.43.29:30000/request', params=payload)
         answer = response.json()
-        data ='Neste local, minha temperatura é '+answer["temperature"]'°C'
+        data_temp = 'Neste local, minha temperatura é '+answer["temperature"]+'°C'
+        data_min = 'Mínima neste dia é de '+answer["temperatureMin"]+'ºC.'
+        data_max = 'Máxima de '+answer["temperatureMax"]+'ºC.'
         try:
-            dispatcher.utter_message(data)
+            dispatcher.utter_message(data_temp)
+            dispatcher.utter_message(data_min)
+            dispatcher.utter_message(data_max)
         except ValueError:
             dispatcher.utter_message(ValueError)
