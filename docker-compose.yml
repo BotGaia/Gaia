@@ -8,9 +8,9 @@ services:
       stdin_open: true
       tty: true
       environment:
-        - TELEGRAM_TOKEN=token
-        - TELEGRAM_BOT_USERNAME=botname
-        - TELEGRAM_WEBHOOK=your_server_url/webhooks/telegram/webhook
+        - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+        - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
+        - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
       ports:
         - 5001:5001
       depends_on:
