@@ -7,6 +7,7 @@
     - utter_how_are_u
 * inform
     -utter_inform
+    - action_test
 
 ## How Are U Story 1
 * greet
@@ -15,6 +16,7 @@
     - utter_how_are_u
 * inform
     -utter_inform
+    - action_test
 
 ## Help
 * help
@@ -23,6 +25,7 @@
 ## Inform
 * inform
     - utter_inform
+    - action_test
 
 ## Fallback
 * out_of_scope

@@ -7,7 +7,7 @@ ADD ./docker/actions.requirements.txt /tmp/
 RUN pip install --upgrade pip && \
     pip install -r /tmp/actions.requirements.txt
 
-ADD ./bot/actions/actions.py /bot/actions/actions.py
+ADD ./bot/actions/weatherAction.py /bot/actions/weatherAction.py
 ADD ./bot/Makefile /bot/Makefile
 
 WORKDIR bot/

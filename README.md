@@ -8,16 +8,9 @@ Saudações! Sou Gaia, a Mãe-Terra e estou aqui para compartilhar informações
 
 ## Como usar
 Com o Docker compose instalado, acesse a pasta raiz do projeto e execute o seguinte comando em seu terminal:
+Este comando treinará o bot e irá iniciá-lo em seu terminal.
 
 ```$ sudo docker-compose up bot```
-
-Após isso, execute o comando para treinar o bot:
-
-```$ sudo docker-compose run --rm bot make train```
-
-Finalizado o treino, execute este comando para executar o bot em seu console:
-
-```$ sudo docker-compose run --rm bot make run-console```
 
 Para rodar no Telegram, é necessário utilizar o ngrok para expor determinada porta para ser utilizado pelo Telegram. Ao baixar, é só executar utilizando o seguinte comando:
 
