@@ -11,13 +11,10 @@ class Action_weather(Action):
 
     def run(self, dispatcher, tracker, domain):
         locale = tracker.get_slot('locale')
-        payload = {'place': 'locale'}
+        payload = {'place': locale}
         response = requests.get(
             'http://68.183.43.29:30000/request', params=payload)
         answer = response.json()
-        print('/n/n/n/n/n')
-        print(answer)
-        print('/n/n/n/n/n')
         try:
             dispatcher.utter_message(answer["sky"])
         except ValueError:
