@@ -27,6 +27,7 @@ intents:
   - sea_level
   - how_do_u_know
   - action_weather
+  - action_temperature
 
 
 entities:
@@ -82,13 +83,6 @@ templates:
         - Velocidade e direção do vento
         - Umidade
         - Atividades mais propensas ao ar livre
-
-    utter_inform:
-    - text: |
-        Neste local, minha temperatura é [temperatura] ºC,  
-        com umidade de [umidade]% e pressão de [pressão]N/m², 
-        meus ventos sopram para [direção] com velocidade de [velocidade]m/s 
-        e apresento [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
         
     utter_out_of_scope:
     - text: |
@@ -239,7 +233,6 @@ actions:
   - utter_good_afternoon
   - utter_good_night
   - utter_change_subject
-  - utter_inform
   - utter_hurricane
   - utter_elaborate
   - utter_user_error
@@ -254,5 +247,6 @@ actions:
   - utter_sunrise_sunset
   - utter_how_do_u_know
   - action_weather
+  - action_temperature
 
 
