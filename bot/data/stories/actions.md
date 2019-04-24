@@ -1,10 +1,10 @@
-## greet action_weather
+## greet action_temperature
 * greet
     - utter_greet
-* action_weather
-    - action_weather
+* action_temperature
+    - action_temperature
 
-## action_weather
-* action_weather
-    - action_weather
+## action_temperature
+* action_temperature
+    - action_temperature
 
