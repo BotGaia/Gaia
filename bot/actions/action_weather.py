@@ -16,17 +16,25 @@ class Action_weather(Action):
         response = requests.get(
             'http://68.183.43.29:30000/request', params=payload)
         answer = response.json()
-        data ='Neste local, meu estado é '+answer["sky"]
         data_loc = locale.capitalize()+':'
         data_temp = 'Neste local, minha temperatura é '+answer["temperature"]+'°C,'
         data_humidity = 'com umidade de '+str(answer["humidity"])+'%, '
         data_pressure = 'e pressão '+answer["pressure"]+' atm. '
+        data_direction = 'Meus ventos sopram para '+answer["windyDegrees"]+','
+        data_speed = ' com velocidade de '+str(answer["windySpeed"])+' m/s,'
+        data_sky =' e apresento '+answer["sky"]+'.'
+        data_sunrise = 'O sol me ilumina de '+answer["sunrise"] 
+        data_sunset = 'às '+answer["sunset"]+'.'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data_temp)
             dispatcher.utter_message(data_humidity)
             dispatcher.utter_message(data_pressure)
-            dispatcher.utter_message(data)
+            dispatcher.utter_message(data_direction)
+            dispatcher.utter_message(data_speed)
+            dispatcher.utter_message(data_sky)
+            dispatcher.utter_message(data_sunrise)
+            dispatcher.utter_message(data_sunset)
         except ValueError:
             dispatcher.utter_message(ValueError)
 
