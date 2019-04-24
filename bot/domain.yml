@@ -28,6 +28,7 @@ intents:
   - how_do_u_know
   - action_temperature
   - action_weather
+  - action_temperature
 
 
 entities:
@@ -248,5 +249,6 @@ actions:
   - utter_how_do_u_know
   - action_temperature
   - action_weather
+  - action_temperature
 
 
