@@ -17,7 +17,15 @@ class Action_weather(Action):
             'http://68.183.43.29:30000/request', params=payload)
         answer = response.json()
         data ='Neste local, meu estado é '+answer["sky"]
+        data_loc = locale.capitalize()+':'
+        data_temp = 'Neste local, minha temperatura é '+answer["temperature"]+'°C,'
+        data_humidity = 'com umidade de '+str(answer["humidity"])+'%, '
+        data_pressure = 'e pressão '+answer["pressure"]+' atm. '
         try:
+            dispatcher.utter_message(data_loc)
+            dispatcher.utter_message(data_temp)
+            dispatcher.utter_message(data_humidity)
+            dispatcher.utter_message(data_pressure)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
