@@ -6,8 +6,8 @@ import json
 
 
 class Action_weather(Action):
-    def name(self)
-        return "action_temperature"
+    def name(self):
+        return "action_weather"
 
     def run(self, dispatcher, tracker, domain):
 
@@ -34,8 +34,6 @@ class Action_temperature(Action):
         answer = response.json()
         data ='Neste local, minha temperatura é '+answer["temperature"]+'°C'
         try:
-            dispatcher.utter_message(data_temp)
-            dispatcher.utter_message(data_min)
-            dispatcher.utter_message(data_max)
+            dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
