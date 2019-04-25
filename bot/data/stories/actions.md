@@ -1,9 +1,10 @@
-## greet action_test
+## greet action_temperature
 * greet
     - utter_greet
-* action_test
-    - action_test
+* action_temperature
+    - action_temperature
 
-## action_test
-* action_test
-    - action_test
+## action_temperature
+* action_temperature
+    - action_temperature
+
