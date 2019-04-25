@@ -23,6 +23,7 @@ intents:
   - humidity
   - weather
   - wind
+  - sports
   - sunrise_sunset
   - how_do_u_know
   - action_temperature
@@ -224,6 +225,7 @@ actions:
   - action_sky
   - action_wind
   - action_sunrise_sunset
+  - action_sports
 
 
 
