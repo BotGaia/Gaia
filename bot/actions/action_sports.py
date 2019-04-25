@@ -4,7 +4,6 @@ import requests
 import random
 import json
 
-
 class Action_sports(Action):
     def name(self):
         return "action_sports"
@@ -16,8 +15,10 @@ class Action_sports(Action):
             'https://my-json-server.typicode.com/sofiapatrocinio/sports/sports')
         content = response.content.decode()
         answer = json.loads(content)
-        data_sport = 'Para as condições atuais, recomendo: '+answer["favorable"][0]["name"]+'.'
         try:
+            data_sport = 'Para as condições atuais, recomendo: '
+            for favorable in answer["favorable"]:
+                data_sport += '\n' + favorable["name"]
             dispatcher.utter_message(data_sport)
         except ValueError:
             dispatcher.utter_message(ValueError)
