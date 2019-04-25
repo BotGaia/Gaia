@@ -16,6 +16,9 @@ Para rodar no Telegram, é necessário utilizar o ngrok para expor determinada p
 
 ```$ ngrok http 5001```
 
+Utilize a rota fornecida pelo ngrok, de preferência https. Cole sua rota do ngrok no arquivo .env, no espaço:
+TELEGRAM_WEBHOOK={https://SEUNGROK/webhooks/telegram/webhook}
+
 Para executar o serviço do bot em seu terminal, utilize o seguinte comando para treiná-lo:
 
 ```$ sudo docker-compose run --rm bot make train```

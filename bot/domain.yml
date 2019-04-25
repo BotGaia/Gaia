@@ -24,7 +24,6 @@ intents:
   - weather
   - wind
   - sunrise_sunset
-  - sea_level
   - how_do_u_know
   - action_temperature
   - action_weather
