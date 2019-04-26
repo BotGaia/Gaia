@@ -42,7 +42,7 @@
 - Como esta a nebulosidade na [praça dos três poderes](locale)?
 
 ## intent: wind
-- ta ventando muito na[praia de tamandaré](locale)?
+- ta ventando muito na [praia de tamandaré](locale)?
 - como estão os ventos no [deck sul](locale)?
 - Na [praça do relógio](locale) está ventando muito?
 - venta muito em [brasilia](locale) agora?
@@ -58,7 +58,7 @@
 - quando escurece nas [ilhas virgens](locale)?
 - quando o sol nasce no [canyon](locale)?
 - quando o sol se põe no [parque de aguas claras](locale)?
-- o sol nasce que horas em[Salvador](locale)?
+- o sol nasce que horas em [Salvador](locale)?
 
 ## intent: hurricane
 - E o [furacão](hurricane)?

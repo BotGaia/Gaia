@@ -1,4 +1,14 @@
 ## intent: sports
-- Esporte?
-- Me fala o esporte?
-- Esportes
+- Qual o melhor esporte pra fazer em [Recife](locale)?
+- Me fala um esporte pra [Brasília](locale)?
+- Que esporte posso fazer no [Distrito Federal](locale)?
+- Qual atividade posso fazer no [Rio de Janeiro](locale)?
+- Atividade mais propensa para fazer em [Santa Catarina](locale)?
+- Me fala uma atividade pra fazer em [Goiânia](lcoale)?
+- Qual é a atividade mais propensa pra fazer na [Bahia](locale)?
+- Me diz um esporte ou atividade pra [Salvador](locale)?
+- Uma atividade pra [Tocantins](locale)?
+- O que posso fazer em [brasilia](locale)?
+- O que dá pra fazer em [Pernambuco](locale)?
+- Um esporte pro [Acre](locale)?
+- Me diz um esporte para fazer no [pará](locale)?
