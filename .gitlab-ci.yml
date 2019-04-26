@@ -1,8 +1,14 @@
+image: docker:latest
+
+variables:
+  LATEST_VER_HML: caleberios/gaia:homolog
+  LATEST_VER_PROD: caleberios/gaia:latest
+
 stages:
   - build
+  - deploy
 
 build bot:
-  image: docker:latest
   stage: build
   services:
     - docker:dind
@@ -10,3 +16,21 @@ build bot:
     - apk add --no-cache py-pip python-dev libffi-dev openssl-dev gcc libc-dev make
     - pip install docker-compose
     - docker-compose up bot
+
+deployHomolog:
+  stage: deploy
+  only:
+    - dev
+  script:
+    - docker build -t $LATEST_VER_HML .
+    - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
+    - docker push $LATEST_VER_HML && docker image rm $LATEST_VER_HML
+
+deployProd:
+  stage: deploy
+  only:
+    - master
+  script:
+    - docker build -t $LATEST_VER_PROD .
+    - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
+    - docker push $LATEST_VER_PROD && docker image rm $LATEST_VER_PROD
