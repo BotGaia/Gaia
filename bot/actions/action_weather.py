@@ -4,15 +4,27 @@ import requests
 import random
 import json
 
+def localRequest(locale, choice):
+	payload = {'address': locale}
+
+	response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
+	answer = response.content.decode()
+	answer_json = json.loads(answer)
+
+	return answer_json[int(choice) - 1]['name']
 
 class Action_weather(Action):
     def name(self):
         return "action_weather"
 
     def run(self, dispatcher, tracker, domain):
-
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        location = localRequest(locale, choice)
+        dispatcher.utter_message(location)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -43,8 +55,12 @@ class Action_temperature(Action):
         return "action_temperature"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+		# location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -63,8 +79,12 @@ class Action_pressure(Action):
         return "action_pressure"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        # location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -79,8 +99,12 @@ class Action_humidity(Action):
         return "action_humidity"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        # location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -95,8 +119,12 @@ class Action_sky(Action):
         return "action_sky"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        # location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -111,8 +139,12 @@ class Action_wind(Action):
         return "action_wind"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        # location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
@@ -127,8 +159,12 @@ class Action_sunrise_sunset(Action):
         return "action_sunrise_sunset"
 
     def run(self, dispatcher, tracker, domain):
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
+		
+        # location = localRequest(locale, choice)
         payload = {'place': locale}
+		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()

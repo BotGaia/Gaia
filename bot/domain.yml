@@ -26,17 +26,21 @@ intents:
   - sunrise_sunset
   - how_do_u_know
   - action_temperature
-
+  - choose
+  
 entities:
   - locale
   - hurricane
   - type
-  
+  - choice
+
 slots:
   locale:
     type: unfeaturized
   type:
     type: unfeaturized  
+  choice:
+    type: unfeaturized
 
 templates:
   utter_anything_else:

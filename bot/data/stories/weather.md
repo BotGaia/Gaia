@@ -6,12 +6,12 @@
     - utter_how_are_u
 * temperature
     - action_local
+* choose
     - action_temperature
 
 ## Path Temperature 1
 * temperature
     - action_local
-    - action_temperature
 
 ## Path Temperature 2
 * greet 
@@ -19,6 +19,7 @@
     - utter_greet1
 * temperature
     - action_local
+* choose
     - action_temperature
 
 ## Path Pressure
@@ -29,11 +30,11 @@
     - utter_how_are_u
 * pressure
     - action_local
-    - action_pressure
 
 ## Path Pressure 1
 * pressure
     - action_local
+* choose
     - action_pressure
 
 ## Path Pressure 3
@@ -42,11 +43,12 @@
     - utter_greet1
 * pressure
     - action_local
-    - action_pressure
+
 
 ## Path Humidity
 * humidity
     - action_local
+* choose
     - action_humidity
 
 ## Path Humidity 1
@@ -55,7 +57,6 @@
     - utter_greet1
 * humidity
     - action_local
-    - action_humidity
 
 ## Path Humidity 2
 * greet 
@@ -65,12 +66,12 @@
     - utter_how_are_u
 * humidity
     - action_local
+* choose
     - action_humidity
 
 ## Path sky
 * sky
     - action_local
-    - action_sky
 
 ## Path sky 1
 * greet 
@@ -80,6 +81,7 @@
     - utter_how_are_u
 * sky
     - action_local
+* choose
     - action_sky
 
 ## Path sky 2
@@ -89,7 +91,7 @@
 * weather
 * sky
     - action_local
-    - action_sky
+
 
 ## Path Wind
 * greet 
@@ -97,12 +99,12 @@
     - utter_greet1
 * wind
     - action_local
+* choose
     - action_wind
 
 ## Path Wind 1
 * wind
     - action_local
-    - action_wind
 
 ## Path Wind 2
 * greet 
@@ -112,12 +114,12 @@
     - utter_how_are_u
 * wind
     - action_local
+* choose
     - action_wind
 
 ## Path Sunrise Sunset
 * sunrise_sunset
     - action_local
-    - action_sunrise_sunset
 
 ## Path Sunrise Sunset 1
 * greet 
@@ -125,6 +127,7 @@
     - utter_greet1
 * sunrise_sunset
     - action_local
+* choose
     - action_sunrise_sunset
 
 ## Path Sunrise Sunset 2
@@ -136,16 +139,17 @@
     - utter_how_are_u
 * sunrise_sunset
     - action_local
-    - action_sunrise_sunset
 
 ## Hurricane
 * hurricane
     - action_local
+* choose
     - utter_hurricane
 
 ## Locale
 * locale
     - action_local
+    
 ## Path 8
 * elaborate
     - utter_elaborate
@@ -189,3 +193,24 @@
     - action_local
 * goodbye
     - utter_goodbye
+
+## Path Weather Choose
+* greet
+    - utter_greet
+* inform
+    - action_local
+* choose
+    - action_weather
+
+## Path Weather Choose1
+* greet
+    - utter_greet
+* how_are_u
+    - utter_how_are_u
+* inform
+    - action_local
+* choose
+    - action_weather
+
+
+
