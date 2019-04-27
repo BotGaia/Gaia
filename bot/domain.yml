@@ -1,65 +1,36 @@
-%YAML 1.1
----
-actions:
-- utter_out_of_scope
-- utter_elaborate
-- utter_good_afternoon
-- action_humidity
-- utter_greet1
-- action_wind
-- utter_hurricane
-- action_sky
-- utter_greet2
-- action_sunrise_sunset
-- action_weather
-- utter_how_are_u
-- utter_greet
-- utter_default
-- utter_good_morning
-- utter_user_error
-- utter_how_do_u_know
-- utter_compliments
-- utter_goodbye
-- utter_help
-- action_pressure
-- utter_anything_else
-- action_temperature
-- utter_who_are_u
-- utter_good_night
-- utter_change_subject
-- utter_gaia_error
+intents:
+  - out_of_scope
+  - goodbye
+  - greet
+  - good_morning
+  - good_afternoon
+  - good_night
+  - user_error
+  - gaia_error
+  - help
+  - change_subject
+  - how_are_u
+  - compliments
+  - inform
+  - hurricane
+  - elaborate
+  - locale
+  - start
+  - anything_else
+  - who_are_u
+  - temperature
+  - pressure
+  - humidity
+  - sky
+  - wind
+  - sunrise_sunset
+  - how_do_u_know
+  - action_temperature
+
 entities:
 - locale
 - hurricane
-intents:
-- inform
-- greet
-- wind
-- locale
-- humidity
-- goodbye
-- temperature
-- sunrise_sunset
-- out_of_scope
-- good_morning
-- good_afternoon
-- good_night
-- user_error
-- gaia_error
-- help
-- change_subject
-- how_are_u
-- compliments
-- hurricane
-- elaborate
-- start
-- anything_else
-- who_are_u
-- pressure
-- weather
-- how_do_u_know
-- action_temperature
-- action_weather
+
 slots:
   locale:
     type: unfeaturized
@@ -140,3 +111,36 @@ templates:
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
+    
+actions:
+  - utter_default
+  - utter_greet
+  - utter_greet1
+  - utter_greet2
+  - utter_goodbye
+  - utter_how_are_u
+  - utter_help
+  - utter_compliments
+  - utter_out_of_scope
+  - utter_good_morning
+  - utter_good_afternoon
+  - utter_good_night
+  - utter_change_subject
+  - utter_hurricane
+  - utter_elaborate
+  - utter_user_error
+  - utter_gaia_error
+  - utter_who_are_u
+  - utter_anything_else
+  - utter_how_do_u_know
+  - action_temperature
+  - action_weather
+  - action_pressure
+  - action_humidity
+  - action_sky
+  - action_wind
+  - action_sunrise_sunset
+  - action_local
+
+
+

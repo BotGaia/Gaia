@@ -14,7 +14,7 @@ class Action_weather(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data_loc = locale.capitalize()+':'
         data_temp = 'Neste local, minha temperatura é '+answer["temperature"]+'°C,'
@@ -46,7 +46,7 @@ class Action_temperature(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data ='Neste local, minha temperatura é '+answer["temperature"]+'°C'
         data_max = 'Minha temperatura mínima no dia de hoje é de '+answer["temperatureMin"]+'°C'
@@ -66,7 +66,7 @@ class Action_pressure(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data ='Neste local, minha pressão é de '+answer["pressure"]+' atm'
         try:
@@ -82,7 +82,7 @@ class Action_humidity(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data ='Neste local, minha umidade é de '+str(answer["humidity"])+'%'
         try:
@@ -98,7 +98,7 @@ class Action_sky(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data ='Neste local, apresento '+answer["sky"]
         try:
@@ -114,7 +114,7 @@ class Action_wind(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data ='Neste local, meus ventos sopram para o '+answer["windyDegrees"]+' com velocidade de '+str(answer["windySpeed"])+'m/s.'
         try:
@@ -130,7 +130,7 @@ class Action_sunrise_sunset(Action):
         locale = tracker.get_slot('locale')
         payload = {'place': locale}
         response = requests.get(
-            'http://68.183.43.29:30000/request', params=payload)
+            'http://68.183.43.29:30000/climate', params=payload)
         answer = response.json()
         data = 'Neste local, o sol me ilumina de '+answer["sunrise"]+' às '+answer["sunset"]+'.'
         try:
