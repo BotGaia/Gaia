@@ -47,13 +47,15 @@ class Action_local(Action):
         answer_json = json.loads(answer)
         
         if(len(answer_json) != 1):
-            data_message = 'Eu possuo vários locais com esse nome, poderia informar qual destas localizações você deseja?\n\n'
+            data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
             
-            counter = 0
+            counter = 1
             
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
                 counter += 1
+                if counter == 6:
+                    break
             
         else:
             if(answer_json[0]['name'] == 'error'):
