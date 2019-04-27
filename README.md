@@ -8,25 +8,24 @@ Saudações! Sou Gaia, a Mãe-Terra e estou aqui para compartilhar informações
 
 ## Como usar
 Com o Docker compose instalado, acesse a pasta raiz do projeto e execute o seguinte comando em seu terminal:
+Este comando treinará o bot e irá iniciá-lo no telegram.
 
 ```$ sudo docker-compose up bot```
 
-Após isso, execute o comando para treinar o bot:
+Para rodar no Telegram, é necessário utilizar o ngrok para expor determinada porta para ser utilizado pelo Telegram. Ao baixar, é só executar utilizando o seguinte comando:
+
+```$ ngrok http 5001```
+
+Utilize a rota fornecida pelo ngrok, de preferência https. Cole sua rota do ngrok no arquivo .env, no espaço:
+TELEGRAM_WEBHOOK={https://SEUNGROK/webhooks/telegram/webhook}
+
+Para executar o serviço do bot em seu terminal, utilize o seguinte comando para treiná-lo:
 
 ```$ sudo docker-compose run --rm bot make train```
 
-Finalizado o treino, execute este comando para executar o bot em seu console:
+Em seguida execute:
 
 ```$ sudo docker-compose run --rm bot make run-console```
-
-Para rodar no Telegram, é necessário utilizar o ngrok para expor determinada porta para ser utilizado pelo Telegram. Ao baixar, é só executar utilizando o seguinte comando:
-
-```$ ./ngrok http 5001```
-
-Para executar o serviço do bot para o Telegram, utilize o seguinte comando:
-
-```$ sudo docker-compose up telegram_bot```
-
 
 
 

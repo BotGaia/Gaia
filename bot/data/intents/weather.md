@@ -51,20 +51,13 @@
 - Em [São Sebastião](locale) tá ventando?
 - tá ventando muito no [porto de galinhas](locale)
 
-## intent: sea_level
-- Qual o nivel do mar em [Lisboa](locale)?
-- Na [praia do flamengo](locale), qual o nivel do mar?
-- No [Canyon](locale) qual o nível do mar?
-- qual o nível do mar na [praia de copacabana](locale)?
-
-
 ## intent: sunrise_sunset
--quando o sol se põe em [minas gerais](locale)?
--quando o sol nasce em [porto de galinhas](locale)?
--quando amanhece no [cerrado](locale)?
--quando escurece nas [ilhas virgens](locale)?
--quando o sol nasce no [canyon](locale)?
--quando o sol se põe no [parque de aguas claras](locale)?
+- quando o sol se põe em [minas gerais](locale)?
+- quando o sol nasce em [porto de galinhas](locale)?
+- quando amanhece no [cerrado](locale)?
+- quando escurece nas [ilhas virgens](locale)?
+- quando o sol nasce no [canyon](locale)?
+- quando o sol se põe no [parque de aguas claras](locale)?
 - o sol nasce que horas em[Salvador](locale)?
 
 ## intent: hurricane

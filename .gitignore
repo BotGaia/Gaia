@@ -175,6 +175,7 @@ Session.vim
 tags
 # ngrok
 ngrok
-
+# cache
+/bot/actions/__pycache__/
 
 # End of https://www.gitignore.io/api/vim,linux,macos,python

@@ -12,7 +12,6 @@ intents:
   - how_are_u
   - compliments
   - inform
-  - action_test
   - hurricane
   - elaborate
   - locale
@@ -25,13 +24,19 @@ intents:
   - weather
   - wind
   - sunrise_sunset
-  - sea_level
   - how_do_u_know
+  - action_temperature
+  - action_weather
+
 
 
 entities:
   - locale
   - hurricane
+
+slots:
+  locale:
+    type: unfeaturized
 
 templates:
     utter_default:
@@ -78,13 +83,6 @@ templates:
         - Velocidade e direção do vento
         - Umidade
         - Atividades mais propensas ao ar livre
-
-    utter_inform:
-    - text: |
-        Neste local, minha temperatura é [temperatura] ºC,  
-        com umidade de [umidade]% e pressão de [pressão]N/m², 
-        meus ventos sopram para [direção] com velocidade de [velocidade]m/s 
-        e apresento [descrição]. O sol me ilumina de [nascer do sol] às [pôr do sol].
         
     utter_out_of_scope:
     - text: |
@@ -107,31 +105,28 @@ templates:
 
     utter_greet:
     - text: |
-          Olá, sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
+          Olá, sou Gaia, também conhecida como a deusa primordial, 
+          aquele que compreende todos os fenômens desta dimensão.
+
+    utter_greet1:
+    - text: |
+          Decidi compartilhar não só a metereologia sobre qualquer lugar do mundo, 
+          mas também as modalidades mais favoráveis a serem praticadas.
 
     utter_good_morning:
     - text: |
-          Bom dia! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
+          Bom dia! sou Gaia, também conhecida como a deusa primordial, 
+          aquele que compreende todos os fenômens desta dimensão.
 
     utter_good_afternoon:
     - text: |
-          Boa tarde! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
+          Boa tarde! sou Gaia, também conhecida como a deusa primordial, 
+          aquele que compreende todos os fenômens desta dimensão.
 
     utter_good_night:
     - text: |
-          Boa noite! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
+          Boa noite! sou Gaia, também conhecida como a deusa primordial, 
+          aquele que compreende todos os fenômens desta dimensão.
 
     utter_goodbye:
     - text: |
@@ -199,39 +194,11 @@ templates:
     utter_gaia_error:
     - text: |
           Desculpa o engano, vocês humanos são muito confusos. Você pode especificar o que quer falar?                  
-
-    
-    utter_temperature:
-    - text: |
-        Neste local, minha temperatura atual é de [temperature]ºC.
-        Minha temperatura mínima neste dia é de [temperature_min]ºC e máxima de [temperature_max]ºC.
-      
-    utter_pressure:
-    - text:  |
-        Neste local, minha pressão é de [pressure]N/m².
-
-    utter_humidity:
-    - text: |
-        Neste local, minha umidade é de [umidade]%.
-
-    utter_weather:
-    - text: |
-        Neste local, minhas nuvens se encontram [weather].
-
-    utter_wind:
-    - text: |
-        Neste local, meus ventos sopram para o [wind_degrees] com velocidade de [wind_speed]m/s.
-
-    utter_sea_level:
-    - text: |
-        Neste local, meu nível do mar é de [sea_level]m.
-
-    utter_sunrise_sunset:
-    - text: |
-        Neste local, o sol me ilumina de [sunrise] às [sunset]. 
+ 
 actions:
   - utter_default
   - utter_greet
+  - utter_greet1
   - utter_goodbye
   - utter_how_are_u
   - utter_help
@@ -241,21 +208,20 @@ actions:
   - utter_good_afternoon
   - utter_good_night
   - utter_change_subject
-  - utter_inform
   - utter_hurricane
   - utter_elaborate
   - utter_user_error
   - utter_gaia_error
   - utter_who_are_u
   - utter_anything_else
-  - utter_temperature
-  - utter_pressure
-  - utter_humidity
-  - utter_sea_level
-  - utter_weather
-  - utter_wind
-  - utter_sunrise_sunset
   - utter_how_do_u_know
-  - action_test
+  - action_temperature
+  - action_weather
+  - action_pressure
+  - action_humidity
+  - action_sky
+  - action_wind
+  - action_sunrise_sunset
+
 
 

@@ -12,6 +12,7 @@
 - como está o clima no [pará](locale)
 - estou no [parque da cidade](locale)
 - estou na [praia do futuro](locale)
+- como esta o clima na [bahia](locale)
 
 ## intent:elaborate
 - Me diga o clima

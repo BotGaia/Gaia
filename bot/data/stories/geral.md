@@ -6,15 +6,16 @@
 * how_are_u
     - utter_how_are_u
 * inform
-    -utter_inform
+    - action_weather
 
 ## How Are U Story 1
 * greet
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * inform
-    -utter_inform
+    - action_weather
 
 ## Help
 * help
@@ -22,7 +23,7 @@
 
 ## Inform
 * inform
-    - utter_inform
+    - action_weather
 
 ## Fallback
 * out_of_scope
@@ -43,12 +44,14 @@
 ## Path 1
 * greet
     - utter_greet
+    - utter_greet1
 * goodbye
     - utter_goodbye
 
 ## Path 2
 * greet
     - utter_greet
+    - utter_greet1
 
 ## Path 7
 * good_night
@@ -77,6 +80,7 @@
 ## start
 * start
     - utter_greet
+    - utter_greet1
 
 ## Anything Else
 * anything_else

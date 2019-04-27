@@ -1,128 +1,122 @@
 ## Path Temperature
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * temperature
-    - utter_temperature
+    - action_temperature
 
 ## Path Temperature 1
 * temperature
-    - utter_temperature
+    - action_temperature
 
 ## Path Temperature 2
 * greet 
     - utter_greet
+    - utter_greet1
 * temperature
-    - utter_temperature
+    - action_temperature
 
 ## Path Pressure
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * pressure
-    - utter_pressure
+    - action_pressure
 
 ## Path Pressure 1
 * pressure
-    - utter_pressure
+    - action_pressure
 
 ## Path Pressure 3
 * greet 
     - utter_greet
+    - utter_greet1
 * pressure
-    - utter_pressure
+    - action_pressure
 
 ## Path Humidity
 * humidity
-    - utter_humidity
+    - action_humidity
 
 ## Path Humidity 1
 * greet 
     - utter_greet
+    - utter_greet1
 * humidity
-    - utter_humidity
+    - action_humidity
 
 ## Path Humidity 2
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * humidity
-    - utter_humidity
+    - action_humidity
 
 ## Path Weather
 * weather
-    - utter_weather
+    - action_sky
 
 ## Path Weather 1
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * weather
-    - utter_weather
+    - action_sky
 
 ## Path Weather 2
 * greet 
     - utter_greet
+    - utter_greet1
 * weather
-    - utter_weather
+    - action_sky
 
 ## Path Wind
 * greet 
     - utter_greet
+    - utter_greet1
 * wind
-    - utter_wind
+    - action_wind
 
 ## Path Wind 1
 * wind
-    - utter_wind
+    - action_wind
 
 ## Path Wind 2
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * wind
-    - utter_wind
-
-## Path Sea Level
-* sea_level 
-    - utter_sea_level
-
-## Path Sea Level 1
-* greet 
-    - utter_greet
-* sea_level 
-    - utter_sea_level
-
-## Path Sea Level 2
-* greet 
-    - utter_greet
-* how_are_u
-    - utter_how_are_u
-* sea_level 
-    - utter_sea_level
+    - action_wind
 
 ## Path Sunrise Sunset
 * sunrise_sunset
-    - utter_sunrise_sunset
+    - action_sunrise_sunset
 
 ## Path Sunrise Sunset 1
 * greet 
     - utter_greet
+    - utter_greet1
 * sunrise_sunset
-    - utter_sunrise_sunset
+    - action_sunrise_sunset
 
 ## Path Sunrise Sunset 2
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * sunrise_sunset
-    - utter_sunrise_sunset
+    - action_sunrise_sunset
 
 ## Hurricane
 * hurricane
@@ -130,19 +124,19 @@
 
 ## Locale
 * locale
-    - utter_inform
-
+    - action_weather
 ## Path 8
 * elaborate
     - utter_elaborate
 * locale
-    - utter_inform
+    - action_weather
 
 ## Path 3
 * greet
     - utter_greet
+    - utter_greet1
 * inform
-    - utter_inform
+    - action_weather
 
 ## Elaborate
 * elaborate
@@ -156,7 +150,7 @@
 
 ## Path 5
 * inform
-    - utter_inform
+    - action_weather
 * hurricane
     - utter_hurricane
 * goodbye
@@ -165,9 +159,10 @@
 ## Path 6
 * greet
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * inform
-    - utter_inform
+    - action_weather
 * goodbye
     - utter_goodbye
