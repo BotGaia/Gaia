@@ -4,9 +4,11 @@
     - utter_greet1
     - utter_greet2
 * action_temperature
+    - action_local
     - action_temperature
 
 ## action_temperature
 * action_temperature
+    - action_local
     - action_temperature
 

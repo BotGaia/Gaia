@@ -21,3 +21,24 @@
 * goodbye
     - utter_goodbye
 
+## Generated Story 6172655584602252502
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* temperature{"type": "temperatura", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"type": "temperatura"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_temperature
+* inform{"locale": "goiania"}
+    - slot{"locale": "goiania"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_weather
+
