@@ -1,6 +1,7 @@
 ## Path Temperature
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * temperature
@@ -13,12 +14,14 @@
 ## Path Temperature 2
 * greet 
     - utter_greet
+    - utter_greet1
 * temperature
     - action_temperature
 
 ## Path Pressure
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * pressure
@@ -31,6 +34,7 @@
 ## Path Pressure 3
 * greet 
     - utter_greet
+    - utter_greet1
 * pressure
     - action_pressure
 
@@ -41,12 +45,14 @@
 ## Path Humidity 1
 * greet 
     - utter_greet
+    - utter_greet1
 * humidity
     - action_humidity
 
 ## Path Humidity 2
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * humidity
@@ -59,6 +65,7 @@
 ## Path Weather 1
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * weather
@@ -67,12 +74,14 @@
 ## Path Weather 2
 * greet 
     - utter_greet
+    - utter_greet1
 * weather
     - action_sky
 
 ## Path Wind
 * greet 
     - utter_greet
+    - utter_greet1
 * wind
     - action_wind
 
@@ -83,6 +92,7 @@
 ## Path Wind 2
 * greet 
     - utter_greet
+    - utter_greet1
 * how_are_u
     - utter_how_are_u
 * wind
@@ -95,12 +105,15 @@
 ## Path Sunrise Sunset 1
 * greet 
     - utter_greet
+    - utter_greet1
 * sunrise_sunset
     - action_sunrise_sunset
 
 ## Path Sunrise Sunset 2
 * greet 
     - utter_greet
+    - utter_greet1
+    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * sunrise_sunset
@@ -122,6 +135,8 @@
 ## Path 3
 * greet
     - utter_greet
+    - utter_greet1
+    - utter_greet2
 * inform
     - action_weather
 
@@ -146,6 +161,8 @@
 ## Path 6
 * greet
     - utter_greet
+    - utter_greet1
+    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * inform
