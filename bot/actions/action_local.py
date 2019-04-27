@@ -60,7 +60,7 @@ class Action_local(Action):
                 data_message = 'Desculpe-me, mas não me recordo de ter criado esse lugar. Talvez me informou erroneamente?'
                 
             else:
-                data_message = weatherRequest(type, locale)
+                data_message = weatherRequest(type_, locale)
                 
         try:
             if(data_message[:1] != '{'):
@@ -81,3 +81,5 @@ class Action_local(Action):
             
         except ValueError:
             dispatcher.utter_message(ValueError)
+    
+        return [SlotSet('type', None)]

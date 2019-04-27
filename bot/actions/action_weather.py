@@ -22,8 +22,7 @@ class Action_weather(Action):
         locale = tracker.get_slot('locale')
 		
         location = localRequest(locale, choice)
-        dispatcher.utter_message(location)
-        payload = {'place': locale}
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -58,8 +57,8 @@ class Action_temperature(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-		# location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -82,8 +81,8 @@ class Action_pressure(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-        # location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -102,8 +101,8 @@ class Action_humidity(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-        # location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -122,8 +121,8 @@ class Action_sky(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-        # location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -142,8 +141,8 @@ class Action_wind(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-        # location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
@@ -162,8 +161,8 @@ class Action_sunrise_sunset(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 		
-        # location = localRequest(locale, choice)
-        payload = {'place': locale}
+        location = localRequest(locale, choice)
+        payload = {'place': location}
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
