@@ -3,20 +3,31 @@ from rasa_core_sdk.events import SlotSet
 import requests
 import json
 
-def weatherRequest(type, locale):
+def weatherRequest(type_, locale):
     payload = {'place': locale}
     
     response = requests.get('http://68.183.43.29:30000/climate', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
-
-    if(type == 'umidade'):
+    if((type_ == 'umidade')or(type_ == 'seco')or(type_ == 'úmido')):
         return 'Neste local, minha umidade é de ' + str(answer_json['humidity']) + '%'
     
-    elif(type == 'vento'):
+    elif((type_ == 'ceu')or(type_ == 'chover')or(type_ == 'nebulosidade')):
+        return 'Neste local, apresento ' + answer_json['sky']
+    
+    elif((type_ == 'vento')or(type_ == 'ventando')or(type_ == 'ventos')or(type_ == 'venta')):
         return 'Neste local, meus ventos sopram para o ' + answer_json["windyDegrees"]+ ' com velocidade de ' +str(answer_json["windySpeed"]) + 'm/s.'
-        
+    
+    elif((type_ == 'sol')or(type_ == 'amanhece')or(type_ == 'escurece')):
+        return 'Neste local, o sol me ilumina de ' + answer_json['sunrise'] + ' às ' + answer_json["sunset"] + '.'
+    
+    elif((type_ == 'pressão')or(type_ == 'pressao')):
+        return 'Neste local, minha pressão é de ' + answer_json['pressure'] + ' atm'
+    
+    elif((type_ == 'temperatura')or(type_ == 'temp')or(type_ == 'graus')):
+        return 'Neste local, minha temperatura é ' + answer_json["temperature"] + '°C'
+    
     else:
         return answer
 
@@ -27,7 +38,7 @@ class Action_local(Action):
 
     def run(self, dispatcher, tracker, domain):
         locale = tracker.get_slot('locale')
-        type = 'my_peepee_is_hard'
+        type_ = tracker.get_slot('type')
         
         payload = {'address': locale}
         

@@ -5,10 +5,12 @@
 * how_are_u
     - utter_how_are_u
 * temperature
+    - action_local
     - action_temperature
 
 ## Path Temperature 1
 * temperature
+    - action_local
     - action_temperature
 
 ## Path Temperature 2
@@ -16,6 +18,7 @@
     - utter_greet
     - utter_greet1
 * temperature
+    - action_local
     - action_temperature
 
 ## Path Pressure
@@ -25,10 +28,12 @@
 * how_are_u
     - utter_how_are_u
 * pressure
+    - action_local
     - action_pressure
 
 ## Path Pressure 1
 * pressure
+    - action_local
     - action_pressure
 
 ## Path Pressure 3
@@ -36,10 +41,12 @@
     - utter_greet
     - utter_greet1
 * pressure
+    - action_local
     - action_pressure
 
 ## Path Humidity
 * humidity
+    - action_local
     - action_humidity
 
 ## Path Humidity 1
@@ -47,6 +54,7 @@
     - utter_greet
     - utter_greet1
 * humidity
+    - action_local
     - action_humidity
 
 ## Path Humidity 2
@@ -56,26 +64,31 @@
 * how_are_u
     - utter_how_are_u
 * humidity
+    - action_local
     - action_humidity
 
-## Path Weather
-* weather
+## Path sky
+* sky
+    - action_local
     - action_sky
 
-## Path Weather 1
+## Path sky 1
 * greet 
     - utter_greet
     - utter_greet1
 * how_are_u
     - utter_how_are_u
-* weather
+* sky
+    - action_local
     - action_sky
 
-## Path Weather 2
+## Path sky 2
 * greet 
     - utter_greet
     - utter_greet1
 * weather
+* sky
+    - action_local
     - action_sky
 
 ## Path Wind
@@ -83,10 +96,12 @@
     - utter_greet
     - utter_greet1
 * wind
+    - action_local
     - action_wind
 
 ## Path Wind 1
 * wind
+    - action_local
     - action_wind
 
 ## Path Wind 2
@@ -96,10 +111,12 @@
 * how_are_u
     - utter_how_are_u
 * wind
+    - action_local
     - action_wind
 
 ## Path Sunrise Sunset
 * sunrise_sunset
+    - action_local
     - action_sunrise_sunset
 
 ## Path Sunrise Sunset 1
@@ -107,6 +124,7 @@
     - utter_greet
     - utter_greet1
 * sunrise_sunset
+    - action_local
     - action_sunrise_sunset
 
 ## Path Sunrise Sunset 2
@@ -117,10 +135,12 @@
 * how_are_u
     - utter_how_are_u
 * sunrise_sunset
+    - action_local
     - action_sunrise_sunset
 
 ## Hurricane
 * hurricane
+    - action_local
     - utter_hurricane
 
 ## Locale
