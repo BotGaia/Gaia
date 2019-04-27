@@ -26,16 +26,17 @@ class Action_weather(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data_temp = 'Neste local, minha temperatura é '+answer["temperature"]+'°C,'
-        data_humidity = 'com umidade de '+str(answer["humidity"])+'%, '
-        data_pressure = 'e pressão '+answer["pressure"]+' atm. '
-        data_direction = 'Meus ventos sopram para '+answer["windyDegrees"]+','
-        data_speed = ' com velocidade de '+str(answer["windySpeed"])+' m/s,'
-        data_sky =' e apresento '+answer["sky"]+'.'
-        data_sunrise = 'O sol me ilumina de '+answer["sunrise"] 
-        data_sunset = 'às '+answer["sunset"]+'.'
+        data_temp = 'Neste local, minha temperatura é '+answer_json["temperature"]+'°C,'
+        data_humidity = 'com umidade de '+str(answer_json["humidity"])+'%, '
+        data_pressure = 'e pressão '+answer_json["pressure"]+' atm. '
+        data_direction = 'Meus ventos sopram para '+answer_json["windyDegrees"]+','
+        data_speed = ' com velocidade de '+str(answer_json["windySpeed"])+' m/s,'
+        data_sky =' e apresento '+answer_json["sky"]+'.'
+        data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"] 
+        data_sunset = 'às '+answer_json["sunset"]+'.'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data_temp)
@@ -62,10 +63,11 @@ class Action_temperature(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data ='Neste local, minha temperatura é '+answer["temperature"]+'°C'
-        data_max = 'Minha temperatura mínima no dia de hoje é de '+answer["temperatureMin"]+'°C'
-        data_min = 'E máxima de '+answer["temperatureMax"]+'°C.' 
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data ='Neste local, minha temperatura é '+answer_json["temperature"]+'°C'
+        data_max = 'Minha temperatura mínima no dia de hoje é de '+answer_json["temperatureMin"]+'°C'
+        data_min = 'E máxima de '+answer_json["temperatureMax"]+'°C.' 
         try:
             dispatcher.utter_message(data)
             dispatcher.utter_message(data_max)
@@ -86,8 +88,9 @@ class Action_pressure(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data ='Neste local, minha pressão é de '+answer["pressure"]+' atm'
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data ='Neste local, minha pressão é de '+answer_json["pressure"]+' atm'
         try:
             dispatcher.utter_message(data)
         except ValueError:
@@ -106,8 +109,9 @@ class Action_humidity(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data ='Neste local, minha umidade é de '+str(answer["humidity"])+'%'
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data ='Neste local, minha umidade é de '+str(answer_json["humidity"])+'%'
         try:
             dispatcher.utter_message(data)
         except ValueError:
@@ -126,8 +130,9 @@ class Action_sky(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data ='Neste local, apresento '+answer["sky"]
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data ='Neste local, apresento '+answer_json["sky"]
         try:
             dispatcher.utter_message(data)
         except ValueError:
@@ -146,8 +151,9 @@ class Action_wind(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data ='Neste local, meus ventos sopram para o '+answer["windyDegrees"]+' com velocidade de '+str(answer["windySpeed"])+'m/s.'
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data ='Neste local, meus ventos sopram para o '+answer_json["windyDegrees"]+' com velocidade de '+str(answer["windySpeed"])+'m/s.'
         try:
             dispatcher.utter_message(data)
         except ValueError:
@@ -166,8 +172,9 @@ class Action_sunrise_sunset(Action):
 		
         response = requests.get(
             'http://68.183.43.29:30000/climate', params=payload)
-        answer = response.json()
-        data = 'Neste local, o sol me ilumina de '+answer["sunrise"]+' às '+answer["sunset"]+'.'
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+        data = 'Neste local, o sol me ilumina de '+answer_json["sunrise"]+' às '+answer["sunset"]+'.'
         try:
             dispatcher.utter_message(data)
         except ValueError:
