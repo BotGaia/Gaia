@@ -40,6 +40,7 @@
 - o clima esta fechado no [parque da cidade](locale)?
 - Qual a nebulosidade em [brasilia](locale)?
 - Como esta a nebulosidade na [praça dos três poderes](locale)?
+- como está em [são paulo](locale)?
 
 ## intent: wind
 - ta ventando muito na[praia de tamandaré](locale)?

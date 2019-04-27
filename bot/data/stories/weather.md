@@ -113,6 +113,7 @@
 * greet 
     - utter_greet
     - utter_greet1
+    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * sunrise_sunset
@@ -135,6 +136,7 @@
 * greet
     - utter_greet
     - utter_greet1
+    - utter_greet2
 * inform
     - action_weather
 
@@ -160,6 +162,7 @@
 * greet
     - utter_greet
     - utter_greet1
+    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * inform
