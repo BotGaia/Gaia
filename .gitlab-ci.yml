@@ -19,6 +19,8 @@ build bot:
 
 deployHomolog:
   stage: deploy
+  services:
+    - docker:dind
   only:
     - dev
   script:
@@ -30,6 +32,8 @@ deployHomolog:
 
 deployProd:
   stage: deploy
+  services:
+    - docker:dind
   only:
     - master
   script:
