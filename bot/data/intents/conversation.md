@@ -38,6 +38,7 @@
 - goodbye
 - nao quero saber mais
 - não quero saber de mais nada
+- valeuzão
 
 ## intent:greet
 - oi, tudo bem
@@ -64,6 +65,8 @@
 - Fala Gaia
 - Fala aí
 - Fala aí Gaia
+- olá
+- ola
 
 ## intent:good_morning
 - bom dia

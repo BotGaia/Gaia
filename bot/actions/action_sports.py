@@ -8,11 +8,11 @@ class Action_sports(Action):
     def name(self):
         return "action_sports"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain, locale):
 
-        locale = tracker.get_slot('locale')
+        payload = {'place': locale}
         response = requests.get(
-            'https://my-json-server.typicode.com/sofiapatrocinio/sports/sports')
+            'http://68.183.43.29:30000/sports', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         try:
