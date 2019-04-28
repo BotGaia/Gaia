@@ -12,3 +12,6 @@
 - O que dá pra fazer em [Pernambuco](locale)?
 - Um esporte pro [Acre](locale)?
 - Me diz um esporte para fazer no [pará](locale)?
+- que esporte posso fazer no [parque de aguas claras](locale)?
+- qual esporte posso fazer no [lago paranoá](locale)?
+- que atividade posso fazer em [bahamas](locale)?
