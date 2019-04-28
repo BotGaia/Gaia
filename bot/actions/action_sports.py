@@ -8,11 +8,11 @@ class Action_sports(Action):
     def name(self):
         return "action_sports"
 
-    def run(self, dispatcher, tracker, domain, locale):
+    def run(self, dispatcher, tracker, domain):
 
+        locale = tracker.get_slot('locale')
         payload = {'place': locale}
-        response = requests.get(
-            'http://68.183.43.29:30000/sports', params=payload)
+        response = requests.get('http://68.183.43.29:30000/sports', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         try:

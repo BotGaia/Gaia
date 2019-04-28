@@ -5,6 +5,7 @@ import random
 import json
 
 def localRequest(locale, choice):
+    
 	payload = {'address': locale}
 
 	response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
