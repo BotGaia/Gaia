@@ -8,7 +8,8 @@
 - ta quantos [graus](type) em [Salvador](locale)?
 - qual a [temperatura](type) nos [Estados Unidos](locale)
 - qual a [temperatura](type) em [recife](locale)?
-- qual a [temp](temp) na [praça do relógio](locale)
+- qual a [temp](type) na [praça do relógio](locale)
+- como está a [temperatura](type) em [goiania](locale)?
 
 ## intent: pressure
 - qual é a [pressão](type) no [mato grosso](locale)?
@@ -17,6 +18,7 @@
 - qual é a [pressao](type) na [bahia](locale)?
 - no [Rio de Janeiro](locale) qual é a [pressão](type)
 - em [roma](locale) qual e a [pressão](type)
+- como está a [pressão](type) no [pará](locale)?
 
 ## intent: humidity
 - qual e a [umidade](type) na [França](locale)?
@@ -48,6 +50,7 @@
 - Como estão os [ventos](type) na [Praia de Ipanema](locale)?
 - Em [São Sebastião](locale) tá [ventando](type)?
 - tá [ventando](type) muito no [porto de galinhas](locale)
+- como está o [vento](type) em [maceio](locale)?
 
 ## intent: sunrise_sunset
 - quando o [sol](type) se põe em [minas gerais](locale)?
