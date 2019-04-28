@@ -38,6 +38,7 @@
 - goodbye
 - nao quero saber mais
 - não quero saber de mais nada
+- valeuzão
 
 ## intent:greet
 - oi, tudo bem

@@ -177,5 +177,6 @@ tags
 ngrok
 # cache
 /bot/actions/__pycache__/
+/bot/story_graph.dot
 
 # End of https://www.gitignore.io/api/vim,linux,macos,python

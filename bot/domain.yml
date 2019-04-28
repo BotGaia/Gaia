@@ -21,187 +21,111 @@ intents:
   - temperature
   - pressure
   - humidity
-  - weather
+  - sky
   - wind
   - sports
   - sunrise_sunset
   - how_do_u_know
   - action_temperature
-  - action_weather
-
-
-
+  - choose
+  
 entities:
   - locale
   - hurricane
+  - type
+  - choice
 
 slots:
   locale:
     type: unfeaturized
+  type:
+    type: unfeaturized  
+  choice:
+    type: unfeaturized
 
 templates:
-    utter_default:
-    - text: |
-        A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo a me comunicar com vocês, 
-        pode falar de outra forma?
-
-    - text: |
-        Minha comunicação com vocês precisa ser direta. Pode ser mais específico?
-
-    - text: |
-        Não compreendi, pode reformular a pergunta?
-
-    - text: |
-        Vamos tentar mais uma vez! Você pode me perguntar sobre:
-
-        - Temperatura de um local
-        - Pressão
-        - Nascer e pôr do sol
-        - Velocidade e direção do vento
-        - Umidade
-        - Nebulosidade
-        - Atividades mais propensas ao ar livre
+  utter_anything_else:
+  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
+      \ um local\n- Pressão\n- Nascer e pôr do sol\n- Nebulosidade\n- Velocidade e\
+      \ direção do vento\n- Umidade\n- Atividades mais propensas ao ar livre\n"
+  utter_change_subject:
+  - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Temperatura de um local\n\
+      - Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n\
+      - Nebulosidade\n- Atividades mais propensas ao ar livre\n"
+  utter_compliments:
+  - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
+  utter_default:
+  - text: "A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo\
+      \ a me comunicar com vocês, \npode falar de outra forma?\n"
+  - text: "Minha comunicação com vocês precisa ser direta. Pode ser mais específico?\n"
+  - text: "Não compreendi, pode reformular a pergunta?\n"
+  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Temperatura\
+      \ de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
+      - Umidade\n- Nebulosidade\n- Atividades mais propensas ao ar livre\n"
+  utter_elaborate:
+  - text: "Em qual localidade?\n"
+  - text: "Onde deseja saber?\n"
+  - text: "Poderia esclarecer em qual localidade, por favor?\n"
+  utter_gaia_error:
+  - text: "Desculpa o engano, vocês humanos são muito confusos. Você pode especificar\
+      \ o que quer falar?                  \n"
+  utter_good_afternoon:
+  - text: "Boa tarde! sou Gaia, também conhecida como a deusa primordial, \naquele\
+      \ que compreende todos os fenômens desta dimensão.\n"
+  utter_good_morning:
+  - text: "Bom dia! sou Gaia, também conhecida como a deusa primordial, \naquele que\
+      \ compreende todos os fenômens desta dimensão.\n"
+  utter_good_night:
+  - text: "Boa noite! sou Gaia, também conhecida como a deusa primordial, \naquele\
+      \ que compreende todos os fenômens desta dimensão.\n"
+  utter_goodbye:
+  - text: "Foi um grande prazer te ajudar!\nSempre que tiver alguma dúvida, pode me\
+      \ consultar!\nSaudações calorosas, Gaia.\n"
+  - text: "Foi um grande prazer te ajudar!\nNão hesite em contactar-me!\nCom os meus\
+      \ melhores cumprimentos, Gaia.\n"
+  - text: "Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
+      Grata, Gaia.\n"
+  utter_greet:
+  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquele que compreende\
+      \ todos os fenômens desta dimensão.\n"
+  utter_greet1:
+  - text: "Decidi compartilhar não só a metereologia sobre qualquer lugar do mundo,\
+      \ \nmas também as modalidades mais favoráveis a serem praticadas.\n"
+  utter_greet2:
+  - text: "Então, me fale sua localidade de interesse e te apresentarei\nmeu sobre-humano\
+      \ conhecimento.\n"
+  utter_help:
+  - text: "Você pode me perguntar sobre:\n\n- Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n\
+      - Atividades mais propensas ao ar livre\n"
+  utter_how_are_u:
+  - text: "Estou ótima, obrigada! Em que posso te ajudar?\n"
+  utter_how_do_u_know:
+  - text: "Como mãe-terra, sou onipresente e posso acessar informações de qualquer\
+      \ lugar do planeta.\n"
+  utter_hurricane:
+  - text: "Por enquanto não posso te informar sobre este fenômeno\n"
+  - text: "Furacões são forças grandes demais para teu conhecimento\n"
+  - text: "Um dia te contarei sobre eles\n"
+  utter_out_of_scope:
+  - text: "Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.\n"
+  utter_user_error:
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Temperatura\
+      \ de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
+      - Umidade\n- Nebulosidade\n- Atividades mais propensas ao ar livre         \
+      \          \n"
+  utter_who_are_u:
+  - text: "Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
+      \ caos. \nE comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
+      \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
+      \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
+      \ \n"
     
-    utter_who_are_u:
-    - text: |
-        Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era caos. 
-        E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da ajuda de vocês! 
-        Pensando nisso, criei esse canal a fim de nos comunicarmos e ajudar vocês no que mais 
-        influencia seus compromissos terráqueos: o clima! 
-
-    utter_how_do_u_know:
-    - text: |
-        Como mãe-terra, sou onipresente e posso acessar informações de qualquer lugar do planeta.
-      
-    utter_anything_else:
-    - text: |
-        O que mais quer saber? Você pode me perguntar sobre:
-
-        - Temperatura de um local
-        - Pressão
-        - Nascer e pôr do sol
-        - Nebulosidade
-        - Velocidade e direção do vento
-        - Umidade
-        - Atividades mais propensas ao ar livre
-        
-    utter_out_of_scope:
-    - text: |
-        Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.
-    utter_help:
-    - text: |
-        Você pode me perguntar sobre:
-
-        - Temperatura de um local
-        - Pressão
-        - Nascer e pôr do sol
-        - Velocidade e direção do vento
-        - Umidade
-        - Nebulosidade
-        - Atividades mais propensas ao ar livre
-
-    utter_compliments:
-    - text: |
-          Obrigada pela gentileza! Fico lisonjeada com o elogio!
-
-    utter_greet:
-    - text: |
-          Olá, sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
-
-    utter_good_morning:
-    - text: |
-          Bom dia! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
-
-    utter_good_afternoon:
-    - text: |
-          Boa tarde! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
-
-    utter_good_night:
-    - text: |
-          Boa noite! Sou Gaia, antes de prosseguirmos você deve saber que possuo um conhecimento 
-          absoluto sobre tudo que há na Terra. Porém há coisas incompreensíveis para o entendimento 
-          humano. Por isso decidi compartilhar, de forma simplificada,  apenas informações sobre 
-          minha condição climática em qualquer lugar do planeta.  Não acredita? Me fale onde está e eu te direi como estou.
-
-    utter_goodbye:
-    - text: |
-          Foi um grande prazer te ajudar!
-          Sempre que tiver alguma dúvida, pode me consultar!
-          Saudações calorosas, Gaia.
-
-    - text: |
-          Foi um grande prazer te ajudar!
-          Não hesite em contactar-me!
-          Com os meus melhores cumprimentos, Gaia.
-
-    - text: |
-          Foi um grande prazer te ajudar!
-          Qualquer dúvida, estou à disposição!
-          Grata, Gaia.
-
-    utter_how_are_u:
-    - text: |
-          Estou ótima, obrigada! Em que posso te ajudar?
-
-    utter_change_subject:
-    - text: |
-          Sobre o que quer falar? Posso conversar sobre:
-
-          - Temperatura de um local
-          - Pressão
-          - Nascer e pôr do sol
-          - Velocidade e direção do vento
-          - Umidade
-          - Nebulosidade
-          - Atividades mais propensas ao ar livre
-
-    utter_elaborate:
-    - text: |
-          Em qual localidade?
-
-    - text: |
-          Onde deseja saber?
-
-    - text: |
-          Poderia esclarecer em qual localidade, por favor?
-    
-    utter_hurricane:
-    - text: |
-          Por enquanto não posso te informar sobre este fenômeno
-
-    - text: |
-          Furacões são forças grandes demais para teu conhecimento
-
-    - text: |
-          Um dia te contarei sobre eles
-
-    utter_user_error:
-    - text: |
-          Podemos falar sobre outra coisa. Podemos conversar sobre:
-          - Temperatura de um local
-          - Pressão
-          - Nascer e pôr do sol
-          - Velocidade e direção do vento
-          - Umidade
-          - Nebulosidade
-          - Atividades mais propensas ao ar livre                   
-
-    utter_gaia_error:
-    - text: |
-          Desculpa o engano, vocês humanos são muito confusos. Você pode especificar o que quer falar?                  
- 
 actions:
   - utter_default
   - utter_greet
+  - utter_greet1
+  - utter_greet2
   - utter_goodbye
   - utter_how_are_u
   - utter_help
@@ -225,7 +149,6 @@ actions:
   - action_sky
   - action_wind
   - action_sunrise_sunset
+  - action_local
   - action_sports
-
-
-
+  

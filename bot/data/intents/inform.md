@@ -12,6 +12,9 @@
 - como está o clima no [pará](locale)
 - estou no [parque da cidade](locale)
 - estou na [praia do futuro](locale)
+- como esta o clima na [bahia](locale)
+- como ta o clima em [barcelona](locale)
+- o clima esta fechado no [parque da cidade](locale)?
 
 ## intent:elaborate
 - Me diga o clima
@@ -37,3 +40,20 @@
 - e no [gama](locale)
 - e em [minas](locale)
 - e na [arniqueiras](locale)
+
+## intent: choose
+- [1](choice)
+- [2](choice)
+- [3](choice)
+- [4](choice)
+- [5](choice)
+- opção [1](choice)
+- opção [2](choice)
+- opção [3](choice)
+- opção [4](choice)
+- opção [5](choice)
+- escolho [1](choice)
+- escolho [2](choice)
+- escolho [3](choice)
+- escolho [4](choice)
+- escolho [5](choice)
