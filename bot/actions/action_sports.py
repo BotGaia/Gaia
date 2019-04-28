@@ -11,8 +11,8 @@ class Action_sports(Action):
     def run(self, dispatcher, tracker, domain):
 
         locale = tracker.get_slot('locale')
-        response = requests.get(
-            'https://my-json-server.typicode.com/sofiapatrocinio/sports/sports')
+        payload = {'place': locale}
+        response = requests.get('http://68.183.43.29:30000/sports', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         try:

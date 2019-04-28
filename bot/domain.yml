@@ -74,10 +74,10 @@ templates:
       \ que compreende todos os fenômens desta dimensão.\n"
   utter_good_morning:
   - text: "Bom dia! sou Gaia, também conhecida como a deusa primordial, \naquele que\
-      \ compreende todos os fenômens desta dimensão.\n"
+      \ compreende todos os fenômenos desta dimensão.\n"
   utter_good_night:
   - text: "Boa noite! sou Gaia, também conhecida como a deusa primordial, \naquele\
-      \ que compreende todos os fenômens desta dimensão.\n"
+      \ que compreende todos os fenômenos desta dimensão.\n"
   utter_goodbye:
   - text: "Foi um grande prazer te ajudar!\nSempre que tiver alguma dúvida, pode me\
       \ consultar!\nSaudações calorosas, Gaia.\n"
@@ -86,10 +86,10 @@ templates:
   - text: "Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia.\n"
   utter_greet:
-  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquele que compreende\
-      \ todos os fenômens desta dimensão.\n"
+  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquela que compreende\
+      \ todos os fenômenos desta dimensão.\n"
   utter_greet1:
-  - text: "Decidi compartilhar não só a metereologia sobre qualquer lugar do mundo,\
+  - text: "Decidi compartilhar não só a meteorologia sobre qualquer lugar do mundo,\
       \ \nmas também as modalidades mais favoráveis a serem praticadas.\n"
   utter_greet2:
   - text: "Então, me fale sua localidade de interesse e te apresentarei\nmeu sobre-humano\

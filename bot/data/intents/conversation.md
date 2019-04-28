@@ -65,6 +65,8 @@
 - Fala Gaia
 - Fala aí
 - Fala aí Gaia
+- olá
+- ola
 
 ## intent:good_morning
 - bom dia

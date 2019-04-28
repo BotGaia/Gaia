@@ -1,8 +1,8 @@
 image: docker:latest
 
 variables:
-  LATEST_VER_HML: caleberios/gaia:homolog
-  LATEST_VER_PROD: caleberios/gaia:latest
+  LATEST_VER_BOT_PROD: caleberios/gaia:latest
+  LATEST_VER_ACTION_PROD: caleberios/gaia-actions:latest
 
 stages:
   - build
@@ -22,15 +22,19 @@ deployHomolog:
   only:
     - dev
   script:
-    - docker build -t $LATEST_VER_HML .
+    - docker build -t $LATEST_VER_BOT_PROD -f docker/bot.Dockerfile .
+    - docker build -t $LATEST_VER_ACTION_PROD -f docker/actions.Dockerfile .
     - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
-    - docker push $LATEST_VER_HML && docker image rm $LATEST_VER_HML
+    - docker push $LATEST_VER_BOT_PROD && docker image rm $LATEST_VER_BOT_PROD
+    - docker push $LATEST_VER_ACTION_PROD && docker image rm $LATEST_VER_ACTION_PROD
 
 deployProd:
   stage: deploy
   only:
     - master
   script:
-    - docker build -t $LATEST_VER_PROD .
+    - docker build -t $LATEST_VER_BOT_PROD -f docker/bot.Dockerfile .
+    - docker build -t $LATEST_VER_ACTION_PROD -f docker/actions.Dockerfile .
     - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
-    - docker push $LATEST_VER_PROD && docker image rm $LATEST_VER_PROD
+    - docker push $LATEST_VER_BOT_PROD && docker image rm $LATEST_VER_BOT_PROD
+    - docker push $LATEST_VER_ACTION_PROD && docker image rm $LATEST_VER_ACTION_PROD

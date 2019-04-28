@@ -1,14 +1,16 @@
-from python:3.6-slim
+FROM python:3.6-slim
 
-run apt update && apt install -y git gcc make curl
+RUN apt update && apt install -y git gcc make curl
 
-run python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
-add ./requirements.txt /tmp
+ADD ./requirements.txt /tmp
 
-run pip install --upgrade pip && pip install -r /tmp/requirements.txt
-run python -c "import nltk; nltk.download('stopwords');"
+RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
+RUN python -c "import nltk; nltk.download('stopwords');"
 
-add ./bot /bot
+ADD ./bot /bot
 
-workdir /bot
+WORKDIR /bot
+
+CMD make train && make run-telegram
