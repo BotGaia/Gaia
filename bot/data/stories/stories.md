@@ -42,3 +42,44 @@
     - slot{"choice": "1"}
     - action_weather
 
+## Generated Story -1095409494094518017
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_sports
+
+## Generated Story 0
+
+## Generated Story -2113884223385975450
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+* sports{"locale": "Nova Iorque Brasil"}
+    - slot{"locale": "Nova Iorque Brasil"}
+    - action_local
+    - slot{"type": null}
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "4"}
+    - slot{"choice": "4"}
+    - action_sports
+* goodbye
+    - utter_goodbye
+

@@ -28,6 +28,7 @@
 - na [Praça dos três poderes](locale), tá muito [úmido](type)?
 - ta [seco](type) em [Alagoas](locale)?
 - como está a [umidade](type) na [capital do rio de janeiro](locale)?
+- Qual é a [umidade](type) em [brasilia](locale)?
 
 ## intent: sky
 - como está o [ceu](type) em [alagoas](locale)?
@@ -40,6 +41,7 @@
 - qual a chance de [chover](type) na [Itália](locale)?
 - Qual a [nebulosidade](type) em [brasilia](locale)?
 - Como esta a [nebulosidade](type) na [praça dos três poderes](locale)?
+- como tá o [céu](type) em [recife](locale)?
 
 ## intent: wind
 - ta [ventando](type) muito na [praia de tamandaré](locale)?

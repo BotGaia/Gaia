@@ -4,7 +4,7 @@
 - Que esporte posso fazer no [Distrito Federal](locale)?
 - Qual atividade posso fazer no [Rio de Janeiro](locale)?
 - Atividade mais propensa para fazer em [Santa Catarina](locale)?
-- Me fala uma atividade pra fazer em [Goiânia](lcoale)?
+- Me fala uma atividade pra fazer em [Goiânia](locale)?
 - Qual é a atividade mais propensa pra fazer na [Bahia](locale)?
 - Me diz um esporte ou atividade pra [Salvador](locale)?
 - Uma atividade pra [Tocantins](locale)?
@@ -15,3 +15,6 @@
 - que esporte posso fazer no [parque de aguas claras](locale)?
 - qual esporte posso fazer no [lago paranoá](locale)?
 - que atividade posso fazer em [bahamas](locale)?
+- Me fala um esporte pra [brasilia](locale)
+- Me fala um esporte pra [Nova Iorque Brasil](locale)
+- Me diz um esporte pra fazer me [brasilia](locale)

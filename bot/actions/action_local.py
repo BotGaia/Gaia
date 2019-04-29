@@ -3,6 +3,29 @@ from rasa_core_sdk.events import SlotSet
 import requests
 import json
 
+def sportsRequest(locale):
+    payload = {'place': locale}
+
+    response = requests.get('http://68.183.43.29:30000/sports', params=payload)
+    answer = response.content.decode()
+    answer_json = json.loads(answer)
+    
+    if(len(answer_json["favorable"]) > 0):
+        data_sport = 'Para as condições atuais, recomendo: '
+        for favorable in answer_json["favorable"]:
+            data_sport += '\n' + favorable["name"].capitalize()
+        return data_sport
+    elif(len(answer_json["reservation"]) > 0):
+        data_reservation = 'Caso queira, algumas condições favorecem: '
+        for reservation in answer_json["reservation"]:
+            data_reservation += '\n' + reservation["name"].capitalize()
+        return data_reservation
+    elif(len(answer_json["alert"]) > 0):
+        data_alert = 'Poucas condições favorecem: '
+        for alert in answer_json["alert"]:
+            data_alert += '\n' + alert["name"].capitalize()
+        return data_alert
+
 def weatherRequest(type_, locale):
     payload = {'place': locale}
     
@@ -37,6 +60,7 @@ class Action_local(Action):
         return "action_local"
 
     def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
         locale = tracker.get_slot('locale')
         type_ = tracker.get_slot('type')
         
@@ -62,7 +86,10 @@ class Action_local(Action):
                 data_message = 'Desculpe-me, mas não me recordo de ter criado esse lugar. Talvez me informou erroneamente?'
                 
             else:
-                data_message = weatherRequest(type_, locale)
+                if(intent == 'sports'):
+                    data_message = sportsRequest(locale)
+                else:
+                    data_message = weatherRequest(type_, locale)
                 
         try:
             if(data_message[:1] != '{'):
