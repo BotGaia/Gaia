@@ -5,13 +5,24 @@ import random
 import json
 
 def localRequest(locale, choice):
-	payload = {'address': locale}
 
-	response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
-	answer = response.content.decode()
-	answer_json = json.loads(answer)
+        if((choice == 'primeiro') or (choice == 'um')):
+            choice = 1
+        elif((choice == 'segundo') or (choice == 'dois')):
+            choice = 2
+        elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
+            choice = 3
+        elif((choice == 'quarto') or (choice == 'quatro')):
+            choice = 4
+        elif((choice == 'quinto') or (choice == 'cinco')):
+            choice = 5
 
-	return answer_json[int(choice) - 1]['name']
+        payload = {'address': locale}
+        response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
+        answer = response.content.decode()
+        answer_json = json.loads(answer)
+
+        return answer_json[int(choice) - 1]['name']
 
 class Action_weather(Action):
     def name(self):
@@ -65,10 +76,12 @@ class Action_temperature(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data ='Neste local, minha temperatura é '+answer_json["temperature"]+'°C'
         data_max = 'Minha temperatura mínima no dia de hoje é de '+answer_json["temperatureMin"]+'°C'
         data_min = 'E máxima de '+answer_json["temperatureMax"]+'°C.' 
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
             dispatcher.utter_message(data_max)
             dispatcher.utter_message(data_min)
@@ -90,8 +103,10 @@ class Action_pressure(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data ='Neste local, minha pressão é de '+answer_json["pressure"]+' atm'
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
@@ -111,8 +126,10 @@ class Action_humidity(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data ='Neste local, minha umidade é de '+str(answer_json["humidity"])+'%'
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
@@ -132,8 +149,10 @@ class Action_sky(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data ='Neste local, apresento '+answer_json["sky"]
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
@@ -153,8 +172,10 @@ class Action_wind(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data ='Neste local, meus ventos sopram para o '+answer_json["windyDegrees"]+' com velocidade de '+str(answer["windySpeed"])+'m/s.'
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
@@ -174,8 +195,10 @@ class Action_sunrise_sunset(Action):
             'http://68.183.43.29:30000/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
+        data_loc = locale.capitalize()+':'
         data = 'Neste local, o sol me ilumina de '+answer_json["sunrise"]+' às '+answer["sunset"]+'.'
         try:
+            dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)

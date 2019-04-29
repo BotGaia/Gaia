@@ -8,7 +8,8 @@
 - ta quantos [graus](type) em [Salvador](locale)?
 - qual a [temperatura](type) nos [Estados Unidos](locale)
 - qual a [temperatura](type) em [recife](locale)?
-- qual a [temp](temp) na [praça do relógio](locale)
+- qual a [temp](type) na [praça do relógio](locale)
+- como está a [temperatura](type) em [goiania](locale)?
 
 ## intent: pressure
 - qual é a [pressão](type) no [mato grosso](locale)?
@@ -17,6 +18,7 @@
 - qual é a [pressao](type) na [bahia](locale)?
 - no [Rio de Janeiro](locale) qual é a [pressão](type)
 - em [roma](locale) qual e a [pressão](type)
+- como está a [pressão](type) no [pará](locale)?
 
 ## intent: humidity
 - qual e a [umidade](type) na [França](locale)?
@@ -26,6 +28,7 @@
 - na [Praça dos três poderes](locale), tá muito [úmido](type)?
 - ta [seco](type) em [Alagoas](locale)?
 - como está a [umidade](type) na [capital do rio de janeiro](locale)?
+- Qual é a [umidade](type) em [brasilia](locale)?
 
 ## intent: sky
 - como está o [ceu](type) em [alagoas](locale)?
@@ -38,6 +41,7 @@
 - qual a chance de [chover](type) na [Itália](locale)?
 - Qual a [nebulosidade](type) em [brasilia](locale)?
 - Como esta a [nebulosidade](type) na [praça dos três poderes](locale)?
+- como tá o [céu](type) em [recife](locale)?
 
 ## intent: wind
 - ta [ventando](type) muito na [praia de tamandaré](locale)?
@@ -48,6 +52,7 @@
 - Como estão os [ventos](type) na [Praia de Ipanema](locale)?
 - Em [São Sebastião](locale) tá [ventando](type)?
 - tá [ventando](type) muito no [porto de galinhas](locale)
+- como está o [vento](type) em [maceio](locale)?
 
 ## intent: sunrise_sunset
 - quando o [sol](type) se põe em [minas gerais](locale)?
