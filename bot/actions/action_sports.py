@@ -4,14 +4,24 @@ import requests
 import random
 import json
 
+def localRequest(choice, locale):
+
+    payload = {'address': locale}
+    response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
+    answer = response.content.decode()
+    answer_json = json.loads(answer)
+
+    return answer_json[int(choice) - 1]['name']
+
 class Action_sports(Action):
     def name(self):
         return "action_sports"
 
     def run(self, dispatcher, tracker, domain):
-
+        choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-        payload = {'place': locale}
+        location = localRequest(choice, locale)
+        payload = {'place': location}
         response = requests.get('http://68.183.43.29:30000/sports', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
@@ -35,5 +45,3 @@ class Action_sports(Action):
                 dispatcher.utter_message(data_alert)
         except ValueError:
             dispatcher.utter_message(ValueError)
-        
-        
