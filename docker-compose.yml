@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  bot:
+      build:
+          context: .
+          dockerfile: ./docker/bot.Dockerfile
+      stdin_open: true
+      tty: true
+      environment:
+        - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+        - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
+        - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
+        - ENDPOINT_ACTIONS=http://actions:5055/webhook
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+      command: sh -c "make train && make run-telegram"
+
+  actions:
+      build:
+        context: .
+        dockerfile: ./docker/actions.Dockerfile
+      ports:
+        - 5055:5055
+      volumes:
+        - ./bot/actions:/bot/actions
+        - ./bot/Makefile:/bot/Makefile
+      command: "make run-actions"

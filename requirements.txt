@@ -1,8 +1,4 @@
-rasa-core==0.13.0
-rasa-nlu==0.14.0
-simplejson=3.13.2
-sklearn-crfsuite=0.3.6
-tensorflow=1.12.0
-rasa_core_sdk=0.12.1
-keras-applications=1.0.5
-keras-preprocessing=1.0.5
+rasa-core==0.13.1
+rasa-nlu==0.14.1
+sklearn-crfsuite==0.3.6
+nltk==3.3
