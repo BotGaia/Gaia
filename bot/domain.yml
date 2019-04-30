@@ -28,12 +28,14 @@ intents:
   - how_do_u_know
   - action_temperature
   - choose
+  - specific_sport
   
 entities:
   - locale
   - hurricane
   - type
   - choice
+  - sport
 
 slots:
   locale:
@@ -120,6 +122,8 @@ templates:
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
+  utter_specific_sport:
+  - text: Dá sim!
     
 actions:
   - utter_default
@@ -142,6 +146,7 @@ actions:
   - utter_who_are_u
   - utter_anything_else
   - utter_how_do_u_know
+  - utter_specific_sport
   - action_temperature
   - action_weather
   - action_pressure

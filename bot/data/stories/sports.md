@@ -15,3 +15,17 @@
     - utter_greet
 * sports
     - action_sports
+
+# Specific Sports
+* specific_sport
+    - action_local
+* choose
+    - utter_specific_sport
+
+# Specific Sports 1
+* greet
+    - utter_greet
+* specific_sport
+    - action_local
+* choose 
+    - utter_specific_sport

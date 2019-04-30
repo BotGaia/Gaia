@@ -15,3 +15,14 @@
 - que esporte posso fazer no [parque de aguas claras](locale)?
 - qual esporte posso fazer no [lago paranoá](locale)?
 - que atividade posso fazer em [bahamas](locale)?
+
+## intent: specific_sport
+- Posso praticar [windsurf](sport) no [lago paranoa](locale)?
+- dá para fazer [kindsurf](sport) em [hibiscus](locale)?
+- consigo praticar [stand up paddle](sport) na [praia do rosa](locale)?
+- é possivel praticar [surf] em [itapimirim](locale)?
+- posso fazer [vela](surf) em [guarujá](locale)?
+- é possivel fazer [stand up paddle](sport) no [lago corumba](locale)?
+- dá para praticar [surf](sport) em [sao paulo](locale)?
+- teria como eu praticar [surf](sport) em [nova iorque](locale)?
+- o clima tá bom pra fazer [windsurf] em [brasilia](locale)?
