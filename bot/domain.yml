@@ -74,6 +74,8 @@ slots:
     type: unfeaturized
   type:
     type: unfeaturized
+  sport: 
+    type: unfeaturized 
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\

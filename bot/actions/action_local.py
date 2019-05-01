@@ -26,6 +26,30 @@ def sportsRequest(locale):
             data_alert += '\n' + alert["name"].capitalize()
         return data_alert
 
+def specifiSportRequest(locale, sport):
+    payload = {'place': locale}
+
+    response = requests.get('http://68.183.43.29:30000/sports', params=payload)
+    answer = response.content.decode()
+    answer_json = json.loads(answer)
+    
+    if(len(answer_json["favorable"]) > 0):
+        for favorable in answer_json["favorable"]:
+            if favorable["name"].capitalize() == sport.capitalize():
+                return 'Sim, as condições estão favoráveis para praticar ' + sport + ' em ' + locale + '.'
+               
+    elif(len(answer_json["reservation"]) > 0):
+        for reservation in answer_json["reservation"]:
+            if reservation["name"].capitalize() == sport.capitalize():
+                return 'Algumas condições favorecem a prática de ' + sport + ' em ' + locale + '.'
+        
+    elif(len(answer_json["alert"]) > 0):
+        for alert in answer_json["alert"]:
+            if alert["name"].capitalize() == sport.capitalize():
+                return 'Poucas condições favorecem a prática de ' + sport + ' em ' + locale + '.'
+    
+    return 'Não é recomendada a prática de ' + sport + ' em ' + locale + '.'
+
 def weatherRequest(type_, locale):
     payload = {'place': locale}
     
@@ -62,6 +86,7 @@ class Action_local(Action):
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message['intent'].get('name')
         locale = tracker.get_slot('locale')
+        sport = tracker.get_slot('sport')
         type_ = tracker.get_slot('type')
         
         payload = {'address': locale}
@@ -88,6 +113,8 @@ class Action_local(Action):
             else:
                 if(intent == 'sports'):
                     data_message = sportsRequest(locale)
+                elif(intent == 'specific_sport'):
+                    data_message = specifiSportRequest(locale, sport)
                 else:
                     data_message = weatherRequest(type_, locale)
                 
