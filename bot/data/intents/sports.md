@@ -21,11 +21,11 @@
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?
-- dá para fazer [kitesurf](sport) em [hibiscus](locale)?
+- dá para fazer [kindsurf](sport) em [hibiscus](locale)?
 - consigo praticar [stand up paddle](sport) na [praia do rosa](locale)?
 - é possivel praticar [surf](sport) em [itapimirim](locale)?
 - posso fazer [vela](sport) em [guarujá](locale)?
 - é possivel fazer [stand up paddle](sport) no [lago corumba](locale)?
 - dá para praticar [surf](sport) em [sao paulo](locale)?
 - teria como eu praticar [surf](sport) em [nova iorque](locale)?
-- o clima tá bom pra fazer [windsurf](sport) em [brasilia](locale)?
+- o clima tá bom pra fazer [windsurf] em [brasilia](locale)?

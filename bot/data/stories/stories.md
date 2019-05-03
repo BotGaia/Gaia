@@ -105,3 +105,23 @@
     - slot{"choice": "2"}
     - action_specific_sport
 
+## Generated Story -6747312658172119038
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+* inform{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "3"}
+    - slot{"choice": "3"}
+    - action_weather
+

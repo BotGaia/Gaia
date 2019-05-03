@@ -3,26 +3,7 @@ from rasa_core_sdk.events import SlotSet
 import requests
 import random
 import json
-
-def localRequest(locale, choice):
-
-        if((choice == 'primeiro') or (choice == 'um')):
-            choice = 1
-        elif((choice == 'segundo') or (choice == 'dois')):
-            choice = 2
-        elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
-            choice = 3
-        elif((choice == 'quarto') or (choice == 'quatro')):
-            choice = 4
-        elif((choice == 'quinto') or (choice == 'cinco')):
-            choice = 5
-
-        payload = {'address': locale}
-        response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
-        answer = response.content.decode()
-        answer_json = json.loads(answer)
-
-        return answer_json[int(choice) - 1]['name']
+from .utils import localRequest
 
 class Action_weather(Action):
     def name(self):
