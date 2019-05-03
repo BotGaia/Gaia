@@ -31,12 +31,13 @@ def specifiSportRequest(locale, sport):
 
     response = requests.get('http://68.183.43.29:30000/sports', params=payload)
     answer = response.content.decode()
+  
     answer_json = json.loads(answer)
     
     if(len(answer_json["favorable"]) > 0):
         for favorable in answer_json["favorable"]:
             if favorable["name"].capitalize() == sport.capitalize():
-                return 'Sim, as condições estão favoráveis para praticar ' + sport + ' em ' + locale + '.'
+                return 'Sim, as condições estão favoráveis paza praticar ' + sport + ' em ' + locale + '.'
                
     elif(len(answer_json["reservation"]) > 0):
         for reservation in answer_json["reservation"]:
@@ -48,7 +49,7 @@ def specifiSportRequest(locale, sport):
             if alert["name"].capitalize() == sport.capitalize():
                 return 'Poucas condições favorecem a prática de ' + sport + ' em ' + locale + '.'
     
-    return 'Não é recomendada a prática de ' + sport + ' em ' + locale + '.'
+    return 'Não é recomendada a prática de ' + sport + ' em ' + locale + '. ' + sportsRequest(locale)
 
 def weatherRequest(type_, locale):
     payload = {'place': locale}

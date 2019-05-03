@@ -1,46 +1,47 @@
 %YAML 1.1
 ---
 actions:
-- utter_user_error
-- utter_good_afternoon
+- action_humidity
+- action_local
+- utter_greet1
 - utter_good_morning
-- utter_compliments
+- action_temperature
+- utter_goodbye
+- action_sports
+- utter_elaborate
+- utter_gaia_error
+- utter_help
+- action_sunrise_sunset
+- utter_greet2
+- utter_greet
+- utter_change_subject
 - utter_good_night
 - utter_out_of_scope
+- action_specific_sport
+- action_wind
 - utter_how_are_u
 - utter_hurricane
-- action_local
-- utter_change_subject
-- utter_greet
-- utter_greet1
-- action_sports
-- utter_goodbye
 - action_pressure
-- utter_help
-- utter_gaia_error
-- action_sky
-- utter_who_are_u
-- utter_how_do_u_know
-- utter_anything_else
+- utter_compliments
 - utter_default
-- utter_specific_sport
-- action_humidity
-- action_sunrise_sunset
-- action_temperature
-- utter_elaborate
-- action_wind
-- utter_greet2
+- utter_how_do_u_know
+- utter_good_afternoon
+- utter_who_are_u
+- action_sky
+- utter_user_error
+- utter_anything_else
 - action_weather
 entities:
+- sport
+- locale
+- hurricane
 - choice
 - type
-- hurricane
-- locale
-- sport
 intents:
-- sports
+- specific_sport
 - greet
 - choose
+- sports
 - goodbye
 - sky
 - humidity
@@ -65,17 +66,16 @@ intents:
 - pressure
 - wind
 - sunrise_sunset
-- specific_sport
 - how_do_u_know
 slots:
   choice:
     type: unfeaturized
   locale:
     type: unfeaturized
+  sport:
+    type: unfeaturized
   type:
     type: unfeaturized
-  sport: 
-    type: unfeaturized 
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
@@ -153,7 +153,3 @@ templates:
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
-  utter_specific_sport:
-  - text: Dá sim!
-    
-  

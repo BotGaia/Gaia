@@ -83,3 +83,25 @@
 * goodbye
     - utter_goodbye
 
+## Generated Story 8313862354176984353
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* specific_sport{"sport": "kitesurf", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"sport": "kitesurf"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_specific_sport
+* specific_sport{"sport": "surf", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"sport": "surf"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_specific_sport
+
