@@ -1,8 +1,8 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+from .utils import sportsRequest, specificSportRequest, weatherRequest
 import requests
 import json
-from .utils import sportsRequest, specificSportRequest, weatherRequest
 
 class Action_local(Action):
     def name(self):

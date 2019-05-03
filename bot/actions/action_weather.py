@@ -1,9 +1,9 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+from .utils import localRequest
 import requests
 import random
 import json
-from .utils import localRequest
 
 class Action_weather(Action):
     def name(self):

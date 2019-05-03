@@ -1,8 +1,8 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+from .utils import localRequest, specificSportRequest
 import requests
 import json
-from .utils import localRequest, specificSportRequest
 
 
 class Action_specific_sport(Action):
