@@ -28,4 +28,4 @@
 - é possivel fazer [stand up paddle](sport) no [lago corumba](locale)?
 - dá para praticar [surf](sport) em [sao paulo](locale)?
 - teria como eu praticar [surf](sport) em [nova iorque](locale)?
-- o clima tá bom pra fazer [windsurf] em [brasilia](locale)?
+- o clima tá bom pra fazer [windsurf](sport) em [brasilia](locale)?
