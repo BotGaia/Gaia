@@ -13,17 +13,17 @@ class User_Action(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('locale')
-        sport = tracker.get_slot('sport')
+        user_sport = tracker.get_slot('sport')
         user_day = tracker.get_slot('user_day')
-        user_time = tracker.get_slot('user_time')
+        user_hour = tracker.get_slot('user_time')
 
         ip_address = os.environ['IP_ADDRESS']
         dataJson = {	
             "telegramId": sender_id,
-            "sport": sport,
-            "notificationDays": user_day,
-            "notificationTime": user_time,
-            "local": user_local
+            "sport": [user_sport],
+            "days": [user_day],
+            "hours": [user_hour],
+            "local": [user_local]
             }
 
         response = requests.post('http://'+ip_address+':3003/registerUser', data = dataJson)
