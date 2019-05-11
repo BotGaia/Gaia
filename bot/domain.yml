@@ -36,7 +36,8 @@ entities:
 - user_day
 - type
 - locale
-- user_time
+- user_hour
+- user_minute
 - choice
 - sport
 - hurricane
@@ -83,7 +84,9 @@ slots:
     type: unfeaturized
   user_day:
     type: unfeaturized
-  user_time:
+  user_hour:
+    type: unfeaturized
+  user_minute:
     type: unfeaturized
 templates:
   utter_anything_else:

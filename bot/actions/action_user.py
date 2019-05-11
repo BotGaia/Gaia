@@ -15,17 +15,18 @@ class User_Action(Action):
         user_local = tracker.get_slot('locale')
         user_sport = tracker.get_slot('sport')
         user_day = tracker.get_slot('user_day')
-        user_hour = tracker.get_slot('user_time')
+        user_hour = tracker.get_slot('user_hour')
+        user_minute = tracker.get.slot('user_minute')
 
         ip_address = os.environ['IP_ADDRESS']
         dataJson = {	
             "telegramId": sender_id,
             "sport": [user_sport],
             "days": [user_day],
-            "hours": [user_hour],
+            "times": [ { user_hour, user_minute }],
             "local": [user_local]
             }
 
-        response = requests.post('http://'+ip_address+':3003/registerUser', data = dataJson)
+        response = requests.post('http://'+ip_address+':3003/createNotification', data = dataJson)
 
 
