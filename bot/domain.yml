@@ -82,12 +82,16 @@ slots:
     type: unfeaturized
   type:
     type: unfeaturized
+  user_sport:
+    type: list
+  user_locale:
+    type: list
   user_day:
-    type: unfeaturized
+    type: list
   user_hour:
-    type: unfeaturized
+    type: list
   user_minute:
-    type: unfeaturized
+    type: list
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
