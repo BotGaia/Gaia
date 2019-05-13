@@ -85,15 +85,20 @@ slots:
   type:
     type: unfeaturized
   user_sport:
-    type: unfeaturized
+    type: list
+    initial_value: []
   user_locale:
-    type: unfeaturized
+    type: list
+    initial_value: []
   user_day:
-    type: unfeaturized
+    type: list
+    initial_value: []
   user_hour:
-    type: unfeaturized
+    type: list
+    initial_value: []
   user_minute:
-    type: unfeaturized
+    type: list
+    initial_value: []
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\

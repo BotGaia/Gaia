@@ -120,7 +120,7 @@ digraph  {
 247 [class=intent, fillcolor=lightblue, label=specific_sport, shape=rect, style=filled];
 248 [class=intent, fillcolor=lightblue, label=who_are_u, shape=rect, style=filled];
 249 [class=intent, fillcolor=lightblue, label=how_do_u_know, shape=rect, style=filled];
-250 [class="intent active", fillcolor=lightblue, label="Salvar stand up paddle em Aguas Claras s 15h", shape=rect, style=filled];
+250 [class="intent active", fillcolor=lightblue, label="Registrar vela e windsurf na sexta-feira no lago paranoa", shape=rect, style=filled];
 251 [class=intent, fillcolor=lightblue, label=temperature, shape=rect, style=filled];
 252 [class=intent, fillcolor=lightblue, label=pressure, shape=rect, style=filled];
 253 [class=intent, fillcolor=lightblue, label=humidity, shape=rect, style=filled];
