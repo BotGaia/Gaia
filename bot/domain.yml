@@ -36,6 +36,8 @@ entities:
 - user_day
 - type
 - locale
+- user_sport
+- user_locale
 - user_hour
 - user_minute
 - choice
@@ -83,15 +85,15 @@ slots:
   type:
     type: unfeaturized
   user_sport:
-    type: list
+    type: unfeaturized
   user_locale:
-    type: list
+    type: unfeaturized
   user_day:
-    type: list
+    type: unfeaturized
   user_hour:
-    type: list
+    type: unfeaturized
   user_minute:
-    type: list
+    type: unfeaturized
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
