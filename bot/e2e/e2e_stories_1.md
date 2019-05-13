@@ -3,7 +3,7 @@
   - utter_greet
   - utter_greet1
   - utter_greet2
-* locale: brasilia
+* locale: [brasilia](locale)
   - action_local
-* choose: 1
+* choose: [1](choice)
   - action_weather
