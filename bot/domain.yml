@@ -26,6 +26,7 @@ actions:
 - action_weather
 - utter_elaborate
 - action_local
+- action_more_local
 - utter_default
 - action_sky
 - utter_good_night
