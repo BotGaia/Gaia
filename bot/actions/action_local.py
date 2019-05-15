@@ -24,10 +24,14 @@ class Action_local(Action):
             data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
             
             counter = 1
-            
+            buttons = []
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
                 counter += 1
+                buttons.append(telegram.InlineKeyboardButton(
+                    text=data_message,
+                    callback_data="Desejo: "+local))
+                )
                 if counter == 6:
                     break
             
