@@ -1,4 +1,4 @@
-##  intent: preference
+## intent: preference
 - Quero registrar [kitesurf](user_sport) para [quinta-feira](user_day) às [9](user_hour):[00](user_minute) no [lago paranoa](user_locale)
 - Quero receber notificações toda [sexta](user_day) as [10h](user_time) do [surf](user_sport) na [praia do futuro](user_locale)
 - Pode registrar [vela](user_sport) na [sexta-feira](user_day) às [14](user_hour):[00](user_minute) em [Brasília](user_locale)
