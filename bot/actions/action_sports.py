@@ -14,7 +14,7 @@ class Action_sports(Action):
         choice = tracker.get_slot('choice')
         location = localRequest(locale, choice)
         payload = {'place': location}
-        response = requests.get('http://68.183.43.29:30000/sports', params=payload)
+        response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         data_loc = locale.capitalize()+':'

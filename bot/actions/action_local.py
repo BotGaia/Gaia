@@ -16,7 +16,7 @@ class Action_local(Action):
         
         payload = {'address': locale}
         
-        response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
+        response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         
