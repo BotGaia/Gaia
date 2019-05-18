@@ -1,29 +1,27 @@
 %YAML 1.1
 ---
 actions:
-- action_wind
-- utter_good_afternoon
-- action_temperature
-- utter_change_subject
-- action_sunrise_sunset
-- utter_greet1
 - utter_greet
-- action_pressure
-- utter_good_morning
-- utter_greet2
-- utter_user_error
-- utter_goodbye
-- utter_hurricane
-- action_humidity
-- action_sports
-- utter_help
 - utter_compliments
-- action_specific_sport
-- utter_who_are_u
-- utter_anything_else
-- utter_out_of_scope
-- utter_how_are_u
+- action_local
 - action_weather
+- action_temperature
+- action_sports
+- utter_anything_else
+- utter_default
+- utter_how_do_u_know
+- utter_greet1
+- action_sunrise_sunset
+- utter_good_night
+- utter_who_are_u
+- utter_change_subject
+- action_sky
+- utter_good_morning
+- utter_how_are_u
+- utter_user_error
+- utter_out_of_scope
+- action_pressure
+- utter_hurricane
 - utter_elaborate
 - action_local
 - action_more_local
@@ -32,17 +30,27 @@ actions:
 - utter_good_night
 - utter_how_do_u_know
 - utter_gaia_error
+- action_wind
+- action_user
+- utter_good_afternoon
+- action_humidity
 entities:
-- locale
+- user_day
 - type
-- hurricane
-- sport
+- locale
+- user_sport
+- user_locale
+- user_hour
+- user_minute
 - choice
+- sport
+- hurricane
 intents:
+- preference
+- greet
 - inform
 - choose
 - sports
-- greet
 - specific_sport
 - goodbye
 - sky
@@ -68,6 +76,7 @@ intents:
 - wind
 - sunrise_sunset
 - how_do_u_know
+- action_temperature
 slots:
   choice:
     type: unfeaturized
@@ -77,6 +86,21 @@ slots:
     type: unfeaturized
   type:
     type: unfeaturized
+  user_sport:
+    type: list
+    initial_value: []
+  user_locale:
+    type: list
+    initial_value: []
+  user_day:
+    type: list
+    initial_value: []
+  user_hour:
+    type: list
+    initial_value: []
+  user_minute:
+    type: list
+    initial_value: []
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\

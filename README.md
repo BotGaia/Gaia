@@ -19,7 +19,7 @@ Se tiver interesse em como contribuir para o projeto, olhe nossa [wiki](https://
 
 ## Como usar
 
-O nosso projeto utiliza o Docker e o Docker Compose como ferramentes de desenvolvimento. Para instalar eles, siga o tutorial no site oficial do [Docker](https://www.docker.com/).
+O nosso projeto utiliza o Docker e o Docker Compose como ferramentas de desenvolvimento. Para instalar eles, siga o tutorial no site oficial do [Docker](https://www.docker.com/).
 
 ### Telegram
 
@@ -29,18 +29,25 @@ Para rodar o bot no Telegram, é necessário utilizar o [ngrok](https://ngrok.co
 
 Utilize a rota fornecida pelo ngrok, de preferência https. Cole sua rota do ngrok no arquivo .env, no espaço:
 
-`TELEGRAM_WEBHOOK={https://SEUNGROK/webhooks/telegram/webhook}`
+~~~
+TELEGRAM_WEBHOOK={https://SEUNGROK/webhooks/telegram/webhook}
+~~~
 
 Insira também no .env as seguintes informações do bot, caso não tenha essas informações, acesse o [BotFather](https://telegram.me/BotFather):
 
-```TELEGRAM_TOKEN```
-
-```TELEGRAM_BOT_USERNAME```
+~~~
+TELEGRAM_TOKEN
+TELEGRAM_BOT_USERNAME
+~~~
 
 Com o Docker compose instalado, acesse a pasta raiz do projeto e execute o seguinte comando em seu terminal:
 Este comando treinará o bot e irá iniciá-lo no telegram.
 
 ```$ sudo docker-compose up bot```
+
+Para rodar a folha de estilo, utilize o seguinte comando:
+
+```docker-compose run bot flake8```
 
 ### Terminal
 
