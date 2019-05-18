@@ -8,7 +8,7 @@ variables:
 
 stages:
   - build
-  - quality
+  # - quality
   - pushImage
   - deploy
 
@@ -21,11 +21,11 @@ build bot:
     - pip install docker-compose
     - docker-compose up bot
 
-staticAnalysis:
-  stage: quality
-  image: ejplatform/python:alpine
-  script:
-    - flake8
+# staticAnalysis:
+#   stage: quality
+#   image: ejplatform/python:alpine
+#   script:
+#     - flake8
 
 pushHomolog:
   stage: pushImage
