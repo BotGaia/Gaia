@@ -62,10 +62,12 @@ deployHomolog:
     - source /root/.bashrc
     - gcloud auth activate-service-account --key-file ${SERVICE_ACCOUNT} --project=${GKE_PROJECT}
     - gcloud container clusters get-credentials gaia-cluster --zone us-central1-a --project gaia-240100
-    - kubectl delete -f k8s/gaia_actions_hml.yaml
-    - kubectl delete -f k8s/gaia_hml.yaml
+    - kubectl delete svc gaia-bot-hml
+    - kubectl delete deployments gaia-bot-hml
+    - kubectl delete svc gaia-bot-actions-hml
+    - kubectl delete deployments gaia-bot-actions-hml
     - kubectl apply -f k8s/gaia_actions_hml.yaml
-    - kubectl apply -f k8s/gaia_hml.yaml
+    - cat k8s/gaia_hml.yaml | sed "s/{{API_KEY_HML}}/$API_KEY_HML/g" | kubectl apply -f -
 
 deployProd:
   stage: deploy
@@ -76,7 +78,9 @@ deployProd:
     - source /root/.bashrc
     - gcloud auth activate-service-account --key-file ${SERVICE_ACCOUNT} --project=${GKE_PROJECT}
     - gcloud container clusters get-credentials gaia-cluster --zone us-central1-a --project gaia-240100
-    - kubectl delete -f k8s/gaia_actions.yaml
-    - kubectl delete -f k8s/gaia.yaml
+    - kubectl delete svc gaia-bot
+    - kubectl delete deployments gaia-bot
+    - kubectl delete svc gaia-bot-actions
+    - kubectl delete deployments gaia-bot-actions
     - kubectl apply -f k8s/gaia_actions.yaml
-    - kubectl apply -f k8s/gaia.yaml
+    - cat k8s/gaia.yaml | sed "s/{{API_KEY}}/$API_KEY/g" | kubectl apply -f -
