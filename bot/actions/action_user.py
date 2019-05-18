@@ -1,10 +1,12 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 from typing import List
+from .utils import convertDay
 import requests
 import random
 import json
 import os
+
 
 IP_ADDRESS = os.environ.get("IP_ADDRESS", "")
 
@@ -19,27 +21,30 @@ class User_Action(Action):
         user_local = tracker.get_slot('user_locale')
         local_user = ', '.join(str(x) for x in user_local)
         user_sport = tracker.get_slot('user_sport')
-        sport_user = ', '.join(str(x) for x in user_sport)
         user_day = tracker.get_slot('user_day')
         day_user = ', '.join(str(x) for x in user_day)
         user_hour = tracker.get_slot('user_hour')
-        hour_user = ', '.join(str(x) for x in user_hour)
         user_minute = tracker.get_slot('user_minute')
-        minute_user = ', '.join(str(x) for x in user_minute)
+        hours_before = tracker.get_slot('hours_before')
+        minutes_before = tracker.get_slot('minutes_before')
 
+        convertDay(day_user)
 
-        dispatcher.utter_message(local_user)
-        dispatcher.utter_message(sport_user)
-        dispatcher.utter_message(day_user)
-        dispatcher.utter_message(hour_user)
-        dispatcher.utter_message(minute_user)
         dataJson = {
              "telegramId": sender_id,
-             "sport": [sport_user],
+             "sport": [user_sport],
              "days": [day_user],
-             "times": [ { hour_user, minute_user }],
-             "local": [local_user]
+             "hours": int(user_hour),
+             "minutes": int(user_minute),
+             "local": [local_user],
+             "hoursBefore": int(hours_before),
+             "minutesBefore": int(minutes_before),
              }
         dispatcher.utter_message(dataJson)
 
-        response = requests.post("http://68.183.43.29:30000//createNotification", data = dataJson)
+        response = requests.post("http://notifica.hml.botgaia.ga/createNotification", data = dataJson)
+
+        if(response.status_code == 200):
+            dispatcher.utter_message('Notificação salva com sucesso!')
+        else:
+            dispatcher.utter_message('Ocorreu um erro ao salvar sua notificação')

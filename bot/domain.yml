@@ -32,6 +32,7 @@ actions:
 - action_user
 - utter_good_afternoon
 - action_humidity
+- utter_time_before
 entities:
 - user_day
 - type
@@ -43,6 +44,8 @@ entities:
 - choice
 - sport
 - hurricane
+- hours_before
+- minutes_before
 intents:
 - preference
 - greet
@@ -75,6 +78,7 @@ intents:
 - sunrise_sunset
 - how_do_u_know
 - action_temperature
+- time_before
 slots:
   choice:
     type: unfeaturized
@@ -85,8 +89,7 @@ slots:
   type:
     type: unfeaturized
   user_sport:
-    type: list
-    initial_value: []
+    type: unfeaturized
   user_locale:
     type: list
     initial_value: []
@@ -94,11 +97,16 @@ slots:
     type: list
     initial_value: []
   user_hour:
-    type: list
-    initial_value: []
+    type: unfeaturized
   user_minute:
-    type: list
-    initial_value: []
+    type: unfeaturized
+    initial_value: '0'
+  hours_before:
+    type: unfeaturized
+    initial_value: '0'
+  minutes_before:
+    type: unfeaturized
+    initial_value: '0'
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
@@ -176,3 +184,8 @@ templates:
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
+  utter_time_before:
+  - text: "Compreendido, quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)"
+  - text: "Certo, quanto tempo antes gostaria? (Em horas ou minutos)"
+  - text: "Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)"  
+  

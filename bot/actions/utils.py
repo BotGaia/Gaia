@@ -99,4 +99,23 @@ def localRequest(locale, choice):
         answer_json = json.loads(answer)
 
         return answer_json[int(choice) - 1]['name']
-        
+
+def convertDay(dayArray):
+
+    for day in dayArray:
+        if((day == 'segunda') or (day == 'segunda-feira')):
+            day = 1
+        elif((day == 'terça') or (day == 'terça-feira')):
+            day = 2
+        elif((day == 'quarta') or (day == 'quarta-feira')):
+            day = 3
+        elif((day == 'quinta') or (day == 'quinta-feira')):
+            day = 4
+        elif((day == 'sexta') or (day == 'sexta-feira')):
+            day = 5
+        elif((day == 'sábado') or (day == 'sabado')):
+            day = 6
+        elif(day == 'domingo'):
+            day = 0    
+
+    return dayArray    
