@@ -31,9 +31,10 @@ class Action_local(Action):
             counter = 1
             buttons = []
             for local in answer_json:
+                data_message += str(counter) + '. ' + local['name'] + '\n'
                 counter += 1
                 buttons.append(telegram.InlineKeyboardButton(
-                    text = str(counter) + '. ' + local['name']
+                    text = str(counter)
                 ))
                 if counter == 6:
                     break

@@ -32,11 +32,10 @@ class Action_local(Action):
             buttons = []
             for local in answer_json:
                 counter += 1
+                data_message += str(counter) + '. ' + local['name'] + '\n'
                 buttons.append(telegram.InlineKeyboardButton(
-                    text = str(counter) + '. ' + local['name'],
+                    text = str(counter)
                 ))
-                if counter == 11:
-                    break
             locales = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
             reply_markup = telegram.InlineKeyboardMarkup(locales)
             bot.send_message(reply_markup=reply_markup)
