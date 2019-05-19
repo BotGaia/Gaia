@@ -21,7 +21,7 @@
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?
-- dá para fazer [kindsurf](sport) em [hibiscus](locale)?
+- dá para fazer [windsurf](sport) em [hibiscus](locale)?
 - consigo praticar [stand up paddle](sport) na [praia do rosa](locale)?
 - é possivel praticar [surf](sport) em [itapimirim](locale)?
 - posso fazer [vela](sport) em [guarujá](locale)?

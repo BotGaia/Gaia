@@ -1,47 +1,55 @@
 %YAML 1.1
 ---
 actions:
-- action_wind
-- utter_good_afternoon
-- action_temperature
-- utter_change_subject
-- action_sunrise_sunset
-- utter_greet1
-- utter_greet
-- action_pressure
-- utter_good_morning
-- utter_greet2
 - utter_user_error
-- utter_goodbye
-- utter_hurricane
-- action_humidity
-- action_sports
 - utter_help
-- utter_compliments
-- action_specific_sport
-- utter_who_are_u
-- utter_anything_else
+- utter_greet2
+- utter_greet1
+- action_wind
+- action_humidity
 - utter_out_of_scope
-- utter_how_are_u
-- action_weather
-- utter_elaborate
-- action_local
-- utter_default
 - action_sky
+- utter_compliments
+- utter_hurricane
 - utter_good_night
+- utter_how_are_u
+- action_pressure
+- utter_elaborate
+- utter_goodbye
+- utter_anything_else
+- utter_change_subject
+- utter_good_morning
+- utter_good_afternoon
+- action_user
+- action_sports
+- action_sunrise_sunset
+- action_local
 - utter_how_do_u_know
+- utter_who_are_u
+- action_weather
 - utter_gaia_error
+- action_specific_sport
+- utter_greet
+- utter_default
+- action_temperature
 entities:
-- locale
 - type
-- hurricane
-- sport
 - choice
+- hurricane
+- user_day
+- user_locale
+- user_sport
+- locale
+- user_hour
+- sport
+- user_minute
 intents:
-- inform
+- locale
 - choose
-- sports
 - greet
+- inform
+- sports
+- preference
 - specific_sport
 - goodbye
 - sky
@@ -58,7 +66,6 @@ intents:
 - compliments
 - hurricane
 - elaborate
-- locale
 - start
 - anything_else
 - who_are_u
@@ -67,6 +74,7 @@ intents:
 - wind
 - sunrise_sunset
 - how_do_u_know
+- action_temperature
 slots:
   choice:
     type: unfeaturized
@@ -76,6 +84,21 @@ slots:
     type: unfeaturized
   type:
     type: unfeaturized
+  user_day:
+    initial_value: []
+    type: list
+  user_hour:
+    initial_value: []
+    type: list
+  user_locale:
+    initial_value: []
+    type: list
+  user_minute:
+    initial_value: []
+    type: list
+  user_sport:
+    initial_value: []
+    type: list
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\

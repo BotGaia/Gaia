@@ -17,7 +17,7 @@ class Action_weather(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -54,7 +54,7 @@ class Action_temperature(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -81,7 +81,7 @@ class Action_pressure(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -104,7 +104,7 @@ class Action_humidity(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -127,7 +127,7 @@ class Action_sky(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -150,7 +150,7 @@ class Action_wind(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -173,7 +173,7 @@ class Action_sunrise_sunset(Action):
         payload = {'place': location}
 		
         response = requests.get(
-            'http://68.183.43.29:30000/climate', params=payload)
+            'https://clima.hml.botgaia.ga/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
