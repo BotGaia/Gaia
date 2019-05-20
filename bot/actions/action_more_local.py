@@ -2,13 +2,9 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 from .utils import sportsRequest, specificSportRequest, weatherRequest
 import requests
-import telegram
 import json
-import os
 
-TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_TOKEN', '')
-
-class Action_local(Action):
+class Action_more_local(Action):
     def name(self):
         return "action_more_local"
 
@@ -23,23 +19,20 @@ class Action_local(Action):
         response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        bot = telegram.Bot(telegramToken=TELEGRAM_ACCESS_TOKEN)
+        buttons = []
         
         if(len(answer_json) != 1):
             data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
             
             counter = 6
-            buttons = []
+            
             for local in answer_json:
-                counter += 1
                 data_message += str(counter) + '. ' + local['name'] + '\n'
-                buttons.append(telegram.InlineKeyboardButton(
-                    text = str(counter)
-                ))
-            locales = [buttons[i:i+2] for i in range(0, len(buttons), 2)]
-            reply_markup = telegram.InlineKeyboardMarkup(locales)
-            bot.send_message(reply_markup=reply_markup)
-           
+                title = (str(counter))
+                payload = (str(counter))
+                buttons.append({ "title": title, "payload": payload })
+                counter += 1
+            dispatcher.utter_button_message(data_message, buttons, tracker)
             
         else:
             if(answer_json[0]['name'] == 'error'):

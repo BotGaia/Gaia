@@ -23,17 +23,16 @@ actions:
 - action_pressure
 - utter_hurricane
 - utter_elaborate
-- action_local
-- action_more_local
-- utter_default
-- action_sky
-- utter_good_night
-- utter_how_do_u_know
+- action_specific_sport
+- utter_goodbye
+- utter_help
+- utter_greet2
 - utter_gaia_error
 - action_wind
 - action_user
 - utter_good_afternoon
 - action_humidity
+- action_more_local
 entities:
 - user_day
 - type
