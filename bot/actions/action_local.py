@@ -23,7 +23,7 @@ class Action_local(Action):
         
         if(len(answer_json) != 1):
             data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
-            
+            message = 'Clique no número do local desejado'
             counter = 1
             
             for local in answer_json:
@@ -34,7 +34,11 @@ class Action_local(Action):
                 counter += 1
                 if counter == 6:
                     break
-            dispatcher.utter_button_message(data_message, buttons)
+            data_message += str(counter) + '. ' + 'Nenhuma das opções'
+            title = (str(counter))
+            payload = (str(counter))
+            buttons.append({ "title": title, "payload": payload })
+            dispatcher.utter_button_message(message, buttons)
             
         else:
             if(answer_json[0]['name'] == 'error'):
