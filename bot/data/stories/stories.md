@@ -125,3 +125,74 @@
     - slot{"choice": "3"}
     - action_weather
 
+## Generated Story 6697694106597150412
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* inform{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "3"}
+    - slot{"choice": "3"}
+    - action_weather
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+
+## Generated Story -2069925269628943747
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* locale{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_weather
+
+## Generated Story 5286607139056624380
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* locale{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_weather
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "3"}
+    - slot{"choice": "3"}
+    - action_weather
+* locale{"locale": "manaus"}
+    - slot{"locale": "manaus"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_weather
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* locale{"locale": "goias"}
+    - slot{"locale": "goias"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_weather
+

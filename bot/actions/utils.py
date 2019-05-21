@@ -7,7 +7,7 @@ import json
 def sportsRequest(locale):
     payload = {'place': locale}
 
-    response = requests.get('http://68.183.43.29:30000/sports', params=payload)
+    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -30,7 +30,7 @@ def sportsRequest(locale):
 def specificSportRequest(locale, sport):
     payload = {'place': locale}
 
-    response = requests.get('http://68.183.43.29:30000/sports', params=payload)
+    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
     answer = response.content.decode()
   
     answer_json = json.loads(answer)
@@ -55,7 +55,7 @@ def specificSportRequest(locale, sport):
 def weatherRequest(type_, locale):
     payload = {'place': locale}
     
-    response = requests.get('http://68.183.43.29:30000/climate', params=payload)
+    response = requests.get('https://clima.hml.botgaia.ga/climate', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -94,9 +94,8 @@ def localRequest(locale, choice):
             choice = 5
 
         payload = {'address': locale}
-        response = requests.get('http://68.183.43.29:31170/listLocales', params=payload)
+        response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
 
         return answer_json[int(choice) - 1]['name']
-        

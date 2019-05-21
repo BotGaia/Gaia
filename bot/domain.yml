@@ -1,54 +1,55 @@
 %YAML 1.1
 ---
 actions:
-- utter_greet
-- utter_compliments
-- action_local
-- action_weather
-- action_temperature
-- action_sports
-- utter_anything_else
-- utter_default
-- utter_how_do_u_know
-- utter_greet1
-- action_sunrise_sunset
-- utter_good_night
-- utter_who_are_u
-- utter_change_subject
-- action_sky
-- utter_good_morning
-- utter_how_are_u
 - utter_user_error
-- utter_out_of_scope
-- action_pressure
-- utter_hurricane
-- utter_elaborate
-- action_specific_sport
-- utter_goodbye
 - utter_help
 - utter_greet2
-- utter_gaia_error
+- utter_greet1
 - action_wind
-- action_user
-- utter_good_afternoon
 - action_humidity
+- utter_out_of_scope
+- action_sky
+- utter_compliments
+- utter_hurricane
+- utter_good_night
+- utter_how_are_u
+- action_pressure
+- utter_elaborate
+- utter_goodbye
+- utter_anything_else
+- utter_change_subject
+- utter_good_morning
+- utter_good_afternoon
+- action_user
+- action_sports
+- action_sunrise_sunset
+- action_local
+- utter_how_do_u_know
+- utter_who_are_u
+- action_weather
+- utter_gaia_error
+- action_specific_sport
+- utter_greet
+- utter_default
+- action_temperature
 entities:
-- user_day
 - type
-- locale
-- user_sport
-- user_locale
-- user_hour
-- user_minute
 - choice
-- sport
 - hurricane
+- user_day
+- user_locale
+- user_sport
+- locale
+- user_hour
+- sport
+- user_minute
 intents:
-- preference
+- locale
+- choose
 - greet
 - inform
-- choose
 - sports
+- preference
 - specific_sport
 - goodbye
 - sky
@@ -65,7 +66,6 @@ intents:
 - compliments
 - hurricane
 - elaborate
-- locale
 - start
 - anything_else
 - who_are_u
@@ -84,21 +84,21 @@ slots:
     type: unfeaturized
   type:
     type: unfeaturized
-  user_sport:
-    type: list
-    initial_value: []
-  user_locale:
-    type: list
-    initial_value: []
   user_day:
-    type: list
     initial_value: []
+    type: list
   user_hour:
-    type: list
     initial_value: []
+    type: list
+  user_locale:
+    initial_value: []
+    type: list
   user_minute:
-    type: list
     initial_value: []
+    type: list
+  user_sport:
+    initial_value: []
+    type: list
 templates:
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
