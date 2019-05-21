@@ -7,9 +7,7 @@ import random
 import json
 import os
 
-
 IP_ADDRESS = os.environ.get("IP_ADDRESS", "")
-
 
 class User_Action(Action):
     def name(self):
