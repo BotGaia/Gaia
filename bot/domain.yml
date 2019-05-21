@@ -76,6 +76,7 @@ intents:
 - sunrise_sunset
 - how_do_u_know
 - action_temperature
+- default_choose
 slots:
   choice:
     type: unfeaturized

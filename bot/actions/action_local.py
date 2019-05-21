@@ -26,6 +26,10 @@ class Action_local(Action):
             message = 'Clique no número do local desejado'
             counter = 1
             
+            data_message += '0. ' + 'Nenhuma das opções' + '\n'
+            title = 0
+            payload = 0
+            buttons.append({ "title": title, "payload": payload })
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
                 title = (str(counter))
@@ -34,10 +38,6 @@ class Action_local(Action):
                 counter += 1
                 if counter == 6:
                     break
-            data_message += str(counter) + '. ' + 'Nenhuma das opções'
-            title = (str(counter))
-            payload = (str(counter))
-            buttons.append({ "title": title, "payload": payload })
             dispatcher.utter_button_message(message, buttons)
             
         else:

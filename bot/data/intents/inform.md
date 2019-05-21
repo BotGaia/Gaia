@@ -69,11 +69,7 @@
 - [quatro](choice)
 - [cinco](choice)
 
-## intent: choose
-- nenhum desses
-- nenhuma dessas opcoes
-- não é nenhum desse
-- não está ai
-- não está listado
-- meu local não está na lista
+## intent: default_choose
+- [0](choice)
+- [zero](choice)
 
