@@ -38,7 +38,6 @@ class Action_local(Action):
                 counter += 1
                 if counter == 6:
                     break
-            dispatcher.utter_button_message(message, buttons)
             
         else:
             if(answer_json[0]['name'] == 'error'):
@@ -55,6 +54,7 @@ class Action_local(Action):
         try:
             if(data_message[:1] != '{'):
                 dispatcher.utter_message(data_message)
+                dispatcher.utter_button_message(message, buttons)
                 
             else:
                 data_message_json = json.loads(data_message)

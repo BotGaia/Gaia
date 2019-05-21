@@ -178,6 +178,14 @@
     - action_local
 * choose
    - action_weather
+
+## Locale 1
+* locale
+    - action_local
+* default_choose
+   - action_more_local
+* choose
+   - action_weather
     
 ## Path 8
 * elaborate
@@ -197,6 +205,18 @@
 * choose
     - action_weather
 
+## Path Weather 1
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* inform
+    - action_local
+* default_choose
+   - action_more_local
+* choose
+   - action_weather
+
 ## Elaborate
 * elaborate
     - utter_elaborate    
@@ -207,6 +227,14 @@
 * hurricane
     - utter_hurricane
 
+## Path Inform Default
+* inform
+    - action_local
+* default_choose
+   - action_more_local
+* choose 
+    - action_weather
+    
 ## Path 5
 * inform
     - action_local
@@ -228,6 +256,20 @@
     - action_weather
 * goodbye
     - utter_goodbye
+
+## Path Weather Default
+* greet
+    - utter_greet
+    - utter_greet1
+    - utter_greet2
+* how_are_u
+    - utter_how_are_u
+* inform
+    - action_local
+* default_choose
+   - action_more_local
+* choose
+   - action_weather
 
 ## Path Weather Choose
 * greet

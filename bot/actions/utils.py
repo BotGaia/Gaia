@@ -97,8 +97,7 @@ def localRequest(locale, choice):
         response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        if(choice == 0):
-            return 'aaa'
-        else:
-            return answer_json[int(choice) - 1]['name']
+
+        return answer_json[int(choice) - 1]['name']
+
         
