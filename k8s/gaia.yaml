@@ -26,9 +26,9 @@ spec:
       containers:
       - env:
         - name: TELEGRAM_TOKEN
-          value: 	${API_KEY}
+          value: {{API_KEY}}
         - name: TELEGRAM_WEBHOOK
-          value: 	https://bot.hml.botgaia.ga/webhooks/telegram/webhook
+          value: https://bot.hml.botgaia.ga/webhooks/telegram/webhook
         - name: TELEGRAM_BOT_USERNAME
           value: GaiaHmlBot
         - name: ENDPOINT_ACTIONS
