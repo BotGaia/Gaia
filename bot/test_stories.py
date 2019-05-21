@@ -13,9 +13,7 @@ from os import listdir
 from os.path import isfile, join
 import argparse
 
-
 logger = logging.getLogger(__name__)
-
 
 PASSED_COLOR = utils.bcolors.OKGREEN
 FAILED_COLOR = utils.bcolors.FAIL
@@ -23,7 +21,6 @@ BLUE_COLOR = utils.bcolors.OKBLUE
 BOLD_COLOR = utils.bcolors.BOLD
 CORE_DIR = 'models/dialogue'
 NLU_DIR = 'models/nlu/current'
-
 
 parser = argparse.ArgumentParser()
 
@@ -38,7 +35,6 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-
 FileResult = namedtuple("FileResult",
                         "num_stories "
                         "num_failed_stories ")
@@ -46,13 +42,11 @@ FileResult = namedtuple("FileResult",
 all_failed_stories = []
 files_results = {}
 
-
 def is_an_intent_line(line):
     if re.search('^\\*', line):
         return True
     else:
         return False
-
 
 def process_failed_story(failed_story):
     print('\n')
@@ -83,7 +77,6 @@ def process_failed_story(failed_story):
             utils.print_color("-" * len(error_message), FAILED_COLOR)
         else:
             print(line)
-
 
 def run_evaluation(file_to_evaluate,
                    fail_on_prediction_errors=False,
@@ -128,7 +121,6 @@ def run_evaluation(file_to_evaluate,
 
     utils.print_color('#' * 80 + '\n', BOLD_COLOR)
 
-
 def print_evaluation_statistics():
     utils.print_color('EVALUATION RESULTS:', BOLD_COLOR)
 
@@ -140,7 +132,6 @@ def print_evaluation_statistics():
         for failed_story in all_failed_stories:
             utils.print_color(failed_story, FAILED_COLOR)
         sys.exit(1)
-
 
 if __name__ == '__main__':
     stories_path = parser.parse_args().stories
