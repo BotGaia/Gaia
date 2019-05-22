@@ -25,11 +25,12 @@ class Action_local(Action):
             data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
             message = 'Clique no número do local desejado'
             counter = 1
-            
-            data_message += '0. ' + 'Nenhuma das opções' + '\n'
-            title = 0
-            payload = 0
-            buttons.append({ "title": title, "payload": payload })
+
+            if (len(answer_json) > 5):
+                data_message += '0. ' + 'Exibir mais opções' + '\n'
+                title = 0
+                payload = 0
+                buttons.append({ "title": title, "payload": payload })
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
                 title = (str(counter))

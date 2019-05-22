@@ -32,7 +32,6 @@ actions:
 - action_user
 - utter_good_afternoon
 - action_humidity
-- action_more_local
 entities:
 - user_day
 - type
@@ -76,7 +75,6 @@ intents:
 - sunrise_sunset
 - how_do_u_know
 - action_temperature
-- default_choose
 slots:
   choice:
     type: unfeaturized

@@ -69,7 +69,4 @@
 - [quatro](choice)
 - [cinco](choice)
 
-## intent: default_choose
-- [0](choice)
-- [zero](choice)
 

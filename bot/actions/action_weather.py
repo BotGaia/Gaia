@@ -32,40 +32,14 @@ class Action_weather(Action):
                 payload = (str(counter))
                 buttons.append({ "title": title, "payload": payload })
                 counter += 1
+                if counter == 11:
+                    break
             dispatcher.utter_message(data_message)
             dispatcher.utter_button_message(message, buttons)
-            if (choice != '0'):
-                location = localRequest(locale, choice)
-                payload = {'place': location}
-                response = requests.get(
-                    'https://clima.hml.botgaia.ga/climate', params=payload)
-                answer = response.content.decode()
-                answer_json = json.loads(answer)
-                data_loc = locale.capitalize()+':'
-                data_temp = 'Neste local, minha temperatura é '+answer_json["temperature"]+'°C,'
-                data_humidity = 'com umidade de '+str(answer_json["humidity"])+'%, '
-                data_pressure = 'e pressão '+answer_json["pressure"]+' atm. '
-                data_direction = 'Meus ventos sopram para '+answer_json["windyDegrees"]+','
-                data_speed = ' com velocidade de '+str(answer_json["windySpeed"])+' m/s,'
-                data_sky =' e apresento '+answer_json["sky"]+'.'
-                data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"] 
-                data_sunset = 'às '+answer_json["sunset"]+'.'
-                try:
-                    dispatcher.utter_message(data_loc)
-                    dispatcher.utter_message(data_temp)
-                    dispatcher.utter_message(data_humidity)
-                    dispatcher.utter_message(data_pressure)
-                    dispatcher.utter_message(data_direction)
-                    dispatcher.utter_message(data_speed)
-                    dispatcher.utter_message(data_sky)
-                    dispatcher.utter_message(data_sunrise)
-                    dispatcher.utter_message(data_sunset)
-                except ValueError:
-                    dispatcher.utter_message(ValueError)
-        else:
+
+        if (choice != '0'):
             location = localRequest(locale, choice)
             payload = {'place': location}
-		
             response = requests.get(
                 'https://clima.hml.botgaia.ga/climate', params=payload)
             answer = response.content.decode()
