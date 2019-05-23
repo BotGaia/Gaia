@@ -99,3 +99,5 @@ def localRequest(locale, choice):
         answer_json = json.loads(answer)
 
         return answer_json[int(choice) - 1]['name']
+
+        

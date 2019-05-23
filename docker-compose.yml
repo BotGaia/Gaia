@@ -11,6 +11,7 @@ services:
         - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
         - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
         - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
+        - IP_ADDRESS=${IP_ADDRESS}
         - ENDPOINT_ACTIONS=http://actions:5055/webhook
       ports:
         - 5001:5001
@@ -24,6 +25,11 @@ services:
       build:
         context: .
         dockerfile: ./docker/actions.Dockerfile
+      environment:
+        - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+        - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
+        - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
+        - IP_ADDRESS=${IP_ADDRESS}
       ports:
         - 5055:5055
       volumes:
