@@ -32,6 +32,9 @@ actions:
 - utter_greet
 - utter_default
 - action_temperature
+- utter_start1
+- utter_start2
+- utter_start3
 entities:
 - type
 - choice
@@ -142,8 +145,10 @@ templates:
   - text: "Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia.\n"
   utter_greet:
-  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquela que compreende\
-      \ todos os fenômenos desta dimensão.\n"
+  - text: "Olá, como posso te ajudar?"
+  - text: "Saudações."
+  - text: "Oi, o que deseja saber?"
+
   utter_greet1:
   - text: "Decidi compartilhar não só a meteorologia sobre qualquer lugar do mundo,\
       \ \nmas também as modalidades mais favoráveis a serem praticadas.\n"
@@ -151,9 +156,10 @@ templates:
   - text: "Então, me fale sua localidade de interesse e te apresentarei\nmeu sobre-humano\
       \ conhecimento.\n"
   utter_help:
-  - text: "Você pode me perguntar sobre:\n\n- Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n\
-      - Atividades mais propensas ao ar livre\n"
+  - text: "Você pode me pedir:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
+   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
+      - Clima de um lugar"
   utter_how_are_u:
   - text: "Estou ótima, obrigada! Em que posso te ajudar?\n"
   utter_how_do_u_know:
@@ -176,3 +182,10 @@ templates:
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
+  utter_start1:
+  -text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquela que compreende\
+      \ todos os fenômenos desta dimensão."
+  utter_start2:
+  -text: "Posso te dizer os melhores esportes para praticar com base no tempo."
+  utter_start3:
+  -text: "Se quiser saber minha recomendação para um esporte específico, é só perguntar."
