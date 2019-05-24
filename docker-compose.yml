@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   bot:
@@ -19,7 +19,7 @@ services:
         - actions
       volumes:
         - ./bot:/bot
-      command: sh -c "make train && make run-telegram"
+      command: sh -c "make train && make run-console"
 
   actions:
       build:
