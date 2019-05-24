@@ -7,6 +7,12 @@ train-core:
 
 train: train-nlu train-core
 
+e2e:
+	python3 -m rasa_core.evaluate default --core /models/dialogue --nlu /models/nlu/current --stories e2e/e2e_stories_1.md --e2e
+
+test-stories:
+	python3 test_stories.py --stories e2e/ --e2e
+
 run-telegram:
 	python -m rasa_core.run -d models/dialogue -u models/nlu/current \
 	--port 5001 --credentials credentials.yml --endpoints endpoints.yml --debug
