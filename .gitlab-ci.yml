@@ -1,5 +1,8 @@
 image: docker:latest
 
+services:
+  - docker:dind
+
 variables:
   LATEST_VER_BOT_PROD: caleberios/gaia:latest
   LATEST_VER_ACTION_PROD: caleberios/gaia-actions:latest
