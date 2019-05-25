@@ -28,11 +28,11 @@ spec:
         - name: TELEGRAM_TOKEN
           value: {{API_KEY}}
         - name: TELEGRAM_WEBHOOK
-          value: https://bot.hml.botgaia.ga/webhooks/telegram/webhook
+          value: https://bot.botgaia.ga/webhooks/telegram/webhook
         - name: TELEGRAM_BOT_USERNAME
-          value: GaiaHmlBot
+          value: DeusaGaiaBot
         - name: ENDPOINT_ACTIONS
-          value: https://bot.actions.hml.botgaia.ga/webhook
+          value: https://bot.actions.botgaia.ga/webhook
         - name: ENVIRONMENT
           value: production
         image: caleberios/gaia:latest

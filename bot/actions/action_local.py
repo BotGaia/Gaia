@@ -21,16 +21,26 @@ class Action_local(Action):
         answer = response.content.decode()
         answer_json = json.loads(answer)
 
+        buttons = []
+
         if(len(answer_json) != 1):
             data_message_1 = 'Eu possuo vários locais com esse nome, poderia'
             data_message_2 = 'poderia informar qual o número '
             data_message_3 = 'da localidade que deseja?\n\n'
             data_message = data_message_1 + data_message_2 + data_message_3
-
+            message = 'Clique no número do local desejado'
             counter = 1
 
+            if (len(answer_json) > 5):
+                data_message += '0. ' + 'Exibir mais opções' + '\n'
+                title = 0
+                payload = 0
+                buttons.append({"title": title, "payload": payload})
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
+                title = (str(counter))
+                payload = (str(counter))
+                buttons.append({"title": title, "payload": payload})
                 counter += 1
                 if counter == 6:
                     break
@@ -52,6 +62,7 @@ class Action_local(Action):
         try:
             if(data_message[:1] != '{'):
                 dispatcher.utter_message(data_message)
+                dispatcher.utter_button_message(message, buttons)
 
             else:
                 dataMsgJson = json.loads(data_message)

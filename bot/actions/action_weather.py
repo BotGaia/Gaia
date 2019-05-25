@@ -12,37 +12,66 @@ class Action_weather(Action):
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
-        location = localRequest(locale, choice)
-        payload = {'place': location}
+        if(choice == '0'):
+            payload = {'address': locale}
+            URL = 'https://local.hml.botgaia.ga/listLocales'
+            response = requests.get(URL, params=payload)
+            answer = response.content.decode()
+            answer_json = json.loads(answer)
+            buttons = []
 
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
-        answer = response.content.decode()
-        answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
-        temp = answer_json["temperature"]
-        windDegrees = answer_json["windyDegrees"]
-        windSpd = str(answer_json["windySpeed"])
-        data_temp = 'Neste local, minha temperatura é '+temp+'°C,'
-        data_humidity = 'com umidade de '+str(answer_json["humidity"])+'%, '
-        data_pressure = 'e pressão '+answer_json["pressure"]+' atm. '
-        data_direction = 'Meus ventos sopram para '+windDegrees+','
-        data_speed = ' com velocidade de '+windSpd+' m/s,'
-        data_sky = ' e apresento '+answer_json["sky"]+'.'
-        data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"]
-        data_sunset = 'às '+answer_json["sunset"]+'.'
-        try:
-            dispatcher.utter_message(data_loc)
-            dispatcher.utter_message(data_temp)
-            dispatcher.utter_message(data_humidity)
-            dispatcher.utter_message(data_pressure)
-            dispatcher.utter_message(data_direction)
-            dispatcher.utter_message(data_speed)
-            dispatcher.utter_message(data_sky)
-            dispatcher.utter_message(data_sunrise)
-            dispatcher.utter_message(data_sunset)
-        except ValueError:
-            dispatcher.utter_message(ValueError)
+            if(len(answer_json) != 1):
+                data_msg = 'Eu possuo vários locais com esse nome, '
+                data_msg1 = 'poderia informar qual o número da localidade que'
+                data_msg_2 = 'deseja?\n\n'
+                data_message = data_msg+data_msg1+data_msg_2
+                message = 'Clique no número do local desejado'
+            counter = 6
+
+            for local in answer_json:
+                data_message += str(counter) + '. ' + local['name'] + '\n'
+                title = (str(counter))
+                payload = (str(counter))
+                buttons.append({"title": title, "payload": payload})
+                counter += 1
+                if counter == 11:
+                    break
+            dispatcher.utter_message(data_message)
+            dispatcher.utter_button_message(message, buttons)
+
+        if (choice != '0'):
+            location = localRequest(locale, choice)
+            payload = {'place': location}
+
+            response = requests.get(
+                'https://clima.hml.botgaia.ga/climate', params=payload)
+            answer = response.content.decode()
+            answer_json = json.loads(answer)
+            data_loc = locale.capitalize()+':'
+            temp = answer_json["temperature"]
+            windDegrees = answer_json["windyDegrees"]
+            windSpd = str(answer_json["windySpeed"])
+            humidity = str(answer_json["humidity"])
+            data_temp = 'Neste local, minha temperatura é '+temp+'°C,'
+            data_humidity = 'com umidade de '+humidity+'%, '
+            data_pressure = 'e pressão '+answer_json["pressure"]+' atm. '
+            data_direction = 'Meus ventos sopram para '+windDegrees+','
+            data_speed = ' com velocidade de '+windSpd+' m/s,'
+            data_sky = ' e apresento '+answer_json["sky"]+'.'
+            data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"]
+            data_sunset = 'às '+answer_json["sunset"]+'.'
+            try:
+                dispatcher.utter_message(data_loc)
+                dispatcher.utter_message(data_temp)
+                dispatcher.utter_message(data_humidity)
+                dispatcher.utter_message(data_pressure)
+                dispatcher.utter_message(data_direction)
+                dispatcher.utter_message(data_speed)
+                dispatcher.utter_message(data_sky)
+                dispatcher.utter_message(data_sunrise)
+                dispatcher.utter_message(data_sunset)
+            except ValueError:
+                dispatcher.utter_message(ValueError)
 
 
 class Action_temperature(Action):

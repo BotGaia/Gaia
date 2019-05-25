@@ -8,12 +8,6 @@
 * choose
     - action_sports
 
-## Path Sports 1
-* sports
-    - action_local
-* choose
-    - action_sports
-
 ## Path Sports 2
 * greet 
     - utter_greet
