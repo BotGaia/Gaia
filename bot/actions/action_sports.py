@@ -1,20 +1,20 @@
 from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
 from .utils import localRequest
 import requests
-import random
 import json
+
 
 class Action_sports(Action):
     def name(self):
         return "action_sports"
 
     def run(self, dispatcher, tracker, domain):
+        URL = 'https://clima.hml.botgaia.ga/sports'
         locale = tracker.get_slot('locale')
         choice = tracker.get_slot('choice')
         location = localRequest(locale, choice)
         payload = {'place': location}
-        response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
+        response = requests.get(URL, params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         data_loc = locale.capitalize()+':'

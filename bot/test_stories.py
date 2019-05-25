@@ -42,13 +42,17 @@ FileResult = namedtuple("FileResult",
 all_failed_stories = []
 files_results = {}
 
+
 def is_an_intent_line(line):
+
     if re.search('^\\*', line):
         return True
     else:
         return False
 
+
 def process_failed_story(failed_story):
+
     print('\n')
     for line in failed_story.splitlines():
         is_intent = is_an_intent_line(line)
@@ -77,6 +81,7 @@ def process_failed_story(failed_story):
             utils.print_color("-" * len(error_message), FAILED_COLOR)
         else:
             print(line)
+
 
 def run_evaluation(file_to_evaluate,
                    fail_on_prediction_errors=False,
@@ -121,7 +126,9 @@ def run_evaluation(file_to_evaluate,
 
     utils.print_color('#' * 80 + '\n', BOLD_COLOR)
 
+
 def print_evaluation_statistics():
+
     utils.print_color('EVALUATION RESULTS:', BOLD_COLOR)
 
     if len(all_failed_stories) == 0:
@@ -133,7 +140,9 @@ def print_evaluation_statistics():
             utils.print_color(failed_story, FAILED_COLOR)
         sys.exit(1)
 
+
 if __name__ == '__main__':
+
     stories_path = parser.parse_args().stories
     use_e2e = parser.parse_args().e2e
 

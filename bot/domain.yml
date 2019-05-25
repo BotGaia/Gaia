@@ -104,13 +104,15 @@ slots:
     type: list
 templates:
   utter_anything_else:
-  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Temperatura de\
-      \ um local\n- Pressão\n- Nascer e pôr do sol\n- Nebulosidade\n- Velocidade e\
-      \ direção do vento\n- Umidade\n- Atividades mais propensas ao ar livre\n"
+  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
+   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
+      - Clima de um lugar"
   utter_change_subject:
-  - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Temperatura de um local\n\
-      - Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n\
-      - Nebulosidade\n- Atividades mais propensas ao ar livre\n"
+  - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
+   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
+      - Clima de um lugar"
   utter_compliments:
   - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
   utter_default:
@@ -118,9 +120,10 @@ templates:
       \ a me comunicar com vocês, \npode falar de outra forma?\n"
   - text: "Minha comunicação com vocês precisa ser direta. Pode ser mais específico?\n"
   - text: "Não compreendi, pode reformular a pergunta?\n"
-  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Temperatura\
-      \ de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
-      - Umidade\n- Nebulosidade\n- Atividades mais propensas ao ar livre\n"
+  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
+   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
+      - Clima de um lugar"
   utter_elaborate:
   - text: "Em qual localidade?\n"
   - text: "Onde deseja saber?\n"
@@ -165,10 +168,10 @@ templates:
   utter_out_of_scope:
   - text: "Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.\n"
   utter_user_error:
-  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Temperatura\
-      \ de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
-      - Umidade\n- Nebulosidade\n- Atividades mais propensas ao ar livre         \
-      \          \n"
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores esportes para seu clima\n- Recomendação de um\
+   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
+      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
+      - Clima de um lugar"
   utter_who_are_u:
   - text: "Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. \nE comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
