@@ -36,11 +36,11 @@ trainBot:
   script:
     - docker-compose run --rm bot make train
 
-# staticAnalysis:
-#   stage: quality
-#   image: ejplatform/python:alpine
-#   script:
-#     - flake8
+staticAnalysis:
+  stage: quality
+  image: ejplatform/python:alpine
+  script:
+    - flake8
 
 pushHomolog:
   stage: pushImage
