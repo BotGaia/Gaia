@@ -41,13 +41,13 @@ def specificSportRequest(locale, sport):
             if favorable["name"].capitalize() == sport.capitalize():
                 a = 'Sim, as condições estão favoráveis paza praticar '
                 return a + sport + ' em ' + locale + '.'
-               
+
     elif(len(answer_json["reservation"]) > 0):
         for reservation in answer_json["reservation"]:
             if reservation["name"].capitalize() == sport.capitalize():
                 a = 'Algumas condições favorecem a prática de '
                 return a + sport + ' em ' + locale + '.'
-    
+
     elif(len(answer_json["alert"]) > 0):
         for alert in answer_json["alert"]:
             if alert["name"].capitalize() == sport.capitalize():
@@ -79,7 +79,7 @@ def weatherRequest(type_, locale):
     elif((type_ == 'ceu')or(type_ == 'chover')or(type_ == 'nebulosidade')):
         a = 'Neste local, apresento '
         return a + answer_json['sky']
- 
+
     elif(sentence1 or sentence2 or(type_ == 'ventos')or(type_ == 'venta')):
         a = 'Neste local, meus ventos sopram para o '
         b = ' com velocidade de '
