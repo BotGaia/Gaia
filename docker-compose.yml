@@ -12,6 +12,9 @@ services:
         - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
         - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
         - IP_ADDRESS=${IP_ADDRESS}
+        - FB_VERIFY=${FB_VERIFY}
+        - FB_SECRET=${FB_SECRET}
+        - FB_ACCESS_TOKEN=${FB_ACCESS_TOKEN}
         - ENDPOINT_ACTIONS=http://actions:5055/webhook
       ports:
         - 5001:5001

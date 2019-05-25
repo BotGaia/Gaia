@@ -17,6 +17,10 @@ run-telegram:
 	python -m rasa_core.run -d models/dialogue -u models/nlu/current \
 	--port 5001 --credentials credentials.yml --endpoints endpoints.yml --debug
 
+run-facebook:
+	python -m rasa_core.run -c facebook -d models/dialogue -u models/nlu/current \
+	--port 5001 --credentials credentials_fb.yml --endpoints endpoints.yml --debug
+
 run-console:
 	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current \
 	--debug --endpoints endpoints.yml
@@ -37,4 +41,4 @@ evaluate:
 	python3 -m rasa_core.evaluate -d models/dialogue -s data/core/
 
 run-actions:
-	python -m rasa_core_sdk.endpoint --actions actions
+	python3 -m rasa_core_sdk.endpoint --actions actions

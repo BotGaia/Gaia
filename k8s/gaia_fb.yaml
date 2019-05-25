@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gaia-bot-fb
+spec:
+  ports:
+  - port: 443
+    targetPort: 5001
+  selector:
+    app: gaia-bot-fb
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gaia-bot-fb
+spec:
+  selector:
+    matchLabels:
+      app: gaia-bot-fb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gaia-bot-fb
+    spec:
+      containers:
+      - env:
+        - name: FB_VERIFY	
+          value: 	{{FB_VERIFY}}
+        - name: FB_SECRET
+          value: 	{{FB_SECRET}}
+        - name: FB_ACCESS_TOKEN
+          value: {{FB_ACCESS_TOKEN}}
+        - name: ENDPOINT_ACTIONS
+          value: https://bot.actions.botgaia.ga/webhook
+        image: caleberios/gaia:facebook
+        imagePullPolicy: Always
+        name: gaia-bot-fb
+        ports:
+        - containerPort: 5001
