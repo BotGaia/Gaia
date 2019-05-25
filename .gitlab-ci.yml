@@ -12,7 +12,7 @@ variables:
 stages:
   - build
   - train
-  # - quality
+  - quality
   - pushImage
   - deploy
 
