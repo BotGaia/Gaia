@@ -7,6 +7,8 @@
     - utter_how_are_u
 * inform
     - action_local
+* choose
+    - action_weather
 
 ## How Are U Story 1
 * greet
@@ -17,6 +19,8 @@
     - utter_how_are_u
 * inform
     - action_local
+* choose
+    - action_weather
 
 ## Help
 * help
@@ -25,6 +29,8 @@
 ## Inform
 * inform
     - action_local
+* choose
+    - action_weather
 
 ## Fallback
 * out_of_scope

@@ -25,7 +25,7 @@ def sportsRequest(locale):
         data_alert = 'Poucas condições favorecem: '
         for alert in answer_json["alert"]:
             data_alert += '\n' + alert["name"].capitalize()
-        return data_alert
+  
 
 def specificSportRequest(locale, sport):
     payload = {'place': locale}
@@ -51,6 +51,7 @@ def specificSportRequest(locale, sport):
                 return 'Poucas condições favorecem a prática de ' + sport + ' em ' + locale + '.'
     
     return 'Não é recomendada a prática de ' + sport + ' em ' + locale + '. ' + sportsRequest(locale)
+
 
 def weatherRequest(type_, locale):
     payload = {'place': locale}
@@ -80,6 +81,7 @@ def weatherRequest(type_, locale):
     else:
         return answer
 
+
 def localRequest(locale, choice):
 
         if((choice == 'primeiro') or (choice == 'um')):
@@ -100,8 +102,9 @@ def localRequest(locale, choice):
 
         return answer_json[int(choice) - 1]['name']
 
-def convertDay(dayArray):
 
+def convertDay(dayArray):
+    
     for day in dayArray:
         if((day == 'segunda') or (day == 'segunda-feira')):
             day = 1
@@ -117,5 +120,5 @@ def convertDay(dayArray):
             day = 6
         elif(day == 'domingo'):
             day = 0    
-
     return dayArray    
+        
