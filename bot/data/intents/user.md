@@ -7,18 +7,23 @@
 - Registrar [Surf](user_sport) na [quarta](user_day) [16](user_time)h em [Pernambuco](user_locale)
 - Quero registrar [surf](user_sport) e [kitesurf](user_sport) para [terça](user_day) e [quinta](user_day) no [parque](user_locale)
 - Registrar [vela](user_sport) e [windsurf](user_sport) na [sexta-feira](user_day) no [lago paranoa](user_locale)
-- Receber notificação de [vela](user_sport) em [Brasilia](user_locale) na [terça](user_day) às [13](user_hour) e às [19](user_hour)
+- Receber notificação de [vela](user_sport) em [Brasilia](user_locale) na [terça](user_day) às [19](user_hour)
 - Salvar [stand up paddle](user_sport) em [Aguas Claras](user_locale) às [15](user_hour)h
 - Notifique-me sobre [vela](user_sport) na [bahia](user_locale) [quarta-feira](user_day)
+- Quero marcar [kitesurf](user_sport) no [lago paranoa](user_locale) e em [Recife](user_locale) na [quarta](user_day) e na [sexta](user_day) [14](user_hour)h
 
 ## intent: time_before
-- [2](hours_before) horas antes
-- [30](minutes_before) minutos antes
-- [5](hours_before)h
-- [12](hours_before) horas
-- [15](minutes_before) minutos
-- [4](hours_before) horas antes
-- [6](hours_before)h antes
-- [10](minutes_before)min antes
-- [5](minutes_before)min antes
-- [40](minutes_before) minutos antes
+- [2 horas](hours_before) antes
+- [30 minutos](minutes_before) antes
+- [5h](hours_before)
+- [12 horas](hours_before)
+- [15 minutos](minutes_before)
+- [4 horas](hours_before) antes
+- [6h](hours_before) antes
+- [10min](minutes_before) antes
+- [5 min](minutes_before) antes
+- [40 minutos](minutes_before) antes
+- Nenhum
+- Não quero ser notificado antes
+- Não precisa notificar antes
+- Sem tempo antes

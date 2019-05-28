@@ -2,6 +2,7 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 from typing import List
 from .utils import convertDay
+from .utils import convertTimeBefore
 import requests
 import random
 import json
@@ -26,21 +27,22 @@ class User_Action(Action):
         hours_before = tracker.get_slot('hours_before')
         minutes_before = tracker.get_slot('minutes_before')
 
-        convertDay(day_user)
+        notificationDays = convertDay(user_day)
+        hours_before = convertTimeBefore(hours_before)
+        minutes_before = convertTimeBefore(minutes_before)
 
         dataJson = {
              "telegramId": sender_id,
-             "sport": [user_sport],
-             "days": [day_user],
+             "sport": user_sport,
+             "days": notificationDays,
              "hours": int(user_hour),
              "minutes": int(user_minute),
-             "local": [local_user],
-             "hoursBefore": int(hours_before),
-             "minutesBefore": int(minutes_before),
+             "locals": user_local,
+             "hoursBefore": hours_before,
+             "minutesBefore": minutes_before,
              }
-        dispatcher.utter_message(dataJson)
 
-        response = requests.post("http://notifica.hml.botgaia.ga/createNotification", data = dataJson)
+        response = requests.post("http://192.168.25.227:3003/createNotification", data = dataJson)
 
         if(response.status_code == 200):
             dispatcher.utter_message('Notificação salva com sucesso!')
