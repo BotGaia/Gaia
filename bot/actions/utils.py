@@ -1,13 +1,15 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+from .environment import configSport
 import requests
 import random
 import json
 
 def sportsRequest(locale):
+    URL = configSport()
     payload = {'place': locale}
 
-    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
+    response = requests.get(URL+'/sports', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -28,9 +30,10 @@ def sportsRequest(locale):
   
 
 def specificSportRequest(locale, sport):
+    URL = configSport()
     payload = {'place': locale}
 
-    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
+    response = requests.get(URL+'/sports', params=payload)
     answer = response.content.decode()
   
     answer_json = json.loads(answer)
@@ -54,9 +57,10 @@ def specificSportRequest(locale, sport):
 
 
 def weatherRequest(type_, locale):
+    URL = configSport()
     payload = {'place': locale}
     
-    response = requests.get('https://clima.hml.botgaia.ga/climate', params=payload)
+    response = requests.get(URL+'/climate', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -83,28 +87,30 @@ def weatherRequest(type_, locale):
 
 
 def localRequest(locale, choice):
+    URL = configSport()
 
-        if((choice == 'primeiro') or (choice == 'um')):
+    if((choice == 'primeiro') or (choice == 'um')):
             choice = 1
-        elif((choice == 'segundo') or (choice == 'dois')):
+    elif((choice == 'segundo') or (choice == 'dois')):
             choice = 2
-        elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
+    elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
             choice = 3
-        elif((choice == 'quarto') or (choice == 'quatro')):
+    elif((choice == 'quarto') or (choice == 'quatro')):
             choice = 4
-        elif((choice == 'quinto') or (choice == 'cinco')):
+    elif((choice == 'quinto') or (choice == 'cinco')):
             choice = 5
 
-        payload = {'address': locale}
-        response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
-        answer = response.content.decode()
-        answer_json = json.loads(answer)
+    payload = {'address': locale}
+    response = requests.get(URL+'/listLocales', params=payload)
+    answer = response.content.decode()
+    answer_json = json.loads(answer)
 
-        return answer_json[int(choice) - 1]['name']
+    return answer_json[int(choice) - 1]['name']
 
 
 def convertDay(dayArray):
     answerArray = []
+    
     for day in dayArray:
         if((day == 'segunda') or (day == 'segunda-feira')):
             answerArray.append(1)

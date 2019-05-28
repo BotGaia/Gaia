@@ -3,18 +3,18 @@ from rasa_core_sdk.events import SlotSet
 from typing import List
 from .utils import convertDay
 from .utils import convertTimeBefore
+from .environment import configSport
 import requests
 import random
 import json
 import os
-
-IP_ADDRESS = os.environ.get("IP_ADDRESS", "")
 
 class User_Action(Action):
     def name(self):
         return "action_user"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')
@@ -42,7 +42,7 @@ class User_Action(Action):
              "minutesBefore": minutes_before,
              }
 
-        response = requests.post("http://192.168.25.227:3003/createNotification", data = dataJson)
+        response = requests.post(URL+'/createNotification', data = dataJson)
 
         if(response.status_code == 200):
             dispatcher.utter_message('Notificação salva com sucesso!')
