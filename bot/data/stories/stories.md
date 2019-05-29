@@ -1,4 +1,4 @@
-## Generated Story 3368280294361445118
+## Generated Story 1
 * greet
     - utter_greet
     - utter_greet1
@@ -21,7 +21,7 @@
 * goodbye
     - utter_goodbye
 
-## Generated Story 6172655584602252502
+## Generated Story 2
 * greet
     - utter_greet
     - utter_greet1
@@ -42,7 +42,7 @@
     - slot{"choice": "1"}
     - action_weather
 
-## Generated Story -1095409494094518017
+## Generated Story 3
 * greet
     - utter_greet
     - utter_greet1
@@ -51,9 +51,7 @@
     - slot{"locale": "brasilia"}
     - action_sports
 
-## Generated Story 0
-
-## Generated Story -2113884223385975450
+## Generated Story 4
 * greet
     - utter_greet
     - utter_greet1
@@ -83,7 +81,7 @@
 * goodbye
     - utter_goodbye
 
-## Generated Story 8313862354176984353
+## Generated Story 5
 * greet
     - utter_greet
     - utter_greet1
@@ -105,7 +103,7 @@
     - slot{"choice": "2"}
     - action_specific_sport
 
-## Generated Story -6747312658172119038
+## Generated Story 6
 * greet
     - utter_greet
     - utter_greet1
@@ -125,7 +123,7 @@
     - slot{"choice": "3"}
     - action_weather
 
-## Generated Story 6697694106597150412
+## Generated Story 7
 * greet
     - utter_greet
     - utter_greet1
@@ -145,7 +143,7 @@
     - slot{"choice": "2"}
     - action_sports
 
-## Generated Story -2069925269628943747
+## Generated Story 8
 * greet
     - utter_greet
     - utter_greet1
@@ -158,7 +156,7 @@
     - slot{"choice": "2"}
     - action_weather
 
-## Generated Story 5286607139056624380
+## Generated Story 9
 * greet
     - utter_greet
     - utter_greet1
@@ -196,7 +194,7 @@
     - slot{"choice": "1"}
     - action_weather
 
-## Generated Story 3611785792353468681
+## Generated Story 10
 * preference{"user_sport": "kitesurf", "user_locale": "Recife", "user_day": "sexta", "user_hour": "14"}
     - slot{"user_day": ["quarta", "sexta"]}
     - slot{"user_hour": "14"}

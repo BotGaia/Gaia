@@ -6,7 +6,9 @@ def configSport():
     if (os.environ.get('ENVIRONMENT') == 'dev'):
         URL = 'http://'+os.environ.get('IP_ADDRESS')+':3000'
     elif(os.environ.get('ENVIRONMENT') == 'homolog'):
-        URL = 'https://esporte.hml.ga'
+        URL = 'https://esporte.hml.botgaia.ga'
+    elif(os.environ.get('ENVIRONMENT') == 'production'):
+        URL = 'https://esporte.botgaia.ga'
     
     return URL
 

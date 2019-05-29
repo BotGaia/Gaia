@@ -5,6 +5,7 @@ import requests
 import random
 import json
 
+
 def sportsRequest(locale):
     URL = configSport()
     payload = {'place': locale}
