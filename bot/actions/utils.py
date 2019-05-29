@@ -103,7 +103,7 @@ def weatherRequest(type_, locale):
 
 
 def localRequest(locale, choice):
-
+    a = 0
     if((choice == 'terceiro')):
         a = 1
 

@@ -9,8 +9,6 @@
     - action_humidity
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sky{"type": "ceu", "locale": "recife"}
     - slot{"locale": "recife"}
     - slot{"type": "ceu"}
@@ -23,8 +21,6 @@
 ## Generated Story -8497949979264641904
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -36,8 +32,6 @@
     - utter_goodbye
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "Nova Iorque Brasil"}
     - slot{"locale": "Nova Iorque Brasil"}
     - action_local

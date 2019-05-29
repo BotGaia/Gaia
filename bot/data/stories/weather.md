@@ -1,8 +1,6 @@
 ## Path Temperature
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * temperature
@@ -19,8 +17,6 @@
 ## Path Temperature 2
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * temperature
     - action_local
 * choose
@@ -29,8 +25,6 @@
 ## Path Pressure
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * pressure
@@ -47,8 +41,6 @@
 ## Path Pressure 3
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * pressure
     - action_local
 * choose
@@ -64,8 +56,6 @@
 ## Path Humidity 1
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * humidity
     - action_local
 * choose
@@ -74,8 +64,6 @@
 ## Path Humidity 2
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * humidity
@@ -92,8 +80,6 @@
 ## Path sky 1
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * sky
@@ -104,8 +90,6 @@
 ## Path sky 2
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sky
     - action_local
 * choose
@@ -114,8 +98,6 @@
 ## Path Wind
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * wind
     - action_local
 * choose
@@ -130,8 +112,6 @@
 ## Path Wind 2
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * wind
@@ -148,8 +128,6 @@
 ## Path Sunrise Sunset 1
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sunrise_sunset
     - action_local
 * choose
@@ -158,8 +136,6 @@
 ## Path Sunrise Sunset 2
 * greet 
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * sunrise_sunset
@@ -190,8 +166,6 @@
 ## Path 3
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * inform
     - action_local
 * choose
@@ -218,8 +192,6 @@
 ## Path 6
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * inform
@@ -232,8 +204,6 @@
 ## Path Weather Choose
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * inform
     - action_local
 * choose
@@ -242,8 +212,6 @@
 ## Path Weather Choose1
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * how_are_u
     - utter_how_are_u
 * inform

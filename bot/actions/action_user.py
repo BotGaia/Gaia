@@ -10,7 +10,7 @@ class User_Action(Action):
         return "action_user"
 
     def run(self, dispatcher, tracker, domain):
-        URL = "http://68.183.43.29:30000//createNotification"
+        URL = "http://notifica.hml.botgaia.ga/createNotification"
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')

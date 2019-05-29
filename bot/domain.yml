@@ -3,8 +3,6 @@
 actions:
 - utter_user_error
 - utter_help
-- utter_greet2
-- utter_greet1
 - action_wind
 - action_humidity
 - utter_out_of_scope

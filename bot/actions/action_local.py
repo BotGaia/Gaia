@@ -24,7 +24,7 @@ class Action_local(Action):
         buttons = []
 
         if(len(answer_json) != 1):
-            data_message_1 = 'Eu possuo vários locais com esse nome, poderia'
+            data_message_1 = 'Eu possuo vários locais com esse nome, '
             data_message_2 = 'poderia informar qual o número '
             data_message_3 = 'da localidade que deseja?\n\n'
             data_message = data_message_1 + data_message_2 + data_message_3

@@ -1,8 +1,6 @@
 ## Generated Story 3368280294361445118
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * locale{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_weather
@@ -24,8 +22,6 @@
 ## Generated Story 6172655584602252502
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * temperature{"type": "temperatura", "locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - slot{"type": "temperatura"}
@@ -45,8 +41,6 @@
 ## Generated Story -1095409494094518017
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_sports
@@ -56,8 +50,6 @@
 ## Generated Story -2113884223385975450
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -71,8 +63,6 @@
     - slot{"type": null}
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -86,8 +76,6 @@
 ## Generated Story 8313862354176984353
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * specific_sport{"sport": "kitesurf", "locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - slot{"sport": "kitesurf"}
@@ -108,8 +96,6 @@
 ## Generated Story -6747312658172119038
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -128,8 +114,6 @@
 ## Generated Story 6697694106597150412
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * inform{"locale": "gama"}
     - slot{"locale": "gama"}
     - action_local
@@ -148,8 +132,6 @@
 ## Generated Story -2069925269628943747
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * locale{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -161,8 +143,6 @@
 ## Generated Story 5286607139056624380
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * locale{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -186,8 +166,6 @@
     - action_weather
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * locale{"locale": "goias"}
     - slot{"locale": "goias"}
     - action_local
