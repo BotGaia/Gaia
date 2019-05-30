@@ -1,41 +1,48 @@
 from rasa_core_sdk import Action
+from rasa_core_sdk.events import SlotSet
+from typing import List
+from .utils import convertDay
+from .utils import convertTimeBefore
+from .environment import configSport
 import requests
 import os
-
-IP_ADDRESS = os.environ.get("IP_ADDRESS", "")
-
 
 class User_Action(Action):
     def name(self):
         return "action_user"
 
     def run(self, dispatcher, tracker, domain):
-        URL = "http://notifica.hml.botgaia.ga/createNotification"
+        URL = configSport()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')
         local_user = ', '.join(str(x) for x in user_local)
         user_sport = tracker.get_slot('user_sport')
-        sport_user = ', '.join(str(x) for x in user_sport)
         user_day = tracker.get_slot('user_day')
         day_user = ', '.join(str(x) for x in user_day)
         user_hour = tracker.get_slot('user_hour')
-        hour_user = ', '.join(str(x) for x in user_hour)
         user_minute = tracker.get_slot('user_minute')
-        minute_user = ', '.join(str(x) for x in user_minute)
+        hours_before = tracker.get_slot('hours_before')
+        minutes_before = tracker.get_slot('minutes_before')
 
-        dispatcher.utter_message(local_user)
-        dispatcher.utter_message(sport_user)
-        dispatcher.utter_message(day_user)
-        dispatcher.utter_message(hour_user)
-        dispatcher.utter_message(minute_user)
+        notificationDays = convertDay(user_day)
+        hours_before = convertTimeBefore(hours_before)
+        minutes_before = convertTimeBefore(minutes_before)
+
         dataJson = {
              "telegramId": sender_id,
-             "sport": [sport_user],
-             "days": [day_user],
-             "times": [{hour_user, minute_user}],
-             "local": [local_user]
+             "sport": user_sport,
+             "days": notificationDays,
+             "hours": int(user_hour),
+             "minutes": int(user_minute),
+             "locals": user_local,
+             "hoursBefore": hours_before,
+             "minutesBefore": minutes_before,
              }
-        dispatcher.utter_message(dataJson)
 
-        requests.post(URL, data=dataJson)
+        response = requests.post(URL+'/createNotification', data = dataJson)
+
+        if(response.status_code == 200):
+            dispatcher.utter_message('Notificação salva com sucesso!')
+        else:
+            dispatcher.utter_message('Ocorreu um erro ao salvar sua notificação')

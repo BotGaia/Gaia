@@ -1,5 +1,6 @@
 from rasa_core_sdk import Action
 from .utils import localRequest
+from .environment import configSport
 import requests
 import json
 
@@ -9,13 +10,14 @@ class Action_weather(Action):
         return "action_weather"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         if(choice == '0'):
-            payload = {'address': locale}
-            URL = 'https://local.hml.botgaia.ga/listLocales'
-            response = requests.get(URL, params=payload)
+            payload = {'local': locale}
+        
+            response = requests.get(URL+'/listLocales', params=payload)
             answer = response.content.decode()
             answer_json = json.loads(answer)
             buttons = []
@@ -42,9 +44,7 @@ class Action_weather(Action):
         if (choice != '0'):
             location = localRequest(locale, choice)
             payload = {'place': location}
-
-            response = requests.get(
-                'https://clima.hml.botgaia.ga/climate', params=payload)
+            response = requests.get(URL+'/climate', params=payload)
             answer = response.content.decode()
             answer_json = json.loads(answer)
             data_loc = locale.capitalize()+':'
@@ -79,14 +79,14 @@ class Action_temperature(Action):
         return "action_temperature"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -109,14 +109,14 @@ class Action_pressure(Action):
         return "action_pressure"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -134,14 +134,14 @@ class Action_humidity(Action):
         return "action_humidity"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -159,14 +159,14 @@ class Action_sky(Action):
         return "action_sky"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -183,13 +183,14 @@ class Action_wind(Action):
         return "action_wind"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
         URL = 'https://clima.hml.botgaia.ga/climate'
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(URL, params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
@@ -209,14 +210,14 @@ class Action_sunrise_sunset(Action):
         return "action_sunrise_sunset"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-
-        response = requests.get(
-            'https://clima.hml.botgaia.ga/climate', params=payload)
+		
+        response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'

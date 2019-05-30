@@ -1,6 +1,7 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 from .utils import sportsRequest, specificSportRequest, weatherRequest
+from .environment import configSport
 import requests
 import json
 
@@ -10,14 +11,15 @@ class Action_local(Action):
         return "action_local"
 
     def run(self, dispatcher, tracker, domain):
+        URL = configSport()
         intent = tracker.latest_message['intent'].get('name')
         locale = tracker.get_slot('locale')
         sport = tracker.get_slot('sport')
         type_ = tracker.get_slot('type')
-        URL = 'https://local.hml.botgaia.ga/listLocales'
-        payload = {'address': locale}
-
-        response = requests.get(URL, params=payload)
+        
+        payload = {'local': locale}
+        
+        response = requests.get(URL+'/listLocales', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
 

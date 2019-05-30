@@ -1,4 +1,4 @@
-## Generated Story 1181946164271676078
+## Generated Story 1
 * humidity{"type": "umidade", "locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - slot{"type": "umidade"}
@@ -18,7 +18,7 @@
     - slot{"choice": "1"}
     - action_sky
 
-## Generated Story -8497949979264641904
+## Generated Story 2
 * greet
     - utter_greet
 * sports{"locale": "brasilia"}
