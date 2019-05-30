@@ -1,13 +1,9 @@
 from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
-from typing import List
 from .utils import convertDay
 from .utils import convertTimeBefore
 from .environment import configSport
 import requests
-import random
-import json
-import os
+
 
 class User_Action(Action):
     def name(self):
@@ -18,10 +14,8 @@ class User_Action(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')
-        local_user = ', '.join(str(x) for x in user_local)
         user_sport = tracker.get_slot('user_sport')
         user_day = tracker.get_slot('user_day')
-        day_user = ', '.join(str(x) for x in user_day)
         user_hour = tracker.get_slot('user_hour')
         user_minute = tracker.get_slot('user_minute')
         hours_before = tracker.get_slot('hours_before')
@@ -42,9 +36,9 @@ class User_Action(Action):
              "minutesBefore": minutes_before,
              }
 
-        response = requests.post(URL+'/createNotification', data = dataJson)
+        response = requests.post(URL+'/createNotification', data=dataJson)
 
         if(response.status_code == 200):
             dispatcher.utter_message('Notificação salva com sucesso!')
         else:
-            dispatcher.utter_message('Ocorreu um erro ao salvar sua notificação')
+            dispatcher.utter_message('Ocorreu um erro ao salvar')

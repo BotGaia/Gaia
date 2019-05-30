@@ -1,10 +1,9 @@
 from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
 from .utils import localRequest
 from .environment import configSport
 import requests
-import random
 import json
+
 
 class Action_sports(Action):
     def name(self):

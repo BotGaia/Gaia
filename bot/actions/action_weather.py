@@ -1,10 +1,9 @@
 from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
 from .utils import localRequest
 from .environment import configSport
 import requests
-import random
 import json
+
 
 class Action_weather(Action):
     def name(self):
@@ -14,25 +13,28 @@ class Action_weather(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         if(choice == '0'):
             payload = {'local': locale}
-        
+
             response = requests.get(URL+'/listLocales', params=payload)
             answer = response.content.decode()
             answer_json = json.loads(answer)
             buttons = []
-        
+
             if(len(answer_json) != 1):
-                data_message = 'Eu possuo vários locais com esse nome, poderia informar qual o número da localidade que deseja?\n\n'
+                data_msg = 'Eu possuo vários locais com esse nome, '
+                data_msg1 = 'poderia informar qual o número da localidade que'
+                data_msg_2 = 'deseja?\n\n'
+                data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
-            
+
             for local in answer_json:
                 data_message += str(counter) + '. ' + local['name'] + '\n'
                 title = (str(counter))
                 payload = (str(counter))
-                buttons.append({ "title": title, "payload": payload })
+                buttons.append({"title": title, "payload": payload})
                 counter += 1
                 if counter == 11:
                     break
@@ -46,13 +48,17 @@ class Action_weather(Action):
             answer = response.content.decode()
             answer_json = json.loads(answer)
             data_loc = locale.capitalize()+':'
-            data_temp = 'Neste local, minha temperatura é '+answer_json["temperature"]+'°C,'
-            data_humidity = 'com umidade de '+str(answer_json["humidity"])+'%, '
+            temp = answer_json["temperature"]
+            windDegrees = answer_json["windyDegrees"]
+            windSpd = str(answer_json["windySpeed"])
+            humidity = str(answer_json["humidity"])
+            data_temp = 'Neste local, minha temperatura é '+temp+'°C,'
+            data_humidity = 'com umidade de '+humidity+'%, '
             data_pressure = 'e pressão '+answer_json["pressure"]+' atm. '
-            data_direction = 'Meus ventos sopram para '+answer_json["windyDegrees"]+','
-            data_speed = ' com velocidade de '+str(answer_json["windySpeed"])+' m/s,'
-            data_sky =' e apresento '+answer_json["sky"]+'.'
-            data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"] 
+            data_direction = 'Meus ventos sopram para '+windDegrees+','
+            data_speed = ' com velocidade de '+windSpd+' m/s,'
+            data_sky = ' e apresento '+answer_json["sky"]+'.'
+            data_sunrise = 'O sol me ilumina de '+answer_json["sunrise"]
             data_sunset = 'às '+answer_json["sunset"]+'.'
             try:
                 dispatcher.utter_message(data_loc)
@@ -67,6 +73,7 @@ class Action_weather(Action):
             except ValueError:
                 dispatcher.utter_message(ValueError)
 
+
 class Action_temperature(Action):
     def name(self):
         return "action_temperature"
@@ -75,17 +82,19 @@ class Action_temperature(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data ='Neste local, minha temperatura é '+answer_json["temperature"]+'°C'
-        data_max = 'Minha temperatura mínima no dia de hoje é de '+answer_json["temperatureMin"]+'°C'
-        data_min = 'E máxima de '+answer_json["temperatureMax"]+'°C.' 
+        temp = answer_json["temperature"]
+        data = 'Neste local, minha temperatura é '+temp+'°C'
+        tempMn = answer_json["temperatureMin"]
+        data_max = 'Minha temperatura mínima no dia de hoje é de '+tempMn+'°C'
+        data_min = 'E máxima de '+answer_json["temperatureMax"]+'°C.'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
@@ -93,6 +102,7 @@ class Action_temperature(Action):
             dispatcher.utter_message(data_min)
         except ValueError:
             dispatcher.utter_message(ValueError)
+
 
 class Action_pressure(Action):
     def name(self):
@@ -102,20 +112,22 @@ class Action_pressure(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data ='Neste local, minha pressão é de '+answer_json["pressure"]+' atm'
+        pressure = answer_json["pressure"]
+        data = 'Neste local, minha pressão é de '+pressure+' atm'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
+
 
 class Action_humidity(Action):
     def name(self):
@@ -125,20 +137,22 @@ class Action_humidity(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data ='Neste local, minha umidade é de '+str(answer_json["humidity"])+'%'
+        humidity = str(answer_json["humidity"])
+        data = 'Neste local, minha umidade é de '+humidity+'%'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
+
 
 class Action_sky(Action):
     def name(self):
@@ -148,20 +162,21 @@ class Action_sky(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data ='Neste local, apresento '+answer_json["sky"]
+        data = 'Neste local, apresento '+answer_json["sky"]
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
+
 
 class Action_wind(Action):
     def name(self):
@@ -171,20 +186,24 @@ class Action_wind(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+        URL = 'https://clima.hml.botgaia.ga/climate'
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data ='Neste local, meus ventos sopram para o '+answer_json["windyDegrees"]+' com velocidade de '+str(answer["windySpeed"])+'m/s.'
+        windD = answer_json["windyDegrees"]
+        windS = str(answer["windySpeed"])
+        data_answer = 'Neste local, meus ventos sopram para o '
+        data = data_answer+windD+' com velocidade de '+windS+'m/s.'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
+
 
 class Action_sunrise_sunset(Action):
     def name(self):
@@ -194,18 +213,19 @@ class Action_sunrise_sunset(Action):
         URL = configSport()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-		
+
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = locale.capitalize()+':'
-        data = 'Neste local, o sol me ilumina de '+answer_json["sunrise"]+' às '+answer["sunset"]+'.'
+        sunrise = answer_json["sunrise"]
+        sunset = answer["sunset"]
+        data = 'Neste local, o sol me ilumina de '+sunrise+' às '+sunset+'.'
         try:
             dispatcher.utter_message(data_loc)
             dispatcher.utter_message(data)
         except ValueError:
             dispatcher.utter_message(ValueError)
-
