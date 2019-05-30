@@ -1,13 +1,16 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+from .environment import configSport
 import requests
 import random
 import json
 
+
 def sportsRequest(locale):
+    URL = configSport()
     payload = {'place': locale}
 
-    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
+    response = requests.get(URL+'/sports', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -25,12 +28,13 @@ def sportsRequest(locale):
         data_alert = 'Poucas condições favorecem: '
         for alert in answer_json["alert"]:
             data_alert += '\n' + alert["name"].capitalize()
-        return data_alert
+  
 
 def specificSportRequest(locale, sport):
+    URL = configSport()
     payload = {'place': locale}
 
-    response = requests.get('https://clima.hml.botgaia.ga/sports', params=payload)
+    response = requests.get(URL+'/sports', params=payload)
     answer = response.content.decode()
   
     answer_json = json.loads(answer)
@@ -52,10 +56,12 @@ def specificSportRequest(locale, sport):
     
     return 'Não é recomendada a prática de ' + sport + ' em ' + locale + '. ' + sportsRequest(locale)
 
+
 def weatherRequest(type_, locale):
+    URL = configSport()
     payload = {'place': locale}
     
-    response = requests.get('https://clima.hml.botgaia.ga/climate', params=payload)
+    response = requests.get(URL+'/climate', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
     
@@ -80,24 +86,61 @@ def weatherRequest(type_, locale):
     else:
         return answer
 
-def localRequest(locale, choice):
 
-        if((choice == 'primeiro') or (choice == 'um')):
+def localRequest(locale, choice):
+    URL = configSport()
+
+    if((choice == 'primeiro') or (choice == 'um')):
             choice = 1
-        elif((choice == 'segundo') or (choice == 'dois')):
+    elif((choice == 'segundo') or (choice == 'dois')):
             choice = 2
-        elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
+    elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
             choice = 3
-        elif((choice == 'quarto') or (choice == 'quatro')):
+    elif((choice == 'quarto') or (choice == 'quatro')):
             choice = 4
-        elif((choice == 'quinto') or (choice == 'cinco')):
+    elif((choice == 'quinto') or (choice == 'cinco')):
             choice = 5
 
-        payload = {'address': locale}
-        response = requests.get('https://local.hml.botgaia.ga/listLocales', params=payload)
-        answer = response.content.decode()
-        answer_json = json.loads(answer)
+    payload = {'address': locale}
+    response = requests.get(URL+'/listLocales', params=payload)
+    answer = response.content.decode()
+    answer_json = json.loads(answer)
 
-        return answer_json[int(choice) - 1]['name']
+    return answer_json[int(choice) - 1]['name']
 
+
+def convertDay(dayArray):
+    answerArray = []
+    
+    for day in dayArray:
+        if((day == 'segunda') or (day == 'segunda-feira')):
+            answerArray.append(1)
+        elif((day == 'terça') or (day == 'terça-feira')):
+            answerArray.append(2)
+        elif((day == 'quarta') or (day == 'quarta-feira')):
+            answerArray.append(3)
+        elif((day == 'quinta') or (day == 'quinta-feira')):
+            answerArray.append(4)
+        elif((day == 'sexta') or (day == 'sexta-feira')):
+            answerArray.append(5)
+        elif((day == 'sábado') or (day == 'sabado')):
+            answerArray.append(6)
+        elif(day == 'domingo'):
+            answerArray.append(0)    
+
+    return answerArray   
+
+
+def convertTimeBefore(timeBefore):
+    convertedTime = []
+    auxTime = []
+    for char in timeBefore:
+        if((char == '0') or (char == '1') or (char == '2') or (char == '3')):
+            auxTime.append(char)
+        if((char == '4') or (char == '5') or (char == '6') or (char == '7')):
+            auxTime.append(char)
+        if((char == '8') or (char == '9')):
+            auxTime.append(char)
+    convertedTime = ''.join(auxTime)
+    return int(convertedTime)
         
