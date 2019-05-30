@@ -16,7 +16,7 @@ class Action_weather(Action):
         locale = tracker.get_slot('locale')
 		
         if(choice == '0'):
-            payload = {'address': locale}
+            payload = {'local': locale}
         
             response = requests.get(URL+'/listLocales', params=payload)
             answer = response.content.decode()

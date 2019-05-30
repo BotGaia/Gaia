@@ -101,7 +101,7 @@ def localRequest(locale, choice):
     elif((choice == 'quinto') or (choice == 'cinco')):
             choice = 5
 
-    payload = {'address': locale}
+    payload = {'local': locale}
     response = requests.get(URL+'/listLocales', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)

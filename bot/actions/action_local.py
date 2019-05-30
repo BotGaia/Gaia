@@ -16,7 +16,7 @@ class Action_local(Action):
         sport = tracker.get_slot('sport')
         type_ = tracker.get_slot('type')
         
-        payload = {'address': locale}
+        payload = {'local': locale}
         
         response = requests.get(URL+'/listLocales', params=payload)
         answer = response.content.decode()
