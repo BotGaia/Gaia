@@ -31,9 +31,9 @@ def sportsRequest(locale):
 
 
 def specificSportRequest(locale, sport):
+    
     URL = configSport()
     payload = {'place': locale}
-    URL = 'https://clima.hml.botgaia.ga/sports'
 
     response = requests.get(URL+'/sports', params=payload)
     answer = response.content.decode()
