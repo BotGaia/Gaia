@@ -16,7 +16,7 @@ class Action_weather(Action):
 
         if(choice == '0'):
             payload = {'local': locale}
-        
+
             response = requests.get(URL+'/listLocales', params=payload)
             answer = response.content.decode()
             answer_json = json.loads(answer)
@@ -85,7 +85,7 @@ class Action_temperature(Action):
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
@@ -115,7 +115,7 @@ class Action_pressure(Action):
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
@@ -140,7 +140,7 @@ class Action_humidity(Action):
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
@@ -165,7 +165,7 @@ class Action_sky(Action):
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
@@ -189,7 +189,7 @@ class Action_wind(Action):
         URL = 'https://clima.hml.botgaia.ga/climate'
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
@@ -216,7 +216,7 @@ class Action_sunrise_sunset(Action):
 
         location = localRequest(locale, choice)
         payload = {'place': location}
-		
+
         response = requests.get(URL+'/climate', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)

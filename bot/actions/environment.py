@@ -9,6 +9,5 @@ def configSport():
         URL = 'https://esporte.hml.botgaia.ga'
     elif(os.environ.get('ENVIRONMENT') == 'production'):
         URL = 'https://esporte.botgaia.ga'
-    
-    return URL
 
+    return URL

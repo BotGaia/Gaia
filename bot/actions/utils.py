@@ -1,5 +1,3 @@
-from rasa_core_sdk import Action
-from rasa_core_sdk.events import SlotSet
 from .environment import configSport
 import requests
 import json
@@ -27,11 +25,10 @@ def sportsRequest(locale):
         data_alert = 'Poucas condições favorecem: '
         for alert in answer_json["alert"]:
             data_alert += '\n' + alert["name"].capitalize()
-  
 
 
 def specificSportRequest(locale, sport):
-    
+
     URL = configSport()
     payload = {'place': locale}
 
@@ -61,11 +58,10 @@ def specificSportRequest(locale, sport):
     return a + sport + ' em ' + locale + '. ' + sportsRequest(locale)
 
 
-
 def weatherRequest(type_, locale):
     URL = configSport()
     payload = {'place': locale}
-    
+
     response = requests.get(URL+'/climate', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
@@ -110,15 +106,15 @@ def localRequest(locale, choice):
     URL = configSport()
 
     if((choice == 'primeiro') or (choice == 'um')):
-            choice = 1
+        choice = 1
     elif((choice == 'segundo') or (choice == 'dois')):
-            choice = 2
-    elif((choice == 'terceiro') or (choice =='tres') or (choice == 'três')):
-            choice = 3
+        choice = 2
+    elif((choice == 'terceiro') or (choice == 'tres') or (choice == 'três')):
+        choice = 3
     elif((choice == 'quarto') or (choice == 'quatro')):
-            choice = 4
+        choice = 4
     elif((choice == 'quinto') or (choice == 'cinco')):
-            choice = 5
+        choice = 5
 
     payload = {'local': locale}
     response = requests.get(URL+'/listLocales', params=payload)
@@ -130,7 +126,7 @@ def localRequest(locale, choice):
 
 def convertDay(dayArray):
     answerArray = []
-    
+
     for day in dayArray:
         if((day == 'segunda') or (day == 'segunda-feira')):
             answerArray.append(1)
@@ -145,9 +141,9 @@ def convertDay(dayArray):
         elif((day == 'sábado') or (day == 'sabado')):
             answerArray.append(6)
         elif(day == 'domingo'):
-            answerArray.append(0)    
+            answerArray.append(0)
 
-    return answerArray   
+    return answerArray
 
 
 def convertTimeBefore(timeBefore):
@@ -162,4 +158,3 @@ def convertTimeBefore(timeBefore):
             auxTime.append(char)
     convertedTime = ''.join(auxTime)
     return int(convertedTime)
-        
