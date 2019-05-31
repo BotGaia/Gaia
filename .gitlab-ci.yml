@@ -6,6 +6,7 @@ services:
 variables:
   LATEST_VER_BOT_PROD: caleberios/gaia:latest
   LATEST_VER_ACTION_PROD: caleberios/gaia-actions:latest
+  LATEST_VER_BOT_FB: caleberios/gaia:facebook
   LATEST_VER_BOT_HML: caleberios/gaia:homolog
   LATEST_VER_ACTION_HML: caleberios/gaia-actions:homolog
 
@@ -64,9 +65,11 @@ pushProd:
   script:
     - docker build -t $LATEST_VER_BOT_PROD -f docker/bot.Dockerfile .
     - docker build -t $LATEST_VER_ACTION_PROD -f docker/actions.Dockerfile .
+    - cat docker/bot.Dockerfile | sed "s/telegram/facebook/g" | docker build -t $LATEST_VER_BOT_FB -f - .
     - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
     - docker push $LATEST_VER_BOT_PROD && docker image rm $LATEST_VER_BOT_PROD
     - docker push $LATEST_VER_ACTION_PROD && docker image rm $LATEST_VER_ACTION_PROD
+    - docker push $LATEST_VER_BOT_FB && docker image rm $LATEST_VER_BOT_FB
 
 deployHomolog:
   stage: deploy
@@ -93,5 +96,7 @@ deployProd:
     - gcloud container clusters get-credentials gaia-cluster --zone us-central1-a --project gaia-240100
     - kubectl delete service/gaia-bot deployment.apps/gaia-bot
     - kubectl delete service/gaia-actions deployment.apps/gaia-actions
+    - kubectl delete service/gaia-bot-fb deployment.apps/gaia-bot-fb
     - kubectl apply -f k8s/gaia_actions.yaml
     - cat k8s/gaia.yaml | sed "s/{{API_KEY}}/$API_KEY/g" | kubectl apply -f -
+    - cat k8s/gaia_fb.yaml | sed "s/{{FB_VERIFY}}/$FB_VERIFY/g" | sed "s/{{FB_SECRET}}/$FB_SECRET/g" | | sed "s/{{FB_ACCESS_TOKEN}}/$FB_ACCESS_TOKEN/g" kubectl apply -f -
