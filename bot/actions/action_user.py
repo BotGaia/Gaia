@@ -26,15 +26,15 @@ class User_Action(Action):
         minutes_before = convertTimeBefore(minutes_before)
 
         dataJson = {
-             "telegramId": sender_id,
-             "sport": user_sport,
-             "days": notificationDays,
-             "hours": int(user_hour),
-             "minutes": int(user_minute),
-             "locals": user_local,
-             "hoursBefore": hours_before,
-             "minutesBefore": minutes_before,
-             }
+          "telegramId": sender_id,
+          "sport": user_sport,
+          "days": notificationDays,
+          "hour": int(user_hour),
+          "minutes": int(user_minute),
+          "locals": user_local,
+          "hoursBefore": hours_before,
+          "minutesBefore": minutes_before,
+        }
 
         response = requests.post(URL+'/createNotification', data=dataJson)
 
