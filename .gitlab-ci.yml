@@ -99,4 +99,4 @@ deployProd:
     - kubectl delete service/gaia-bot-fb deployment.apps/gaia-bot-fb
     - kubectl apply -f k8s/gaia_actions.yaml
     - cat k8s/gaia.yaml | sed "s/{{API_KEY}}/$API_KEY/g" | kubectl apply -f -
-    - cat k8s/gaia_fb.yaml | sed "s/{{FB_VERIFY}}/$FB_VERIFY/g" | sed "s/{{FB_SECRET}}/$FB_SECRET/g" | | sed "s/{{FB_ACCESS_TOKEN}}/$FB_ACCESS_TOKEN/g" kubectl apply -f -
+    - cat k8s/gaia_fb.yaml | sed "s/{{FB_VERIFY}}/$FB_VERIFY/g" | sed "s/{{FB_SECRET}}/$FB_SECRET/g" | sed "s/{{FB_ACCESS_TOKEN}}/$FB_ACCESS_TOKEN/g" | kubectl apply -f -
