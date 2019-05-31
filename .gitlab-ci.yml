@@ -1,5 +1,8 @@
 image: docker:latest
 
+services:
+  - docker:dind
+
 variables:
   LATEST_VER_BOT_PROD: caleberios/gaia:latest
   LATEST_VER_ACTION_PROD: caleberios/gaia-actions:latest
@@ -8,19 +11,39 @@ variables:
 
 stages:
   - build
+  - train
+  - quality
+  - pushImage
   - deploy
 
-build bot:
+buildBot:
   stage: build
+  script:
+    - docker build -f docker/bot.Dockerfile .
+
+buildActions:
+  stage: build
+  script:
+    - docker build -f docker/actions.Dockerfile .
+
+trainBot:
+  stage: train
   services:
     - docker:dind
-  script:
+  before_script:
     - apk add --no-cache py-pip python-dev libffi-dev openssl-dev gcc libc-dev make
     - pip install docker-compose
-    - docker-compose up bot
+  script:
+    - docker-compose run --rm bot make train
 
-deployHomolog:
-  stage: deploy
+staticAnalysis:
+  stage: quality
+  image: ejplatform/python:alpine
+  script:
+    - flake8
+
+pushHomolog:
+  stage: pushImage
   services:
     - docker:dind
   only:
@@ -32,8 +55,8 @@ deployHomolog:
     - docker push $LATEST_VER_BOT_HML && docker image rm $LATEST_VER_BOT_HML
     - docker push $LATEST_VER_ACTION_HML && docker image rm $LATEST_VER_ACTION_HML
 
-deployProd:
-  stage: deploy
+pushProd:
+  stage: pushImage
   services:
     - docker:dind
   only:
@@ -44,3 +67,31 @@ deployProd:
     - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
     - docker push $LATEST_VER_BOT_PROD && docker image rm $LATEST_VER_BOT_PROD
     - docker push $LATEST_VER_ACTION_PROD && docker image rm $LATEST_VER_ACTION_PROD
+
+deployHomolog:
+  stage: deploy
+  image: google/cloud-sdk
+  only:
+    - dev
+  script:
+    - source /root/.bashrc
+    - gcloud auth activate-service-account --key-file ${SERVICE_ACCOUNT} --project=${GKE_PROJECT}
+    - gcloud container clusters get-credentials gaia-cluster --zone us-central1-a --project gaia-240100
+    - kubectl delete service/gaia-bot-hml deployment.apps/gaia-bot-hml
+    - kubectl delete service/gaia-actions-hml deployment.apps/gaia-actions-hml
+    - kubectl apply -f k8s/gaia_actions_hml.yaml
+    - cat k8s/gaia_hml.yaml | sed "s/{{API_KEY_HML}}/$API_KEY_HML/g" | kubectl apply -f -
+
+deployProd:
+  stage: deploy
+  image: google/cloud-sdk
+  only:
+    - master
+  script:
+    - source /root/.bashrc
+    - gcloud auth activate-service-account --key-file ${SERVICE_ACCOUNT} --project=${GKE_PROJECT}
+    - gcloud container clusters get-credentials gaia-cluster --zone us-central1-a --project gaia-240100
+    - kubectl delete service/gaia-bot deployment.apps/gaia-bot
+    - kubectl delete service/gaia-actions deployment.apps/gaia-actions
+    - kubectl apply -f k8s/gaia_actions.yaml
+    - cat k8s/gaia.yaml | sed "s/{{API_KEY}}/$API_KEY/g" | kubectl apply -f -

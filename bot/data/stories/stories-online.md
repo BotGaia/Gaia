@@ -1,4 +1,4 @@
-## Generated Story 1181946164271676078
+## Generated Story 1
 * humidity{"type": "umidade", "locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - slot{"type": "umidade"}
@@ -9,8 +9,6 @@
     - action_humidity
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sky{"type": "ceu", "locale": "recife"}
     - slot{"locale": "recife"}
     - slot{"type": "ceu"}
@@ -20,11 +18,9 @@
     - slot{"choice": "1"}
     - action_sky
 
-## Generated Story -8497949979264641904
+## Generated Story 2
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "brasilia"}
     - slot{"locale": "brasilia"}
     - action_local
@@ -36,8 +32,6 @@
     - utter_goodbye
 * greet
     - utter_greet
-    - utter_greet1
-    - utter_greet2
 * sports{"locale": "Nova Iorque Brasil"}
     - slot{"locale": "Nova Iorque Brasil"}
     - action_local

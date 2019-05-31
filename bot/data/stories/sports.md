@@ -8,12 +8,6 @@
 * choose
     - action_sports
 
-## Path Sports 1
-* sports
-    - action_local
-* choose
-    - action_sports
-
 ## Path Sports 2
 * greet 
     - utter_greet
@@ -25,6 +19,7 @@
 ## Path sports 3
 * good_morning
     - utter_good_morning
+    - utter_greet
 * sports
     - action_local
 * choose
@@ -45,7 +40,7 @@
 ## Path sports 5
 * good_night
     - utter_good_night
-* sports
+    - utter_greet
     - action_local
 * choose
     - action_sports
@@ -55,7 +50,22 @@
 ## Path sports 6
 * good_afternoon
     - utter_good_afternoon
+    - utter_greet
 * sports
     - action_local
 * choose
     - action_sports
+
+# Specific Sports
+* specific_sport
+    - action_local
+* choose
+    - action_specific_sport
+
+# Specific Sports 1
+* greet
+    - utter_greet
+* specific_sport
+    - action_local
+* choose 
+    - action_specific_sport

@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gaia-actions-hml
+spec:
+  ports:
+  - port: 443
+    targetPort: 5055
+  selector:
+    app: gaia-actions-hml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gaia-actions-hml
+spec:
+  selector:
+    matchLabels:
+      app: gaia-actions-hml
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gaia-actions-hml
+    spec:
+      containers:
+      - env:
+        - name: ENVIRONMENT
+          value: homolog
+        image: caleberios/gaia-actions:homolog
+        imagePullPolicy: Always
+        name: gaia-actions-hml
+        ports:
+        - containerPort: 5055

@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gaia-bot-hml
+spec:
+  ports:
+  - port: 443
+    targetPort: 5001
+  selector:
+    app: gaia-bot-hml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gaia-bot-hml
+spec:
+  selector:
+    matchLabels:
+      app: gaia-bot-hml
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gaia-bot-hml
+    spec:
+      containers:
+      - env:
+        - name: TELEGRAM_TOKEN
+          value: {{API_KEY_HML}}
+        - name: TELEGRAM_WEBHOOK
+          value: https://bot.hml.botgaia.ga/webhooks/telegram/webhook
+        - name: TELEGRAM_BOT_USERNAME
+          value: GaiaHmlBot
+        - name: ENDPOINT_ACTIONS
+          value: https://bot.actions.hml.botgaia.ga/webhook
+        - name: ENVIRONMENT
+          value: homolog
+        image: caleberios/gaia:latest
+        imagePullPolicy: Always
+        name: gaia-bot-hml
+        ports:
+        - containerPort: 5001
