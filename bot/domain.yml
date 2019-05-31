@@ -1,51 +1,51 @@
 %YAML 1.1
 ---
 actions:
-- utter_user_error
-- utter_time_before
-- utter_good_morning
-- utter_good_afternoon
-- action_pressure
+- utter_goodbye
+- utter_start2
 - utter_change_subject
-- action_local
-- action_weather
+- utter_anything_else
+- utter_how_are_u
+- utter_how_do_u_know
 - utter_hurricane
 - utter_greet
-- utter_help
-- action_wind
-- utter_how_do_u_know
-- action_sky
-- action_humidity
-- utter_how_are_u
-- utter_good_night
-- utter_elaborate
-- action_specific_sport
-- utter_anything_else
-- action_sunrise_sunset
-- utter_default
-- utter_goodbye
-- action_sports
 - utter_compliments
-- utter_who_are_u
+- action_local
+- utter_default
 - utter_gaia_error
-- action_temperature
+- action_wind
+- action_sports
 - utter_start1
-- utter_start2
-- utter_start3
-- action_user
+- utter_time_before
+- action_temperature
+- utter_help
+- action_weather
+- action_sky
+- utter_good_afternoon
 - utter_out_of_scope
+- utter_who_are_u
+- utter_good_morning
+- action_user
+- action_pressure
+- action_humidity
+- utter_elaborate
+- utter_good_night
+- utter_start3
+- action_specific_sport
+- action_sunrise_sunset
+- utter_user_error
 entities:
-- user_locale
-- user_hour
-- hours_before
+- user_sport
+- type
+- hurricane
 - sport
 - minutes_before
-- user_sport
-- user_day
-- hurricane
-- type
-- choice
 - locale
+- user_hour
+- user_locale
+- user_day
+- choice
+- hours_before
 intents:
 - preference
 - time_before
@@ -110,15 +110,15 @@ slots:
     type: unfeaturized
 templates:
   utter_anything_else:
-  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
-   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
-      - Clima de um lugar"
+  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Melhores esportes\
+      \ para seu clima\n- Recomendação de umesporte específico\n- Para agendar uma\
+      \ notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n\
+      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
   utter_change_subject:
-  - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
-   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
-      - Clima de um lugar"
+  - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Melhores esportes para\
+      \ seu clima\n- Recomendação de umesporte específico\n- Para agendar uma notificacao\n\
+      \ - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade\
+      \ e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
   utter_compliments:
   - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
   utter_default:
@@ -126,10 +126,11 @@ templates:
       \ a me comunicar com vocês, \npode falar de outra forma?\n"
   - text: "Minha comunicação com vocês precisa ser direta. Pode ser mais específico?\n"
   - text: "Não compreendi, pode reformular a pergunta?\n"
-  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
-   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
-      - Clima de um lugar"
+  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Melhores\
+      \ esportes para seu clima\n- Recomendação de umesporte específico\n- Para agendar\
+      \ uma notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do\
+      \ sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima\
+      \ de um lugar"
   utter_elaborate:
   - text: "Em qual localidade?\n"
   - text: "Onde deseja saber?\n"
@@ -154,14 +155,14 @@ templates:
   - text: "Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia.\n"
   utter_greet:
-  - text: "Olá, como posso te ajudar?"
-  - text: "Saudações."
-  - text: "Oi, o que deseja saber?"
+  - text: Olá, como posso te ajudar?
+  - text: Saudações.
+  - text: Oi, o que deseja saber?
   utter_help:
-  - text: "Você pode me pedir:\n\n- Melhores esportes para seu clima\n- Recomendação de um\
-   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
-      - Clima de um lugar"
+  - text: "Você pode me pedir:\n\n- Melhores esportes para seu clima\n- Recomendação\
+      \ de umesporte específico\n- Para agendar uma notificacao\n - Temperatura de\
+      \ um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
+      - Umidade\n- Nebulosidade\n - Clima de um lugar"
   utter_how_are_u:
   - text: "Estou ótima, obrigada! Em que posso te ajudar?\n"
   utter_how_do_u_know:
@@ -173,25 +174,25 @@ templates:
   - text: "Um dia te contarei sobre eles\n"
   utter_out_of_scope:
   - text: "Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.\n"
+  utter_start1:
+  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquela que compreende\
+      \ todos os fenômenos desta dimensão."
+  utter_start2:
+  - text: Posso te dizer os melhores esportes para praticar com base no tempo.
+  utter_start3:
+  - text: Se quiser saber minha recomendação para um esporte específico, é só perguntar.
   utter_time_before:
   - text: Compreendido, quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   - text: Certo, quanto tempo antes gostaria de ser notificado? (Em horas ou minutos)
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
-  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores esportes para seu clima\n- Recomendação de um\
-   esporte específico\n- Para agendar uma notificacao\n - Temperatura de um local\n- Pressão\n\
-      - Nascer e pôr do sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n \
-      - Clima de um lugar"
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores esportes\
+      \ para seu clima\n- Recomendação de umesporte específico\n- Para agendar uma\
+      \ notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n\
+      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
   utter_who_are_u:
   - text: "Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. \nE comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar vocês no que mais \ninfluencia seus compromissos terráqueos: o clima!\
       \ \n"
-  utter_start1:
-  - text: "Olá, sou Gaia, também conhecida como a deusa primordial, \naquela que compreende\
-      \ todos os fenômenos desta dimensão."
-  utter_start2:
-  - text: "Posso te dizer os melhores esportes para praticar com base no tempo."
-  utter_start3:
-  - text: "Se quiser saber minha recomendação para um esporte específico, é só perguntar."
