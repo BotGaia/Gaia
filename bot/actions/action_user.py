@@ -3,7 +3,6 @@ from .utils import convertDay
 from .utils import convertTimeBefore
 from .environment import configSport
 import requests
-import json
 
 
 class User_Action(Action):
@@ -36,7 +35,6 @@ class User_Action(Action):
           "hoursBefore": hours_before,
           "minutesBefore": minutes_before,
         }
-
 
         response = requests.post(URL+'/createNotification', data=dataJson)
 
