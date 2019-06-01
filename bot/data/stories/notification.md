@@ -43,9 +43,9 @@
 
 ## Notification 2
 * start
-    - utter_start_1
-    - utter_start_2
-    - utter_start_3
+    - utter_start1
+    - utter_start2
+    - utter_start3
 * notification
     - utter_notification
 

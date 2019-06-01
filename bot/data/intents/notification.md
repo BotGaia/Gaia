@@ -12,8 +12,8 @@
 - Ver notificacao
 - me mostra minhas notificacoes
 - minhas notificações
-- visualizar notificaçao
-- mostrar notificaçao
+- visualizar notificacao
+- mostrar notificacao
 
 ## intent: delete_notification
 - apaga minha notificação
@@ -21,7 +21,7 @@
 - quero apagar minha notificacao
 - desejo excluir uma notificação
 - Apagar uma notificação
-- Deletar notificação
+- deletar notificacao
 
 ## intent: edit_notification
 - quero editar minha notificação
