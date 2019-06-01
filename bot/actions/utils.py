@@ -122,39 +122,3 @@ def localRequest(locale, choice):
     answer_json = json.loads(answer)
 
     return answer_json[int(choice) - 1]['name']
-
-
-def convertDay(dayArray):
-    answerArray = []
-
-    for day in dayArray:
-        if((day == 'segunda') or (day == 'segunda-feira')):
-            answerArray.append(1)
-        elif((day == 'terça') or (day == 'terça-feira')):
-            answerArray.append(2)
-        elif((day == 'quarta') or (day == 'quarta-feira')):
-            answerArray.append(3)
-        elif((day == 'quinta') or (day == 'quinta-feira')):
-            answerArray.append(4)
-        elif((day == 'sexta') or (day == 'sexta-feira')):
-            answerArray.append(5)
-        elif((day == 'sábado') or (day == 'sabado')):
-            answerArray.append(6)
-        elif(day == 'domingo'):
-            answerArray.append(0)
-
-    return answerArray
-
-
-def convertTimeBefore(timeBefore):
-    convertedTime = []
-    auxTime = []
-    for char in timeBefore:
-        if((char == '0') or (char == '1') or (char == '2') or (char == '3')):
-            auxTime.append(char)
-        if((char == '4') or (char == '5') or (char == '6') or (char == '7')):
-            auxTime.append(char)
-        if((char == '8') or (char == '9')):
-            auxTime.append(char)
-    convertedTime = ''.join(auxTime)
-    return int(convertedTime)

@@ -1,7 +1,5 @@
 from rasa_core_sdk import Action
-from .utils import convertDay
-from .utils import convertTimeBefore
-from .environment import configSport
+from .environment import configGateway
 import requests
 
 
@@ -10,7 +8,7 @@ class User_Action(Action):
         return "action_user"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')
@@ -21,22 +19,19 @@ class User_Action(Action):
         hours_before = tracker.get_slot('hours_before')
         minutes_before = tracker.get_slot('minutes_before')
 
-        notificationDays = convertDay(user_day)
-        hours_before = convertTimeBefore(hours_before)
-        minutes_before = convertTimeBefore(minutes_before)
-
         dataJson = {
           "telegramId": sender_id,
           "sport": user_sport,
-          "days": notificationDays,
-          "hour": int(user_hour),
-          "minutes": int(user_minute),
+          "days": user_day,
+          "hour": user_hour,
+          "minutes": user_minute,
           "locals": user_local,
           "hoursBefore": hours_before,
           "minutesBefore": minutes_before,
         }
+        endpoint = '/notification/createNotification'
 
-        response = requests.post(URL+'/createNotification', data=dataJson)
+        response = requests.post(URL+endpoint, data=dataJson)
 
         if(response.status_code == 200):
             dispatcher.utter_message('Notificação salva com sucesso!')
