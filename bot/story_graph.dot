@@ -72,7 +72,7 @@ digraph  {
 108 [class=intent, fillcolor=lightblue, label=who_are_u, shape=rect, style=filled];
 109 [class=intent, fillcolor=lightblue, label=how_do_u_know, shape=rect, style=filled];
 110 [class=intent, fillcolor=lightblue, label=elaborate, shape=rect, style=filled];
-111 [class="intent active", fillcolor=lightblue, label="2 horas antes", shape=rect, style=filled];
+111 [class="intent active", fillcolor=lightblue, label="15 minutos", shape=rect, style=filled];
 0 -> 81  [class="", key=0];
 0 -> 82  [class="", key=0];
 0 -> 83  [class="", key=0];

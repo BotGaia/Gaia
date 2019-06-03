@@ -194,3 +194,14 @@
     - slot{"hours_before": "2 horas"}
     - action_user
 
+## Generated Story -3234865760225780992
+* preference{"user_sport": "kitesurf", "user_locale": "Recife", "user_day": "sexta", "user_hour": "14"}
+    - slot{"user_day": ["quarta", "sexta"]}
+    - slot{"user_hour": "14"}
+    - slot{"user_locale": ["lago paranoa", "Recife"]}
+    - slot{"user_sport": "kitesurf"}
+    - utter_time_before
+* time_before{"minutes_before": "15 minutos"}
+    - slot{"minutes_before": "15 minutos"}
+    - action_user
+
