@@ -122,3 +122,20 @@ def localRequest(locale, choice):
     answer_json = json.loads(answer)
 
     return answer_json[int(choice) - 1]['name']
+
+def convertDay(day):
+
+    if(day == 1):
+        return ('Segunda-feira')
+    elif(day == 2):
+        return ('Terça-feira')
+    elif(day == 3):
+        return ('Quarta-feira')
+    elif(day == 4):
+        return ('Quinta-feira')
+    elif(day == 5):
+        return ('Sexta-feira')
+    elif(day == 6):
+        return ('Sábado')
+    elif(day == 0):
+        return ('Domingo')

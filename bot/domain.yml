@@ -1,16 +1,13 @@
 %YAML 1.1
 ---
 actions:
-- utter_start3
 - action_weather
 - utter_how_are_u
 - utter_start1
 - utter_who_are_u
-- utter_good_night
 - utter_time_before
 - utter_greet
 - utter_anything_else
-- action_sunrise_sunset
 - action_humidity
 - utter_default
 - utter_good_afternoon
@@ -19,11 +16,9 @@ actions:
 - utter_start2
 - utter_compliments
 - utter_how_do_u_know
-- utter_user_error
 - utter_help
 - action_sky
 - action_pressure
-- action_specific_sport
 - utter_out_of_scope
 - action_user
 - utter_change_subject
@@ -40,7 +35,7 @@ actions:
 - action_sunrise_sunset
 - utter_user_error
 - utter_notification
-- utter_show_notification
+- action_show_notification
 - utter_delete_notification
 - utter_edit_notification
 - utter_create_notification
@@ -226,8 +221,6 @@ templates:
   - text: 'Usuário quer editar uma notificação'
   utter_delete_notification:
   - text: 'Usuário quer apagar uma notificação'
-  utter_show_notification:
-  - text: 'Usuário quer ver uma notificação'
   utter_create_notification:
   - text: 'Para criar uma notificação siga o exemplo: Quero registrar [esporte(s) desejado(s)]\
    para [dia(s) da semana] às [hora]:[minutos] no [local(is) desejado(s)]'

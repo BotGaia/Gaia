@@ -8,7 +8,13 @@
 * notification
     - utter_notification
 * show_notification
-    - utter_show_notification
+    - action_show_notification
+
+## Notification show 1
+* greet
+    - utter_greet
+* show_notification
+    - action_show_notification
 
 ## Notification edit
 * greet
@@ -65,10 +71,10 @@
 * notification
     - utter_notification
 * show_notification
-    - utter_show_notification
+    - action_show_notification
 
 ## Notification 2 create
 * notification
     - utter_notification
-* show_notification
+* create_notification
     - utter_create_notification
