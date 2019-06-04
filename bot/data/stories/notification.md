@@ -30,7 +30,11 @@
 * notification
     - utter_notification
 * delete_notification
-    - utter_delete_notification
+    - action_show_notification
+    - action_show_button
+* choose 
+    - action_delete_notification
+
 
 ## Notification create
 * greet
@@ -59,7 +63,10 @@
 * notification
     - utter_notification
 * delete_notification
-    - utter_delete_notification
+    - action_show_notification
+    - action_show_button
+* choose 
+    - action_delete_notification
 
 ## Notification 1 edit
 * notification
