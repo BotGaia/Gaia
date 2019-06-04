@@ -23,7 +23,7 @@ class Action_show_notification(Action):
             if(len(answerJson) > 0):
                 for notification in answerJson:
                     json_counter+=1
-                    data_message = 'Notificação ' + str(json_counter) + ':\n'
+                    data_message = 'Notificação ' + str(json_counter) + '\n'
                     data_message+= 'Esporte:' + notification["sport"].title() + '\n'
                     if(len(notification["locals"]) > 0):
                         for locales in notification["locals"]:

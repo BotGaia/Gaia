@@ -22,7 +22,12 @@
 * notification
     - utter_notification
 * edit_notification
-    - utter_edit_notification
+    - action_show_notification
+    - utter_edit_button
+    - action_show_button
+* choose
+    - action_edit_notification
+    - action_user
 
 ## Notification delete
 * greet
@@ -31,6 +36,7 @@
     - utter_notification
 * delete_notification
     - action_show_notification
+    - utter_delete_button
     - action_show_button
 * choose 
     - action_delete_notification
@@ -64,6 +70,7 @@
     - utter_notification
 * delete_notification
     - action_show_notification
+    - utter_delete_button
     - action_show_button
 * choose 
     - action_delete_notification
@@ -72,7 +79,12 @@
 * notification
     - utter_notification
 * edit_notification
-    - utter_edit_notification
+    - action_show_notification
+    - utter_edit_button
+    - action_show_button
+* choose
+    - action_edit_notification
+    - action_user
 
 ## Notification 1 show
 * notification

@@ -13,14 +13,13 @@ class Action_show_button(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
-    
+        message = ""
         response = requests.get(URL+'/userNotification', params = payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         buttons = []
         json_counter = 0
         if(len(answerJson) > 0):
-            message = 'Escolha o número da notificação que deseja deletar:\n'
             while json_counter < len(answerJson):
                 json_counter+=1
                 title = (str(json_counter))

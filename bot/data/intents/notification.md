@@ -1,5 +1,7 @@
 ## intent: notification
 - notificação
+- notificacao
+- noticaçao
 - lembretes
 - minhas notificações
 - meus lembretes
@@ -26,6 +28,7 @@
 ## intent: edit_notification
 - quero editar minha notificação
 - editar notificacao
+- editar notificação
 - desejo editar uma notificacao
 - quero mudar minha notificação
 - mudar notificacao
