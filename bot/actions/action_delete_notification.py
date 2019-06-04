@@ -14,14 +14,15 @@ class Action_delete_notification(Action):
         sender_id = tracker_state['sender_id']
         choice = tracker.get_slot('choice')
         payload = {"id": sender_id, "number": choice}
-    
-        response = requests.get(URL+'/deleteNotification', params = payload)
+        response = requests.get(URL+'/deleteNotification', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        try: 
+        try:
             if "Notificação excluída" in answer_json:
                 dispatcher.utter_message("Notificação excluída.")
             else:
-                dispatcher.utter_message("Não foi possível deletar a notificação.")
+                dispatcher.utter_message("Não foi possível deletar \
+                a notificação.")
         except ValueError:
-            dispatcher.utter_message("Não foi possível deletar a notificação.")
+            dispatcher.utter_message("Não foi possível deletar \
+            a notificação.")

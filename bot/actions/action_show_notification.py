@@ -14,33 +14,41 @@ class Action_show_notification(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
-    
-        response = requests.get(URL+'/userNotification', params = payload)
+        response = requests.get(URL+'/userNotification', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         json_counter = 0
-        try: 
+        try:
             if(len(answerJson) > 0):
                 for notification in answerJson:
-                    json_counter+=1
+                    json_counter += 1
                     data_message = 'Notificação ' + str(json_counter) + '\n'
-                    data_message+= 'Esporte:' + notification["sport"].title() + '\n'
+                    data_message += 'Esporte:'
+                    data_message += notification["sport"].title() + '\n'
                     if(len(notification["locals"]) > 0):
                         for locales in notification["locals"]:
-                            data_message+= 'Local: ' + locales.title() + '\n'
+                            data_message += 'Local: ' + locales.title() + '\n'
                     if (len(str(notification["hour"])) < 2):
-                        data_message+= 'Horário: 0' + str(notification["hour"]) 
+                        data_message += 'Horário: 0'
+                        data_message += str(notification["hour"])
                     else:
-                        data_message+= 'Horário: ' + str(notification["hour"]) 
+                        data_message += 'Horário: ' + str(notification["hour"])
                     if (len(str(notification["minutes"])) < 2):
-                        data_message+= ':0' + str(notification["minutes"]) + '\n'
+                        data_message += ':0'
+                        data_message += str(notification["minutes"]) + '\n'
                     else:
-                        data_message+= ':' + str(notification["minutes"]) + '\n'
+                        data_message += ':'
+                        data_message += str(notification["minutes"]) + '\n'
                     if(len(notification["days"]) > 0):
                         for days in notification["days"]:
                             day = convertDay(days)
-                            data_message+= 'Dia(s) da semana: ' + day + '\n'
-                    data_message+= 'Notificado(a) ' + str(notification["hoursBefore"]) + ' horas e ' + str(notification["minutesBefore"]) + ' minutos antes.\n'
+                            data_message += 'Dia(s) da semana: ' + day + '\n'
+                    data_message += 'Notificado(a) '
+                    data_message += str(notification["hoursBefore"])
+                    data_message += ' horas e '
+                    data_message += str(notification["minutesBefore"])
+                    data_message += ' minutos antes.\n'
                     dispatcher.utter_message(data_message)
         except ValueError:
-            dispatcher.utter_message("Não foi possível exibir suas notificações")
+            dispatcher.utter_message("Não foi possível \
+            exibir suas notificações")

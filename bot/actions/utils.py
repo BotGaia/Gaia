@@ -123,6 +123,7 @@ def localRequest(locale, choice):
 
     return answer_json[int(choice) - 1]['name']
 
+
 def convertDay(day):
 
     if(day == 1):

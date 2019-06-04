@@ -14,15 +14,17 @@ class Action_edit_notification(Action):
         sender_id = tracker_state['sender_id']
         choice = tracker.get_slot('choice')
         payload = {"id": sender_id, "number": choice}
-    
-        response = requests.get(URL+'/deleteNotification', params = payload)
+        response = requests.get(URL+'/deleteNotification', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        try: 
+        try:
             if "Notificação excluída" in answer_json:
-                dispatcher.utter_message("Entendido. Mande os novos dados da seguinta forma :Quero registrar [esporte(s) desejado(s)]para\
-                [dia(s) da semana] às [hora]:[minutos] no [local(is) desejado(s)]")
+                dispatcher.utter_message("Entendido. Mande os novos dados \
+                da seguinta forma :Quero registrar [esporte(s) \
+                desejado(s)]para [dia(s) da semana] às \
+                [hora]:[minutos] no [local(is) desejado(s)]")
             else:
-                dispatcher.utter_message("Não foi possível editar a notificação.")
+                dispatcher.utter_message("Não foi possível \
+                editar a notificação.")
         except ValueError:
             dispatcher.utter_message("Não foi possível editar a notificação.")

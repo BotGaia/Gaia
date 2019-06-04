@@ -14,14 +14,14 @@ class Action_show_button(Action):
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
         message = ""
-        response = requests.get(URL+'/userNotification', params = payload)
+        response = requests.get(URL+'/userNotification', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         buttons = []
         json_counter = 0
         if(len(answerJson) > 0):
             while json_counter < len(answerJson):
-                json_counter+=1
+                json_counter += 1
                 title = (str(json_counter))
                 payload = (str(json_counter))
                 buttons.append({"title": title, "payload": payload})
