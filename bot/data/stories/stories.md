@@ -315,3 +315,60 @@
     - slot{"minutes_before": "40 minutos"}
     - action_user
 
+## Generated Story 2076172119833102731
+* greet
+    - utter_greet
+* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "user_locale": "rio de janeiro"}
+    - slot{"user_day": ["quarta"]}
+    - slot{"user_hour": "10"}
+    - slot{"user_locale": ["rio de janeiro"]}
+    - slot{"user_minute": "00"}
+    - slot{"user_sport": "surf"}
+    - utter_time_before
+* time_before{"hours_before": "2 horas"}
+    - slot{"hours_before": "2 horas"}
+    - action_user
+* preference{"user_sport": "vela", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "user_locale": "guaruja"}
+    - slot{"user_day": ["quinta"]}
+    - slot{"user_hour": "13"}
+    - slot{"user_locale": ["guaruja"]}
+    - slot{"user_minute": "00"}
+    - slot{"user_sport": "vela"}
+    - utter_time_before
+* time_before{"minutes_before": "30 minutos"}
+    - slot{"minutes_before": "30 minutos"}
+    - action_user
+* preference{"user_sport": "stand up paddle", "user_day": "sexta", "user_hour": "12", "user_minute": "00", "user_locale": "lago paranoa"}
+    - slot{"user_day": ["sexta"]}
+    - slot{"user_hour": "12"}
+    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"user_minute": "00"}
+    - slot{"user_sport": "stand up paddle"}
+    - utter_time_before
+* time_before{"hours_before": "3 horas"}
+    - slot{"hours_before": "3 horas"}
+    - action_user
+
+## Generated Story -514383783422040419
+* greet
+    - utter_greet
+* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_locale": "guaruj\u00e1"}
+    - slot{"user_day": ["quarta"]}
+    - slot{"user_hour": "10"}
+    - slot{"user_locale": ["guaruj\u00e1"]}
+    - slot{"user_sport": "surf"}
+    - utter_time_before
+* time_before{"minutes_before": "30 minutos"}
+    - slot{"minutes_before": "30 minutos"}
+    - action_user
+* preference{"user_sport": "kitesurf", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "user_locale": "bahia"}
+    - slot{"user_day": ["quinta"]}
+    - slot{"user_hour": "13"}
+    - slot{"user_locale": ["bahia"]}
+    - slot{"user_minute": "00"}
+    - slot{"user_sport": "kitesurf"}
+    - utter_time_before
+* time_before{"hours_before": "4 horas"}
+    - slot{"hours_before": "4 horas"}
+    - action_user
+

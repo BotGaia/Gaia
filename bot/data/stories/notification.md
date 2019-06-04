@@ -27,6 +27,9 @@
     - action_show_button
 * choose
     - action_edit_notification
+* preference
+    - utter_time_before
+* time_before
     - action_user
 
 ## Notification delete
@@ -84,6 +87,9 @@
     - action_show_button
 * choose
     - action_edit_notification
+* preference
+    - utter_time_before
+* time_before
     - action_user
 
 ## Notification 1 show

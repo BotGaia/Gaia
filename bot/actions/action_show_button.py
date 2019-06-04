@@ -13,7 +13,7 @@ class Action_show_button(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
-        message = " ▽▽▽▽▽▽▽ "
+        message = "Opções:"
         response = requests.get(URL+'/userNotification', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)

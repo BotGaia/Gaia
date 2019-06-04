@@ -13,7 +13,7 @@ class Action_delete_notification(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         choice = tracker.get_slot('choice')
-        payload = {"id": sender_id, "number": choice}
+        payload = {"id": sender_id, "number": (int(choice) - 1)}
         response = requests.get(URL+'/deleteNotification', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
