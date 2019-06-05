@@ -22,7 +22,7 @@ services:
         - actions
       volumes:
         - ./bot:/bot
-      command: sh -c "make train && make run-console"
+      command: sh -c "make train && make run-telegram"
 
   actions:
       build:
