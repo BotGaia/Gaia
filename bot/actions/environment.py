@@ -12,6 +12,7 @@ def configSport():
 
     return URL
 
+
 def configCyclone():
     URL = ''
     if (os.environ.get('ENVIRONMENT') == 'dev'):
@@ -22,6 +23,7 @@ def configCyclone():
         URL = 'https://cyclone.botgaia.ga'
 
     return URL
+
 
 def configGateway():
     URL = ''

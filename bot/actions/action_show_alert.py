@@ -1,6 +1,7 @@
 from rasa_core_sdk import Action
 from .environment import configCyclone
 import requests
+import json
 
 
 class Show_alert_Action(Action):
@@ -18,4 +19,6 @@ class Show_alert_Action(Action):
         try:
             dispatcher.utter_message(str(answer_json))
         except ValueError:
-            dispatcher.utter_message("Ocorreu um erro ao mostrar o alerta de ciclone")
+            message1 = 'Ocorreu um erro ao '
+            message2 = 'mostrar o alerta de ciclone'
+            dispatcher.utter_message(message1 + message2)

@@ -139,7 +139,8 @@ templates:
   - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Melhores esportes para\
       \ seu clima\n- Recomendação de umesporte específico\n- Para agendar uma notificacao\n\
       \ - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade\
-      \ e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
+      \ e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_compliments:
   - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
   utter_create_notification:
@@ -154,7 +155,8 @@ templates:
       \ esportes para seu clima\n- Recomendação de umesporte específico\n- Para agendar\
       \ uma notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do\
       \ sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima\
-      \ de um lugar"
+      \ de um luga\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiror"
   utter_delete_button:
   - text: 'Escolha o número da notificação que deseja deletar:'
   utter_edit_button:
@@ -190,7 +192,8 @@ templates:
   - text: "Você pode me pedir:\n\n- Melhores esportes para seu clima\n- Recomendação\
       \ de umesporte específico\n- Para agendar uma notificacao\n - Temperatura de\
       \ um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
-      - Umidade\n- Nebulosidade\n - Clima de um lugar"
+      - Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_how_are_u:
   - text: "Estou ótima, obrigada! Em que posso te ajudar?\n"
   utter_how_do_u_know:
@@ -233,7 +236,8 @@ templates:
   - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores esportes\
       \ para seu clima\n- Recomendação de umesporte específico\n- Para agendar uma\
       \ notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n\
-      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
+      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_who_are_u:
   - text: "Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. \nE comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
