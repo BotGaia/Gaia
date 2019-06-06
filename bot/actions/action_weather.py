@@ -186,7 +186,6 @@ class Action_wind(Action):
         URL = configGateway()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-        URL = 'https://clima.hml.botgaia.ga/climate'
         location = localRequest(locale, choice)
         payload = {'place': location, 'intent': 'climate'}
 
