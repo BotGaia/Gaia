@@ -372,3 +372,36 @@
     - slot{"hours_before": "4 horas"}
     - action_user
 
+## Generated Story -1656233441744573291
+* greet
+    - utter_greet
+* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "0 minutos", "user_locale": "brasilia"}
+    - slot{"user_day": ["quarta"]}
+    - slot{"user_hour": "10"}
+    - slot{"user_locale": ["brasilia"]}
+    - slot{"user_minute": "0 minutos"}
+    - slot{"user_sport": "surf"}
+    - utter_time_before
+* time_before{"hours_before": "3 horas"}
+    - slot{"hours_before": "3 horas"}
+    - action_user
+* preference{"user_sport": "kitesurf", "user_day": "quinta", "user_hour": "17", "user_locale": "bahia"}
+    - slot{"user_day": ["ter\u00e7a", "quarta", "quinta"]}
+    - slot{"user_hour": "17"}
+    - slot{"user_locale": ["bahia"]}
+    - slot{"user_sport": "kitesurf"}
+    - utter_time_before
+* time_before{"minutes_before": "30 minutos"}
+    - slot{"minutes_before": "30 minutos"}
+    - action_user
+* preference{"user_sport": "vela", "user_day": "sabado", "user_hour": "15", "user_minute": "30 minutos", "user_locale": "lago paranoa"}
+    - slot{"user_day": ["sabado"]}
+    - slot{"user_hour": "15"}
+    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"user_minute": "30 minutos"}
+    - slot{"user_sport": "vela"}
+    - utter_time_before
+* time_before{"minutes_before": "40 minutos"}
+    - slot{"minutes_before": "40 minutos"}
+    - action_user
+

@@ -1,60 +1,60 @@
 %YAML 1.1
 ---
 actions:
-- utter_time_before
-- action_weather
-- action_show_button
-- utter_good_afternoon
-- action_temperature
-- utter_create_notification
-- utter_compliments
-- utter_start1
-- utter_gaia_error
-- action_edit_notification
-- utter_how_do_u_know
-- utter_user_error
-- utter_change_subject
-- utter_greet
+- action_show_notification
+- utter_hurricane
+- utter_who_are_u
 - utter_delete_button
-- action_user
 - utter_start2
+- utter_elaborate
+- utter_default
+- action_weather
+- action_specific_sport
+- utter_good_night
+- utter_help
+- action_user
+- action_wind
+- utter_greet
+- utter_create_notification
+- utter_start1
+- utter_change_subject
+- utter_edit_button
+- utter_compliments
+- utter_good_morning
+- utter_gaia_error
+- action_show_button
+- utter_user_error
 - utter_how_are_u
 - utter_start3
-- action_delete_notification
-- utter_notification
-- utter_default
-- utter_elaborate
-- utter_edit_button
-- action_local
-- action_show_notification
-- action_sky
 - action_pressure
-- utter_anything_else
-- utter_who_are_u
-- utter_help
-- action_sunrise_sunset
-- utter_good_night
 - utter_goodbye
-- utter_out_of_scope
-- utter_good_morning
-- action_specific_sport
-- utter_hurricane
-- action_wind
+- action_edit_notification
 - action_humidity
+- action_temperature
+- action_sunrise_sunset
+- utter_out_of_scope
+- utter_how_do_u_know
+- utter_time_before
+- action_delete_notification
+- utter_anything_else
+- utter_good_afternoon
+- action_sky
+- utter_notification
+- action_local
 - action_sports
 entities:
+- sport
+- hurricane
+- locale
+- type
+- user_sport
+- minutes_before
+- user_locale
+- user_minute
+- choice
 - hours_before
 - user_hour
-- type
-- choice
-- user_locale
-- user_sport
-- user_minute
 - user_day
-- minutes_before
-- hurricane
-- sport
-- locale
 intents:
 - greet
 - time_before
@@ -136,8 +136,8 @@ templates:
   utter_compliments:
   - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
   utter_create_notification:
-  - text: 'Para criar uma notificação siga o exemplo: Quero registrar [esporte(s)
-      desejado(s)]   para [dia(s) da semana] às [hora]:[minutos] no [local(is) desejado(s)]'
+  - text: 'Para criar uma notificação siga o exemplo: Quero registrar [esporte desejado]
+      para [dia(s) da semana] às [hora] e [minutos] no [local(is) desejado(s)]'
   utter_default:
   - text: "A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo\
       \ a me comunicar com vocês, \npode falar de outra forma?\n"

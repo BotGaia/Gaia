@@ -11,6 +11,8 @@
 - Salvar [stand up paddle](user_sport) em [Aguas Claras](user_locale) às [15](user_hour) h
 - Notifique-me sobre [vela](user_sport) na [bahia](user_locale) [quarta-feira](user_day) às [10](user_hour) horas
 - Quero marcar [kitesurf](user_sport) no [lago paranoa](user_locale) e em [Recife](user_locale) na [quarta](user_day) e na [sexta](user_day) [14](user_hour) h
+- registrar [kitesurf](user_sport) para [sabado](user_day) às [15](user_hour) horas e [30 minutos](user_minute) na [bahia](user_locale)
+- registrar [vela](user_sport) para [quarta](user_day) às [10](user_hour) horas e [30 minutos](user_minute) no [lago paranoa](user_locale)
 
 ## intent: time_before
 - [2 horas](hours_before) antes

@@ -23,7 +23,7 @@ class Action_show_notification(Action):
                 for notification in answerJson:
                     json_counter += 1
                     data_message = 'Notificação ' + str(json_counter) + '\n'
-                    data_message += 'Esporte:'
+                    data_message += 'Esporte: '
                     data_message += notification["sport"].title() + '\n'
                     if(len(notification["locals"]) > 0):
                         for locales in notification["locals"]:
@@ -43,12 +43,16 @@ class Action_show_notification(Action):
                         for days in notification["days"]:
                             day = convertDay(days)
                             data_message += 'Dia(s) da semana: ' + day + '\n'
-                    data_message += 'Notificado(a) '
+                    data_message += 'Notificado(a) às'
                     data_message += str(notification["hoursBefore"])
                     data_message += ' horas e '
                     data_message += str(notification["minutesBefore"])
-                    data_message += ' minutos antes.\n'
+                    data_message += ' minutos.\n'
                     dispatcher.utter_message(data_message)
+            else:
+                message1 = 'Não foi possível'
+                message2 = ' encontrar suas notificações.'
+                dispatcher.utter_message(message1 + message2)
         except ValueError:
             dispatcher.utter_message("Não foi possível \
-            exibir suas notificações")
+            exibir suas notificações.")

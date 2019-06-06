@@ -18,11 +18,7 @@ class Action_delete_notification(Action):
         answer = response.content.decode()
         answer_json = json.loads(answer)
         try:
-            if "Notificação excluída" in answer_json:
-                dispatcher.utter_message("Notificação excluída.")
-            else:
-                dispatcher.utter_message("Não foi possível deletar \
-                a notificação.")
+            dispatcher.utter_message(str(answer_json))
         except ValueError:
             dispatcher.utter_message("Não foi possível deletar \
             a notificação.")
