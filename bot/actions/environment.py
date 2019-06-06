@@ -18,9 +18,9 @@ def configCyclone():
     if (os.environ.get('ENVIRONMENT') == 'dev'):
         URL = 'http://'+os.environ.get('IP_ADDRESS')+':3001'
     elif(os.environ.get('ENVIRONMENT') == 'homolog'):
-        URL = 'https://cyclone.hml.botgaia.ga'
+        URL = 'https://ciclone.hml.botgaia.ga'
     elif(os.environ.get('ENVIRONMENT') == 'production'):
-        URL = 'https://cyclone.botgaia.ga'
+        URL = 'https://ciclone.botgaia.ga'
 
     return URL
 
