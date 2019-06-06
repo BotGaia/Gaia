@@ -1,5 +1,5 @@
 from rasa_core_sdk import Action
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
@@ -9,12 +9,12 @@ class Action_show_button(Action):
         return "action_show_button"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
         message = "Opções:"
-        response = requests.get(URL+'/userNotification', params=payload)
+        response = requests.get(URL+'/', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         buttons = []

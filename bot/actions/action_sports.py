@@ -1,6 +1,6 @@
 from rasa_core_sdk import Action
 from .utils import localRequest
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
@@ -10,12 +10,12 @@ class Action_sports(Action):
         return "action_sports"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         locale = tracker.get_slot('locale')
         choice = tracker.get_slot('choice')
         location = localRequest(locale, choice)
-        payload = {'place': location}
-        response = requests.get(URL+'/sports', params=payload)
+        payload = {'place': location, 'intent': 'sports'}
+        response = requests.get(URL+'/', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         data_loc = locale.capitalize()+':'
