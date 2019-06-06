@@ -14,6 +14,9 @@
 - quero registrar [vela](user_sport) para [sexta](user_day) às [19](user_hour) e [00](user_minute) em [guarujá](user_locale)
 - Quero registrar [surf](user_sport) na [terça](user_day) e [quinta](user_day) às [14](user_hour) e [00](user_minute) em [ilhabela](user_locale)
 - registre [stand up paddle](user_sport) para [terça](user_day) e [quinta](user_day) às [10](user_hour) e [00](user_minute) no [lago paranoa](user_locale)
+- registrar [surf](user_sport) para [quarta](user_day) às [10](user_hour) horas e [0 minutos](user_minute) em [brasilia](user_locale)
+- registrar [kitesurf](user_sport) na [terça](user_day), [quarta](user_day) e [quinta](user_day) às [17](user_hour) horas na [bahia](user_locale)
+- registrar [vela](user_sport) para [sabado](user_day) às [15](user_hour) horas e [30 minutos](user_minute) no [lago paranoa](user_locale)
 
 ## intent:time_before
 - [2 horas](hours_before)
@@ -22,5 +25,8 @@
 ## intent:time_before
 - [3 horas](hours_before)
 - [7 horas](hours_before)
+- [30 minutos](minutes_before)
+- [40 minutos](minutes_before)
+- [3 horas](hours_before)
 - [30 minutos](minutes_before)
 - [40 minutos](minutes_before)
