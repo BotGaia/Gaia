@@ -2,7 +2,10 @@
 ---
 actions:
 - action_show_notification
-- utter_hurricane
+- utter_cyclone
+- action_create_alert
+- action_show_alert
+- action_delete_alert
 - utter_who_are_u
 - utter_delete_button
 - utter_start2
@@ -44,7 +47,6 @@ actions:
 - action_sports
 entities:
 - sport
-- hurricane
 - locale
 - type
 - user_sport
@@ -77,7 +79,8 @@ intents:
 - change_subject
 - how_are_u
 - compliments
-- hurricane
+- cyclone
+- cyclone_alert
 - elaborate
 - start
 - anything_else
@@ -93,6 +96,9 @@ intents:
 - delete_notification
 - edit_notification
 - create_notification
+- create_alert
+- show_alert
+- delete_alert
 slots:
   choice:
     type: unfeaturized
@@ -127,12 +133,14 @@ templates:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Melhores esportes\
       \ para seu clima\n- Recomendação de um esporte específico\n- Para agendar uma\
       \ notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n\
-      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
+      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_change_subject:
   - text: "Sobre o que quer falar? Posso conversar sobre:\n\n- Melhores esportes para\
       \ seu clima\n- Recomendação de umesporte específico\n- Para agendar uma notificacao\n\
       \ - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade\
-      \ e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
+      \ e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_compliments:
   - text: "Obrigada pela gentileza! Fico lisonjeada com o elogio!\n"
   utter_create_notification:
@@ -147,7 +155,8 @@ templates:
       \ esportes para seu clima\n- Recomendação de umesporte específico\n- Para agendar\
       \ uma notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do\
       \ sol\n- Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima\
-      \ de um lugar"
+      \ de um luga\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiror"
   utter_delete_button:
   - text: 'Escolha o número da notificação que deseja deletar:'
   utter_edit_button:
@@ -183,16 +192,22 @@ templates:
   - text: "Você pode me pedir:\n\n- Melhores esportes para seu clima\n- Recomendação\
       \ de umesporte específico\n- Para agendar uma notificacao\n - Temperatura de\
       \ um local\n- Pressão\n- Nascer e pôr do sol\n- Velocidade e direção do vento\n\
-      - Umidade\n- Nebulosidade\n - Clima de um lugar"
+      - Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_how_are_u:
   - text: "Estou ótima, obrigada! Em que posso te ajudar?\n"
   utter_how_do_u_know:
   - text: "Como mãe-terra, sou onipresente e posso acessar informações de qualquer\
       \ lugar do planeta.\n"
-  utter_hurricane:
-  - text: "Por enquanto não posso te informar sobre este fenômeno\n"
-  - text: "Furacões são forças grandes demais para teu conhecimento\n"
-  - text: "Um dia te contarei sobre eles\n"
+  utter_cyclone:
+  - buttons:
+    - payload: criar alerta ciclone
+      title: Sim
+    - payload: deletar alerta ciclone
+      title: Não
+    - payload: mostrar alerta ciclone
+      title: Já possui?
+    text: 'Deseja receber alertas sobre ciclones?'
   utter_notification:
   - buttons:
     - payload: visualizar notificacao
@@ -221,7 +236,8 @@ templates:
   - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores esportes\
       \ para seu clima\n- Recomendação de umesporte específico\n- Para agendar uma\
       \ notificacao\n - Temperatura de um local\n- Pressão\n- Nascer e pôr do sol\n\
-      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar"
+      - Velocidade e direção do vento\n- Umidade\n- Nebulosidade\n - Clima de um lugar\n\
+      - Alertas sobre ocorrências de ciclones no mundo inteiro"
   utter_who_are_u:
   - text: "Sou Gaia, mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. \nE comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
