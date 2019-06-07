@@ -1,7 +1,7 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 from .utils import sportsRequest, specificSportRequest, weatherRequest
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
@@ -11,7 +11,7 @@ class Action_local(Action):
         return "action_local"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         intent = tracker.latest_message['intent'].get('name')
         locale = tracker.get_slot('locale')
         sport = tracker.get_slot('sport')
@@ -19,7 +19,7 @@ class Action_local(Action):
 
         payload = {'local': locale}
 
-        response = requests.get(URL+'/listLocales', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
 

@@ -29,9 +29,8 @@ class User_Action(Action):
           "hoursBefore": hours_before,
           "minutesBefore": minutes_before,
         }
-        endpoint = '/notification/createNotification'
 
-        response = requests.post(URL+endpoint, data=dataJson)
+        response = requests.post(URL+'esporte', data=dataJson)
 
         if(response.status_code == 200):
             dispatcher.utter_message('Notificação salva com sucesso!')

@@ -1,5 +1,5 @@
 from rasa_core_sdk import Action
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 from .utils import convertDay
@@ -10,11 +10,11 @@ class Action_show_notification(Action):
         return "action_show_notification"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
-        response = requests.get(URL+'/userNotification', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         json_counter = 0

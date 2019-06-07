@@ -1,13 +1,13 @@
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
 
 def sportsRequest(locale):
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/sports', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -29,10 +29,10 @@ def sportsRequest(locale):
 
 def specificSportRequest(locale, sport):
 
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/sports', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
 
     answer_json = json.loads(answer)
@@ -59,10 +59,10 @@ def specificSportRequest(locale, sport):
 
 
 def weatherRequest(type_, locale):
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'climate'}
 
-    response = requests.get(URL+'/climate', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -103,7 +103,7 @@ def weatherRequest(type_, locale):
 
 
 def localRequest(locale, choice):
-    URL = configSport()
+    URL = configGateway()
 
     if((choice == 'primeiro') or (choice == 'um')):
         choice = 1
@@ -117,7 +117,7 @@ def localRequest(locale, choice):
         choice = 5
 
     payload = {'local': locale}
-    response = requests.get(URL+'/listLocales', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 

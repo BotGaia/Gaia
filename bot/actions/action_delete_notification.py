@@ -1,5 +1,5 @@
 from rasa_core_sdk import Action
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
@@ -9,12 +9,12 @@ class Action_delete_notification(Action):
         return "action_delete_notification"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configSport()
+        URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         choice = tracker.get_slot('choice')
         payload = {"id": sender_id, "number": (int(choice) - 1)}
-        response = requests.get(URL+'/deleteNotification', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
         try:
