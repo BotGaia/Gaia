@@ -14,7 +14,7 @@ class Action_show_notification(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         payload = {"id": sender_id}
-        response = requests.get(URL+'/', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answerJson = json.loads(answer)
         json_counter = 0

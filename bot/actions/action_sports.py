@@ -15,7 +15,7 @@ class Action_sports(Action):
         choice = tracker.get_slot('choice')
         location = localRequest(locale, choice)
         payload = {'place': location, 'intent': 'sports'}
-        response = requests.get(URL+'/', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
         data_loc = locale.capitalize()+':'

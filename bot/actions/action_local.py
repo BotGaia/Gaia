@@ -19,7 +19,7 @@ class Action_local(Action):
 
         payload = {'local': locale}
 
-        response = requests.get(URL+'/', params=payload)
+        response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
 

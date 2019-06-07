@@ -7,7 +7,7 @@ def sportsRequest(locale):
     URL = configGateway()
     payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -32,7 +32,7 @@ def specificSportRequest(locale, sport):
     URL = configGateway()
     payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
 
     answer_json = json.loads(answer)
@@ -62,7 +62,7 @@ def weatherRequest(type_, locale):
     URL = configGateway()
     payload = {'place': locale, 'intent': 'climate'}
 
-    response = requests.get(URL+'/', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -117,7 +117,7 @@ def localRequest(locale, choice):
         choice = 5
 
     payload = {'local': locale}
-    response = requests.get(URL+'/', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
