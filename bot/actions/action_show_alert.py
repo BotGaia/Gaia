@@ -12,7 +12,7 @@ class Show_alert_Action(Action):
         URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
-        payload = {"id": sender_id}
+        payload = {"id": sender_id, "intent": 'show'}
         response = requests.get(URL+'ciclone', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
