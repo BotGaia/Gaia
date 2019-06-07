@@ -1,5 +1,5 @@
 from rasa_core_sdk import Action
-from .environment import configCyclone
+from .environment import configGateway
 import requests
 
 
@@ -8,13 +8,13 @@ class Create_alert_Action(Action):
         return "action_create_alert"
 
     def run(self, dispatcher, tracker, domain):
-        URL = configCyclone()
+        URL = configGateway()
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         dataJson = {
           "telegramId": sender_id,
         }
-        response = requests.post(URL+'/createCycloneAlert', data=dataJson)
+        response = requests.post(URL+'ciclone', data=dataJson)
         if(response.status_code == 200):
             dispatcher.utter_message('Alerta de ciclone ativado com sucesso!')
         else:
