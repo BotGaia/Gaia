@@ -33,9 +33,7 @@ spec:
           value: GaiaHmlBot
         - name: ENDPOINT_ACTIONS
           value: https://bot.actions.hml.botgaia.ga/webhook
-        - name: ENVIRONMENT
-          value: homolog
-        image: caleberios/gaia:latest
+        image: caleberios/gaia:homolog
         imagePullPolicy: Always
         name: gaia-bot-hml
         ports:
