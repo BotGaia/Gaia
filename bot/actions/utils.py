@@ -1,13 +1,13 @@
-from .environment import configSport
+from .environment import configGateway
 import requests
 import json
 
 
 def sportsRequest(locale):
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/sports', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -29,10 +29,10 @@ def sportsRequest(locale):
 
 def specificSportRequest(locale, sport):
 
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'sports'}
 
-    response = requests.get(URL+'/sports', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
 
     answer_json = json.loads(answer)
@@ -59,10 +59,10 @@ def specificSportRequest(locale, sport):
 
 
 def weatherRequest(type_, locale):
-    URL = configSport()
-    payload = {'place': locale}
+    URL = configGateway()
+    payload = {'place': locale, 'intent': 'climate'}
 
-    response = requests.get(URL+'/climate', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
@@ -103,7 +103,7 @@ def weatherRequest(type_, locale):
 
 
 def localRequest(locale, choice):
-    URL = configSport()
+    URL = configGateway()
 
     if((choice == 'primeiro') or (choice == 'um')):
         choice = 1
@@ -117,44 +117,26 @@ def localRequest(locale, choice):
         choice = 5
 
     payload = {'local': locale}
-    response = requests.get(URL+'/listLocales', params=payload)
+    response = requests.get(URL+'esporte', params=payload)
     answer = response.content.decode()
     answer_json = json.loads(answer)
 
     return answer_json[int(choice) - 1]['name']
 
 
-def convertDay(dayArray):
-    answerArray = []
+def convertDay(day):
 
-    for day in dayArray:
-        if((day == 'segunda') or (day == 'segunda-feira')):
-            answerArray.append(1)
-        elif((day == 'terça') or (day == 'terça-feira')):
-            answerArray.append(2)
-        elif((day == 'quarta') or (day == 'quarta-feira')):
-            answerArray.append(3)
-        elif((day == 'quinta') or (day == 'quinta-feira')):
-            answerArray.append(4)
-        elif((day == 'sexta') or (day == 'sexta-feira')):
-            answerArray.append(5)
-        elif((day == 'sábado') or (day == 'sabado')):
-            answerArray.append(6)
-        elif(day == 'domingo'):
-            answerArray.append(0)
-
-    return answerArray
-
-
-def convertTimeBefore(timeBefore):
-    convertedTime = []
-    auxTime = []
-    for char in timeBefore:
-        if((char == '0') or (char == '1') or (char == '2') or (char == '3')):
-            auxTime.append(char)
-        if((char == '4') or (char == '5') or (char == '6') or (char == '7')):
-            auxTime.append(char)
-        if((char == '8') or (char == '9')):
-            auxTime.append(char)
-    convertedTime = ''.join(auxTime)
-    return int(convertedTime)
+    if(day == 1):
+        return ('Segunda-feira')
+    elif(day == 2):
+        return ('Terça-feira')
+    elif(day == 3):
+        return ('Quarta-feira')
+    elif(day == 4):
+        return ('Quinta-feira')
+    elif(day == 5):
+        return ('Sexta-feira')
+    elif(day == 6):
+        return ('Sábado')
+    elif(day == 0):
+        return ('Domingo')

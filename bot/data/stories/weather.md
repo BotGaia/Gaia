@@ -143,12 +143,6 @@
 * choose
     - action_sunrise_sunset
 
-## Hurricane
-* hurricane
-    - action_local
-* choose
-    - utter_hurricane
-
 ## Locale
 * locale
     - action_local
@@ -174,20 +168,6 @@
 ## Elaborate
 * elaborate
     - utter_elaborate    
-
-## Path 4
-* elaborate
-    - utter_elaborate
-* hurricane
-    - utter_hurricane
-
-## Path 5
-* inform
-    - action_local
-* hurricane
-    - utter_hurricane
-* goodbye
-    - utter_goodbye
 
 ## Path 6
 * greet
