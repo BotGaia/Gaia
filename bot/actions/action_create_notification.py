@@ -12,7 +12,7 @@ class User_Action(Action):
         tracker_state = tracker.current_state()
         sender_id = tracker_state['sender_id']
         user_local = tracker.get_slot('user_locale')
-        user_sport = tracker.get_slot('user_sport')
+        sport = tracker.get_slot('sport')
         user_day = tracker.get_slot('user_day')
         user_hour = tracker.get_slot('user_hour')
         user_minute = tracker.get_slot('user_minute')
@@ -21,7 +21,7 @@ class User_Action(Action):
 
         dataJson = {
           "telegramId": sender_id,
-          "sport": user_sport,
+          "sport": sport,
           "days": user_day,
           "hour": user_hour,
           "minutes": user_minute,

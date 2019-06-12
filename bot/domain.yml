@@ -49,7 +49,6 @@ entities:
 - sport
 - locale
 - type
-- user_sport
 - minutes_before
 - user_locale
 - user_minute
@@ -126,8 +125,6 @@ slots:
   user_minute:
     initial_value: '0'
     type: unfeaturized
-  user_sport:
-    type: unfeaturized
 templates:
   utter_anything_else:
   - text: O que mais quer saber? Você pode me perguntar sobre:\n- Melhores atividades \
@@ -142,8 +139,8 @@ templates:
   utter_compliments:
   - text: Obrigada pela gentileza! Fico lisonjeada com o elogio!\n
   utter_create_notification:
-  - text: Para criar uma notificação siga o exemplo: Quero registrar [esporte desejado]
-      para [dia(s) da semana] às [hora] e [minutos] no [local(is) desejado(s)]
+  - text: "Para criar uma notificação siga o exemplo: Quero registrar [esporte desejado]
+      para [dia(s) da semana] às [hora] e [minutos] no [local(is) desejado(s)]"
   utter_default:
   - text: A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo\
       \ a me comunicar com vocês, \npode falar de outra forma?\n
@@ -154,9 +151,9 @@ templates:
       de uma notificação de determinada atividade para \um local e data\n - Alertas \
       sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
   utter_delete_button:
-  - text: Escolha o número da notificação que deseja deletar:
+  - text: "Escolha o número da notificação que deseja deletar:"
   utter_edit_button:
-  - text: Escolha o número da notificação que deseja editar:
+  - text: "Escolha o número da notificação que deseja editar:"
   utter_elaborate:
   - text: Em qual localidade?\n
   - text: Onde deseja saber?\n
@@ -165,17 +162,17 @@ templates:
   - text: Desculpa o engano, vocês humanos são muito confusos. Você pode especificar\
       \ o que quer falar?
   utter_good_afternoon:
-  - text: Boa tarde! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  - text: "Boa tarde! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
   fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
-  só mandar um: 'Me ajuda'!
+  só mandar um: 'Me ajuda'!"
   utter_good_morning:
-  - text: Bom dia! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  - text: "Bom dia! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
   fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
-  só mandar um: 'Me ajuda'!
+  só mandar um: 'Me ajuda'!"
   utter_good_night:
-  - text: Boa noite! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  - text: "Boa noite! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
   fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
-  só mandar um: 'Me ajuda'!
+  só mandar um: 'Me ajuda'!"
   - text: Foi um grande prazer te ajudar!\nSempre que tiver alguma dúvida, pode me\
       \ consultar!\nSaudações calorosas, Gaia.\n
   - text: Foi um grande prazer te ajudar!\nNão hesite em contactar-me!\nCom os meus\
@@ -183,16 +180,16 @@ templates:
   - text: Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia.\n
   utter_greet:
-  - text: Olá, sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  - text: "Olá, sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
   fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
-  só mandar um: 'Me ajuda'!
+  só mandar um: 'Me ajuda'!"
   utter_help:
-  - text: Você pode me pedir:\n\n- Melhores atividades para o local de interesse\n\
+  - text: "Você pode me pedir:\n\n- Melhores atividades para o local de interesse\n\
     - Recomendação de um esporte específico\n- Agendamento de uma notificação de determinada atividade para \
       um local e data\n - Alertas sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
       Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.\n\
-      Ainda com dúvidas? Só mandar: Exemplo de 'tópico que deseja'.
+      Ainda com dúvidas? Só mandar: Exemplo de 'tópico que deseja'."
   utter_how_are_u:
   - text: Estou ótima, obrigada! Em que posso te ajudar?\n
   utter_how_do_u_know:
@@ -221,11 +218,11 @@ templates:
   utter_out_of_scope:
   - text: Vocês, humanos, ainda não estão preparados para ter a resposta sobre isso.\n
   utter_start1:
-  - text: Olá, sou Gaia, também conhecida como a deusa primordial. Sou responsável \
+  - text: "Olá, sou Gaia, também conhecida como a deusa primordial. Sou responsável \
   por tudo que acontece na Terra. Por isso, decidi te ajudar a escolher qual atividade \
-  fazer ao ar livre com base na condição meteorológica.
+  fazer ao ar livre com base na condição meteorológica."
   utter_start2:
-  - text: Pra entender melhor como posso te ajudar. É só mandar um:  'Me ajuda'.
+  - text: "Pra entender melhor como posso te ajudar. É só mandar um:  'Me ajuda'."
   utter_start3:
   - text: Vamos lá, pode perguntar.
   utter_time_before:
@@ -233,14 +230,14 @@ templates:
   - text: Certo, quanto tempo antes gostaria de ser notificado? (Em horas ou minutos)
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
-  - text: Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores atividades \
-      para o local de interesse\n\- Recomendação de um esporte específico\n- Agendamento \
-      de uma notificação de determinada atividade para \um local e data\n - Alertas \
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores atividades \
+      para o local de interesse\n- Recomendação de um esporte específico\n- Agendamento \
+      de uma notificação de determinada atividade para um local e data\n - Alertas \
       sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
-      Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.
+      Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade."
   utter_who_are_u:
-  - text: Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
+  - text: "Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
-      \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!
+      \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
