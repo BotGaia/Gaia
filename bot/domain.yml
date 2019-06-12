@@ -165,15 +165,17 @@ templates:
   - text: Desculpa o engano, vocês humanos são muito confusos. Você pode especificar\
       \ o que quer falar?
   utter_good_afternoon:
-  - text: Boa tarde! sou Gaia, também conhecida como a deusa primordial, \naquele\
-      \ que compreende todos os fenômenos desta dimensão.\n
+  - text: Boa tarde! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
+  só mandar um: 'Me ajuda'!
   utter_good_morning:
-  - text: Bom dia! sou Gaia, também conhecida como a deusa primordial, \naquele que\
-      \ compreende todos os fenômenos desta dimensão.\n
+  - text: Bom dia! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
+  só mandar um: 'Me ajuda'!
   utter_good_night:
-  - text: Boa noite! sou Gaia, também conhecida como a deusa primordial, \naquele\
-      \ que compreende todos os fenômenos desta dimensão.\n
-  utter_goodbye:
+  - text: Boa noite! sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
+  só mandar um: 'Me ajuda'!
   - text: Foi um grande prazer te ajudar!\nSempre que tiver alguma dúvida, pode me\
       \ consultar!\nSaudações calorosas, Gaia.\n
   - text: Foi um grande prazer te ajudar!\nNão hesite em contactar-me!\nCom os meus\
@@ -181,15 +183,16 @@ templates:
   - text: Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia.\n
   utter_greet:
-  - text: Olá, como posso te ajudar?
-  - text: Saudações.
-  - text: Oi, o que deseja saber?
+  - text: Olá, sou Gaia. Estou aqui para te ajudar a escolher qual atividade \
+  fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
+  só mandar um: 'Me ajuda'!
   utter_help:
   - text: Você pode me pedir:\n\n- Melhores atividades para o local de interesse\n\
     - Recomendação de um esporte específico\n- Agendamento de uma notificação de determinada atividade para \
       um local e data\n - Alertas sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
-      Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.
+      Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.\n\
+      Ainda com dúvidas? Só mandar: Exemplo de 'tópico que deseja'.
   utter_how_are_u:
   - text: Estou ótima, obrigada! Em que posso te ajudar?\n
   utter_how_do_u_know:
