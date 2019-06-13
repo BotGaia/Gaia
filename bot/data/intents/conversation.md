@@ -182,3 +182,18 @@
  - feshow
  - fechou
  - top
+
+## intent: example_general
+ - pode me dar um exemplo
+ - como converso com voce
+ - nao sei fazer isso
+
+## intent: example_sport
+ - me da um exemplo de esporte
+ - como te pergunto sobre modalidades
+ - exemplifique a recomendacao de modalidades
+
+## intent: example_climate
+ - como te pergunto o clima
+ - me da um exemplo de condicoes meteorologicas
+ - como te pergunto sobre o tempo

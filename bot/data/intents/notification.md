@@ -39,3 +39,5 @@
 - desejo criar uma notificacao
 - quero adicionar uma notificação
 - adicionar notificacao
+- como agendo uma notificacao
+- nao sei editar minhas notificacoes
