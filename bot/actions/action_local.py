@@ -39,7 +39,7 @@ class Action_local(Action):
                 payload = 0
                 buttons.append({"title": title, "payload": payload})
             for local in answer_json:
-                data_message += str(counter) + '. ' + local['name'] + '\n'
+                data_message += str(counter) + '. ' + local["name"] + '\n'
                 title = (str(counter))
                 payload = (str(counter))
                 buttons.append({"title": title, "payload": payload})
