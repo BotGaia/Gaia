@@ -45,6 +45,9 @@ actions:
 - utter_notification
 - action_local
 - action_sports
+- utter_example_general
+- utter_example_sport
+- utter_example_climate
 entities:
 - sport
 - locale
@@ -238,17 +241,17 @@ templates:
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
       Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade."
   utter_who_are_u:
-  - text: "Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
+  - text: Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
       \ caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso\
       \ da ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
-      \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
+      \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!
 utter_example_general:
-  -text: "Para me pedir um recomendação de uma atividade específica, pode perguntar: "Posso\
-      \ praticar surf em Brasília?"\nPara saber quais atividades recomendo para seu local, pode perguntar: "Quais atividades\
+  - text: "Para me pedir um recomendação de uma atividade específica, pode perguntar: 'Posso\
+      \ praticar surf em Brasília?'\nPara saber quais atividades recomendo para seu local, pode perguntar: 'Quais atividades\
       \ posso praticar em Recife?\nPara saber as condições meteorológicas de um local, pode \
-      \ perguntar: "Qual é o tempo em Pindamonhangaba?"\nPode me pedir aspectos meteorológicos\
-      \ específicos(temperatura, pressão, umidade, nebulosidade): "Qual é a temperatura em\
-      \ Araguaçú?"\nPara saber como agendar uma notificação, me pergunte: "Como agendo uma notificação?\""
+      \ perguntar: 'Qual é o tempo em Pindamonhangaba?'\nPode me pedir aspectos meteorológicos\
+      \ específicos(temperatura, pressão, umidade, nebulosidade): 'Qual é a temperatura em\
+      \ Araguaçú?'\nPara saber como agendar uma notificação, me pergunte: 'Como agendo uma notificação?'"
 utter_create_notification:
   - text: "Para criar uma notificação siga o exemplo: Quero registrar [modalidade desejada]
       para [dia(s) da semana] às [hora] e [minutos] no [local(is) desejado(s)]"
