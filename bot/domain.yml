@@ -130,8 +130,8 @@ slots:
     type: unfeaturized
 templates:
   utter_anything_else:
-  - text: "O que mais quer saber? Você pode me perguntar sobre:\n- Melhores atividades \
-      para o local de interesse\n- Recomendação de um esporte específico\n- Agendamento \
+  - text: "O que mais quer saber? Você pode me perguntar sobre:\n- Sugestão de atividades ao ar \
+      livre a serem praticadas em localidade de seu interesse\n- Recomendação de um esporte específico\n- Agendamento \
       de uma notificação de determinada atividade para um local e data\n - Alertas \
       sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica"
   utter_change_subject:
@@ -146,8 +146,8 @@ templates:
       \ a me comunicar com vocês, \npode falar de outra forma?"
   - text: "Minha comunicação com vocês precisa ser direta. Pode ser mais específico?"
   - text: Não compreendi, pode reformular a pergunta?
-  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Melhores atividades \
-      para o local de interesse\n- Recomendação de um esporte específico\n- Agendamento \
+  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n- Sugestão de atividades ao ar \
+      livre a serem praticadas em localidade de seu interesse\n- Recomendação de um esporte específico\n- Agendamento \
       de uma notificação de determinada atividade para um local e data\n - Alertas \
       sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica"
   utter_delete_button:
@@ -185,9 +185,10 @@ templates:
   fazer ao ar livre com base na condição meteorológica. Para mais detalhes, é \
   só mandar um: 'Me ajuda'!"
   utter_help:
-  - text: "Você pode me pedir:\n\n- Melhores atividades para o local de interesse\n\
-    - Recomendação de um esporte específico\n- Agendamento de uma notificação de determinada atividade para \
-      um local e data\n - Alertas sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
+  - text: "Você pode me pedir:\n- Sugestão de atividades ao ar \
+      livre a serem praticadas em localidade de seu interesse\n- Recomendação de um esporte específico\n
+      - Agendamento de uma notificação de determinada atividade para um local e data\n - Alertas sobre \
+      ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
       Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.\n\
       Ainda com dúvidas? Só mandar: Exemplo de [tópico que deseja]."
@@ -231,9 +232,9 @@ templates:
   - text: Certo, quanto tempo antes gostaria de ser notificado? (Em horas ou minutos)
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
-  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Melhores atividades \
-      para o local de interesse\n- Recomendação de um esporte específico\n- Agendamento \
-      de uma notificação de determinada atividade para um local e data\n - Alertas \
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Sugestão de atividades ao ar \
+      livre a serem praticadas em localidade de seu interesse\n- Recomendação de um esporte específico\n
+      - Agendamento de uma notificação de determinada atividade para um local e data\n - Alertas \
       sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica \
       de um lugar no geral\n- Dados específicos da condição meteorológica, como: Temperatura, \
       Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade."
