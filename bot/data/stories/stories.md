@@ -30,7 +30,7 @@
 * choose{"choice": "2"}
     - slot{"choice": "2"}
     - action_temperature
-* inform{"locale": "goiania"}
+* inform{"locale": "goiania"}@mi
     - slot{"locale": "goiania"}
     - action_local
     - slot{"type": null}
@@ -418,7 +418,7 @@
     - slot{"user_minute": "0 minutos"}
     - slot{"sport": "surf"}
     - action_local
-*choose
+* choose
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
