@@ -178,6 +178,8 @@
     - slot{"user_hour": "14"}
     - slot{"user_locale": ["lago paranoa", "Recife"]}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
@@ -189,6 +191,8 @@
     - slot{"user_hour": "14"}
     - slot{"user_locale": ["lago paranoa", "Recife"]}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
@@ -200,6 +204,8 @@
     - slot{"user_hour": "14"}
     - slot{"user_locale": ["lago paranoa", "Recife"]}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "15 minutos"}
     - slot{"minutes_before": "15 minutos"}
@@ -214,6 +220,8 @@
     - slot{"user_locale": ["lago parano\u00e1"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
@@ -223,6 +231,8 @@
     - slot{"user_hour": "14"}
     - slot{"user_locale": ["lago paranoa", "recife"]}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -233,6 +243,8 @@
     - slot{"user_locale": ["brasilia"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "vela"}
+    - action_local
+*choice
     - utter_time_before
 
 ## Generated Story -95977543789797183
@@ -244,6 +256,8 @@
     - slot{"user_locale": ["guar\u00e1"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
@@ -254,6 +268,8 @@
     - slot{"user_locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "stand up paddle"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -266,6 +282,8 @@
     - slot{"user_hour": "11"}
     - slot{"user_minute": "00"}
     - slot{"sport": "vela"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "1 hora"}
     - slot{"hours_before": "1 hora"}
@@ -280,6 +298,8 @@
     - slot{"user_locale": ["rio de janeiro"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
@@ -290,6 +310,8 @@
     - slot{"user_locale": ["guaruj\u00e1"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "vela"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "7 horas"}
     - slot{"hours_before": "7 horas"}
@@ -300,6 +322,8 @@
     - slot{"user_locale": ["ilhabela"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -310,6 +334,8 @@
     - slot{"user_locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "stand up paddle"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "40 minutos"}
     - slot{"minutes_before": "40 minutos"}
@@ -324,6 +350,8 @@
     - slot{"user_locale": ["rio de janeiro"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
@@ -334,6 +362,8 @@
     - slot{"user_locale": ["guaruja"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "vela"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -344,6 +374,8 @@
     - slot{"user_locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "stand up paddle"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
@@ -357,6 +389,8 @@
     - slot{"user_hour": "10"}
     - slot{"user_locale": ["guaruj\u00e1"]}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -367,6 +401,8 @@
     - slot{"user_locale": ["bahia"]}
     - slot{"user_minute": "00"}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "4 horas"}
     - slot{"hours_before": "4 horas"}
@@ -381,6 +417,8 @@
     - slot{"user_locale": ["brasilia"]}
     - slot{"user_minute": "0 minutos"}
     - slot{"sport": "surf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
@@ -390,6 +428,8 @@
     - slot{"user_hour": "17"}
     - slot{"user_locale": ["bahia"]}
     - slot{"sport": "kitesurf"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
@@ -400,8 +440,11 @@
     - slot{"user_locale": ["lago paranoa"]}
     - slot{"user_minute": "30 minutos"}
     - slot{"sport": "vela"}
+    - action_local
+*choice
     - utter_time_before
 * time_before{"minutes_before": "40 minutos"}
     - slot{"minutes_before": "40 minutos"}
     - action_user
 
+  

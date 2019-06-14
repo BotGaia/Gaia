@@ -50,10 +50,9 @@ actions:
 - utter_example_climate
 entities:
 - sport
-- locale
 - type
 - minutes_before
-- user_locale
+- locale
 - user_minute
 - choice
 - hours_before
@@ -126,9 +125,6 @@ slots:
   user_hour:
     initial_value: '0'
     type: unfeaturized
-  user_locale:
-    initial_value: []
-    type: list
   user_minute:
     initial_value: '0'
     type: unfeaturized
