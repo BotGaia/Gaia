@@ -24,7 +24,7 @@ class User_Action(Action):
 
         dataJson = {
           "telegramId": sender_id,
-          "sport": sport,
+          "sport": sport.title(),
           "days": user_day,
           "hour": user_hour,
           "minutes": user_minute,

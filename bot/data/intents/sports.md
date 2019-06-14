@@ -18,6 +18,7 @@
 - Me fala um esporte pra [brasilia](locale)
 - Me fala um esporte pra [Nova Iorque Brasil](locale)
 - Me diz um esporte pra fazer me [brasilia](locale)
+- O que você recomenda fazer na [Bahia](locale)
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?

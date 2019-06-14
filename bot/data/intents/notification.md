@@ -24,6 +24,7 @@
 - desejo excluir uma notificação
 - Apagar uma notificação
 - deletar notificacao
+- quero deletar minha notificação
 
 ## intent: edit_notification
 - quero editar minha notificação
