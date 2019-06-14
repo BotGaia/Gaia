@@ -41,6 +41,7 @@
 - valeuzão
 
 ## intent:greet
+- oi
 - oi, tudo bem
 - como vai
 - oi, como vai voce
@@ -197,3 +198,4 @@
  - como te pergunto o clima
  - me da um exemplo de condicoes meteorologicas
  - como te pergunto sobre o tempo
+ - exemplo condição meteorologica

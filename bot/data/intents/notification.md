@@ -35,6 +35,7 @@
 
 ## intent: create_notification
 - quero criar minha notificação
+- quero registrar uma notificacao
 - criar notificacao
 - desejo criar uma notificacao
 - quero adicionar uma notificação

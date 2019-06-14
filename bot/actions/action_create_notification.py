@@ -33,6 +33,7 @@ class User_Action(Action):
         response = requests.post(URL+'esporte', data=dataJson)
 
         if(response.status_code == 200):
+            dispatcher.utter_message(str(dataJson))
             dispatcher.utter_message('Notificação salva com sucesso!')
         else:
             dispatcher.utter_message('Ocorreu um erro ao salvar')
