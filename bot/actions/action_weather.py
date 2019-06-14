@@ -29,15 +29,16 @@ class Action_weather(Action):
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
+            index = 0
 
             for local in answer_json:
-                data_message += str(counter) + '. ' + local['name'] + '\n'
-                title = (str(counter))
-                payload = (str(counter))
-                buttons.append({"title": title, "payload": payload})
-                counter += 1
-                if counter == 11:
-                    break
+                index += 1
+                if (index >= 6):
+                    data_message += str(counter) + '. ' + local['name'] + '\n'
+                    title = (str(counter))
+                    payload = (str(counter))
+                    buttons.append({"title": title, "payload": payload})
+                    counter += 1
             dispatcher.utter_message(data_message)
             dispatcher.utter_button_message(message, buttons)
 

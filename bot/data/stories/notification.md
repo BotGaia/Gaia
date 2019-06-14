@@ -28,6 +28,8 @@
 * choose
     - action_edit_notification
 * preference
+    - action_local
+* choose
     - utter_time_before
 * time_before
     - action_user
@@ -88,6 +90,8 @@
 * choose
     - action_edit_notification
 * preference
+    - action_local
+* choose
     - utter_time_before
 * time_before
     - action_user

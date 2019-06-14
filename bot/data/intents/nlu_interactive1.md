@@ -37,14 +37,14 @@
 - [goias](locale)
 
 ## intent:preference
-- Quero registrar [surf](user_sport) para [quarta](user_day) às [10](user_hour) e [00](user_minute) no [guará](user_locale)
-- Registrar [stand up paddle](user_sport) para [sabado](user_day) as [9](user_hour) e [00](user_minute) no [lago paranoa](user_locale)
-- registrar [vela](user_sport) para [sexta](user_day) as [11](user_hour) e [00](user_minute) no [rio de janeiro](user_locale)
-- registrar [surf](user_sport) na [quarta](user_day) às [10](user_hour) e [00](user_minute) no [rio de janeiro](user_locale)
-- quero registrar [vela](user_sport) na [quinta](user_day) às [13](user_hour) e [00](user_minute) em [guaruja](user_locale)
-- registrar [stand up paddle](user_sport) [sexta](user_day) às [12](user_hour) e [00](user_minute) no [lago paranoa](user_locale)
-- registrar [surf](user_sport) na [quarta](user_day) às [10](user_hour) horas no [guarujá](user_locale)
-- quero registrar [kitesurf](user_sport) na [quinta](user_day) às [13](user_hour) e [00](user_minute) na [bahia](user_locale)
+- Quero registrar [surf](sport) para [quarta](user_day) às [10](user_hour) e [00](user_minute) no [guará](locale)
+- Registrar [stand up paddle](sport) para [sabado](user_day) as [9](user_hour) e [00](user_minute) no [lago paranoa](locale)
+- registrar [vela](sport) para [sexta](user_day) as [11](user_hour) e [00](user_minute) no [rio de janeiro](locale)
+- registrar [surf](sport) na [quarta](user_day) às [10](user_hour) e [00](user_minute) no [rio de janeiro](locale)
+- quero registrar [vela](sport) na [quinta](user_day) às [13](user_hour) e [00](user_minute) em [guaruja](locale)
+- registrar [stand up paddle](sport) [sexta](user_day) às [12](user_hour) e [00](user_minute) no [lago paranoa](locale)
+- registrar [surf](sport) na [quarta](user_day) às [10](user_hour) horas no [guarujá](locale)
+- quero registrar [kitesurf](sport) na [quinta](user_day) às [13](user_hour) e [00](user_minute) na [bahia](locale)
 
 ## intent:time_before
 - [2 horas](hours_before)

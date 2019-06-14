@@ -10,6 +10,8 @@
 * greet
     - utter_greet
 * preference
+    - action_local
+* choose
     - utter_time_before
 * time_before
     - action_user
@@ -26,6 +28,8 @@
 * good_afternoon
     - utter_good_afternoon
 * preference
+    - action_local
+* choose
     - utter_time_before
 * time_before
     - action_user
@@ -34,6 +38,8 @@
 * good_night
     - utter_good_night
 * preference
+    - action_local
+* choose
     - utter_time_before
 * time_before
     - action_user

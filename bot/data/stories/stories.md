@@ -30,7 +30,7 @@
 * choose{"choice": "2"}
     - slot{"choice": "2"}
     - action_temperature
-* inform{"locale": "goiania"}
+* inform{"locale": "goiania"}@mi
     - slot{"locale": "goiania"}
     - action_local
     - slot{"type": null}
@@ -173,33 +173,39 @@
     - action_weather
 
 ## Generated Story 10
-* preference{"user_sport": "kitesurf", "user_locale": "Recife", "user_day": "sexta", "user_hour": "14"}
+* preference{"sport": "kitesurf", "locale": "Recife", "user_day": "sexta", "user_hour": "14"}
     - slot{"user_day": ["quarta", "sexta"]}
     - slot{"user_hour": "14"}
-    - slot{"user_locale": ["lago paranoa", "Recife"]}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"locale": ["lago paranoa", "Recife"]}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
     - action_user
 
 ## Generated Story 11
-* preference{"user_sport": "kitesurf", "user_locale": "Recife", "user_day": "sexta", "user_hour": "14"}
+* preference{"sport": "kitesurf", "locale": "Recife", "user_day": "sexta", "user_hour": "14"}
     - slot{"user_day": ["quarta", "sexta"]}
     - slot{"user_hour": "14"}
-    - slot{"user_locale": ["lago paranoa", "Recife"]}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"locale": ["lago paranoa", "Recife"]}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
     - action_user
 
 ## Generated Story -3234865760225780992
-* preference{"user_sport": "kitesurf", "user_locale": "Recife", "user_day": "sexta", "user_hour": "14"}
+* preference{"sport": "kitesurf", "locale": "Recife", "user_day": "sexta", "user_hour": "14"}
     - slot{"user_day": ["quarta", "sexta"]}
     - slot{"user_hour": "14"}
-    - slot{"user_locale": ["lago paranoa", "Recife"]}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"locale": ["lago paranoa", "Recife"]}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "15 minutos"}
     - slot{"minutes_before": "15 minutos"}
@@ -208,64 +214,76 @@
 ## Generated Story -6422965880512245028
 * greet
     - utter_greet
-* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "user_locale": "lago parano\u00e1"}
+* preference{"sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "locale": "lago parano\u00e1"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["lago parano\u00e1"]}
+    - slot{"locale": ["lago parano\u00e1"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "surf"}
+    - slot{"sport": "surf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
     - action_user
-* preference{"user_sport": "kitesurf", "user_locale": "recife", "user_day": "sexta", "user_hour": "14"}
+* preference{"sport": "kitesurf", "locale": "recife", "user_day": "sexta", "user_hour": "14"}
     - slot{"user_day": ["quarta", "sexta"]}
     - slot{"user_hour": "14"}
-    - slot{"user_locale": ["lago paranoa", "recife"]}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"locale": ["lago paranoa", "recife"]}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
-* preference{"user_sport": "vela", "user_locale": "brasilia", "user_day": "quarta", "user_hour": "19", "user_minute": "00"}
+* preference{"sport": "vela", "locale": "brasilia", "user_day": "quarta", "user_hour": "19", "user_minute": "00"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "19"}
-    - slot{"user_locale": ["brasilia"]}
+    - slot{"locale": ["brasilia"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "vela"}
+    - slot{"sport": "vela"}
+    - action_local
+* choose
     - utter_time_before
 
 ## Generated Story -95977543789797183
 * greet
     - utter_greet
-* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "user_locale": "guar\u00e1"}
+* preference{"sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "locale": "guar\u00e1"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["guar\u00e1"]}
+    - slot{"locale": ["guar\u00e1"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "surf"}
+    - slot{"sport": "surf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
     - action_user
-* preference{"user_sport": "stand up paddle", "user_day": "sabado", "user_hour": "9", "user_minute": "00", "user_locale": "lago paranoa"}
+* preference{"sport": "stand up paddle", "user_day": "sabado", "user_hour": "9", "user_minute": "00", "locale": "lago paranoa"}
     - slot{"user_day": ["sabado"]}
     - slot{"user_hour": "9"}
-    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "stand up paddle"}
+    - slot{"sport": "stand up paddle"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
 * greet
     - utter_greet
-* preference{"user_sport": "vela", "user_day": "sexta", "user_hour": "11", "user_minute": "00", "locale": "rio de janeiro"}
+* preference{"sport": "vela", "user_day": "sexta", "user_hour": "11", "user_minute": "00", "locale": "rio de janeiro"}
     - slot{"locale": "rio de janeiro"}
     - slot{"user_day": ["sexta"]}
     - slot{"user_hour": "11"}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "vela"}
+    - slot{"sport": "vela"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "1 hora"}
     - slot{"hours_before": "1 hora"}
@@ -274,42 +292,50 @@
 ## Generated Story -1100676358352346366
 * greet
     - utter_greet
-* preference{"user_sport": "kitesurf", "user_day": "quinta", "user_hour": "11", "user_minute": "00", "user_locale": "rio de janeiro"}
+* preference{"sport": "kitesurf", "user_day": "quinta", "user_hour": "11", "user_minute": "00", "locale": "rio de janeiro"}
     - slot{"user_day": ["quinta"]}
     - slot{"user_hour": "11"}
-    - slot{"user_locale": ["rio de janeiro"]}
+    - slot{"locale": ["rio de janeiro"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
     - action_user
-* preference{"user_sport": "vela", "user_day": "sexta", "user_hour": "19", "user_minute": "00", "user_locale": "guaruj\u00e1"}
+* preference{"sport": "vela", "user_day": "sexta", "user_hour": "19", "user_minute": "00", "locale": "guaruj\u00e1"}
     - slot{"user_day": ["sexta"]}
     - slot{"user_hour": "19"}
-    - slot{"user_locale": ["guaruj\u00e1"]}
+    - slot{"locale": ["guaruj\u00e1"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "vela"}
+    - slot{"sport": "vela"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "7 horas"}
     - slot{"hours_before": "7 horas"}
     - action_user
-* preference{"user_sport": "surf", "user_day": "quinta", "user_hour": "14", "user_minute": "00", "user_locale": "ilhabela"}
+* preference{"sport": "surf", "user_day": "quinta", "user_hour": "14", "user_minute": "00", "locale": "ilhabela"}
     - slot{"user_day": ["ter\u00e7a", "quinta"]}
     - slot{"user_hour": "14"}
-    - slot{"user_locale": ["ilhabela"]}
+    - slot{"locale": ["ilhabela"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "surf"}
+    - slot{"sport": "surf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
-* preference{"user_sport": "stand up paddle", "user_day": "quinta", "user_hour": "10", "user_minute": "00", "user_locale": "lago paranoa"}
+* preference{"sport": "stand up paddle", "user_day": "quinta", "user_hour": "10", "user_minute": "00", "locale": "lago paranoa"}
     - slot{"user_day": ["ter\u00e7a", "quinta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "stand up paddle"}
+    - slot{"sport": "stand up paddle"}
+    - action_local
+*choose
     - utter_time_before
 * time_before{"minutes_before": "40 minutos"}
     - slot{"minutes_before": "40 minutos"}
@@ -318,32 +344,38 @@
 ## Generated Story 2076172119833102731
 * greet
     - utter_greet
-* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "user_locale": "rio de janeiro"}
+* preference{"sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "00", "locale": "rio de janeiro"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["rio de janeiro"]}
+    - slot{"locale": ["rio de janeiro"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "surf"}
+    - slot{"sport": "surf"}
+    - action_local
+*choose
     - utter_time_before
 * time_before{"hours_before": "2 horas"}
     - slot{"hours_before": "2 horas"}
     - action_user
-* preference{"user_sport": "vela", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "user_locale": "guaruja"}
+* preference{"sport": "vela", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "locale": "guaruja"}
     - slot{"user_day": ["quinta"]}
     - slot{"user_hour": "13"}
-    - slot{"user_locale": ["guaruja"]}
+    - slot{"locale": ["guaruja"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "vela"}
+    - slot{"sport": "vela"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
-* preference{"user_sport": "stand up paddle", "user_day": "sexta", "user_hour": "12", "user_minute": "00", "user_locale": "lago paranoa"}
+* preference{"sport": "stand up paddle", "user_day": "sexta", "user_hour": "12", "user_minute": "00", "locale": "lago paranoa"}
     - slot{"user_day": ["sexta"]}
     - slot{"user_hour": "12"}
-    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"locale": ["lago paranoa"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "stand up paddle"}
+    - slot{"sport": "stand up paddle"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
@@ -352,21 +384,25 @@
 ## Generated Story -514383783422040419
 * greet
     - utter_greet
-* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_locale": "guaruj\u00e1"}
+* preference{"sport": "surf", "user_day": "quarta", "user_hour": "10", "locale": "guaruj\u00e1"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["guaruj\u00e1"]}
-    - slot{"user_sport": "surf"}
+    - slot{"locale": ["guaruj\u00e1"]}
+    - slot{"sport": "surf"}
+    - action_local
+*choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
-* preference{"user_sport": "kitesurf", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "user_locale": "bahia"}
+* preference{"sport": "kitesurf", "user_day": "quinta", "user_hour": "13", "user_minute": "00", "locale": "bahia"}
     - slot{"user_day": ["quinta"]}
     - slot{"user_hour": "13"}
-    - slot{"user_locale": ["bahia"]}
+    - slot{"locale": ["bahia"]}
     - slot{"user_minute": "00"}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "4 horas"}
     - slot{"hours_before": "4 horas"}
@@ -375,33 +411,40 @@
 ## Generated Story -1656233441744573291
 * greet
     - utter_greet
-* preference{"user_sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "0 minutos", "user_locale": "brasilia"}
+* preference{"sport": "surf", "user_day": "quarta", "user_hour": "10", "user_minute": "0 minutos", "locale": "brasilia"}
     - slot{"user_day": ["quarta"]}
     - slot{"user_hour": "10"}
-    - slot{"user_locale": ["brasilia"]}
+    - slot{"locale": ["brasilia"]}
     - slot{"user_minute": "0 minutos"}
-    - slot{"user_sport": "surf"}
+    - slot{"sport": "surf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"hours_before": "3 horas"}
     - slot{"hours_before": "3 horas"}
     - action_user
-* preference{"user_sport": "kitesurf", "user_day": "quinta", "user_hour": "17", "user_locale": "bahia"}
+* preference{"sport": "kitesurf", "user_day": "quinta", "user_hour": "17", "locale": "bahia"}
     - slot{"user_day": ["ter\u00e7a", "quarta", "quinta"]}
     - slot{"user_hour": "17"}
-    - slot{"user_locale": ["bahia"]}
-    - slot{"user_sport": "kitesurf"}
+    - slot{"locale": ["bahia"]}
+    - slot{"sport": "kitesurf"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "30 minutos"}
     - slot{"minutes_before": "30 minutos"}
     - action_user
-* preference{"user_sport": "vela", "user_day": "sabado", "user_hour": "15", "user_minute": "30 minutos", "user_locale": "lago paranoa"}
+* preference{"sport": "vela", "user_day": "sabado", "user_hour": "15", "user_minute": "30 minutos", "locale": "lago paranoa"}
     - slot{"user_day": ["sabado"]}
     - slot{"user_hour": "15"}
-    - slot{"user_locale": ["lago paranoa"]}
+    - slot{"locale": ["lago paranoa"]}
     - slot{"user_minute": "30 minutos"}
-    - slot{"user_sport": "vela"}
+    - slot{"sport": "vela"}
+    - action_local
+* choose
     - utter_time_before
 * time_before{"minutes_before": "40 minutos"}
     - slot{"minutes_before": "40 minutos"}
     - action_user
 
+  
