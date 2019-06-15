@@ -1,34 +1,145 @@
 ## intent: cyclone
 - E o ciclone?
 - Ciclone
+- terremoto
+- e o maremoto
+- ta tendo maremoto
+- teve algum tornado?
+- tornado
+- tem risco de tornado?
+- tufão
+- ta tendo tufao?
+- onde ta tendo tufao?
+- tem risco de tufao
 - Onde tem Ciclone?
 - fala do ciclone
 - tem ciclone?
 - tem risco de ciclone?
+- furacão
+- ta tendo furacão?
+- quero saber do furacão
+- ta tendo terremoto?
+- teve algum terremoto?
+- onde a terra ta tremendo?
+- tem risco de terremoto
+- fala do furacao
+- e o carreta furacao?
+- redemoinho
+- tem redemoinho?
+- e os redemoinhos?
+
+## intent: example_cyclone_alert
+- exemplo de alerta de ocorrência de ciclone
+- exemplo de alerta de ciclone
+- como posso saber dos ciclones?
+- como posso saber dos tornados?
+- como posso saber dos tufoes?
+- como posso saber dos maremotos?
+- como posso saber dos furacoes?
+- como recebo alerta de ciclone?
+- como faço para saber dos tornados?
+- como faço para saber dos redemoinhos?
 
 ## intent: create_alert
 - criar alerta ciclone
+- criar alerta maremoto
+- criar alerta furacão
+- criar alerta tornado
+- criar alerta redomoinho
+- criar alerta furacao
+- criar alerta terremoto
 - Quero receber alertas sobre ciclone
+- Quero receber alertas sobre maremotos
+- Quero receber alertas sobre tufões
+- Quero receber alertas sobre tornado
 - desejo ser alertado sobre ciclones
 - me fala quando tiver um ciclone
+- me fala quando tiver um tornado
+- me fala quando tiver um maremoto
+- me fala quando tiver um redemoinho
+- me fala quando tiver um furacao
 - alertar ciclone
-- notficar ciclone
+- alertar maremoto
+- alertar furacao
+- alertar tornado
+- alertar tufao
+- alertar terremoto
+- alertar furacao
+- notficar redemoinho
+- notficar furacão
+- me alerta quando tiver um ciclone
+- me alerta quando tiver um tornado
+- me alerta quando tiver um terremoto
+- me alerta quando tiver um tufao
+- me alerta quando tiver um furacao
+- me alerta quando tiver um redemoinho
 
 ## intent: show_alert
 - mostrar alerta ciclone
+- mostrar alerta maremoto
+- mostrar alerta terremoto
+- mostrar alerta tornado
+- mostrar alerta redemoinho
+- mostrar alerta tufão
+- mostrar alerta furacao
+- já possuo alerta de ciclone?
+- já possuo alerta de terremoto?
+- já possuo alerta de tufao?
+- já tenho alerta de tornado?
+- já tenho alerta de maremoto?
+- já tenho alerta de furacao?
 - Quero ver se tenho alertas sobre ciclone
+- Quero ver se tenho alertas sobre maremoto
+- Quero ver se tenho alertas sobre tufao
+- Quero ver se tenho alertas sobre terremoto
+- Quero ver se tenho alertas sobre furacao
+- Quero ver se tenho alertas sobre tornado
 - mostra se eu sou alertado sobre ciclones
 - me fala se eu posso ver alerta de ciclone
+- me fala se eu posso ver alerta de furacao
+- me fala se eu posso ver alerta de tornado
 - mostrar ciclone alerta
 - ver alerta ciclone
+- ver alerta furacao
+- ver alerta maremoto
+- ver alerta tornado
 - quero ver se tenho alerta de ciclone
+- quero ver se tenho alerta de maremoto
+- quero ver se tenho alerta de tufao
+- quero ver se tenho alerta de terremoto
+- quero ver se tenho alerta de redemoinho
+- quero ver se tenho alerta de tornado
 
 ## intent: delete_alert
 - deletar alerta ciclone
+- deletar alerta terremoto
+- deletar alerta furacao
+- deletar alerta tufao
+- deletar alerta maremoto
 - Quero cancelar alertas sobre ciclone
+- Quero cancelar alertas sobre terremoto
+- Quero cancelar alertas sobre furacao
+- Quero cancelar alertas sobre maremoto
+- Quero cancelar alertas sobre tufao
 - Não desejo ser alertado sobre ciclones
 - cancela meu alerta de ciclone
+- cancela meu alerta de maremoto
+- cancela meu alerta de furacao
+- cancela meu alerta de tornado
+- cancela meu alerta de tufao
 - deletar ciclone
 - cancelar ciclone
+- cancelar tornado
+- cancelar furacao
+- cancelar terremoto
+- cancelar maremoto
 - ciclone cancela
 - quero deletar alerta sobre ciclone
+- quero deletar alerta sobre furacao
+- quero deletar alerta sobre tornado
+- quero deletar alerta sobre terremoto
+- quero deletar alerta sobre maremoto
+
+## intent: all_cyclones
+- Quero saber se há ciclone por agora
+- tem ciclone acontecendo agora?
