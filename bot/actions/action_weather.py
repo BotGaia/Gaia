@@ -48,7 +48,7 @@ class Action_weather(Action):
             response = requests.get(URL+'esporte', params=payload)
             answer = response.content.decode()
             answer_json = json.loads(answer)
-            data_loc = locale.capitalize()+':'
+            data_loc = location.title()+':'
             temp = answer_json["temperature"]
             windDegrees = answer_json["windyDegrees"]
             windSpd = str(answer_json["windySpeed"])
@@ -90,7 +90,7 @@ class Action_temperature(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         temp = answer_json["temperature"]
         data = 'Neste local, minha temperatura é '+temp+'°C'
         tempMn = answer_json["temperatureMin"]
@@ -120,7 +120,7 @@ class Action_pressure(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         pressure = answer_json["pressure"]
         data = 'Neste local, minha pressão é de '+pressure+' atm'
         try:
@@ -145,7 +145,7 @@ class Action_humidity(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         humidity = str(answer_json["humidity"])
         data = 'Neste local, minha umidade é de '+humidity+'%'
         try:
@@ -170,7 +170,7 @@ class Action_sky(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         data = 'Neste local, apresento '+answer_json["sky"]
         try:
             dispatcher.utter_message(data_loc)
@@ -193,7 +193,7 @@ class Action_wind(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         windD = answer_json["windyDegrees"]
         windS = str(answer["windySpeed"])
         data_answer = 'Neste local, meus ventos sopram para o '
@@ -220,7 +220,7 @@ class Action_sunrise_sunset(Action):
         response = requests.get(URL+'esporte', params=payload)
         answer = response.content.decode()
         answer_json = json.loads(answer)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.title()+':'
         sunrise = answer_json["sunrise"]
         sunset = answer["sunset"]
         data = 'Neste local, o sol me ilumina de '+sunrise+' às '+sunset+'.'

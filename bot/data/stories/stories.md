@@ -30,7 +30,7 @@
 * choose{"choice": "2"}
     - slot{"choice": "2"}
     - action_temperature
-* inform{"locale": "goiania"}@mi
+* inform{"locale": "goiania"}
     - slot{"locale": "goiania"}
     - action_local
     - slot{"type": null}

@@ -48,6 +48,10 @@ actions:
 - utter_example_general
 - utter_example_sport
 - utter_example_climate
+- utter_example_cyclone_alert
+- utter_after_create_cyclone_alert
+- utter_after_all_cyclones
+- action_all_cyclones
 entities:
 - sport
 - type
@@ -104,6 +108,8 @@ intents:
 - create_alert
 - show_alert
 - delete_alert
+- example_cyclone_alert
+- all_cyclones
 slots:
   choice:
     type: unfeaturized
@@ -204,7 +210,7 @@ templates:
     - payload: deletar alerta ciclone
       title: Não
     - payload: mostrar alerta ciclone
-      title: Já possui?
+      title: Já possuo?
     text: 'Deseja receber alertas sobre ciclones?'
   utter_notification:
   - buttons:
@@ -262,3 +268,12 @@ templates:
   - text: "Para saber o tempo em uma localidade, siga o exemplo: Como está o tempo em\
       \ [local desejado]?\nPara saber uma condição meteorológica específica(temperatura, umidade, nebulosidade), siga o exemplo:\
       \ Como está [condição meteorológica] em [local desejado]?"
+  utter_example_cyclone_alert:
+  - text: "Eu monitoro vários tipos do ciclone na Terra. Para receber atualizações de quando houver um fenômeno dessa natureza,\
+  \ é só pedir: Quero receber alertas de ciclone.\
+  \ Para saber se já possui o alerta, me pergunte: já tenho alerta de ciclone?\
+  \ Se quiser cancelar este alerta, me mande: Quero cancelar alertas sobre ciclone."
+  utter_after_create_cyclone_alert:
+  - text: "Após ser acionado, você receberá alertas, em tempo real, de todos os tipos de ciclones em todo o mundo!"
+  utter_after_all_cyclones:
+  - text: "Você pode ser alertado quando houver ciclones em tempo real, basta acionar o alerta de ciclone."
