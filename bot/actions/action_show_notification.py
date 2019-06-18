@@ -43,7 +43,7 @@ class Action_show_notification(Action):
                         for days in notification["days"]:
                             day = convertDay(days)
                             data_message += 'Dia(s) da semana: ' + day + '\n'
-                    data_message += 'Notificado(a) às'
+                    data_message += 'Notificado(a) às '
                     data_message += str(notification["hoursBefore"])
                     data_message += ' horas e '
                     data_message += str(notification["minutesBefore"])

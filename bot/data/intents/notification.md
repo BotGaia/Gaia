@@ -24,6 +24,7 @@
 - desejo excluir uma notificação
 - Apagar uma notificação
 - deletar notificacao
+- quero deletar minha notificação
 
 ## intent: edit_notification
 - quero editar minha notificação
@@ -35,7 +36,10 @@
 
 ## intent: create_notification
 - quero criar minha notificação
+- quero registrar uma notificacao
 - criar notificacao
 - desejo criar uma notificacao
 - quero adicionar uma notificação
 - adicionar notificacao
+- como agendo uma notificacao
+- nao sei editar minhas notificacoes
