@@ -149,25 +149,65 @@
 * choose
    - action_weather
     
-## Path 8
-* elaborate
-    - utter_elaborate
+## elaborate weather
+* elaborate_weather
+    - utter_elaborate_local
 * locale
     - action_local
 * choose
     - action_weather
 
-## Path 3
-* greet
-    - utter_greet
-* inform
+## elaborate temperature
+* elaborate_temperature
+    - utter_elaborate_local
+* locale
     - action_local
 * choose
-    - action_weather
+    - action_temperature
+
+## elaborate pressure
+* elaborate_pressure
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - action_pressure
+
+## elaborate humidity
+* elaborate_humidity
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - action_humidity
+
+## elaborate sun
+* elaborate_sun
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - action_sunrise_sunset
+
+## elaborate wind
+* elaborate_wind
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - action_wind
+
+## elaborate sky
+* elaborate_sky
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - action_sky
 
 ## Elaborate
-* elaborate
-    - utter_elaborate    
+* elaborate_weather
+    - utter_elaborate_local    
 
 ## Path 6
 * greet

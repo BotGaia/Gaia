@@ -9,7 +9,6 @@ actions:
 - utter_who_are_u
 - utter_delete_button
 - utter_start2
-- utter_elaborate
 - utter_default
 - action_weather
 - action_specific_sport
@@ -52,6 +51,7 @@ actions:
 - utter_after_create_cyclone_alert
 - utter_after_all_cyclones
 - action_all_cyclones
+- utter_elaborate_local
 entities:
 - sport
 - type
@@ -90,7 +90,13 @@ intents:
 - compliments
 - cyclone
 - cyclone_alert
-- elaborate
+- elaborate_weather
+- elaborate_temperature
+- elaborate_pressure
+- elaborate_humidity
+- elaborate_wind
+- elaborate_sun
+- elaborate_sky
 - start
 - anything_else
 - who_are_u
@@ -160,7 +166,7 @@ templates:
   - text: "Escolha o número da notificação que deseja deletar:"
   utter_edit_button:
   - text: "Escolha o número da notificação que deseja editar:"
-  utter_elaborate:
+  utter_elaborate_local:
   - text: Em qual localidade?
   - text: Onde deseja saber?
   - text: Poderia esclarecer em qual localidade, por favor?

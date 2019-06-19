@@ -30,7 +30,7 @@ class Action_local(Action):
             data_message_2 = 'poderia informar qual o número '
             data_message_3 = 'da localidade que deseja?\n\n'
             data_message = data_message_1 + data_message_2 + data_message_3
-            message = 'Clique no número do local desejado'
+            message = 'Selecione no número do local desejado'
             counter = 1
 
             if (len(answer_json) > 5):

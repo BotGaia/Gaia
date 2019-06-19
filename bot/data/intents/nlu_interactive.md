@@ -5,6 +5,11 @@
 ## intent:specific_sport
 - posso praticar [kitesurf](sport) em [brasilia](locale)?
 - posso praticar [surf](sport) em [brasilia](locale)?
+- posso fazer [surf](sport) no [rio de janeiro](locale)?
+- tem como praticar [stand up paddle](sport) na [bahia](locale)
+- tem como fazer [kitesurf](sport) em [sao paulo](locale)?
+- pratica de [surf](sport) no [paraguai](locale)
+- pratica de [kitesurf](surf) na [praia de tamandare](locale)
 
 ## intent:preference
 - Quero registrar [surf](sport) para [quarta](user_day) às [10](user_hour) e [00](user_minute) no [lago paranoá](locale)

@@ -9,3 +9,7 @@
 ## Example climate
 * example_climate
     - utter_example_climate
+
+## Example notification
+* example_notification
+    - utter_create_notification
