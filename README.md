@@ -11,11 +11,13 @@
 
 Saudações! Sou Gaia, a Mãe-Terra e estou aqui para compartilhar informações sobre minha meteorologia e correlacioná-la com modalidades esportivas.
 
+Você pode me encontrar tanto no Telegram ([@DeusaGaiaBot](https://t.me/DeusaGaiaBot)) quanto no Facebook ([@DeusaGaiaBot](https://m.me/DeusaGaiaBot))
+
 Esse projeto teve como base o [Rasa Boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate).
 
 ## Como contribuir
 
-Se tiver interesse em como contribuir para o projeto, olhe nossa [wiki](https://github.com/fga-eps-mds/2019.1-Gaia).
+Se tiver interesse em como contribuir para o projeto, olhe mais sobre o projeto em nossa [wiki](https://github.com/fga-eps-mds/2019.1-Gaia) e dê uma lida também no nosso guia de [contribuição](https://github.com/BotGaia/Gaia/blob/dev/CONTRIBUTING.md).
 
 ## Como usar
 
