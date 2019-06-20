@@ -7,17 +7,17 @@ assignees: ''
 
 ---
 
-### Nome da *issue*
+# v0.X - Sprint x1 a Sprint x5
 
-O nome da *issue* deve conter uma breve descrição sobre o problema a ser resolvido e deve ser escrito no infinitivo.
+## Funcionalidades e Melhorias:
 
+* Funcionalidade 1: #issue #issue #issue
+* Funcionalidade 2: #issue #issue 
+* Funcionalidade 3: #issue #issue #issue #issue
 
-Nessa issue será realizado:
-- tarefa 1
-- tarefa 2
-- tarefa 3
+## Bugs Consertados
+* Descrição do bug #issue
+* Descrição do bug #issue
 
-Critérios de aceitação:
-- [ ] critério 1
-- [ ] critério 2
-- [ ] critério 3
+## Contribuidores:
+@nome1, @nome2, @nome3, @nome4
