@@ -24,10 +24,6 @@
 - registrar [vela](sport) para [sabado](user_day) às [15](user_hour) horas e [30 minutos](user_minute) no [lago paranoa](locale)
 
 ## intent:time_before
-- [2 horas](hours_before)
-- [30 minutos](minutes_before)
-
-## intent:time_before
 - [3 horas](hours_before)
 - [7 horas](hours_before)
 - [30 minutos](minutes_before)
@@ -35,3 +31,5 @@
 - [3 horas](hours_before)
 - [30 minutos](minutes_before)
 - [40 minutos](minutes_before)
+- [2 horas](hours_before)
+- [30 minutos](minutes_before)
