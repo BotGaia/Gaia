@@ -82,3 +82,54 @@
     - slot{"locale": "taguatinga"}
     - action_local
 
+## Generated Story 3721559633672000720
+* greet
+    - utter_greet
+* help
+    - utter_help
+* example_sport
+    - utter_example_sport
+* specific_sport{"sport": "surf", "locale": "sao paulo"}
+    - slot{"locale": "sao paulo"}
+    - slot{"sport": "surf"}
+    - action_local
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_specific_sport
+* specific_sport
+    - utter_example_sport
+* specific_sport{"sport": "kitesurf", "locale": "rio de janeiro"}
+    - slot{"locale": "rio de janeiro"}
+    - slot{"sport": "kitesurf"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_specific_sport
+* example_sport
+    - utter_example_sport
+* sports{"locale": "lago paranoa"}
+    - slot{"locale": "lago paranoa"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sports
+* help
+    - utter_help
+* notification
+    - utter_create_notification
+* preference{"sport": "kitesurf", "user_day": "quinta", "user_hour": "8", "user_minute": "20 minutos", "locale": "lago paranoa"}
+    - slot{"locale": "lago paranoa"}
+    - slot{"sport": "kitesurf"}
+    - slot{"user_day": ["quinta"]}
+    - slot{"user_hour": "8"}
+    - slot{"user_minute": "20 minutos"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - utter_time_before
+* time_before{"minutes_before": "10 minutos"}
+    - slot{"minutes_before": "10 minutos"}
+    - action_user

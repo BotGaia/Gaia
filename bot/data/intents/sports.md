@@ -57,3 +57,15 @@
 - me fala os esportes de hoje
 - o clima ta bom pra fazer o que?
 
+## intent: all_sports
+- quais esportes vc pode sugerir?
+- quais esportes?
+- que esporte
+- lista de esportes
+- esportes
+- modalidades
+- lista de modalidades
+- quais modadalidades?
+- quais modalidades vc pode sugerir?
+- que tipo de esporte
+- que tipo de modalidade

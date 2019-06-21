@@ -52,6 +52,7 @@ actions:
 - utter_after_create_cyclone_alert
 - utter_user_error
 - action_weather
+- utter_all_sports
 entities:
 - locale
 - choice
@@ -63,6 +64,7 @@ entities:
 - hours_before
 - user_day
 intents:
+- all_sports
 - locale
 - choose
 - elaborate_sport
@@ -288,3 +290,7 @@ templates:
       \ E comigo, a terra encontrou sua harmonia, e para mantê-la preciso daajuda\
       \ de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmose ajudar\
       \ você a escolher atividades que podem ser feitas ao ar livre!"
+utter_all_sports:
+  - text: "Eu posso sugerir essas modalidades:\n- Kitesurf\n- Stand up paddle\n- Surf\n -Vela\n\
+  - Volei da areia\n- WindSurf\n- Caiaque\n- Wakeboard\n- Paraquedismo\n -Remo\n- Caminhada\n\
+  - Trekking\n- Golf\n- Tênis"
