@@ -1,6 +1,7 @@
 from rasa_core_sdk import Action
 from .environment import configGateway
 from .utils import localRequest
+from rasa_core_sdk.events import SlotSet
 import requests
 
 
@@ -28,7 +29,7 @@ class User_Action(Action):
           "days": user_day,
           "hour": user_hour,
           "minutes": user_minute,
-          "locals": location,
+          "local": location,
           "hoursBefore": hours_before,
           "minutesBefore": minutes_before,
         }
@@ -39,3 +40,5 @@ class User_Action(Action):
             dispatcher.utter_message('Notificação salva com sucesso!')
         else:
             dispatcher.utter_message('Ocorreu um erro ao salvar')
+
+        return [SlotSet('hours_before', '0'), SlotSet('minutes_before', '0')]
