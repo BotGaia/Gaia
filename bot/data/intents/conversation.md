@@ -102,6 +102,8 @@
 - voce e deusa
 - você é incrível
 - vc e sensacional
+- você é demais
+- vc eh demais
 
 ## intent:user_error
 - nao era isso, me enganei

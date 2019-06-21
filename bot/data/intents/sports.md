@@ -29,6 +29,9 @@
 - sugestao de modalidade para praticar em [sao paulo](locale)
 - sugestao de esporte para jogar em [sao paulo](locale)
 - quais esportes vc me sugere para praticar em [brasilia](locale)
+- o que recomenda para [amapá](locale)?
+- sugestão de atividades ao ar livre em [brasilia](locale)?
+- sugestão de esporte [bahia](locale)
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?
@@ -43,6 +46,7 @@
 - teria como eu praticar [surf](sport) em [nova iorque](locale)?
 - o clima tá bom pra fazer [windsurf](sport) em [brasilia](locale)?
 - o clima tá bom pra jogar [volei de areia](sport) em [brasilia](locale)?
+- dá pra fazer [trekking] na [bahia](locale)?
 
 ## intent: elaborate_sport
 - da pra jogar alguma coisa hj?
@@ -56,6 +60,10 @@
 - qual a melhor atividade para se fazer por agora?
 - me fala os esportes de hoje
 - o clima ta bom pra fazer o que?
+- recomendacao
+- recomendação
+- sugestão
+- sugestao de esporte
 
 ## intent: all_sports
 - quais esportes vc pode sugerir?
@@ -69,3 +77,6 @@
 - quais modalidades vc pode sugerir?
 - que tipo de esporte
 - que tipo de modalidade
+- lista de esportes monitorados
+- exemplo de esportes monitorados
+- exemplo de lista de esportes monitorados

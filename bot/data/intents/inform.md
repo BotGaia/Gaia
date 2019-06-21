@@ -11,6 +11,7 @@
 - como esta o clima na [bahia](locale)
 - como ta o clima em [barcelona](locale)
 - o clima esta fechado no [parque da cidade](locale)?
+- condição [gama](locale)
 
 ## intent:elaborate_weather
 - Me diga o clima
@@ -81,6 +82,7 @@
 - para onde os ventos estao?
 - onde o vento ta
 - em qual direcao o vento sopra
+- vento
 
 ## intent: elaborate_sun
 - quando o sol nasce?

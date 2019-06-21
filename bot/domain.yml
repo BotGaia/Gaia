@@ -149,11 +149,11 @@ templates:
   - text: Após ser acionado, você receberá alertas, em tempo real, de todos os tipos
       de ciclones em todo o mundo!
   utter_anything_else:
-  - text: "O que mais quer saber? Você pode me perguntar sobre:\n- Sugestão de atividadesao\
-      \ ar livre a serem praticadas em localidade de seu interesse\n- Recomendaçãode\
-      \ um esporte específico\n- Agendamento de uma notificação de determinadaatividade\
-      \ para um local e data\n - Alertas sobre ocorrências de ciclones nomundo inteiro\n\
-      - Condição meteorológica"
+  - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Sugestão de atividades ao ar livre\
+      \ \n\n- Recomendação de um esporte\n\n- Lista de esportes monitorados\n\n- Agendamento\
+      \ de notificação\n\n- Alertas sobre ocorrências de ciclones\n\n- Condição meteorológica\
+      \ \n\n- Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade\
+      \ e Nebulosidade.\n\nAinda com dúvidas? Só mandar: Exemplo de[tópico que deseja]."
   utter_change_subject:
   - text: "Sobre o que quer falar? Posso conversar sobre:\n- Melhores atividades parao\
       \ local de interesse\n- Recomendação de um esporte específico\n- Agendamentode\
@@ -178,11 +178,11 @@ templates:
       \ me comunicar com vocês, \npode falar de outra forma?"
   - text: Minha comunicação com vocês precisa ser direta. Pode ser mais específico?
   - text: Não compreendi, pode reformular a pergunta?
-  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n- Sugestão deatividades\
-      \ ao ar livre a serem praticadas em localidade de seu interesse\n- Recomendação\
-      \ de um esporte específico\n- Agendamento de uma notificação dedeterminada atividade\
-      \ para um local e data\n - Alertas sobre ocorrências deciclones no mundo inteiro\n\
-      - Condição meteorológica"
+  - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n\n- Sugestão de atividades ao ar livre\
+      \ \n\n- Recomendação de um esporte\n\n- Lista de esportes monitorados\n\n- Agendamento\
+      \ de notificação\n\n- Alertas sobre ocorrências de ciclones\n\n- Condição meteorológica\
+      \ \n\n- Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade\
+      \ e Nebulosidade.\n\nAinda com dúvidas? Só mandar: Exemplo de[tópico que deseja]."
   utter_delete_button:
   - text: 'Escolha o número da notificação que deseja deletar:'
   utter_edit_button:
@@ -192,7 +192,7 @@ templates:
   - text: Onde deseja saber?
   - text: Poderia esclarecer em qual localidade, por favor?
   utter_example_climate:
-  - text: "Para saber o tempo em uma localidade, siga o exemplo: Como está o tempoem\
+  - text: "Para saber o tempo em uma localidade, siga o exemplo: Como está o tempo em\
       \ [local desejado]?\nPara saber uma condição meteorológica específica(temperatura,umidade,\
       \ nebulosidade), siga o exemplo: Como está [condição meteorológica]em [local\
       \ desejado]?"
@@ -240,17 +240,15 @@ templates:
       \ ar livre com base na condição meteorológica. Para mais detalhes, é só mandarum:\
       \ 'Me ajuda'!"
   utter_help:
-  - text: "Você pode me pedir:\n- Sugestão de atividades ao ar livre a serem praticadasem\
-      \ localidade de seu interesse\n- Recomendação de um esporte específico\n- Agendamento\
-      \ de uma notificação de determinada atividade para um local edata\n- Alertas\
-      \ sobre ocorrências de ciclones no mundo inteiro\n- Condiçãometeorológica de\
-      \ um lugar no geral\n- Dados específicos da condição meteorológica,como: Temperatura,\
-      \ Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direçãodo Vento, Umidade\
-      \ e Nebulosidade.\nAinda com dúvidas? Só mandar: Exemplo de[tópico que deseja]."
+  - text: "Você pode me pedir:\n\n- Sugestão de atividades ao ar livre\
+      \ \n\n- Recomendação de um esporte\n\n- Lista de esportes monitorados\n\n- Agendamento\
+      \ de notificação\n\n- Alertas sobre ocorrências de ciclones\n\n- Condição meteorológica\
+      \ \n\n- Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade\
+      \ e Nebulosidade.\n\nAinda com dúvidas? Só mandar: Exemplo de[tópico que deseja]."
   utter_how_are_u:
   - text: Estou ótima, obrigada! Em que posso te ajudar?
   utter_how_do_u_know:
-  - text: Como mãe-terra, sou onipresente e posso acessar informações de qualquerlugar
+  - text: Como mãe-terra, sou onipresente e posso acessar informações de qualquer lugar
       do planeta.
   utter_notification:
   - buttons:
@@ -278,19 +276,17 @@ templates:
   - text: Certo, quanto tempo antes gostaria de ser notificado? (Em horas ou minutos)
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
-  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Sugestão deatividades\
-      \ ao ar livre a serem praticadas em localidade de seu interesse\n- Recomendação\
-      \ de um esporte específico\n- Agendamento de uma notificação dedeterminada atividade\
-      \ para um local e data\n- Alertas sobre ocorrências deciclones no mundo inteiro\n\
-      - Condição meteorológica de um lugar no geral\n- Dados específicos da condição\
-      \ meteorológica, como: Temperatura, Pressão, Horáriode Nascer e Pôr do Sol,\
-      \ Velocidade e Direção do Vento, Umidade e Nebulosidade."
+  - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n\n- Sugestão de atividades ao ar livre\
+      \ \n\n- Recomendação de um esporte\n\n- Lista de esportes monitorados\n\n- Agendamento\
+      \ de notificação\n\n- Alertas sobre ocorrências de ciclones\n\n- Condição meteorológica\
+      \ \n\n- Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade\
+      \ e Nebulosidade.\n\nAinda com dúvidas? Só mandar: Exemplo de[tópico que deseja]."
   utter_who_are_u:
-  - text: "Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo eracaos.\
-      \ E comigo, a terra encontrou sua harmonia, e para mantê-la preciso daajuda\
-      \ de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmose ajudar\
+  - text: "Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era caos.\
+      \ E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da ajuda\
+      \ de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmos e ajudar\
       \ você a escolher atividades que podem ser feitas ao ar livre!"
-utter_all_sports:
+  utter_all_sports:
   - text: "Eu posso sugerir essas modalidades:\n- Kitesurf\n- Stand up paddle\n- Surf\n -Vela\n\
   - Volei da areia\n- WindSurf\n- Caiaque\n- Wakeboard\n- Paraquedismo\n -Remo\n- Caminhada\n\
   - Trekking\n- Golf\n- Tênis"

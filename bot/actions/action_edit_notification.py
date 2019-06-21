@@ -23,18 +23,18 @@ class Action_edit_notification(Action):
                     message = 'Entendido. Mande os novos dados'
                     message += ' da seguinte forma: Quero registrar [esporte'
                     message += ' desejado] para [dia(s) da semana] às'
-                    message += ' [hora] e [minutos] no [local(is) desejado(s)]'
+                    message += ' [hora] e [minutos] no [local desejado]'
                     dispatcher.utter_message(message)
                 else:
                     dispatcher.utter_message("Não foi possível \
                     editar a notificação.")
             else:
                 message1 = 'Você não possui notificação.'
-                message += ' Para criar: Quero registrar'
-                message += ' [esporte desejado] para'
-                message += ' [dia(s) da semana] às [hora]'
-                message += ' e [minutos] no'
-                message += ' [local(is) desejado(s)]'
+                message1 += ' Para criar: Quero registrar'
+                message1 += ' [esporte desejado] para'
+                message1 += ' [dia(s) da semana] às [hora]'
+                message1 += ' e [minutos] no'
+                message1 += ' [local(is) desejado(s)]'
                 dispatcher.utter_message(message1)
         except ValueError:
             dispatcher.utter_message("Não foi possível editar a notificação.")
