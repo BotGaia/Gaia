@@ -93,7 +93,6 @@ intents:
 - how_are_u
 - compliments
 - cyclone
-- cyclone_alert
 - elaborate_weather
 - elaborate_wind
 - elaborate_sun
@@ -105,7 +104,6 @@ intents:
 - wind
 - sunrise_sunset
 - how_do_u_know
-- action_temperature
 - notification
 - show_notification
 - delete_notification
@@ -150,15 +148,15 @@ templates:
       de ciclones em todo o mundo!
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n- Sugestão de atividades\
-      \ ao ar livre a serem praticadas em localidade de seu interesse\n- Recomendação\
-      \ de um esporte específico\n- Agendamento de uma notificação de determinada\
-      \ atividade para um local e data\n - Alertas sobre ocorrências de ciclones no\
-      \ mundo inteiro\n- Condição meteorológica"
+      ao ar livre a serem praticadas em localidade de seu interesse\n- Recomendação\
+      de um esporte específico\n- Agendamento de uma notificação de determinada\
+      atividade para um local e data\n - Alertas sobre ocorrências de ciclones no\
+      mundo inteiro\n- Condição meteorológica"
   utter_change_subject:
   - text: "Sobre o que quer falar? Posso conversar sobre:\n- Melhores atividades para\
-      \ o local de interesse\n- Recomendação de um esporte específico\n- Agendamento\
-      \ de uma notificação de determinada atividade para um local e data\n - Alertas\
-      \ sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica"
+      o local de interesse\n- Recomendação de um esporte específico\n- Agendamento\
+      de uma notificação de determinada atividade para um local e data\n - Alertas\
+      sobre ocorrências de ciclones no mundo inteiro\n- Condição meteorológica"
   utter_compliments:
   - text: Obrigada pela gentileza! Fico lisonjeada com o elogio!
   utter_create_notification:
@@ -175,86 +173,86 @@ templates:
     text: Deseja receber alertas sobre ciclones?
   utter_default:
   - text: "A minha língua é um pouco mais complexa que a sua, ainda estou aprendendo\
-      \ a me comunicar com vocês, \npode falar de outra forma?"
+      a me comunicar com vocês, \npode falar de outra forma?"
   - text: Minha comunicação com vocês precisa ser direta. Pode ser mais específico?
   - text: Não compreendi, pode reformular a pergunta?
   - text: "Vamos tentar mais uma vez! Você pode me perguntar sobre:\n- Sugestão de\
-      \ atividades ao ar livre a serem praticadas em localidade de seu interesse\n\
+      atividades ao ar livre a serem praticadas em localidade de seu interesse\n\
       - Recomendação de um esporte específico\n- Agendamento de uma notificação de\
-      \ determinada atividade para um local e data\n - Alertas sobre ocorrências de\
-      \ ciclones no mundo inteiro\n- Condição meteorológica"
+      determinada atividade para um local e data\n - Alertas sobre ocorrências de\
+      ciclones no mundo inteiro\n- Condição meteorológica"
   utter_delete_button:
-  - text: 'Escolha o número da notificação que deseja deletar:'
+  - text: "Escolha o número da notificação que deseja deletar:"
   utter_edit_button:
-  - text: 'Escolha o número da notificação que deseja editar:'
+  - text: "Escolha o número da notificação que deseja editar:"
   utter_elaborate_local:
   - text: Em qual localidade?
   - text: Onde deseja saber?
   - text: Poderia esclarecer em qual localidade, por favor?
   utter_example_climate:
   - text: "Para saber o tempo em uma localidade, siga o exemplo: Como está o tempo\
-      \ em [local desejado]?\nPara saber uma condição meteorológica específica(temperatura,\
-      \ umidade, nebulosidade), siga o exemplo: Como está [condição meteorológica]\
-      \ em [local desejado]?"
+      em [local desejado]?\nPara saber uma condição meteorológica específica(temperatura,\
+      umidade, nebulosidade), siga o exemplo: Como está [condição meteorológica]\
+      em [local desejado]?"
   utter_example_cyclone_alert:
-  - text: 'Eu monitoro vários tipos do ciclone na Terra. Para receber atualizações
-      de quando houver um fenômeno dessa natureza, é só pedir: Quero receber alertas
-      de ciclone. Para saber se já possui o alerta, me pergunte: já tenho alerta de
-      ciclone? Se quiser cancelar este alerta, me mande: Quero cancelar alertas sobre
-      ciclone.'
+  - text: "Eu monitoro vários tipos do ciclone na Terra. Para receber atualizações\
+      de quando houver um fenômeno dessa natureza, é só pedir: Quero receber alertas\
+      de ciclone. Para saber se já possui o alerta, me pergunte: já tenho alerta de\
+      ciclone? Se quiser cancelar este alerta, me mande: Quero cancelar alertas sobre\
+      ciclone."
   utter_example_general:
   - text: "Para me pedir um recomendação de uma atividade específica, pode perguntar:\
-      \ Posso praticar surf em Brasília?\nPara saber quais atividades recomendo para\
-      \ seu local, pode perguntar: Quais atividades posso praticar em Recife?\nPara\
-      \ saber as condições meteorológicas de um local, pode  perguntar: Qual é o tempo\
-      \ em Pindamonhangaba?\nPode me pedir aspectos meteorológicos específicos(temperatura,\
-      \ pressão, umidade, nebulosidade): Qual é a temperatura em Araguaçú?\nPara saber\
-      \ como agendar uma notificação, me pergunte: Como agendo uma notificação?"
+      Posso praticar surf em Brasília?\nPara saber quais atividades recomendo para\
+      seu local, pode perguntar: Quais atividades posso praticar em Recife?\nPara\
+      saber as condições meteorológicas de um local, pode  perguntar: Qual é o tempo\
+      em Pindamonhangaba?\nPode me pedir aspectos meteorológicos específicos(temperatura,\
+      pressão, umidade, nebulosidade): Qual é a temperatura em Araguaçú?\nPara saber\
+      como agendar uma notificação, me pergunte: Como agendo uma notificação?"
   utter_example_sport:
   - text: "Para saber se recomendo um esporte específico, siga o exemplo: Posso praticar\
-      \  [modalidade desejada] em [local desejado]?\nPara saber quais esportes recomendo\
-      \ para  uma localidade, siga o exemplo: Quais modalidades posso praticar em\
-      \ [local desejado]?"
+      [modalidade desejada] em [local desejado]?\nPara saber quais esportes recomendo\
+      para  uma localidade, siga o exemplo: Quais modalidades posso praticar em\
+      [local desejado]?"
   utter_gaia_error:
-  - text: Desculpa o engano, vocês humanos são muito confusos. Você pode especificar
-      o que quer falar?
+  - text: "Desculpa o engano, vocês humanos são muito confusos. Você pode especificar\
+      o que quer falar?"
   utter_good_afternoon:
   - text: "Boa tarde! sou Gaia. Estou aqui para te ajudar a escolher qual atividade\
-      \ fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
-      \ é só mandar um: 'Me ajuda'!"
+      fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
+      é só mandar um: 'Me ajuda'!"
   utter_good_morning:
   - text: "Bom dia! sou Gaia. Estou aqui para te ajudar a escolher qual atividade\
-      \ fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
-      \ é só mandar um: 'Me ajuda'!"
+      fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
+      é só mandar um: 'Me ajuda'!"
   utter_good_night:
   - text: "Boa noite! sou Gaia. Estou aqui para te ajudar a escolher qual atividade\
-      \ fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
-      \ é só mandar um: 'Me ajuda'!"
+      fazer ao ar livre com base na condição meteorológica. Para mais detalhes,\
+      é só mandar um: 'Me ajuda'!"
   utter_goodbye:
   - text: "Foi um grande prazer te ajudar!\nSempre que tiver alguma dúvida, pode me\
-      \ consultar!\nSaudações calorosas, Gaia."
+      consultar!\nSaudações calorosas, Gaia."
   - text: "Foi um grande prazer te ajudar!\nNão hesite em contactar-me!\nCom os meus\
-      \ melhores cumprimentos, Gaia."
+      melhores cumprimentos, Gaia."
   - text: "Foi um grande prazer te ajudar!\nQualquer dúvida, estou à disposição!\n\
       Grata, Gaia."
   utter_greet:
   - text: "Olá, sou Gaia. Estou aqui para te ajudar a escolher qual atividade fazer\
-      \ ao ar livre com base na condição meteorológica. Para mais detalhes, é só mandar\
-      \ um: 'Me ajuda'!"
+      ao ar livre com base na condição meteorológica. Para mais detalhes, é só mandar\
+      um: 'Me ajuda'!"
   utter_help:
   - text: "Você pode me pedir:\n- Sugestão de atividades ao ar livre a serem praticadas\
-      \ em localidade de seu interesse\n- Recomendação de um esporte específico\n\
-      \ - Agendamento de uma notificação de determinada atividade para um local e\
-      \ data\n - Alertas sobre ocorrências de ciclones no mundo inteiro\n- Condição\
-      \ meteorológica de um lugar no geral\n- Dados específicos da condição meteorológica,\
-      \ como: Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção\
-      \ do Vento, Umidade e Nebulosidade.\nAinda com dúvidas? Só mandar: Exemplo de\
-      \ [tópico que deseja]."
+      em localidade de seu interesse\n- Recomendação de um esporte específico\n\
+      - Agendamento de uma notificação de determinada atividade para um local e\
+      data\n- Alertas sobre ocorrências de ciclones no mundo inteiro\n- Condição\
+      meteorológica de um lugar no geral\n- Dados específicos da condição meteorológica,\
+      como: Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção\
+      do Vento, Umidade e Nebulosidade.\nAinda com dúvidas? Só mandar: Exemplo de\
+      [tópico que deseja]."
   utter_how_are_u:
   - text: Estou ótima, obrigada! Em que posso te ajudar?
   utter_how_do_u_know:
-  - text: Como mãe-terra, sou onipresente e posso acessar informações de qualquer
-      lugar do planeta.
+  - text: "Como mãe-terra, sou onipresente e posso acessar informações de qualquer\
+      lugar do planeta."
   utter_notification:
   - buttons:
     - payload: visualizar notificacao
@@ -282,14 +280,14 @@ templates:
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
   - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n- Sugestão de\
-      \ atividades ao ar livre a serem praticadas em localidade de seu interesse\n\
-      - Recomendação de um esporte específico\n - Agendamento de uma notificação de\
-      \ determinada atividade para um local e data\n - Alertas sobre ocorrências de\
-      \ ciclones no mundo inteiro\n- Condição meteorológica de um lugar no geral\n\
+      atividades ao ar livre a serem praticadas em localidade de seu interesse\n\
+      - Recomendação de um esporte específico\n- Agendamento de uma notificação de\
+      determinada atividade para um local e data\n- Alertas sobre ocorrências de\
+      ciclones no mundo inteiro\n- Condição meteorológica de um lugar no geral\n\
       - Dados específicos da condição meteorológica, como: Temperatura, Pressão, Horário\
-      \ de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade."
+      de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade."
   utter_who_are_u:
   - text: "Sou Gaia, Mãe-terra, criadora de tudo que há aqui! Antes de mim, tudo era\
-      \ caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da\
-      \ ajuda de vocês! \nPensando nisso, criei esse canal a fim de nos comunicarmos\
-      \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
+      caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da\
+      ajuda de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmos\
+      e ajudar você a escolher atividades que podem ser feitas ao ar livre!"

@@ -73,7 +73,7 @@
 ## Elaborate Sport
 * elaborate_sport
     - utter_elaborate_local
-* locale
+* sports
     - action_local
 * choose
     - action_sports
@@ -83,7 +83,7 @@
     - utter_greet
 * elaborate_sport
     - utter_elaborate_local
-* locale
+* sports
     - action_local
 * choose
     - action_sports
@@ -94,7 +94,7 @@
     - utter_greet
 * elaborate_sport
     - utter_elaborate_local
-* locale
+* sports
     - action_local
 * choose
     - action_sports

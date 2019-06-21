@@ -1,7 +1,7 @@
 ## elaborate weather
 * elaborate_weather
     - utter_elaborate_local
-* locale
+* inform
     - action_local
 * choose
     - action_weather    
@@ -9,7 +9,7 @@
 ## elaborate temperature
 * elaborate_temperature
     - utter_elaborate_local
-* locale
+* temperature
     - action_local
 * choose
     - action_temperature
@@ -19,7 +19,7 @@
     - utter_greet
 * elaborate_temperature
     - utter_elaborate_local
-* locale
+* temperature
     - action_local
 * choose
     - action_temperature
@@ -31,7 +31,7 @@
     - utter_how_are_u
 * elaborate_temperature
     - utter_elaborate_local
-* locale
+* temperature
     - action_local
 * choose
     - action_temperature
@@ -39,7 +39,7 @@
 ## elaborate pressure
 * elaborate_pressure
     - utter_elaborate_local
-* locale
+* pressure
     - action_local
 * choose
     - action_pressure
@@ -49,7 +49,7 @@
     - utter_greet
 * elaborate_pressure
     - utter_elaborate_local
-* locale
+* pressure
     - action_local
 * choose
     - action_pressure
@@ -61,7 +61,7 @@
     - utter_how_are_u
 * elaborate_pressure
     - utter_elaborate_local
-* locale
+* pressure
     - action_local
 * choose
     - action_pressure
@@ -69,7 +69,7 @@
 ## elaborate humidity
 * elaborate_humidity
     - utter_elaborate_local
-* locale
+* humidity
     - action_local
 * choose
     - action_humidity
@@ -79,7 +79,7 @@
     - utter_greet
 * elaborate_humidity
     - utter_elaborate_local
-* locale
+* humidity
     - action_local
 * choose
     - action_humidity
@@ -91,7 +91,7 @@
     - utter_how_are_u
 * elaborate_humidity
     - utter_elaborate_local
-* locale
+* humidity
     - action_local
 * choose
     - action_humidity
@@ -99,7 +99,7 @@
 ## elaborate sun
 * elaborate_sun
     - utter_elaborate_local
-* locale
+* sunrise_sunset
     - action_local
 * choose
     - action_sunrise_sunset
@@ -109,7 +109,7 @@
     - utter_greet
 * elaborate_sun
     - utter_elaborate_local
-* locale
+* sunrise_sunset
     - action_local
 * choose
     - action_sunrise_sunset
@@ -121,7 +121,7 @@
     - utter_how_are_u
 * elaborate_sun
     - utter_elaborate_local
-* locale
+* sunrise_sunset
     - action_local
 * choose
     - action_sunrise_sunset
@@ -129,7 +129,7 @@
 ## elaborate wind
 * elaborate_wind
     - utter_elaborate_local
-* locale
+* wind
     - action_local
 * choose
     - action_wind
@@ -139,7 +139,7 @@
     - utter_greet
 * elaborate_wind
     - utter_elaborate_local
-* locale
+* wind
     - action_local
 * choose
     - action_wind
@@ -151,7 +151,7 @@
     - utter_how_are_u
 * elaborate_wind
     - utter_elaborate_local
-* locale
+* wind
     - action_local
 * choose
     - action_wind
@@ -159,7 +159,7 @@
 ## elaborate sky
 * elaborate_sky
     - utter_elaborate_local
-* locale
+* sky
     - action_local
 * choose
     - action_sky
@@ -169,19 +169,19 @@
     - utter_greet
 * elaborate_sky
     - utter_elaborate_local
-* locale
+* sky
     - action_local
 * choose
     - action_sky
 
-## elaborate temperature 2
+## elaborate sky 2
 * greet 
     - utter_greet
 * how_are_u
     - utter_how_are_u
 * elaborate_sky
     - utter_elaborate_local
-* locale
+* sky
     - action_local
 * choose
     - action_sky
