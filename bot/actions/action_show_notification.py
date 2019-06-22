@@ -25,8 +25,8 @@ class Action_show_notification(Action):
                     data_message = 'Notificação ' + str(json_counter) + '\n'
                     data_message += 'Esporte: '
                     data_message += notification["sport"].title() + '\n'
-                    if(len(notification["locals"]) > 0):
-                        for locales in notification["locals"]:
+                    if(len(notification["local"]) > 0):
+                        for locales in notification["local"]:
                             data_message += 'Local: ' + locales.title() + '\n'
                     if (len(str(notification["hour"])) < 2):
                         data_message += 'Horário: 0'

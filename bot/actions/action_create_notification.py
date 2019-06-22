@@ -41,4 +41,9 @@ class User_Action(Action):
         else:
             dispatcher.utter_message('Ocorreu um erro ao salvar')
 
-        return [SlotSet('hours_before', '0'), SlotSet('minutes_before', '0')]
+        resetHours = SlotSet('hours_before', '0')
+        resetMinutes = SlotSet('minutes_before', '0')
+        resetMinbefore = SlotSet('user_minute', '0')
+        resetHBefore = SlotSet('user_hour', '0')
+
+        return [resetHours, resetMinutes, resetMinbefore, resetHBefore]
