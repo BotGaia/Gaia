@@ -26,8 +26,8 @@ class Action_show_notification(Action):
                     data_message += 'Esporte: '
                     data_message += notification["sport"].title() + '\n'
                     if(len(notification["local"]) > 0):
-                        for locales in notification["local"]:
-                            data_message += 'Local: ' + locales.title() + '\n'
+                        local = notification["local"].title()
+                        data_message += 'Local: ' + local + '\n'
                     if (len(str(notification["hour"])) < 2):
                         data_message += 'Horário: 0'
                         data_message += str(notification["hour"])
@@ -50,9 +50,8 @@ class Action_show_notification(Action):
                     data_message += ' minutos.\n'
                     dispatcher.utter_message(data_message)
             else:
-                message1 = 'Não foi possível'
-                message2 = ' encontrar suas notificações.'
-                dispatcher.utter_message(message1 + message2)
+                message1 = 'Você ainda não criou uma notificação'
+                dispatcher.utter_message(message1)
         except ValueError:
             dispatcher.utter_message("Não foi possível \
             exibir suas notificações.")

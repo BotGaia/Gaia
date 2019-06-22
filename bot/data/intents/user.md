@@ -13,6 +13,7 @@
 - Quero marcar [kitesurf](sport) no [lago paranoa](locale) e em [Recife](locale) na [quarta](user_day) e na [sexta](user_day) [14](user_hour) h
 - registrar [kitesurf](sport) para [sabado](user_day) às [15](user_hour) horas e [30 minutos](user_minute) na [bahia](locale)
 - registrar [vela](sport) para [quarta](user_day) às [10](user_hour) horas e [30 minutos](user_minute) no [lago paranoa](locale)
+- registrar [golf](sport) para [sábado](user_day) às [0](user_hour) horas e [30 minutos](user_minute) em [tocantins](locale)
 
 ## intent: time_before
 - [2 horas](hours_before) antes
