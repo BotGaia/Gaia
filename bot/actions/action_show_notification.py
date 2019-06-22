@@ -44,10 +44,18 @@ class Action_show_notification(Action):
                             day = convertDay(days)
                             data_message += 'Dia(s) da semana: ' + day + '\n'
                     data_message += 'Notificado(a) às '
-                    data_message += str(notification["hoursBefore"])
-                    data_message += ' horas e '
-                    data_message += str(notification["minutesBefore"])
-                    data_message += ' minutos.\n'
+                    hour = notification["hoursBefore"]
+                    minute = notification["minutesBefore"]
+                    if((hour == 0) and (minute == 0)):
+                        data_message += str(notification["hour"])
+                        data_message += ' horas e '
+                        data_message += str(notification["minutes"])
+                        data_message += ' minutos.\n'
+                    else:
+                        data_message += str(notification["hoursBefore"])
+                        data_message += ' horas e '
+                        data_message += str(notification["minutesBefore"])
+                        data_message += ' minutos.\n'
                     dispatcher.utter_message(data_message)
             else:
                 message1 = 'Você ainda não criou uma notificação'
