@@ -41,6 +41,8 @@
 - como falo da velocidade do vento?
 - como falo da direção do vento?
 - como falo da umidade?
+- exemplo nascer do sol
+- exemplo por do sol
 
 ## intent: example_cyclone_alert
 - exemplo de ciclone
