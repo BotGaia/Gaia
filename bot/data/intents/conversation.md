@@ -56,6 +56,8 @@
 - estou otimo
 - muito bem
 - olá
+- oii
+- eae
 - oie
 - oiee
 - opa tudo bem
@@ -68,6 +70,7 @@
 - Fala aí Gaia
 - olá
 - ola
+- gaia
 
 ## intent:good_morning
 - bom dia
