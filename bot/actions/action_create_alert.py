@@ -18,6 +18,6 @@ class Create_alert_Action(Action):
         if(response.status_code == 200):
             dispatcher.utter_message('Alerta de ciclone ativado com sucesso!')
         else:
-            message1 = 'Ocorreu um erro ao ativar '
-            message2 = 'o alerta de ciclone'
-            dispatcher.utter_message(message1 + message2)
+            message = 'Ocorreu um erro ao ativar '
+            message += 'o alerta de ciclone'
+            dispatcher.utter_message(message)

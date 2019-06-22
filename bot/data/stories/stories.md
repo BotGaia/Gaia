@@ -447,4 +447,53 @@
     - slot{"minutes_before": "40 minutos"}
     - action_user
 
-  
+## Generated Story 6375185026803936177
+* greet
+    - utter_greet
+* elaborate_sport
+    - utter_elaborate_local
+* locale{"locale": "goiania"}
+    - slot{"locale": "goiania"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sports
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_temperature
+* elaborate_sun
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "3"}
+    - slot{"choice": "3"}
+    - action_sunrise_sunset
+* elaborate_pressure{"type": "press\u00e3o"}
+    - slot{"type": "press\u00e3o"}
+    - utter_elaborate_local
+* locale{"locale": "bahia"}
+    - slot{"locale": "bahia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_pressure
+* elaborate_wind
+    - utter_elaborate_local
+* locale{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_wind
+

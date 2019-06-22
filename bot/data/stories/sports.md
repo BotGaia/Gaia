@@ -56,16 +56,67 @@
 * choose
     - action_sports
 
-# Specific Sports
+## Specific Sports
 * specific_sport
     - action_local
 * choose
     - action_specific_sport
 
-# Specific Sports 1
+## Specific Sports 1
 * greet
     - utter_greet
 * specific_sport
     - action_local
 * choose 
     - action_specific_sport
+
+## Elaborate Sport
+* elaborate_sport
+    - utter_elaborate_local
+* sports
+    - action_local
+* choose
+    - action_sports
+
+## Elaborate Sport 1
+* greet
+    - utter_greet
+* elaborate_sport
+    - utter_elaborate_local
+* sports
+    - action_local
+* choose
+    - action_sports
+
+## Elaborate Sport 2
+* good_night
+    - utter_good_night
+    - utter_greet
+* elaborate_sport
+    - utter_elaborate_local
+* sports
+    - action_local
+* choose
+    - action_sports
+* goodbye
+    - utter_goodbye
+
+## All Sports
+* all_sports
+    - utter_all_sports
+    - utter_example_sport
+
+## All Sports 1
+* good_night
+    - utter_good_night
+    - utter_greet
+* all_sports
+    - utter_all_sports
+    - utter_example_sport
+
+## All Sports 2
+* greet
+    - utter_greet
+* all_sports
+    - utter_all_sports
+    - utter_example_sport

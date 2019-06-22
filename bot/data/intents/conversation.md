@@ -92,7 +92,7 @@
 - good night
 
 ## intent:compliments
-- Você é  muito educada!
+- Você é muito educada!
 - Adorei
 - Me ajudou muito
 - vc eh linda
@@ -102,6 +102,8 @@
 - voce e deusa
 - você é incrível
 - vc e sensacional
+- você é demais
+- vc eh demais
 
 ## intent:user_error
 - nao era isso, me enganei
@@ -169,33 +171,17 @@
 - beleza
 
 ## intent: anything_else
- - entendi
- - ok
- - beleza
- - bacana
- - bom demais
- - legal 
- - opa, bom de mais
- - belezura
- - tranquilo
- - massa
- - okay
- - feshow
- - fechou
- - top
-
-## intent: example_general
- - pode me dar um exemplo
- - como converso com voce
- - nao sei fazer isso
-
-## intent: example_sport
- - me da um exemplo de esporte
- - como te pergunto sobre modalidades
- - exemplifique a recomendacao de modalidades
-
-## intent: example_climate
- - como te pergunto o clima
- - me da um exemplo de condicoes meteorologicas
- - como te pergunto sobre o tempo
- - exemplo condição meteorologica
+- entendi
+- ok
+- beleza
+- bacana
+- bom demais
+- legal 
+- opa, bom de mais
+- belezura
+- tranquilo
+- massa
+- okay
+- feshow
+- fechou
+- top

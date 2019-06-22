@@ -5,17 +5,12 @@
 ## intent:greet
 - oi
 
-## intent:inform
-- estou no [gama](locale)
-
 ## intent:sports
 - qual esporte posso fazer em [brasilia](locale)?
 
 ## intent:choose
 - [2](choice)
 
-## intent:greet
-- oi
 
 ## intent:locale
 - [brasilia](locale)
