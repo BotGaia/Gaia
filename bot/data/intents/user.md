@@ -14,6 +14,8 @@
 - registrar [kitesurf](sport) para [sabado](user_day) às [15](user_hour) horas e [30 minutos](user_minute) na [bahia](locale)
 - registrar [vela](sport) para [quarta](user_day) às [10](user_hour) horas e [30 minutos](user_minute) no [lago paranoa](locale)
 - registrar [golf](sport) para [sábado](user_day) às [0](user_hour) horas e [30 minutos](user_minute) em [tocantins](locale)
+- Quero registrar [caminhada](sport) para [todos os dias](user_day) às [9](user_hour) e [00](user_minute) em [pernambuco](locale)
+- Quero marcar [trekking](sport) no [Parque da cidade](locale) [todo dia](user_day) [14](user_hour)h
 
 ## intent: time_before
 - [2 horas](hours_before) antes
