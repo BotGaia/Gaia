@@ -19,6 +19,6 @@ class Delete_alert_Action(Action):
         try:
             dispatcher.utter_message(str(answer_json))
         except ValueError:
-            message1 = 'Ocorreu um erro ao '
-            message2 = 'desativar o alerta de ciclone'
-            dispatcher.utter_message(message1 + message2)
+            message = 'Ocorreu um erro ao '
+            message += 'desativar o alerta de ciclone'
+            dispatcher.utter_message(message)

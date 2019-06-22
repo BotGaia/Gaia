@@ -195,7 +195,7 @@ class Action_wind(Action):
         answer_json = json.loads(answer)
         data_loc = location.title()+':'
         windD = answer_json["windyDegrees"]
-        windS = str(answer["windySpeed"])
+        windS = str(answer_json["windySpeed"])
         data_answer = 'Neste local, meus ventos sopram para o '
         data = data_answer+windD+' com velocidade de '+windS+'m/s.'
         try:
@@ -221,8 +221,8 @@ class Action_sunrise_sunset(Action):
         answer = response.content.decode()
         answer_json = json.loads(answer)
         data_loc = location.title()+':'
-        sunrise = answer_json["sunrise"]
-        sunset = answer["sunset"]
+        sunrise = str(answer_json["sunrise"])
+        sunset = str(answer_json["sunset"])
         data = 'Neste local, o sol me ilumina de '+sunrise+' às '+sunset+'.'
         try:
             dispatcher.utter_message(data_loc)

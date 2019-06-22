@@ -63,10 +63,3 @@
 - quando o [sol](type) se põe no [parque de aguas claras](locale)?
 - o [sol](type) nasce que horas em [Salvador](locale)?
 
-## intent: hurricane
-- E o [furacão](hurricane)?
-- [Furacão](hurricane)
-- Onde tem [furacão](hurricane)?
-- fala do [furacão](hurricane)
-- tem [furacão](hurricane)?
-- tem risco de [furacão](hurricane)?

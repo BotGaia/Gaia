@@ -19,6 +19,6 @@ class Show_alert_Action(Action):
         try:
             dispatcher.utter_message(str(answer_json))
         except ValueError:
-            message1 = 'Ocorreu um erro ao '
-            message2 = 'mostrar o alerta de ciclone'
-            dispatcher.utter_message(message1 + message2)
+            message = 'Ocorreu um erro ao '
+            message += 'mostrar o alerta de ciclone'
+            dispatcher.utter_message(message)

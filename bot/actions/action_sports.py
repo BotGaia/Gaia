@@ -18,7 +18,7 @@ class Action_sports(Action):
         response = requests.get(URL+'esporte', params=payload)
         content = response.content.decode()
         answer = json.loads(content)
-        data_loc = locale.capitalize()+':'
+        data_loc = location.capitalize()+':'
         try:
             dispatcher.utter_message(data_loc)
             if(len(answer["favorable"]) > 0):

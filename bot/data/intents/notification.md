@@ -1,5 +1,6 @@
 ## intent: notification
 - notificação
+- agendamento
 - notificacao
 - noticaçao
 - lembretes
