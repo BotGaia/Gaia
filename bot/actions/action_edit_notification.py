@@ -34,7 +34,7 @@ class Action_edit_notification(Action):
                 message1 += ' [esporte desejado] para'
                 message1 += ' [dia(s) da semana] às [hora]'
                 message1 += ' e [minutos] no'
-                message1 += ' [local desejado(s)]'
+                message1 += ' [local desejado]'
                 dispatcher.utter_message(message1)
         except ValueError:
             dispatcher.utter_message("Não foi possível editar a notificação.")
