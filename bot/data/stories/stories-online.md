@@ -133,3 +133,87 @@
 * time_before{"minutes_before": "10 minutos"}
     - slot{"minutes_before": "10 minutos"}
     - action_user
+
+## Generated Story 1312342511481818637
+* greet
+    - utter_greet
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_temperature
+* elaborate_sun
+    - utter_elaborate_local
+* locale{"locale": "goiania"}
+    - slot{"locale": "goiania"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sunrise_sunset
+* elaborate_sun
+    - utter_elaborate_local
+* locale{"locale": "manaus"}
+    - slot{"locale": "manaus"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sunrise_sunset
+* elaborate_sport
+    - utter_elaborate_local
+* locale{"locale": "bahia"}
+    - slot{"locale": "bahia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sports
+* sports{"locale": "taguatinga"}
+    - slot{"locale": "taguatinga"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+* elaborate_sport
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sports
+* inform{"locale": "taguatinga"}
+    - slot{"locale": "taguatinga"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_weather
+* sports{"locale": "Bras\u00edlia"}
+    - slot{"locale": "Bras\u00edlia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+* sports{"locale": "Bras\u00edlia"}
+    - slot{"locale": "Bras\u00edlia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "2"}
+    - slot{"choice": "2"}
+    - action_sports
+* all_cyclones
+    - action_all_cyclones
+    - utter_after_all_cyclones
+* all_cyclones
+    - action_all_cyclones
+    - utter_after_all_cyclones
+

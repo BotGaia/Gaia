@@ -64,6 +64,7 @@
 - recomendação
 - sugestão
 - sugestao de esporte
+- sugestao
 
 ## intent: all_sports
 - quais esportes vc pode sugerir?

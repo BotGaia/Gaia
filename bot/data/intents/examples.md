@@ -20,11 +20,6 @@
 - me da um exemplo de esporte
 - como te pergunto sobre modalidades
 - exemplifique a recomendacao de modalidades
-- recomendação
-- recomendacao
-- sugestão
-- sugestao
-- recomendaçao
 
 ## intent: example_climate
 - como te pergunto o clima

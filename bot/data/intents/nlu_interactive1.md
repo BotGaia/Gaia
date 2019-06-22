@@ -50,3 +50,44 @@
 - [3 horas](hours_before)
 - [30 minutos](minutes_before)
 - [4 horas](hours_before)
+
+## intent:all_cyclones
+- tem ciclone agora?
+- tá rolando ciclone agora?
+
+## intent:choose
+- [2](choice)
+- [1](choice)
+- [1](choice)
+- [1](choice)
+- [2](choice)
+- [1](choice)
+- [2](choice)
+- [2](choice)
+- [2](choice)
+
+## intent:elaborate_sport
+- que atividades posso fazer agora?
+- Sugestão de atividades ao ar livre
+
+## intent:elaborate_sun
+- que horas o sol se põe hoje?
+- por do sol
+
+## intent:elaborate_temperature
+- temperatura
+
+## intent:inform
+- qual o clima em [taguatinga](locale)?
+
+## intent:locale
+- em [brasilia](locale)
+- em [goiania](locale)
+- em [manaus](locale)
+- na [bahia](locale)
+- no [gama](locale)
+
+## intent:sports
+- sugestão de atividades ao ar livre em [taguatinga](locale)
+- O que recomenda para [Brasília](locale)?
+- Sugestão de atividades ao ar livre em [Brasília](locale)
