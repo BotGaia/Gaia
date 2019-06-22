@@ -12,6 +12,7 @@
 - como ta o clima em [barcelona](locale)
 - o clima esta fechado no [parque da cidade](locale)?
 - condição [gama](locale)
+- como tá [manaus](locale)?
 
 ## intent:elaborate_weather
 - Me diga o clima
@@ -34,6 +35,8 @@
 - como está o tempo
 - qual o clima hj
 - fala do clima de agora
+- condicao meteorologica
+- condição meteorológica
 
 ## intent: elaborate_temperature
 - qual é a temperatura

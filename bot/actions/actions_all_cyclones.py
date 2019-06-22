@@ -36,5 +36,5 @@ class All_cyclones_Action(Action):
 
         else:
             message1 = 'Não houve ocorrência de '
-            message2 = 'ciclone nas últmas duas horas'
+            message2 = 'ciclone nas últimas duas horas'
             dispatcher.utter_message(message1 + message2)
