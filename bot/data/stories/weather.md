@@ -142,3 +142,39 @@
     - action_local
 * choose
     - action_sunrise_sunset
+
+## forecast
+* forecast
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - utter_forecast_time
+* forecast_time
+    - action_forecast
+
+## forecast 1
+* greet 
+    - utter_greet
+* forecast
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - utter_forecast_time
+* forecast_time
+    - action_forecast
+
+## forecast 2
+* greet 
+    - utter_greet
+* how_are_u
+    - utter_how_are_u
+* forecast
+    - utter_elaborate_local
+* locale
+    - action_local
+* choose
+    - utter_forecast_time
+* forecast_time
+    - action_forecast

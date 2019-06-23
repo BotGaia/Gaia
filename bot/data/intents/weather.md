@@ -63,3 +63,14 @@
 - quando o [sol](type) se põe no [parque de aguas claras](locale)?
 - o [sol](type) nasce que horas em [Salvador](locale)?
 
+## intent: forecast
+- qual a previsao de amanha?
+- Qual a previsão para amanhã
+- tem alguma previsao pra amanha
+- qual a previsao?
+- tem previsao de chuva amanha?
+- amanha vai chover?
+- como vai estar o clima amanhã
+- amanha vai fazer sol?
+- qual o clima de amanha?
+- qual a temperatura de amanha?

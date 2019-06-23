@@ -53,6 +53,9 @@ actions:
 - utter_how_are_u
 - utter_how_do_u_know
 - utter_start1
+- action_all_sports
+- action_forecast
+- utter_forecast_time
 entities:
 - locale
 - type
@@ -65,6 +68,8 @@ entities:
 - user_minute
 intents:
 - locale
+- forecast
+- forecast_time
 - inform
 - elaborate_sport
 - sports
@@ -295,3 +300,5 @@ templates:
       \ caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da\
       \ ajuda de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
+  utter_forecast_time:
+  - text: "qual a hora do dia gostaria de saber a previsão?"

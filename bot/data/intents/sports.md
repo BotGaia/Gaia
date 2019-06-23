@@ -62,8 +62,13 @@
 - o clima ta bom pra fazer o que?
 - recomendacao
 - recomendação
+- recomendaçao de um esporte
+- recomendacao de esporte
+- recomendaçao de modalidade
 - sugestão
 - sugestao de esporte
+- sugestao de um esporte
+- sugestao de modalidade
 - sugestao
 
 ## intent: all_sports

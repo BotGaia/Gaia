@@ -29,3 +29,13 @@
 - Não quero ser notificado antes
 - Não precisa notificar antes
 - Sem tempo antes
+
+## intent: forecast_time
+- [14](user_hour) horas
+- [10](user_hour) h
+- [9](user_hour) hr
+- [4](user_hour) hrs
+- [1](user_hour) hora
+- [10](user_hour)h
+- [9](user_hour)hr
+- [4](user_hour)hrs
