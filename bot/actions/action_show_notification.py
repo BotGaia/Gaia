@@ -25,9 +25,9 @@ class Action_show_notification(Action):
                     data_message = 'Notificação ' + str(json_counter) + '\n'
                     data_message += 'Esporte: '
                     data_message += notification["sport"].title() + '\n'
-                    if(len(notification["locals"]) > 0):
-                        for locales in notification["locals"]:
-                            data_message += 'Local: ' + locales.title() + '\n'
+                    if(len(notification["local"]) > 0):
+                        local = notification["local"].title()
+                        data_message += 'Local: ' + local + '\n'
                     if (len(str(notification["hour"])) < 2):
                         data_message += 'Horário: 0'
                         data_message += str(notification["hour"])
@@ -44,15 +44,22 @@ class Action_show_notification(Action):
                             day = convertDay(days)
                             data_message += 'Dia(s) da semana: ' + day + '\n'
                     data_message += 'Notificado(a) às '
-                    data_message += str(notification["hoursBefore"])
-                    data_message += ' horas e '
-                    data_message += str(notification["minutesBefore"])
-                    data_message += ' minutos.\n'
+                    hour = notification["hoursBefore"]
+                    minute = notification["minutesBefore"]
+                    if((hour == 0) and (minute == 0)):
+                        data_message += str(notification["hour"])
+                        data_message += ' horas e '
+                        data_message += str(notification["minutes"])
+                        data_message += ' minutos.\n'
+                    else:
+                        data_message += str(notification["hoursBefore"])
+                        data_message += ' horas e '
+                        data_message += str(notification["minutesBefore"])
+                        data_message += ' minutos.\n'
                     dispatcher.utter_message(data_message)
             else:
-                message1 = 'Não foi possível'
-                message2 = ' encontrar suas notificações.'
-                dispatcher.utter_message(message1 + message2)
+                message1 = 'Você ainda não criou uma notificação'
+                dispatcher.utter_message(message1)
         except ValueError:
             dispatcher.utter_message("Não foi possível \
             exibir suas notificações.")

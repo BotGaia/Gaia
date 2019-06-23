@@ -1,8 +1,11 @@
 ## intent: sports
 - Qual o melhor esporte pra fazer em [Recife](locale)?
+- Qual o melhor esporte pra jogar em [Recife](locale)?
 - Me fala um esporte pra [Brasília](locale)?
 - Que esporte posso fazer no [Distrito Federal](locale)?
+- Que esporte posso jogar no [Distrito Federal](locale)?
 - Qual atividade posso fazer no [Rio de Janeiro](locale)?
+- Qual atividade posso jogar no [Rio de Janeiro](locale)?
 - Atividade mais propensa para fazer em [Santa Catarina](locale)?
 - Me fala uma atividade pra fazer em [Goiânia](locale)?
 - Qual é a atividade mais propensa pra fazer na [Bahia](locale)?
@@ -12,21 +15,69 @@
 - O que dá pra fazer em [Pernambuco](locale)?
 - Um esporte pro [Acre](locale)?
 - Me diz um esporte para fazer no [pará](locale)?
+- Me diz um esporte para jogar no [pará](locale)?
 - que esporte posso fazer no [parque de aguas claras](locale)?
 - qual esporte posso fazer no [lago paranoá](locale)?
 - que atividade posso fazer em [bahamas](locale)?
 - Me fala um esporte pra [brasilia](locale)
-- Me fala um esporte pra [Nova Iorque Brasil](locale)
 - Me diz um esporte pra fazer me [brasilia](locale)
 - O que você recomenda fazer na [Bahia](locale)
+- sugestao de esportes no [espirito santo](locale)
+- o que voce me sugere para fazer na [praia do futuro](locale)
+- sugestao de modalidade em [sao paulo](locale)
+- sugestao de esporte em [sao paulo](locale)
+- sugestao de modalidade para praticar em [sao paulo](locale)
+- sugestao de esporte para jogar em [sao paulo](locale)
+- quais esportes vc me sugere para praticar em [brasilia](locale)
+- o que recomenda para [amapá](locale)?
+- sugestão de atividades ao ar livre em [brasilia](locale)?
+- sugestão de esporte [bahia](locale)
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?
 - dá para fazer [windsurf](sport) em [hibiscus](locale)?
+- dá para jogar [volei de areia](sport) em [hibiscus](locale)?
 - consigo praticar [stand up paddle](sport) na [praia do rosa](locale)?
 - é possivel praticar [surf](sport) em [itapimirim](locale)?
 - posso fazer [vela](sport) em [guarujá](locale)?
+- posso jogar [volei de praia](sport) em [guarujá](locale)?
 - é possivel fazer [stand up paddle](sport) no [lago corumba](locale)?
 - dá para praticar [surf](sport) em [sao paulo](locale)?
 - teria como eu praticar [surf](sport) em [nova iorque](locale)?
 - o clima tá bom pra fazer [windsurf](sport) em [brasilia](locale)?
+- o clima tá bom pra jogar [volei de areia](sport) em [brasilia](locale)?
+- dá pra fazer [trekking] na [bahia](locale)?
+
+## intent: elaborate_sport
+- da pra jogar alguma coisa hj?
+- o que posso fazer hoje?
+- o que posso praticar hoje?
+- quais esportes posso jogar hoje?
+- quais esportes posso praticar agr?
+- o clima ta bom pra jogar o que?
+- me fala os esportes bons pra hoje
+- qual o melhor esporte pra jogar agora?
+- qual a melhor atividade para se fazer por agora?
+- me fala os esportes de hoje
+- o clima ta bom pra fazer o que?
+- recomendacao
+- recomendação
+- sugestão
+- sugestao de esporte
+- sugestao
+
+## intent: all_sports
+- quais esportes vc pode sugerir?
+- quais esportes?
+- que esporte
+- lista de esportes
+- esportes
+- modalidades
+- lista de modalidades
+- quais modadalidades?
+- quais modalidades vc pode sugerir?
+- que tipo de esporte
+- que tipo de modalidade
+- lista de esportes monitorados
+- exemplo de esportes monitorados
+- exemplo de lista de esportes monitorados

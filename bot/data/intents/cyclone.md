@@ -3,44 +3,37 @@
 - Ciclone
 - terremoto
 - e o maremoto
-- ta tendo maremoto
-- teve algum tornado?
 - tornado
 - tem risco de tornado?
 - tufão
-- ta tendo tufao?
-- onde ta tendo tufao?
 - tem risco de tufao
-- Onde tem Ciclone?
 - fala do ciclone
 - tem ciclone?
 - tem risco de ciclone?
 - furacão
-- ta tendo furacão?
 - quero saber do furacão
-- ta tendo terremoto?
 - teve algum terremoto?
-- onde a terra ta tremendo?
 - tem risco de terremoto
 - fala do furacao
 - e o carreta furacao?
 - redemoinho
-- tem redemoinho?
 - e os redemoinhos?
+- alerta de ciclone
+- alerta de maremoto
+- alerta de furacao
+- alerta de tornado
+- alerta de tufao
+- alerta de terremoto
+- alerta de furacao
 
-## intent: example_cyclone_alert
-- exemplo de alerta de ocorrência de ciclone
-- exemplo de alerta de ciclone
-- como posso saber dos ciclones?
-- como posso saber dos tornados?
-- como posso saber dos tufoes?
-- como posso saber dos maremotos?
-- como posso saber dos furacoes?
-- como recebo alerta de ciclone?
-- como faço para saber dos tornados?
-- como faço para saber dos redemoinhos?
 
 ## intent: create_alert
+- quero ser alertado de ciclones
+- quero ser alertado de terremotos
+- quero ser alertado de tufoes
+- quero ser alertado de maremotos
+- quero ser alertado de tornados
+- quero ser alertado de redemoinhos
 - criar alerta ciclone
 - criar alerta maremoto
 - criar alerta furacão
@@ -142,4 +135,33 @@
 
 ## intent: all_cyclones
 - Quero saber se há ciclone por agora
+- quero saber se ha ciclone agora
 - tem ciclone acontecendo agora?
+- quero saber da ocorrencia de ciclone por agora
+- esta acontecendo algum ciclone agora?
+- quais ciclones estao acontecendo no mundo agora?
+- quais ciclones estao acontecendo agr?
+- quais ciclones estao acontecendo agr?
+- quero saber se tem terremoto agora
+- ta tendo terremoto por agora?
+- houve algum maremoto?
+- teve terremoto em algum lugar?
+- aconteceu um furacao?
+- teve tornado hoje?
+- quero saber se há algum furacao por agora
+- teve algum redemoinho por agora?
+- esta tendo terremoto agora?
+- esta ocorrendo furacoes por agr?
+- houve algum furacao?
+- esta tendo maremoto por agr?
+- quais tornados estao acontecendo?
+- quais maremotos estao acontecendo?
+- tem tornado por agora?
+- ta tendo tornado?
+- quero saber se ha tornados por agora
+- quero saber se ha furacoes por agora
+- quero saber se ha maremotos por agora
+- quero saber se ha tufao por agora
+- teve tufao hoje?
+- esta acontecendo algum tufao agora?
+- tem tufao acontecendo agora?

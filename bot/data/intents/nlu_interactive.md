@@ -30,3 +30,45 @@
 - [3 horas](hours_before)
 - [30 minutos](minutes_before)
 - [40 minutos](minutes_before)
+
+## intent:choose
+- [1](choice)
+- [2](choice)
+- [3](choice)
+- [1](choice)
+- [2](choice)
+
+## intent:elaborate_pressure
+- como está a [pressão](type)?
+
+## intent:elaborate_sport
+- quais atividades posso fazer agora?
+- que atividades posso fazer hj?
+- sugestão de esporte
+
+## intent:elaborate_sun
+- que horas o sol se põe hoje?
+- que horas o sol se poe?
+
+## intent:elaborate_temperature
+- como está a temperatura?
+
+## intent:elaborate_wind
+- como está o vento hj?
+
+## intent:locale
+- em [goiania](locale)
+- em [brasilia](locale)
+- no [gama](locale)
+- na [bahia](locale)
+- em [brasilia](locale)
+- em [maceio](locale)
+- no [guaruja](locale)
+- em [taguatinga](locale)
+
+## intent:choose
+- [2](choice)
+- [1](choice)
+- [1](choice)
+- [1](choice)
+
