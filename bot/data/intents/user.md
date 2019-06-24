@@ -20,6 +20,12 @@
 - Marcar [stand up paddle](sport) [todos os dias](user_day) no [Pontao](locale) [13](user_hour)h e [20](user_minute) minutos
 - Notificar [paraquedismo](sport) na [segunda](user_day) as [15](user_hour) e [40](user_minute) no [pontao df](locale)
 - Notifique [volei de areia](sport) na [segunda-feira](user_day) [12](user_hour) no [parque da cidade df](locale)
+- Agendar [Caiaque](sport) [todos os dias](user_day) no [Parque da cidade df](locale) [14](user_hour) horas e [20](user_minute) min
+- Salvar [wakeboard](sport) [terça](user_day) e [quinta](user_day) no [gama] [10](user_hour)h e [30](user_minute)min
+- Quero ser notificado [todos os dias](user_day) [20](user_hour)h no [Guará](locale) sobre [Remo](sport)
+- Salvar [tenis](sport) [domingo](user_day) e [sábado](user_day) [13](user_hour) no [sudoeste df](locale)
+- Salvar [tênis](sport) [quarta](user_day) e [sábado](user_day) [16](user_hour) no [jardim botânico](locale)
+Notifique [vôlei de areia](sport) na [segunda-feira](user_day) e no [domingo](user_day) [12](user_hour) no [parque da cidade df](locale)
 
 ## intent: time_before
 - [2 horas](hours_before) antes
