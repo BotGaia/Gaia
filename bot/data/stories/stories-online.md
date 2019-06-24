@@ -216,4 +216,89 @@
 * all_cyclones
     - action_all_cyclones
     - utter_after_all_cyclones
+## Generated Story -4687082174916381721
+* greet
+    - utter_greet
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_temperature
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_temperature
+* elaborate_weather
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_weather
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_weather
+* elaborate_pressure
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_pressure
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_pressure
+* elaborate_sun
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_sunrise_sunset
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_sunrise_sunset
+* inform{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_weather
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_weather
+* elaborate_humidity
+    - utter_elaborate_local
+* locale{"locale": "guar\u00e1"}
+    - slot{"locale": "guar\u00e1"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_humidity
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_humidity
+* pressure{"type": "press\u00e3o", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"type": "press\u00e3o"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_pressure
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_pressure
+
 
