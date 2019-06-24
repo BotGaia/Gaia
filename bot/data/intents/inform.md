@@ -100,6 +100,8 @@
 - o sol se poe q horas?
 - q horas o sol se poe hoje?
 - que hrs o sol se poe hj 
+- por do sol
+- nascer do sol
 
 ## intent: elaborate_sky
 - como estao as nuvens hj?

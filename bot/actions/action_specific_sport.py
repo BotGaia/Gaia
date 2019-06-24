@@ -1,6 +1,8 @@
 from rasa_core_sdk import Action
 from .utils import localRequest, specificSportRequest
+from .environment import configGateway
 import requests
+import json
 
 
 class Action_specific_sport(Action):
@@ -11,6 +13,7 @@ class Action_specific_sport(Action):
         locale = tracker.get_slot('locale')
         choice = tracker.get_slot('choice')
         sport = tracker.get_slot('sport')
+        URL = configGateway()
         if(choice == '0'):
             payload = {'local': locale}
 
@@ -22,7 +25,7 @@ class Action_specific_sport(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6

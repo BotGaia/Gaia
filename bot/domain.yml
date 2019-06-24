@@ -1,84 +1,84 @@
 %YAML 1.1
 ---
 actions:
-- action_sky
-- utter_start2
-- utter_how_do_u_know
-- action_edit_notification
-- action_wind
-- utter_after_create_cyclone_alert
-- action_show_alert
-- action_delete_notification
-- utter_anything_else
-- utter_create_notification
-- utter_goodbye
 - action_sunrise_sunset
-- utter_edit_button
-- utter_start1
-- action_local
-- utter_greet
-- utter_default
-- action_show_notification
-- utter_out_of_scope
-- utter_help
-- utter_how_are_u
-- utter_example_cyclone_alert
-- action_sports
-- utter_user_error
-- utter_time_before
-- utter_example_sport
-- action_create_alert
+- utter_after_all_cyclones
+- utter_cyclone
+- utter_good_night
+- action_user
 - action_specific_sport
-- utter_who_are_u
+- action_local
+- utter_how_are_u
+- utter_elaborate_local
+- action_all_cyclones
+- action_show_alert
+- action_sports
 - action_temperature
+- utter_change_subject
+- action_wind
+- utter_user_error
+- utter_out_of_scope
+- utter_who_are_u
+- action_show_notification
 - utter_compliments
 - action_delete_alert
-- utter_change_subject
-- utter_elaborate_local
-- action_humidity
-- utter_good_afternoon
-- utter_start3
-- action_pressure
-- action_all_cyclones
-- utter_cyclone
+- utter_time_before
+- utter_default
+- utter_example_climate
+- utter_delete_button
+- action_edit_notification
+- action_delete_notification
+- utter_example_sport
+- utter_gaia_error
+- utter_greet
+- action_sky
+- utter_all_sports
+- utter_create_notification
+- utter_after_create_cyclone_alert
+- utter_start1
+- action_create_alert
+- utter_anything_else
+- utter_example_cyclone_alert
+- utter_good_morning
+- utter_start2
+- utter_goodbye
 - utter_example_general
 - action_weather
+- utter_good_afternoon
+- utter_edit_button
+- utter_start3
 - action_show_button
-- action_user
-- utter_after_all_cyclones
-- utter_good_morning
-- utter_gaia_error
-- utter_all_sports
-- utter_example_climate
+- utter_help
 - utter_notification
-- utter_delete_button
-- utter_good_night
+- utter_how_do_u_know
+- action_humidity
+- action_pressure
 entities:
-- type
-- user_day
 - sport
+- choice
+- locale
+- type
+- user_minute
 - hours_before
+- user_day
 - user_hour
 - minutes_before
-- user_minute
-- locale
-- choice
 intents:
+- sports
+- all_sports
+- locale
+- choose
+- specific_sport
+- elaborate_sport
+- greet
 - pressure
 - inform
 - elaborate_weather
 - elaborate_pressure
 - elaborate_sun
-- greet
 - elaborate_temperature
-- locale
-- specific_sport
 - elaborate_humidity
-- choose
-- elaborate_sport
-- sports
 - all_cyclones
-- all_sports
 - elaborate_wind
 - elaborate_sky
 - goodbye
@@ -168,7 +168,7 @@ templates:
   - text: Obrigada pela gentileza! Fico lisonjeada com o elogio!
   utter_create_notification:
   - text: 'Para criar uma notificação siga o exemplo: Quero registrar [modalidade
-      desejada] para [dia(s) da semana] às [hora] e [minutos] no [local desejado]'
+      desejada] para [dia(s) da semana] às [hora] horas e [minutos] minutos no [local desejado]'
   utter_cyclone:
   - buttons:
     - payload: criar alerta ciclone
@@ -196,7 +196,7 @@ templates:
   utter_elaborate_local:
   - text: 'Em qual localidade? Por favor, use uma preposição. Exemplo: [Em] Brasília'
   - text: 'Onde deseja saber? Por favor, use uma preposição. Exemplo: [Em] Brasília'
-  - text: 'Poderia esclarecer em qual localidade, por favor? Por favor, use uma preposição.
+  - text: 'Poderia esclarecer em qual localidade? Por favor, use uma preposição.
       Exemplo: [Em] Brasília'
   utter_example_climate:
   - text: "Para saber o tempo em uma localidade, siga o exemplo: Como está o tempo\

@@ -25,7 +25,7 @@ class Action_weather(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -95,7 +95,7 @@ class Action_temperature(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -123,7 +123,8 @@ class Action_temperature(Action):
             temp = answer_json["temperature"]
             data = 'Neste local, minha temperatura é '+temp+'°C'
             tempMn = answer_json["temperatureMin"]
-            data_max = 'Minha temperatura mínima no dia de hoje é de '+tempMn+'°C'
+            data_max = 'Minha temperatura mínima no dia de hoje é de '
+            data_max += tempMn+'°C'
             data_min = 'E máxima de '+answer_json["temperatureMax"]+'°C.'
             try:
                 dispatcher.utter_message(data_loc)
@@ -142,7 +143,7 @@ class Action_pressure(Action):
         URL = configGateway()
         choice = tracker.get_slot('choice')
         locale = tracker.get_slot('locale')
-        
+
         if(choice == '0'):
             payload = {'local': locale}
 
@@ -154,7 +155,7 @@ class Action_pressure(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -207,7 +208,7 @@ class Action_humidity(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -260,7 +261,7 @@ class Action_sky(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -312,7 +313,7 @@ class Action_wind(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -367,7 +368,7 @@ class Action_sunrise_sunset(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -394,7 +395,8 @@ class Action_sunrise_sunset(Action):
             data_loc = location.title()+':'
             sunrise = str(answer_json["sunrise"])
             sunset = str(answer_json["sunset"])
-            data = 'Neste local, o sol me ilumina de '+sunrise+' às '+sunset+'.'
+            data = 'Neste local, o sol me ilumina de '+sunrise
+            data += ' às '+sunset+'.'
             try:
                 dispatcher.utter_message(data_loc)
                 dispatcher.utter_message(data)

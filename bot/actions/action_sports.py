@@ -24,7 +24,7 @@ class Action_sports(Action):
             if(len(answer_json) != 1):
                 data_msg = 'Eu possuo vários locais com esse nome, '
                 data_msg1 = 'poderia informar qual o número da localidade que'
-                data_msg_2 = 'deseja?\n\n'
+                data_msg_2 = ' deseja?\n\n'
                 data_message = data_msg+data_msg1+data_msg_2
                 message = 'Clique no número do local desejado'
             counter = 6
@@ -47,7 +47,7 @@ class Action_sports(Action):
             response = requests.get(URL+'esporte', params=payload)
             content = response.content.decode()
             answer = json.loads(content)
-            data_loc = location.capitalize()+':'
+            data_loc = location.title()+':'
             try:
                 dispatcher.utter_message(data_loc)
                 if(len(answer["favorable"]) > 0):
@@ -56,9 +56,11 @@ class Action_sports(Action):
                         data_sport += '\n' + favorable["name"].capitalize()
                     dispatcher.utter_message(data_sport)
                 elif(len(answer["reservation"]) > 0):
-                    data_reservation = 'Caso queira, algumas condições favorecem: '
+                    data_reservation = 'Caso queira, algumas'
+                    data_reservation += ' condições favorecem:'
                     for reservation in answer["reservation"]:
-                        data_reservation += '\n' + reservation["name"].capitalize()
+                        data_reservation += '\n'
+                        data_reservation += reservation["name"].capitalize()
                     dispatcher.utter_message(data_reservation)
                 elif(len(answer["alert"]) > 0):
                     data_alert = 'Poucas condições favorecem: '

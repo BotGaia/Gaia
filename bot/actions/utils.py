@@ -40,7 +40,7 @@ def specificSportRequest(locale, sport):
     if(len(answer_json["favorable"]) > 0):
         for favorable in answer_json["favorable"]:
             if favorable["name"].capitalize() == sport.capitalize():
-                a = 'Sim, as condições estão favoráveis paza praticar '
+                a = 'Sim, as condições estão favoráveis para praticar '
                 return a + sport + ' em ' + locale + '.'
 
     elif(len(answer_json["reservation"]) > 0):
@@ -55,7 +55,8 @@ def specificSportRequest(locale, sport):
                 a = 'Poucas condições favorecem a prática de '
                 return a + sport + ' em ' + locale + '.'
     a = 'Não é recomendada a prática de '
-    return a + sport + ' em ' + locale + '. ' + sportsRequest(locale)
+    data = sportsRequest(locale).title()
+    return a + sport + ' em ' + locale + '. ' + data
 
 
 def weatherRequest(type_, locale):
