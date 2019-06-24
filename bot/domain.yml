@@ -301,4 +301,4 @@ templates:
       \ ajuda de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
   utter_forecast_time:
-  - text: "qual a hora do dia gostaria de saber a previsão?"
+  - text: "Qual a hora do dia gostaria de saber a previsão?"

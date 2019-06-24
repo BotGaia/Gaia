@@ -91,3 +91,4 @@
 - sugestão de atividades ao ar livre em [taguatinga](locale)
 - O que recomenda para [Brasília](locale)?
 - Sugestão de atividades ao ar livre em [Brasília](locale)
+
