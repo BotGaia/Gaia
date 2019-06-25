@@ -17,7 +17,7 @@ class All_sports_Action(Action):
         answer = response.content.decode()
         answer_json = json.loads(answer)
         counter = 1
- 
+
         if(len(answer_json) > 0):
             for sports in answer_json:
                 if (counter == 15):

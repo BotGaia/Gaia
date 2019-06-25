@@ -40,8 +40,6 @@
     - slot{"type": null}
 * choose{"choice": "2"}
     - slot{"choice": "2"}
-    - utter_forecast_time
-* forecast_time
     - action_forecast
 * forecast
     - utter_elaborate_local

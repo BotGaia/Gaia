@@ -17,3 +17,7 @@
     - utter_greet
 * how_do_u_know
     - utter_how_do_u_know
+
+## Rain
+* rain
+    - utter_rain
