@@ -85,54 +85,18 @@
 ## Generated Story 3721559633672000720
 * greet
     - utter_greet
-* help
-    - utter_help
-* example_sport
-    - utter_example_sport
-* specific_sport{"sport": "surf", "locale": "sao paulo"}
-    - slot{"locale": "sao paulo"}
-    - slot{"sport": "surf"}
-    - action_local
-* choose{"choice": "1"}
-    - slot{"choice": "1"}
-    - action_specific_sport
-* specific_sport
-    - utter_example_sport
-* specific_sport{"sport": "kitesurf", "locale": "rio de janeiro"}
-    - slot{"locale": "rio de janeiro"}
-    - slot{"sport": "kitesurf"}
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
     - action_local
     - slot{"type": null}
-* choose{"choice": "1"}
-    - slot{"choice": "1"}
-    - action_specific_sport
-* example_sport
-    - utter_example_sport
-* sports{"locale": "lago paranoa"}
-    - slot{"locale": "lago paranoa"}
-    - action_local
-    - slot{"type": null}
-* choose{"choice": "1"}
-    - slot{"choice": "1"}
-    - action_sports
-* help
-    - utter_help
-* notification
-    - utter_create_notification
-* preference{"sport": "kitesurf", "user_day": "quinta", "user_hour": "8", "user_minute": "20 minutos", "locale": "lago paranoa"}
-    - slot{"locale": "lago paranoa"}
-    - slot{"sport": "kitesurf"}
-    - slot{"user_day": ["quinta"]}
-    - slot{"user_hour": "8"}
-    - slot{"user_minute": "20 minutos"}
-    - action_local
-    - slot{"type": null}
-* choose{"choice": "1"}
-    - slot{"choice": "1"}
-    - utter_time_before
-* time_before{"minutes_before": "10 minutos"}
-    - slot{"minutes_before": "10 minutos"}
-    - action_user
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_temperature
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_temperature
 
 ## Generated Story 1312342511481818637
 * greet
@@ -145,6 +109,18 @@
     - slot{"type": null}
 * choose{"choice": "2"}
     - slot{"choice": "2"}
+    - action_temperature
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_temperature
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
     - action_temperature
 * elaborate_sun
     - utter_elaborate_local
@@ -216,4 +192,146 @@
 * all_cyclones
     - action_all_cyclones
     - utter_after_all_cyclones
+## Generated Story -4687082174916381721
+* greet
+    - utter_greet
+* elaborate_temperature
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_temperature
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_temperature
+* elaborate_weather
+    - utter_elaborate_local
+* locale{"locale": "Brasilia"}
+    - slot{"locale": "Brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_weather
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_weather
+* elaborate_pressure
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_pressure
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_pressure
+* elaborate_sun
+    - utter_elaborate_local
+* locale{"locale": "gama"}
+    - slot{"locale": "gama"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_sunrise_sunset
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_sunrise_sunset
+* inform{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_weather
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_weather
+* elaborate_humidity
+    - utter_elaborate_local
+* locale{"locale": "guar\u00e1"}
+    - slot{"locale": "guar\u00e1"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_humidity
+* choose{"choice": "6"}
+    - slot{"choice": "6"}
+    - action_humidity
+* pressure{"type": "press\u00e3o", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"type": "press\u00e3o"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_pressure
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_pressure
+
+## Generated Story -3053050227868752220
+* greet
+    - utter_greet
+* specific_sport{"sport": "surf", "locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - slot{"sport": "surf"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_specific_sport
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_specific_sport
+* sports{"locale": "brasilia"}
+    - slot{"locale": "brasilia"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_sports
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_sports
+* sports{"locale": "lago paranoa"}
+    - slot{"locale": "lago paranoa"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "1"}
+    - slot{"choice": "1"}
+    - action_sports
+* specific_sport{"sport": "kitesurf", "locale": "gama"}
+    - slot{"locale": "gama"}
+    - slot{"sport": "kitesurf"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_specific_sport
+* choose{"choice": "8"}
+    - slot{"choice": "8"}
+    - action_specific_sport
+* elaborate_sport
+    - utter_elaborate_local
+* locale{"locale": "Manaus"}
+    - slot{"locale": "Manaus"}
+    - action_local
+    - slot{"type": null}
+* choose{"choice": "0"}
+    - slot{"choice": "0"}
+    - action_sports
+* choose{"choice": "7"}
+    - slot{"choice": "7"}
+    - action_sports
+
+
+
 

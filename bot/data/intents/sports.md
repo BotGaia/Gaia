@@ -32,21 +32,29 @@
 - o que recomenda para [amapá](locale)?
 - sugestão de atividades ao ar livre em [brasilia](locale)?
 - sugestão de esporte [bahia](locale)
+- Qual esporte você me recomenda no [parque da cidade df](locale)?
 
 ## intent: specific_sport
 - Posso praticar [windsurf](sport) no [lago paranoa](locale)?
-- dá para fazer [windsurf](sport) em [hibiscus](locale)?
+- dá para fazer [caminhada](sport) em [hibiscus](locale)?
 - dá para jogar [volei de areia](sport) em [hibiscus](locale)?
 - consigo praticar [stand up paddle](sport) na [praia do rosa](locale)?
 - é possivel praticar [surf](sport) em [itapimirim](locale)?
 - posso fazer [vela](sport) em [guarujá](locale)?
 - posso jogar [volei de praia](sport) em [guarujá](locale)?
 - é possivel fazer [stand up paddle](sport) no [lago corumba](locale)?
-- dá para praticar [surf](sport) em [sao paulo](locale)?
-- teria como eu praticar [surf](sport) em [nova iorque](locale)?
-- o clima tá bom pra fazer [windsurf](sport) em [brasilia](locale)?
+- dá para praticar [caiaque](sport) em [sao paulo](locale)?
+- teria como eu praticar [remo](sport) em [nova iorque](locale)?
+- o clima tá bom pra fazer [paraquedismo](sport) em [brasilia](locale)?
 - o clima tá bom pra jogar [volei de areia](sport) em [brasilia](locale)?
-- dá pra fazer [trekking] na [bahia](locale)?
+- dá pra fazer [trekking](sport) na [bahia](locale)?
+- Fazer [golf](sport) em [goiania](locale)
+- Posso fazer [tenis](sport) em [maceio](locale)?
+- Quero fazer [wakeboard](sport) em [sao paulo](locale)
+- Rola [paraquedismo](sport) em [Anápolis](locale)?
+- Vou fazer [remo](sport) em [Aracaju](locale) rola?
+- posso praticar [caminhada](sport) no [lago paranoa](locale)?
+- posso praticar [golf](sport) no [paque da cidade df](locale)?
 
 ## intent: elaborate_sport
 - da pra jogar alguma coisa hj?
@@ -65,6 +73,15 @@
 - sugestão
 - sugestao de esporte
 - sugestao
+- Me recomenda uma atividade ao ar livre?
+- Você pode me sugerir uma atividade ao ar livre?
+- Atividade ao ar livre
+- Me sugere esportes
+- Me fala atividades ao ar livre
+- Me diga atividades
+- me recomenda um esporte
+- me fala um esporte
+- me sugere um esporte
 
 ## intent: all_sports
 - quais esportes vc pode sugerir?
@@ -81,3 +98,4 @@
 - lista de esportes monitorados
 - exemplo de esportes monitorados
 - exemplo de lista de esportes monitorados
+- exemplo de lista de esportes
