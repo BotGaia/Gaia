@@ -1,15 +1,17 @@
 <p align="center">
-  <img src="https://i.imgur.com/sEkmmNN.png" width="260" height="">
+  <img src="https://user-images.githubusercontent.com/1852287/60073116-f4d0f680-96f5-11e9-898c-389efc78d7ca.png" width="260" height="">
 </p>
 
 <h1 align="center"> Gaia </h1>
 
 [![pipeline status](https://gitlab.com/botgaia/Gaia/badges/master/pipeline.svg)](https://gitlab.com/botgaia/Gaia/commits/master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![StyleGuide](https://img.shields.io/badge/StyleGuide-flake8-<COLOR>.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v2.0-blue.svg)](https://github.com/BotGaia/Gaia/releases/tag/v2.0)
 
 ---
 
-Saudações! Sou Gaia, a Mãe-Terra e estou aqui para compartilhar informações sobre minha meteorologia e correlacioná-la com modalidades esportivas.
+Olá, sou Gaia, também conhecida como a deusa primordial. Sou responsável por tudo que acontece na Terra. Por isso, decidi te ajudar a escolher qual atividade fazer ao ar livre com base na condição meteorológica.
 
 Você pode me encontrar tanto no Telegram ([@DeusaGaiaBot](https://t.me/DeusaGaiaBot)) quanto no Facebook ([@DeusaGaiaBot](https://m.me/DeusaGaiaBot))
 
@@ -49,7 +51,7 @@ Este comando treinará o bot e irá iniciá-lo no telegram.
 
 Para rodar a folha de estilo, utilize o seguinte comando:
 
-```docker-compose run bot flake8```
+```$ sudo docker-compose run bot flake8```
 
 ### Terminal
 
