@@ -33,7 +33,7 @@ services:
         - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
         - TELEGRAM_WEBHOOK=${TELEGRAM_WEBHOOK}
         - IP_ADDRESS=${IP_ADDRESS}
-        - ENVIRONMENT=dev
+        - ENVIRONMENT=homolog
       ports:
         - 5055:5055
       volumes:
