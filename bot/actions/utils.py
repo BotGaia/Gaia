@@ -17,12 +17,12 @@ def sportsRequest(locale):
             data_sport += '\n' + favorable["name"].capitalize()
         return data_sport
     elif(len(answer_json["reservation"]) > 0):
-        data_reservation = 'Caso queira, algumas condições favorecem: '
+        data_reservation = '\n\nCaso queira, algumas condições favorecem: '
         for reservation in answer_json["reservation"]:
             data_reservation += '\n' + reservation["name"].capitalize()
         return data_reservation
     elif(len(answer_json["alert"]) > 0):
-        data_alert = 'Poucas condições favorecem: '
+        data_alert = '\n\nPoucas condições favorecem: '
         for alert in answer_json["alert"]:
             data_alert += '\n' + alert["name"].capitalize()
 
@@ -55,7 +55,7 @@ def specificSportRequest(locale, sport):
                 a = 'Poucas condições favorecem a prática de '
                 return a + sport + ' em ' + locale + '.'
     a = 'Não é recomendada a prática de '
-    data = sportsRequest(locale).title()
+    data = sportsRequest(locale)
     return a + sport + ' em ' + locale + '. ' + data
 
 

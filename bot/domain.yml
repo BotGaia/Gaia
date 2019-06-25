@@ -154,7 +154,7 @@ templates:
       \ - Remo\n- Caminhada\n- Trekking\n- Golf\n- Tênis"
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Sugestão de atividades\
-      \ ao ar livre \n\n- Recomendação de um esporte\n\n- Lista de esportes monitorados\n\
+      \ ao ar livre \n\n- Recomendação de um esporte específico\n\n- Lista de esportes monitorados\n\
       \n- Agendamento de notificação\n\n- Alertas sobre ocorrências de ciclones\n\n\
       - Condição meteorológica \n\n- Temperatura, Pressão, Horário de Nascer e Pôr\
       \ do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.\n\nAinda com\
@@ -168,7 +168,7 @@ templates:
   - text: Obrigada pela gentileza! Fico lisonjeada com o elogio!
   utter_create_notification:
   - text: 'Para criar uma notificação siga o exemplo: Quero registrar [modalidade
-      desejada] para [dia(s) da semana] às [hora] horas e [minutos] minutos no [local desejado]'
+      desejada] para [dia(s) da semana] às [horas] horas e [minutos] minutos no [local desejado]'
   utter_cyclone:
   - buttons:
     - payload: criar alerta ciclone
@@ -204,11 +204,11 @@ templates:
       \ nebulosidade), siga o exemplo: Como está [condição meteorológica] em [local\
       \ desejado]?"
   utter_example_cyclone_alert:
-  - text: 'Eu monitoro vários tipos do ciclone na Terra. Para receber atualizações
+  - text: "Eu monitoro vários tipos do ciclone na Terra. Para receber atualizações
       de quando houver um fenômeno dessa natureza, é só pedir: Quero receber alertas
-      de ciclone. Para saber se já possui o alerta, me pergunte: já tenho alerta de
-      ciclone? Se quiser cancelar este alerta, me mande: Quero cancelar alertas sobre
-      ciclone.'
+      de ciclone.\n\nPara saber se já possui o alerta, me pergunte: já tenho alerta de
+      ciclone?\n\nSe quiser cancelar este alerta, me mande: Quero cancelar alertas sobre
+      ciclone."
   utter_example_general:
   - text: "Para me pedir um recomendação de uma atividade específica, pode perguntar:Posso\
       \ praticar surf em Brasília?\n\nPara saber quais atividades recomendo para seu\
@@ -250,7 +250,7 @@ templates:
       \ um: 'Me ajuda'!"
   utter_help:
   - text: "Você pode me pedir:\n\n- Sugestão de atividades ao ar livre \n\n- Recomendação\
-      \ de um esporte\n\n- Lista de esportes monitorados\n\n- Agendamento de notificação\n\
+      \ de um esporte específico\n\n- Lista de esportes monitorados\n\n- Agendamento de notificação\n\
       \n- Alertas sobre ocorrências de ciclones\n\n- Condição meteorológica \n\n-\
       \ Temperatura, Pressão, Horário de Nascer e Pôr do Sol, Velocidade e Direção\
       \ do Vento, Umidade e Nebulosidade.\n\nAinda com dúvidas? Só mandar: Exemplo\
@@ -287,7 +287,7 @@ templates:
   - text: Tudo bem! Quanto tempo antes gostaria de ser avisado? (Em horas ou minutos)
   utter_user_error:
   - text: "Podemos falar sobre outra coisa. Podemos conversar sobre:\n\n- Sugestão\
-      \ de atividades ao ar livre \n\n- Recomendação de um esporte\n\n- Lista de esportes\
+      \ de atividades ao ar livre \n\n- Recomendação de um esporte específico\n\n- Lista de esportes\
       \ monitorados\n\n- Agendamento de notificação\n\n- Alertas sobre ocorrências\
       \ de ciclones\n\n- Condição meteorológica \n\n- Temperatura, Pressão, Horário\
       \ de Nascer e Pôr do Sol, Velocidade e Direção do Vento, Umidade e Nebulosidade.\n\

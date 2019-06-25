@@ -1,23 +1,4 @@
 ## intent: cyclone
-- E o ciclone?
-- Ciclone
-- terremoto
-- e o maremoto
-- tornado
-- tem risco de tornado?
-- tufão
-- tem risco de tufao
-- fala do ciclone
-- tem ciclone?
-- tem risco de ciclone?
-- furacão
-- quero saber do furacão
-- teve algum terremoto?
-- tem risco de terremoto
-- fala do furacao
-- e o carreta furacao?
-- redemoinho
-- e os redemoinhos?
 - alerta de ciclone
 - alerta de maremoto
 - alerta de furacao
@@ -25,7 +6,6 @@
 - alerta de tufao
 - alerta de terremoto
 - alerta de furacao
-
 
 ## intent: create_alert
 - quero ser alertado de ciclones
@@ -66,6 +46,7 @@
 - me alerta quando tiver um tufao
 - me alerta quando tiver um furacao
 - me alerta quando tiver um redemoinho
+- acionar alerta de ciclone
 
 ## intent: show_alert
 - mostrar alerta ciclone
@@ -102,6 +83,7 @@
 - quero ver se tenho alerta de terremoto
 - quero ver se tenho alerta de redemoinho
 - quero ver se tenho alerta de tornado
+- já possuo alerta?
 
 ## intent: delete_alert
 - deletar alerta ciclone
@@ -109,6 +91,7 @@
 - deletar alerta furacao
 - deletar alerta tufao
 - deletar alerta maremoto
+- deletar alerta
 - Quero cancelar alertas sobre ciclone
 - Quero cancelar alertas sobre terremoto
 - Quero cancelar alertas sobre furacao
@@ -134,6 +117,7 @@
 - quero deletar alerta sobre maremoto
 
 ## intent: all_cyclones
+- Vai ter ciclones na minha região?
 - Quero saber se há ciclone por agora
 - quero saber se ha ciclone agora
 - tem ciclone acontecendo agora?
@@ -148,6 +132,7 @@
 - teve terremoto em algum lugar?
 - aconteceu um furacao?
 - teve tornado hoje?
+- tá rolando ciclone?
 - quero saber se há algum furacao por agora
 - teve algum redemoinho por agora?
 - esta tendo terremoto agora?
@@ -165,3 +150,22 @@
 - teve tufao hoje?
 - esta acontecendo algum tufao agora?
 - tem tufao acontecendo agora?
+- Ciclone
+- E o ciclone?
+- terremoto
+- e o maremoto
+- tornado
+- tem risco de tornado?
+- tufão
+- tem risco de tufao
+- fala do ciclone
+- tem ciclone?
+- tem risco de ciclone?
+- furacão
+- quero saber do furacão
+- teve algum terremoto?
+- tem risco de terremoto
+- fala do furacao
+- e o carreta furacao?
+- redemoinho
+- e os redemoinhos?

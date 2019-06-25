@@ -13,6 +13,7 @@
 - o clima esta fechado no [parque da cidade](locale)?
 - condição [gama](locale)
 - como tá [manaus](locale)?
+- condição meteorológica no [paquistão](locale)
 
 ## intent:elaborate_weather
 - Me diga o clima
