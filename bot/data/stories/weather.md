@@ -149,8 +149,6 @@
 * locale
     - action_local
 * choose
-    - utter_forecast_time
-* forecast_time
     - action_forecast
 
 ## forecast 1
@@ -161,8 +159,6 @@
 * locale
     - action_local
 * choose
-    - utter_forecast_time
-* forecast_time
     - action_forecast
 
 ## forecast 2
@@ -175,6 +171,4 @@
 * locale
     - action_local
 * choose
-    - utter_forecast_time
-* forecast_time
     - action_forecast

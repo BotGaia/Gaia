@@ -11,9 +11,7 @@ class Forecast_Action(Action):
     def run(self, dispatcher, tracker, domain):
         URL = configGateway()
         locale = tracker.get_slot('locale')
-        time = tracker.get_slot('user_hour')
         payload = {
-          "hour": time,
           "place": locale,
           "intent": "forecast"
         }
