@@ -16,6 +16,16 @@
 - registrar [golf](sport) para [sábado](user_day) às [0](user_hour) horas e [30 minutos](user_minute) em [tocantins](locale)
 - Quero registrar [caminhada](sport) para [todos os dias](user_day) às [9](user_hour) e [00](user_minute) em [pernambuco](locale)
 - Quero marcar [trekking](sport) no [Parque da cidade](locale) [todo dia](user_day) [14](user_hour)h
+- Quero salvar [stand up](sport) no [pontão](locale) no [domingo](user_day) [20](user_hour) horas e [30](user_minute) min
+- Marcar [stand up paddle](sport) [todos os dias](user_day) no [Pontao](locale) [13](user_hour)h e [20](user_minute) minutos
+- Notificar [paraquedismo](sport) na [segunda](user_day) as [15](user_hour) e [40](user_minute) no [pontao df](locale)
+- Notifique [volei de areia](sport) na [segunda-feira](user_day) [12](user_hour) no [parque da cidade df](locale)
+- Agendar [Caiaque](sport) [todos os dias](user_day) no [Parque da cidade df](locale) [14](user_hour) horas e [20](user_minute) min
+- Salvar [wakeboard](sport) [terça](user_day) e [quinta](user_day) no [gama](locale) [10](user_hour)h e [30](user_minute)min
+- Quero ser notificado [todos os dias](user_day) [20](user_hour)h no [Guará](locale) sobre [Remo](sport)
+- Salvar [tenis](sport) [domingo](user_day) e [sábado](user_day) [13](user_hour) no [sudoeste df](locale)
+- Salvar [tênis](sport) [quarta](user_day) e [sábado](user_day) [16](user_hour) no [jardim botânico](locale)
+- Notifique [vôlei de areia](sport) na [segunda-feira](user_day) e no [domingo](user_day) [12](user_hour) no [parque da cidade df](locale)
 
 ## intent: time_before
 - [2 horas](hours_before) antes
@@ -32,3 +42,13 @@
 - Não quero ser notificado antes
 - Não precisa notificar antes
 - Sem tempo antes
+
+## intent: forecast_time
+- [14](user_hour) horas
+- [10](user_hour) h
+- [9](user_hour) hr
+- [4](user_hour) hrs
+- [1](user_hour) hora
+- [10](user_hour)h
+- [9](user_hour)hr
+- [4](user_hour)hrs

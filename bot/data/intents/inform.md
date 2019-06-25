@@ -13,6 +13,7 @@
 - o clima esta fechado no [parque da cidade](locale)?
 - condição [gama](locale)
 - como tá [manaus](locale)?
+- condição meteorológica no [paquistão](locale)
 
 ## intent:elaborate_weather
 - Me diga o clima
@@ -100,6 +101,8 @@
 - o sol se poe q horas?
 - q horas o sol se poe hoje?
 - que hrs o sol se poe hj 
+- por do sol
+- nascer do sol
 
 ## intent: elaborate_sky
 - como estao as nuvens hj?
@@ -161,5 +164,3 @@
 - [tres](choice)
 - [quatro](choice)
 - [cinco](choice)
-
-
