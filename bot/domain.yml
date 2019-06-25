@@ -32,10 +32,8 @@ actions:
 - utter_gaia_error
 - utter_greet
 - action_sky
-- utter_all_sports
 - utter_create_notification
 - utter_after_create_cyclone_alert
-- utter_start1
 - action_create_alert
 - utter_anything_else
 - utter_example_cyclone_alert
@@ -158,10 +156,6 @@ templates:
   utter_after_create_cyclone_alert:
   - text: Após ser acionado, você receberá alertas, em tempo real, de todos os tipos
       de ciclones em todo o mundo!
-  utter_all_sports:
-  - text: "Eu posso sugerir essas modalidades:\n- Kitesurf\n- Stand up paddle\n- Surf\n\
-      \ - Vela\n- Volei da areia\n- WindSurf\n- Caiaque\n- Wakeboard\n- Paraquedismo\n\
-      \ - Remo\n- Caminhada\n- Trekking\n- Golf\n- Tênis"
   utter_anything_else:
   - text: "O que mais quer saber? Você pode me perguntar sobre:\n\n- Sugestão de atividades\
       \ ao ar livre \n\n- Recomendação de um esporte específico\n\n- Lista de esportes monitorados\n\
