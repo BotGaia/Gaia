@@ -70,8 +70,13 @@
 - o clima ta bom pra fazer o que?
 - recomendacao
 - recomendação
+- recomendaçao de um esporte
+- recomendacao de esporte
+- recomendaçao de modalidade
 - sugestão
 - sugestao de esporte
+- sugestao de um esporte
+- sugestao de modalidade
 - sugestao
 - Me recomenda uma atividade ao ar livre?
 - Você pode me sugerir uma atividade ao ar livre?

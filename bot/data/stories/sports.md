@@ -103,7 +103,7 @@
 
 ## All Sports
 * all_sports
-    - utter_all_sports
+    - action_all_sports
     - utter_example_sport
 
 ## All Sports 1
@@ -111,12 +111,12 @@
     - utter_good_night
     - utter_greet
 * all_sports
-    - utter_all_sports
+    - action_all_sports
     - utter_example_sport
 
 ## All Sports 2
 * greet
     - utter_greet
 * all_sports
-    - utter_all_sports
+    - action_all_sports
     - utter_example_sport

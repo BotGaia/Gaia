@@ -51,6 +51,10 @@ actions:
 - utter_help
 - utter_notification
 - utter_how_do_u_know
+- utter_start1
+- action_all_sports
+- action_forecast
+- utter_rain
 - action_humidity
 - action_pressure
 entities:
@@ -64,6 +68,12 @@ entities:
 - user_hour
 - minutes_before
 intents:
+- locale
+- rain
+- forecast
+- forecast_time
+- inform
+- elaborate_sport
 - sports
 - all_sports
 - locale
@@ -297,3 +307,6 @@ templates:
       \ caos. E comigo, a terra encontrou sua harmonia, e para mantê-la preciso da\
       \ ajuda de vocês!\nPensando nisso, criei esse canal a fim de nos comunicarmos\
       \ e ajudar você a escolher atividades que podem ser feitas ao ar livre!"
+  utter_rain:
+  - text: "Aqui ta chovendo pra caraca! Olha o relampiando."
+  - text: "To nem aí!"
